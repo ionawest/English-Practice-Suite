@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Spelling Sprint</title>
+    <script src="papaparse.min.js"></script>
+    <script src="data.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 { color: #2c3e50; margin-top: 0; text-align: center; }
+        .setup-screen, .game-screen, .end-screen { display: none; }
+        .active { display: block; }
+        
+        .setup-controls { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; align-items: center; }
+        .selection-controls { display: flex; gap: 10px; width: 100%; max-width: 400px; margin-bottom: -5px; }
+        .btn-small { flex: 1; padding: 8px; font-size: 14px; margin: 0; background-color: #7f8c8d; }
+        .btn-small:hover { background-color: #636e72; }
+        
+        .checkbox-group { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 400px; background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ddd; max-height: 250px; overflow-y: auto; }
+        .checkbox-label { display: flex; align-items: center; font-size: 16px; cursor: pointer; padding: 5px 0; }
+        .checkbox-label input { margin-right: 10px; width: 18px; height: 18px; cursor: pointer; }
+        
+        .input-group { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 300px; }
+        .input-group label { font-weight: bold; margin-bottom: 5px; text-align: center; }
+        input[type="number"] { padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 6px; text-align: center; }
+        
+        button { background-color: #3498db; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; transition: background 0.3s ease; width: 100%; max-width: 300px; display: block; margin: 10px auto 0 auto; }
+        button:hover { background-color: #2980b9; }
+
+        .question-text { font-size: 20px; margin: 20px 0; line-height: 1.6; text-align: center; background: #f9f9f9; padding: 30px; border-left: 4px solid #9b59b6; border-radius: 4px;}
+        .cloze-blank { color: #e74c3c; font-family: monospace; font-size: 1.2em; font-weight: bold; letter-spacing: 2px; }
+        
+        /* The Typing Input */
+        .typing-input { font-size: 24px; padding: 15px; width: 100%; max-width: 400px; border: 2px solid #bdc3c7; border-radius: 8px; text-align: center; margin: 10px auto 30px auto; display: block; transition: border 0.3s; }
+        .typing-input:focus { border-color: #9b59b6; outline: none; box-shadow: 0 0 8px rgba(155, 89, 182, 0.3); }
+
+        .timer-wrapper { margin: 15px 0; width: 100%; }
+        .timer-bar-container { width: 100%; height: 12px; background-color: #ecf0f1; border-radius: 6px; overflow: hidden; margin-bottom: 8px; }
+        .timer-bar { height: 100%; width: 100%; background-color: #9b59b6; transition: width 0.1s linear; }
+        .timer-display { font-size: 18px; font-weight: bold; color: #7f8c8d; text-align: right; }
+        
+        .stats { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 18px; color: #7f8c8d; }
+        
+        .review-container { margin-top: 30px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 20px; max-height: 400px; overflow-y: auto; text-align: left; }
+        .review-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #ecf0f1; }
+        .review-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .review-q { font-weight: bold; margin-bottom: 8px; font-size: 16px; }
+        .review-ans { font-size: 15px; margin: 4px 0; }
+        .correct-text { color: #27ae60; font-weight: bold; }
+        .incorrect-text { color: #c0392b; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div id="setupScreen" class="setup-screen active">
+        <h1>Spelling & Recall Sprint</h1>
+        <div class="setup-controls">
+            
+            <label style="font-weight: bold;">Select Topics to Mix:</label>
+            <div class="selection-controls">
+                <button type="button" class="btn-small" onclick="selectAllTopics()">Select All</button>
+                <button type="button" class="btn-small" onclick="deselectAllTopics()">Deselect All</button>
+            </div>
+
+            <div id="checkboxContainer" class="checkbox-group">
+                </div>
+            
+            <div class="input-group" style="margin-top: 10px;">
+                <label for="questionCount">Number of Questions (Max):</label>
+                <input type="number" id="questionCount" value="10" min="1">
+            </div>
+
+            <div class="input-group">
+                <label for="timeInput">Time per Word (Sec):</label>
+                <input type="number" id="timeInput" value="15" min="2" max="60">
+            </div>
+            
+            <button onclick="startGame()" style="margin-top: 20px; background-color: #9b59b6;">Start Drill</button>
+            <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+        </div>
+    </div>
+
+    <div id="gameScreen" class="game-screen">
+        <div class="stats">
+            <span id="scoreDisplay">Score: 0</span>
+            <span id="questionCounter">Question: 1/10</span>
+        </div>
+        
+        <div class="timer-wrapper">
+            <div class="timer-bar-container">
+                <div id="timerBar" class="timer-bar"></div>
+            </div>
+            <div class="timer-display" id="timerDisplay">15.0s</div>
+        </div>
+
+        <div class="question-text" id="questionText">Loading...</div>
+        
+        <input type="text" id="answerInput" class="typing-input" placeholder="Type here and press Enter..." autocomplete="off">
+        
+    </div>
+
+    <div id="endScreen" class="end-screen">
+        <h1>Drill Complete</h1>
+        <p id="finalScore" style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0;"></p>
+        <p id="feedbackText" style="text-align: center; margin-bottom: 20px;"></p>
+        
+        <button onclick="resetGame()" style="background-color: #9b59b6;">Try Again</button>
+        <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+
+        <div id="reviewSection" class="review-container">
+            <h3 style="margin-top: 0;">Spelling Review</h3>
+            <div id="reviewList"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let spellingBanks = {};
+    let currentQuestions = [];
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let globalTimeLimit = 15;
+    let timeLeft = 15;
+    let timerInterval;
+    let sessionHistory = []; 
+    let activeCorrectAnswer = "";
+
+    window.onload = function() {
+        if (typeof spellingCSVData === 'undefined') {
+            alert("Error: Could not find spellingCSVData in data.js");
+            return;
+        }
+
+        Papa.parse(spellingCSVData, {
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+                results.data.forEach(row => {
+                    if (!row.Category || !row.Sentence) return; 
+                    
+                    if (!spellingBanks[row.Category]) {
+                        spellingBanks[row.Category] = [];
+                    }
+                    
+                    spellingBanks[row.Category].push({ rawSentence: row.Sentence });
+                });
+                buildMenu();
+            }
+        });
+    };
+
+    function buildMenu() {
+        const container = document.getElementById('checkboxContainer');
+        container.innerHTML = ''; 
+        
+        for (const bankName in spellingBanks) {
+            const label = document.createElement('label');
+            label.className = 'checkbox-label';
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.value = bankName;
+            checkbox.checked = true; 
+            label.appendChild(checkbox);
+            label.appendChild(document.createTextNode(bankName));
+            container.appendChild(label);
+        }
+    }
+
+    function selectAllTopics() {
+        document.querySelectorAll('#checkboxContainer input[type="checkbox"]').forEach(cb => cb.checked = true);
+    }
+
+    function deselectAllTopics() {
+        document.querySelectorAll('#checkboxContainer input[type="checkbox"]').forEach(cb => cb.checked = false);
+    }
+
+    function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
+    }
+
+    function startGame() {
+        const checkboxes = document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked');
+        if (checkboxes.length === 0) {
+            alert("Please select at least one topic.");
+            return;
+        }
+
+        let combinedQuestions = [];
+        checkboxes.forEach(cb => {
+            combinedQuestions = combinedQuestions.concat(spellingBanks[cb.value]);
+        });
+
+        const timeInput = document.getElementById('timeInput').value;
+        globalTimeLimit = parseInt(timeInput) > 0 ? parseInt(timeInput) : 15;
+        
+        const countInput = document.getElementById('questionCount').value;
+        let requestedCount = parseInt(countInput) > 0 ? parseInt(countInput) : 10;
+
+        score = 0;
+        currentQuestionIndex = 0;
+        sessionHistory = []; 
+        
+        currentQuestions = shuffleArray([...combinedQuestions]).slice(0, requestedCount);
+        
+        document.getElementById('setupScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.add('active');
+        
+        loadQuestion();
+    }
+
+    function loadQuestion() {
+        clearInterval(timerInterval);
+        
+        if (currentQuestionIndex >= currentQuestions.length) {
+            endGame();
+            return;
+        }
+
+        const currentQ = currentQuestions[currentQuestionIndex];
+        
+        // Auto-Cloze Engine: Extracts the word in brackets and creates the blank spaces
+        const regex = /\[(.*?)\]/;
+        const match = currentQ.rawSentence.match(regex);
+        
+        if (match) {
+            activeCorrectAnswer = match[1].trim().toLowerCase();
+            let firstLetter = match[1].charAt(0);
+            let underscores = " _".repeat(match[1].length - 1);
+            let displayHtml = currentQ.rawSentence.replace(regex, `<span class="cloze-blank">${firstLetter}${underscores}</span>`);
+            document.getElementById('questionText').innerHTML = displayHtml;
+        } else {
+            // Fallback in case a sentence doesn't have brackets
+            document.getElementById('questionText').innerHTML = currentQ.rawSentence;
+            activeCorrectAnswer = "";
+        }
+
+        document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+        document.getElementById('questionCounter').innerText = `Question: ${currentQuestionIndex + 1}/${currentQuestions.length}`;
+        
+        // Reset and Focus Input
+        const inputField = document.getElementById('answerInput');
+        inputField.value = "";
+        inputField.focus();
+
+        timeLeft = globalTimeLimit;
+        document.getElementById('timerDisplay').innerText = timeLeft.toFixed(1) + "s";
+        document.getElementById('timerBar').style.width = "100%";
+        
+        timerInterval = setInterval(updateTimer, 100);
+    }
+
+    function updateTimer() {
+        timeLeft -= 0.1;
+        document.getElementById('timerDisplay').innerText = Math.max(0, timeLeft).toFixed(1) + "s";
+        const percentage = (timeLeft / globalTimeLimit) * 100;
+        document.getElementById('timerBar').style.width = `${Math.max(0, percentage)}%`;
+        
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            processAnswer("Timed Out");
+        }
+    }
+
+    // Listen for the "Enter" key on the text box
+    document.getElementById('answerInput').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            clearInterval(timerInterval);
+            processAnswer(this.value);
+        }
+    });
+
+    function processAnswer(userInput) {
+        const cleanInput = userInput.trim().toLowerCase();
+        const isCorrect = (cleanInput === activeCorrectAnswer);
+        
+        if (isCorrect) score++;
+
+        // Log history (remove the brackets for the review screen presentation)
+        const cleanQuestionText = currentQuestions[currentQuestionIndex].rawSentence.replace('[', '').replace(']', '');
+
+        sessionHistory.push({
+            question: cleanQuestionText,
+            userAnswer: userInput === "" ? "Left Blank" : userInput,
+            correctAnswer: activeCorrectAnswer,
+            isCorrect: isCorrect
+        });
+
+        currentQuestionIndex++;
+        loadQuestion();
+    }
+
+    function endGame() {
+        document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.add('active');
+        
+        const percentage = (score / currentQuestions.length) * 100;
+        document.getElementById('finalScore').innerText = `${score} out of ${currentQuestions.length} (${percentage.toFixed(0)}%)`;
+        
+        let feedback = "";
+        if (percentage >= 90) feedback = "Excellent! Your spelling is extremely accurate.";
+        else if (percentage >= 70) feedback = "Good job, but you lost points to minor typos.";
+        else feedback = "We need to drill these words more. One wrong letter loses the IELTS mark!";
+        document.getElementById('feedbackText').innerText = feedback;
+
+        generateReviewSection();
+    }
+
+    function generateReviewSection() {
+        const reviewList = document.getElementById('reviewList');
+        reviewList.innerHTML = ''; 
+
+        sessionHistory.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'review-item';
+            
+            const qText = `<div class="review-q">${index + 1}. ${item.question}</div>`;
+            
+            let ansText = '';
+            if (item.isCorrect) {
+                ansText = `<div class="review-ans">Your Answer: <span class="correct-text">${item.userAnswer}</span> (Correct)</div>`;
+            } else {
+                ansText = `
+                    <div class="review-ans">Your Answer: <span class="incorrect-text">${item.userAnswer}</span></div>
+                    <div class="review-ans">Correct Answer: <span class="correct-text">${item.correctAnswer}</span></div>
+                `;
+            }
+
+            div.innerHTML = qText + ansText;
+            reviewList.appendChild(div);
+        });
+    }
+
+    function resetGame() {
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('setupScreen').classList.add('active');
+    }
+</script>
+
+</body>
+</html>
