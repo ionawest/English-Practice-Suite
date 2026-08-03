@@ -49,6 +49,14 @@
         .selected { background-color: #8e44ad !important; color: white !important; border-color: #732d91 !important; transform: scale(1.02); }
         .matched { background-color: #27ae60 !important; color: white !important; border-color: #2ecc71 !important; cursor: default; opacity: 0.8; transform: scale(1); }
         .wrong { background-color: #e74c3c !important; color: white !important; border-color: #c0392b !important; }
+
+        /* Review Screen Styles */
+        .review-container { margin-top: 30px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 20px; max-height: 400px; overflow-y: auto; text-align: left; }
+        .review-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #ecf0f1; }
+        .review-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .review-q { font-weight: bold; margin-bottom: 8px; font-size: 16px; color: #2c3e50; }
+        .correct-text { color: #27ae60; font-weight: bold; }
+        .incorrect-text { color: #c0392b; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -56,7 +64,7 @@
 <div class="container">
     
     <div id="setupScreen" class="setup-screen active">
-        <h1>Connections</h1>
+        <h1>Connections Drill</h1>
         <p>Sound natural. Connect the Verb to its correct Noun partner to build Band 7+ vocabulary chunks.</p>
         
         <div class="setup-controls">
@@ -107,6 +115,11 @@
         <p id="feedbackText"></p>
         <button onclick="resetGame()">Return to Setup</button>
         <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+
+        <div id="reviewSection" class="review-container">
+            <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px;">Performance Review</h3>
+            <div id="reviewList"></div>
+        </div>
     </div>
 </div>
 
@@ -125,6 +138,10 @@
     let selectedNounBtn = null;
     let matchesOnCurrentBoard = 0;
 
+    // Tracking arrays for the review screen
+    let sessionHistory = [];
+    let currentBoardPairs = [];
+
     function shuffleArray(array) {
         return array.sort(() => Math.random() - 0.5);
     }
@@ -141,17 +158,16 @@
         const countInput = document.getElementById('boardCount').value;
         totalBoards = parseInt(countInput) > 0 ? parseInt(countInput) : 5;
         
-        // Safety check: Do we have enough data to fill the boards?
         const maxBoards = Math.floor(collocationData.length / 5);
         if (totalBoards > maxBoards) totalBoards = maxBoards;
 
-        // Shuffle all data and pull the required number of items (5 per board)
         const shuffledData = shuffleArray([...collocationData]);
         activeData = shuffledData.slice(0, totalBoards * 5);
 
         currentBoardIndex = 0;
         score = 0;
         totalPossibleScore = totalBoards * 5;
+        sessionHistory = [];
 
         document.getElementById('setupScreen').classList.remove('active');
         document.getElementById('endScreen').classList.remove('active');
@@ -175,18 +191,23 @@
         document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
         document.getElementById('boardCounter').innerText = `Board: ${currentBoardIndex + 1}/${totalBoards}`;
         
-        // Extract the 5 pairs for this specific board
         const startIndex = currentBoardIndex * 5;
         const currentPairs = activeData.slice(startIndex, startIndex + 5);
 
-        // Separate and independently shuffle verbs and nouns so they don't line up
+        // Track the current board's data for the review screen
+        currentBoardPairs = currentPairs.map(p => ({
+            verb: p.verb,
+            noun: p.noun,
+            mistakes: [],
+            matched: false
+        }));
+
         let verbs = currentPairs.map(p => ({ text: p.verb, id: p.noun }));
-        let nouns = currentPairs.map(p => ({ text: p.noun, id: p.noun })); // Noun acts as the ID key
+        let nouns = currentPairs.map(p => ({ text: p.noun, id: p.noun })); 
 
         verbs = shuffleArray(verbs);
         nouns = shuffleArray(nouns);
 
-        // Render Columns
         const verbCol = document.getElementById('verbCol');
         const nounCol = document.getElementById('nounCol');
         verbCol.innerHTML = '';
@@ -226,16 +247,18 @@
         
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
+            
+            // Push current board results to history when time runs out
+            sessionHistory.push(...currentBoardPairs);
+
             currentBoardIndex++;
-            loadBoard(); // Time's up, force next board
+            loadBoard(); 
         }
     }
 
     function handleSelect(btn) {
-        // Ignore if already matched
         if (btn.classList.contains('matched')) return;
 
-        // Deselect logic
         if (btn === selectedVerbBtn) {
             selectedVerbBtn.classList.remove('selected');
             selectedVerbBtn = null;
@@ -247,7 +270,6 @@
             return;
         }
 
-        // Selection logic
         if (btn.dataset.type === 'verb') {
             if (selectedVerbBtn) selectedVerbBtn.classList.remove('selected');
             selectedVerbBtn = btn;
@@ -258,7 +280,6 @@
             selectedNounBtn.classList.add('selected');
         }
 
-        // If both are selected, check for a match
         if (selectedVerbBtn && selectedNounBtn) {
             checkMatch();
         }
@@ -268,16 +289,19 @@
         const vBtn = selectedVerbBtn;
         const nBtn = selectedNounBtn;
 
-        // The verb's ID was secretly set to the noun's text during rendering, so if they match, they are a pair.
+        // Find the tracker object for this verb
+        let trackerPair = currentBoardPairs.find(p => p.verb === vBtn.innerText);
+
         if (vBtn.dataset.id === nBtn.dataset.id) {
             // Correct Match
             score++;
             matchesOnCurrentBoard++;
             
+            if (trackerPair) trackerPair.matched = true;
+            
             vBtn.className = 'word-btn matched';
             nBtn.className = 'word-btn matched';
             
-            // Remove click events
             vBtn.onclick = null;
             nBtn.onclick = null;
 
@@ -285,14 +309,20 @@
 
             if (matchesOnCurrentBoard === 5) {
                 clearInterval(timerInterval);
+                
+                // Push current board results to history
+                sessionHistory.push(...currentBoardPairs);
+
                 setTimeout(() => {
                     currentBoardIndex++;
                     loadBoard();
-                }, 800); // Short delay before clearing a won board
+                }, 800); 
             }
 
         } else {
             // Wrong Match
+            if (trackerPair) trackerPair.mistakes.push(nBtn.innerText);
+
             vBtn.classList.remove('selected');
             vBtn.classList.add('wrong');
             nBtn.classList.remove('selected');
@@ -301,10 +331,9 @@
             setTimeout(() => {
                 vBtn.classList.remove('wrong');
                 nBtn.classList.remove('wrong');
-            }, 400); // Red flash
+            }, 400); 
         }
 
-        // Reset selection state
         selectedVerbBtn = null;
         selectedNounBtn = null;
     }
@@ -319,8 +348,35 @@
         let feedback = "";
         if (percentage >= 90) feedback = "Excellent! You are building highly natural, native-sounding sentences.";
         else if (percentage >= 70) feedback = "Good effort. Watch out for direct translations from Japanese that don't quite fit English.";
-        else feedback = "We need to study vocabulary in chunks, not single words. Keep practicing to sound more natural!";
+        else feedback = "We need to study vocabulary in chunks, not single words. Review your mistakes below!";
         document.getElementById('feedbackText').innerText = feedback;
+
+        generateReviewSection();
+    }
+
+    function generateReviewSection() {
+        const reviewList = document.getElementById('reviewList');
+        reviewList.innerHTML = ''; 
+
+        sessionHistory.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'review-item';
+            
+            const qText = `<div class="review-q">${index + 1}. <span style="color:#8e44ad">${item.verb}</span> + <span style="color:#2980b9">${item.noun}</span></div>`;
+            
+            let statusBadge = item.matched 
+                ? `<span class="correct-text">Matched successfully</span>` 
+                : `<span class="incorrect-text">Timed out before matching</span>`;
+
+            let ansText = `<div>Status: ${statusBadge}</div>`;
+            
+            if (item.mistakes.length > 0) {
+                ansText += `<div style="margin-top: 5px;">Incorrect attempts: <span class="incorrect-text">${item.verb} + ${item.mistakes.join(', ')}</span></div>`;
+            }
+
+            div.innerHTML = qText + ansText;
+            reviewList.appendChild(div);
+        });
     }
 
     function resetGame() {

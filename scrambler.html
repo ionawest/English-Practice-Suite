@@ -13,6 +13,11 @@
         .setup-screen, .game-screen, .end-screen { display: none; }
         .active { display: block; }
         
+        .setup-controls { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; align-items: center; }
+        .input-group { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 300px; }
+        .input-group label { font-weight: bold; margin-bottom: 5px; text-align: center; color: #2c3e50;}
+        input[type="number"], select { padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 6px; text-align: center; background-color: #fff; }
+
         button { background-color: #e67e22; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; transition: background 0.3s ease; width: 100%; max-width: 300px; display: block; margin: 10px auto; font-weight: bold; }
         button:hover { background-color: #d35400; }
 
@@ -48,7 +53,6 @@
         
         .sentence-block:active { cursor: grabbing; }
 
-        /* The icon on the left of the block to indicate draggability */
         .drag-handle {
             color: #bdc3c7;
             margin-right: 15px;
@@ -56,11 +60,9 @@
             cursor: grab;
         }
 
-        /* SortableJS specific classes for animations */
         .sortable-ghost { opacity: 0.4; background-color: #f0f3f4; border: 2px dashed #95a5a6; }
         .sortable-drag { box-shadow: 0 10px 20px rgba(0,0,0,0.15); cursor: grabbing !important; }
         
-        /* Feedback Animations */
         .correct-anim { border-color: #27ae60 !important; background-color: #eafaf1 !important; }
         .wrong-anim { border-color: #e74c3c !important; background-color: #fdedec !important; }
     </style>
@@ -72,15 +74,32 @@
     <div id="setupScreen" class="setup-screen active">
         <h1>Paragraph Scrambler</h1>
         <p>Drag and drop the sentences to build a perfectly cohesive academic paragraph.</p>
-        <br>
-        <button onclick="startGame()">Start Drill</button>
-        <button onclick="window.location.href='index.html'" style="background-color: #95a5a6;">Back to Menu</button>
+        
+        <div class="setup-controls">
+            <div class="input-group">
+                <label for="bandSelect">Difficulty Band:</label>
+                <select id="bandSelect">
+                    <option value="all">All Bands (Mixed)</option>
+                    <option value="5.5">Band 5.5 - 6.0 (Basic)</option>
+                    <option value="7.0">Band 6.5 - 7.0 (Intermediate)</option>
+                    <option value="7.5">Band 7.5+ (Advanced)</option>
+                </select>
+            </div>
+
+            <div class="input-group" style="margin-top: 10px;">
+                <label for="questionCount">Number of Paragraphs:</label>
+                <input type="number" id="questionCount" value="5" min="1" max="20">
+            </div>
+            
+            <button onclick="startGame()" style="margin-top: 20px;">Start Drill</button>
+            <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+        </div>
     </div>
 
     <div id="gameScreen" class="game-screen">
         <div class="stats">
             <span id="scoreDisplay">Score: 0</span>
-            <span id="questionCounter">Paragraph: 1/10</span>
+            <span id="questionCounter">Paragraph: 1/5</span>
         </div>
         
         <div class="topic-display" id="topicDisplay">Topic: Loading...</div>
@@ -99,8 +118,8 @@
         <h1>Drill Complete</h1>
         <p id="finalScore" style="font-size: 24px; font-weight: bold;"></p>
         <p id="feedbackText"></p>
-        <button onclick="window.location.reload()">Try Again</button>
-        <button onclick="window.location.href='index.html'" style="background-color: #95a5a6;">Back to Menu</button>
+        <button onclick="resetGame()">Return to Setup</button>
+        <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
     </div>
 </div>
 
@@ -109,7 +128,7 @@
     let currentIndex = 0;
     let score = 0;
     let originalSentences = []; 
-    let sortableInstance = null; // Holds the drag-and-drop engine
+    let sortableInstance = null; 
     
     function shuffleArray(array) {
         return array.sort(() => Math.random() - 0.5);
@@ -121,11 +140,36 @@
             return;
         }
 
-        currentPool = shuffleArray([...scramblerData]).slice(0, 10); 
+        const bandChoice = document.getElementById('bandSelect').value;
+        let filteredPool = [...scramblerData];
+
+        if (bandChoice !== 'all') {
+            filteredPool = scramblerData.filter((item, index) => {
+                const topic = item.topic.toLowerCase();
+                if (bandChoice === '5.5') {
+                    // Match items categorized as band 5.5-6.0 or fallback to first batch of indices
+                    return topic.includes('5.5') || topic.includes('6.0') || index < 10;
+                } else if (bandChoice === '7.0') {
+                    // Match intermediate items
+                    return topic.includes('6.5') || topic.includes('7.0') || (index >= 10 && index < 30);
+                } else if (bandChoice === '7.5') {
+                    // Match advanced items
+                    return topic.includes('7.5') || index >= 30;
+                }
+                return true;
+            });
+            if (filteredPool.length === 0) filteredPool = [...scramblerData];
+        }
+
+        const countInput = document.getElementById('questionCount').value;
+        let requestedCount = parseInt(countInput) > 0 ? parseInt(countInput) : 5;
+
+        currentPool = shuffleArray(filteredPool).slice(0, requestedCount);
         currentIndex = 0;
         score = 0;
 
         document.getElementById('setupScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.remove('active');
         document.getElementById('gameScreen').classList.add('active');
         
         loadParagraph();
@@ -144,7 +188,6 @@
         
         originalSentences = [...currentPara.sentences];
         
-        // Shuffle sentences
         let shuffled;
         do {
             shuffled = shuffleArray([...originalSentences]);
@@ -153,31 +196,25 @@
         const listEl = document.getElementById('sortableList');
         listEl.innerHTML = '';
         
-        // Reset Buttons
         document.getElementById('checkBtn').style.display = 'block';
         document.getElementById('showAnswerBtn').style.display = 'block';
         document.getElementById('nextBtn').style.display = 'none';
 
-        // Generate the draggable blocks
         shuffled.forEach(text => {
             let div = document.createElement('div');
             div.className = 'sentence-block';
-            
-            // Add a little grip icon (≡) on the left side
             div.innerHTML = `<span class="drag-handle">≡</span> <span class="sentence-text">${text}</span>`;
             listEl.appendChild(div);
         });
 
-        // Initialize or re-initialize the SortableJS drag-and-drop engine
         if (sortableInstance) {
             sortableInstance.destroy();
         }
         
         sortableInstance = new Sortable(listEl, {
-            animation: 150, // smooth sliding animation
+            animation: 150,
             ghostClass: 'sortable-ghost',
             dragClass: 'sortable-drag',
-            // The moment they start dragging a block, remove any red/green feedback
             onStart: function (evt) {
                 clearFeedback();
             }
@@ -200,7 +237,6 @@
             listEl.appendChild(div);
         });
 
-        // Disable dragging when showing answer
         sortableInstance.options.disabled = true;
 
         document.getElementById('checkBtn').style.display = 'none';
@@ -216,7 +252,6 @@
         clearFeedback(); 
 
         for (let i = 0; i < userBlocks.length; i++) {
-            // Extract the actual text from the span inside the block
             let blockText = userBlocks[i].querySelector('.sentence-text').innerText;
             
             if (blockText === originalSentences[i]) {
@@ -233,10 +268,8 @@
             document.getElementById('showAnswerBtn').style.display = 'none';
             document.getElementById('nextBtn').style.display = 'block';
             
-            // Turn off dragging once they win
             sortableInstance.options.disabled = true;
             
-            // Change the grab handles to checkmarks
             for(let i = 0; i < userBlocks.length; i++) { 
                 userBlocks[i].querySelector('.drag-handle').innerText = '✓';
                 userBlocks[i].style.cursor = 'default';
@@ -261,6 +294,11 @@
         else if (percentage >= 60) feedback = "Good effort. Take your time to read the paragraph slowly after 'Checking' to see why the red sentences failed.";
         else feedback = "We need to practice essay structuring. Look for clues like 'However', 'Therefore', and 'For instance'.";
         document.getElementById('feedbackText').innerText = feedback;
+    }
+
+    function resetGame() {
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('setupScreen').classList.add('active');
     }
 </script>
 
