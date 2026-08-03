@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Paragraph Scrambler</title>
+    <script src="data_scrambler.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; display: flex; flex-direction: column; align-items: center; padding: 50px 20px; margin: 0; }
+        .container { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 800px; width: 100%; text-align: center; }
+        h1 { color: #2c3e50; margin-top: 0; }
+        .setup-screen, .game-screen, .end-screen { display: none; }
+        .active { display: block; }
+        
+        button { background-color: #e67e22; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; transition: background 0.3s ease; width: 100%; max-width: 300px; display: block; margin: 10px auto; font-weight: bold; }
+        button:hover { background-color: #d35400; }
+
+        /* Specific Button Styles */
+        #nextBtn { background-color: #27ae60; display: none; }
+        #nextBtn:hover { background-color: #2ecc71; }
+        #showAnswerBtn { background-color: #7f8c8d; margin-top: 10px; }
+        #showAnswerBtn:hover { background-color: #636e72; }
+        
+        .button-group { display: flex; flex-direction: column; align-items: center; margin-top: 30px; border-top: 2px solid #eee; padding-top: 20px;}
+
+        .stats { display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 18px; color: #7f8c8d; border-bottom: 2px solid #ecf0f1; padding-bottom: 15px; }
+        .topic-display { font-size: 20px; font-weight: bold; color: #2980b9; margin-bottom: 20px; text-align: left;}
+        .instruction-text { color: #7f8c8d; font-size: 14px; margin-bottom: 20px; text-align: left; font-style: italic; }
+
+        /* Scrambler specific UI */
+        .sortable-list { display: flex; flex-direction: column; gap: 12px; min-height: 300px; padding-bottom: 20px; }
+        
+        .sentence-block { 
+            background: white; 
+            padding: 18px 20px; 
+            border-radius: 8px; 
+            border: 2px solid #bdc3c7; 
+            cursor: grab; 
+            text-align: left; 
+            font-size: 16px; 
+            line-height: 1.5; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+            display: flex;
+            align-items: center;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+        
+        .sentence-block:active { cursor: grabbing; }
+
+        /* The icon on the left of the block to indicate draggability */
+        .drag-handle {
+            color: #bdc3c7;
+            margin-right: 15px;
+            font-size: 20px;
+            cursor: grab;
+        }
+
+        /* SortableJS specific classes for animations */
+        .sortable-ghost { opacity: 0.4; background-color: #f0f3f4; border: 2px dashed #95a5a6; }
+        .sortable-drag { box-shadow: 0 10px 20px rgba(0,0,0,0.15); cursor: grabbing !important; }
+        
+        /* Feedback Animations */
+        .correct-anim { border-color: #27ae60 !important; background-color: #eafaf1 !important; }
+        .wrong-anim { border-color: #e74c3c !important; background-color: #fdedec !important; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div id="setupScreen" class="setup-screen active">
+        <h1>Paragraph Scrambler</h1>
+        <p>Drag and drop the sentences to build a perfectly cohesive academic paragraph.</p>
+        <br>
+        <button onclick="startGame()">Start Drill</button>
+        <button onclick="window.location.href='index.html'" style="background-color: #95a5a6;">Back to Menu</button>
+    </div>
+
+    <div id="gameScreen" class="game-screen">
+        <div class="stats">
+            <span id="scoreDisplay">Score: 0</span>
+            <span id="questionCounter">Paragraph: 1/10</span>
+        </div>
+        
+        <div class="topic-display" id="topicDisplay">Topic: Loading...</div>
+        <div class="instruction-text">Drag the blocks up and down to reorder them.</div>
+
+        <div id="sortableList" class="sortable-list"></div>
+
+        <div class="button-group">
+            <button id="checkBtn" onclick="checkAnswer()">Check Paragraph</button>
+            <button id="showAnswerBtn" onclick="showCorrectAnswer()">I'm Stuck (Show Answer)</button>
+            <button id="nextBtn" onclick="nextQuestion()">Next Paragraph</button>
+        </div>
+    </div>
+
+    <div id="endScreen" class="end-screen">
+        <h1>Drill Complete</h1>
+        <p id="finalScore" style="font-size: 24px; font-weight: bold;"></p>
+        <p id="feedbackText"></p>
+        <button onclick="window.location.reload()">Try Again</button>
+        <button onclick="window.location.href='index.html'" style="background-color: #95a5a6;">Back to Menu</button>
+    </div>
+</div>
+
+<script>
+    let currentPool = [];
+    let currentIndex = 0;
+    let score = 0;
+    let originalSentences = []; 
+    let sortableInstance = null; // Holds the drag-and-drop engine
+    
+    function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
+    }
+
+    function startGame() {
+        if (typeof scramblerData === 'undefined' || scramblerData.length === 0) {
+            alert("Error: No data found in data_scrambler.js");
+            return;
+        }
+
+        currentPool = shuffleArray([...scramblerData]).slice(0, 10); 
+        currentIndex = 0;
+        score = 0;
+
+        document.getElementById('setupScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.add('active');
+        
+        loadParagraph();
+    }
+
+    function loadParagraph() {
+        if (currentIndex >= currentPool.length) {
+            endGame();
+            return;
+        }
+
+        const currentPara = currentPool[currentIndex];
+        document.getElementById('topicDisplay').innerText = `Topic: ${currentPara.topic}`;
+        document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+        document.getElementById('questionCounter').innerText = `Paragraph: ${currentIndex + 1}/${currentPool.length}`;
+        
+        originalSentences = [...currentPara.sentences];
+        
+        // Shuffle sentences
+        let shuffled;
+        do {
+            shuffled = shuffleArray([...originalSentences]);
+        } while (JSON.stringify(shuffled) === JSON.stringify(originalSentences));
+
+        const listEl = document.getElementById('sortableList');
+        listEl.innerHTML = '';
+        
+        // Reset Buttons
+        document.getElementById('checkBtn').style.display = 'block';
+        document.getElementById('showAnswerBtn').style.display = 'block';
+        document.getElementById('nextBtn').style.display = 'none';
+
+        // Generate the draggable blocks
+        shuffled.forEach(text => {
+            let div = document.createElement('div');
+            div.className = 'sentence-block';
+            
+            // Add a little grip icon (≡) on the left side
+            div.innerHTML = `<span class="drag-handle">≡</span> <span class="sentence-text">${text}</span>`;
+            listEl.appendChild(div);
+        });
+
+        // Initialize or re-initialize the SortableJS drag-and-drop engine
+        if (sortableInstance) {
+            sortableInstance.destroy();
+        }
+        
+        sortableInstance = new Sortable(listEl, {
+            animation: 150, // smooth sliding animation
+            ghostClass: 'sortable-ghost',
+            dragClass: 'sortable-drag',
+            // The moment they start dragging a block, remove any red/green feedback
+            onStart: function (evt) {
+                clearFeedback();
+            }
+        });
+    }
+
+    function clearFeedback() {
+        const allBlocks = document.querySelectorAll('.sentence-block');
+        allBlocks.forEach(b => b.classList.remove('correct-anim', 'wrong-anim'));
+    }
+
+    function showCorrectAnswer() {
+        const listEl = document.getElementById('sortableList');
+        listEl.innerHTML = '';
+
+        originalSentences.forEach(text => {
+            let div = document.createElement('div');
+            div.className = 'sentence-block correct-anim';
+            div.innerHTML = `<span class="drag-handle">✓</span> <span class="sentence-text">${text}</span>`;
+            listEl.appendChild(div);
+        });
+
+        // Disable dragging when showing answer
+        sortableInstance.options.disabled = true;
+
+        document.getElementById('checkBtn').style.display = 'none';
+        document.getElementById('showAnswerBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'block';
+    }
+
+    function checkAnswer() {
+        const listEl = document.getElementById('sortableList');
+        const userBlocks = listEl.children;
+        let allCorrect = true;
+
+        clearFeedback(); 
+
+        for (let i = 0; i < userBlocks.length; i++) {
+            // Extract the actual text from the span inside the block
+            let blockText = userBlocks[i].querySelector('.sentence-text').innerText;
+            
+            if (blockText === originalSentences[i]) {
+                userBlocks[i].classList.add('correct-anim');
+            } else {
+                userBlocks[i].classList.add('wrong-anim');
+                allCorrect = false;
+            }
+        }
+
+        if (allCorrect) {
+            score++;
+            document.getElementById('checkBtn').style.display = 'none';
+            document.getElementById('showAnswerBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'block';
+            
+            // Turn off dragging once they win
+            sortableInstance.options.disabled = true;
+            
+            // Change the grab handles to checkmarks
+            for(let i = 0; i < userBlocks.length; i++) { 
+                userBlocks[i].querySelector('.drag-handle').innerText = '✓';
+                userBlocks[i].style.cursor = 'default';
+            }
+        }
+    }
+
+    function nextQuestion() {
+        currentIndex++;
+        loadParagraph();
+    }
+
+    function endGame() {
+        document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.add('active');
+        
+        const percentage = (score / currentPool.length) * 100;
+        document.getElementById('finalScore').innerText = `${score} out of ${currentPool.length} (${percentage.toFixed(0)}%)`;
+        
+        let feedback = "";
+        if (percentage === 100) feedback = "Flawless! You perfectly understand English academic cohesion.";
+        else if (percentage >= 60) feedback = "Good effort. Take your time to read the paragraph slowly after 'Checking' to see why the red sentences failed.";
+        else feedback = "We need to practice essay structuring. Look for clues like 'However', 'Therefore', and 'For instance'.";
+        document.getElementById('feedbackText').innerText = feedback;
+    }
+</script>
+
+</body>
+</html>

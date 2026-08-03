@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Skim & Scan Radar</title>
+    <script src="data_skimming.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; display: flex; flex-direction: column; align-items: center; padding: 50px 20px; margin: 0; }
+        .container { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 800px; width: 100%; text-align: center; }
+        h1 { color: #2c3e50; margin-top: 0; }
+        .setup-screen, .game-screen, .end-screen { display: none; }
+        .active { display: block; }
+        
+        .setup-controls { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; align-items: center; }
+        .input-group { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 300px; }
+        .input-group label { font-weight: bold; margin-bottom: 5px; text-align: center; color: #2c3e50;}
+        input[type="number"] { padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 6px; text-align: center; }
+
+        button { background-color: #e74c3c; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; transition: background 0.3s ease; width: 100%; max-width: 300px; display: block; margin: 10px auto; font-weight: bold; }
+        button:hover { background-color: #c0392b; }
+
+        .timer-wrapper { margin: 15px 0; width: 100%; }
+        .timer-bar-container { width: 100%; height: 12px; background-color: #ecf0f1; border-radius: 6px; overflow: hidden; margin-bottom: 8px; }
+        .timer-bar { height: 100%; width: 100%; background-color: #e74c3c; transition: width 0.1s linear; }
+        .timer-display { font-size: 18px; font-weight: bold; color: #7f8c8d; text-align: right; }
+        .stats { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 18px; color: #7f8c8d; }
+
+        /* The prompt the user must find */
+        .radar-prompt { font-size: 22px; font-weight: bold; color: #c0392b; margin-bottom: 25px; padding: 20px; background-color: #fdedec; border-radius: 8px; border: 2px solid #e74c3c; }
+
+        /* The text area */
+        .reading-text { font-size: 18px; line-height: 2; text-align: left; background: #fdfbf7; padding: 30px; border: 2px dashed #bdc3c7; border-radius: 8px; }
+        
+        /* Individual clickable words */
+        .scan-word { display: inline-block; cursor: pointer; padding: 0 2px; border-radius: 3px; transition: background-color 0.1s; }
+        .scan-word:hover { background-color: #e0e6e8; }
+        
+        /* Feedback animations */
+        .word-wrong { background-color: #e74c3c !important; color: white; transition: all 0.2s; }
+        .word-correct { background-color: #27ae60 !important; color: white; font-weight: bold; transform: scale(1.1); transition: all 0.2s; }
+
+        .instruction-text { color: #7f8c8d; font-size: 14px; margin-bottom: 20px; font-style: italic; }
+
+        /* Review Screen Styles */
+        .review-container { margin-top: 30px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 20px; max-height: 400px; overflow-y: auto; text-align: left; }
+        .review-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #ecf0f1; }
+        .review-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .review-q { font-weight: bold; margin-bottom: 8px; font-size: 16px; color: #2c3e50; }
+        .review-ans { font-size: 15px; margin: 4px 0; color: #555; }
+        .correct-text { color: #27ae60; font-weight: bold; }
+        .incorrect-text { color: #c0392b; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div id="setupScreen" class="setup-screen active">
+        <h1>Skim & Scan Radar</h1>
+        <p>Break the habit of reading every word. Scan the paragraph and click the exact target word before the timer runs out!</p>
+        
+        <div class="setup-controls">
+            <div class="input-group" style="margin-top: 10px;">
+                <label for="questionCount">Number of Passages:</label>
+                <input type="number" id="questionCount" value="10" min="1">
+            </div>
+
+            <div class="input-group">
+                <label for="timeInput">Timer Duration (Sec):</label>
+                <input type="number" id="timeInput" value="20" min="5" max="60">
+            </div>
+            
+            <button onclick="startGame()" style="margin-top: 20px;">Start Radar</button>
+            <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+        </div>
+    </div>
+
+    <div id="gameScreen" class="game-screen">
+        <div class="stats">
+            <span id="scoreDisplay">Score: 0</span>
+            <span id="questionCounter">Passage: 1/10</span>
+        </div>
+        
+        <div class="timer-wrapper">
+            <div class="timer-bar-container">
+                <div id="timerBar" class="timer-bar"></div>
+            </div>
+            <div class="timer-display" id="timerDisplay">20.0s</div>
+        </div>
+
+        <div class="radar-prompt" id="radarPrompt">Loading...</div>
+        <div class="instruction-text">Don't read the text. Scan it. Click the word that answers the prompt above.</div>
+
+        <div id="readingText" class="reading-text"></div>
+    </div>
+
+    <div id="endScreen" class="end-screen">
+        <h1>Radar Complete</h1>
+        <p id="finalScore" style="font-size: 24px; font-weight: bold;"></p>
+        <p id="feedbackText"></p>
+        <button onclick="resetGame()">Return to Setup</button>
+        <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+
+        <div id="reviewSection" class="review-container">
+            <h3 style="margin-top: 0; color: #2c3e50;">Performance Review</h3>
+            <div id="reviewList"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentPool = [];
+    let currentIndex = 0;
+    let score = 0;
+    
+    let globalTimeLimit = 20; 
+    let timeLeft = 20;
+    let timerInterval;
+    let currentTargetWord = "";
+    
+    // Tracking Variables for Review
+    let sessionHistory = [];
+    let currentMistakes = [];
+
+    function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
+    }
+
+    function startGame() {
+        if (typeof skimmingData === 'undefined' || skimmingData.length === 0) {
+            alert("Error: No data found in data_skimming.js");
+            return;
+        }
+
+        // Fetch inputs from user
+        const timeInput = document.getElementById('timeInput').value;
+        globalTimeLimit = parseInt(timeInput) > 0 ? parseInt(timeInput) : 20;
+        
+        const countInput = document.getElementById('questionCount').value;
+        let requestedCount = parseInt(countInput) > 0 ? parseInt(countInput) : 10;
+
+        currentPool = shuffleArray([...skimmingData]).slice(0, requestedCount);
+        currentIndex = 0;
+        score = 0;
+        sessionHistory = [];
+
+        document.getElementById('setupScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.add('active');
+        
+        loadPassage();
+    }
+
+    function loadPassage() {
+        clearInterval(timerInterval);
+        
+        if (currentIndex >= currentPool.length) {
+            endGame();
+            return;
+        }
+
+        currentMistakes = []; // Reset mistakes for the new passage
+
+        const currentTask = currentPool[currentIndex];
+        document.getElementById('radarPrompt').innerText = `TARGET: ${currentTask.prompt}`;
+        document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+        document.getElementById('questionCounter').innerText = `Passage: ${currentIndex + 1}/${currentPool.length}`;
+        
+        currentTargetWord = currentTask.target.toLowerCase().trim();
+
+        const textContainer = document.getElementById('readingText');
+        textContainer.innerHTML = '';
+        
+        // Split the paragraph into words and wrap them in clickable spans
+        const words = currentTask.text.split(' ');
+        words.forEach(word => {
+            let span = document.createElement('span');
+            span.innerText = word + ' ';
+            span.className = 'scan-word';
+            span.onclick = function() { checkWord(word, this); };
+            textContainer.appendChild(span);
+        });
+
+        timeLeft = globalTimeLimit;
+        document.getElementById('timerDisplay').innerText = timeLeft.toFixed(1) + "s";
+        document.getElementById('timerBar').style.width = "100%";
+        
+        timerInterval = setInterval(updateTimer, 100);
+    }
+
+    function updateTimer() {
+        timeLeft -= 0.1;
+        document.getElementById('timerDisplay').innerText = Math.max(0, timeLeft).toFixed(1) + "s";
+        document.getElementById('timerBar').style.width = `${Math.max(0, (timeLeft / globalTimeLimit) * 100)}%`;
+        
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            
+            // Log timeout
+            sessionHistory.push({
+                prompt: currentPool[currentIndex].prompt,
+                target: currentTargetWord,
+                status: "Timed Out",
+                mistakes: [...currentMistakes]
+            });
+
+            currentIndex++;
+            loadPassage(); // Timed out, move to next
+        }
+    }
+
+    function checkWord(clickedWord, element) {
+        // Strip punctuation from the clicked word (commas, periods, quotes) to compare purely the letters/numbers
+        const cleanClicked = clickedWord.replace(/^[.,;'\"!?()]+|[.,;'\"!?()]+$/g, "").toLowerCase().trim();        
+        if (cleanClicked === currentTargetWord) {
+            // Correct!
+            clearInterval(timerInterval);
+            element.classList.add('word-correct');
+            score++;
+            
+            // Log Success
+            sessionHistory.push({
+                prompt: currentPool[currentIndex].prompt,
+                target: currentTargetWord,
+                status: "Found",
+                mistakes: [...currentMistakes]
+            });
+
+            // Disable further clicks
+            const allWords = document.querySelectorAll('.scan-word');
+            allWords.forEach(w => w.onclick = null);
+
+            setTimeout(() => {
+                currentIndex++;
+                loadPassage();
+            }, 1000);
+
+        } else {
+            // Wrong click
+            element.classList.add('word-wrong');
+            currentMistakes.push(cleanClicked); // Track the misclick
+            
+            setTimeout(() => {
+                element.classList.remove('word-wrong');
+            }, 300); // Quick red flash and disappear
+        }
+    }
+
+    function endGame() {
+        document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.add('active');
+        
+        const percentage = (score / currentPool.length) * 100;
+        document.getElementById('finalScore').innerText = `${score} out of ${currentPool.length} (${percentage.toFixed(0)}%)`;
+        
+        let feedback = "";
+        if (percentage >= 80) feedback = "Excellent! You have incredibly fast visual tracking skills.";
+        else if (percentage >= 50) feedback = "Good speed, but try to stop reading the sentences. Just scan for shapes and capital letters.";
+        else feedback = "You are likely trying to read the whole paragraph. Stop translating! Let your eyes jump around the text.";
+        document.getElementById('feedbackText').innerText = feedback;
+
+        generateReviewSection();
+    }
+
+    function generateReviewSection() {
+        const reviewList = document.getElementById('reviewList');
+        reviewList.innerHTML = ''; 
+
+        sessionHistory.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'review-item';
+            
+            const qText = `<div class="review-q">${index + 1}. ${item.prompt}</div>`;
+            
+            let statusBadge = item.status === "Found" 
+                ? `<span class="correct-text">Found Before Timeout</span>` 
+                : `<span class="incorrect-text">Timed Out</span>`;
+
+            let ansText = `<div class="review-ans">Target Word: <span class="correct-text" style="text-transform: uppercase;">${item.target}</span> (${statusBadge})</div>`;
+            
+            if (item.mistakes.length > 0) {
+                // Remove empty strings if they misclicked on a double space or weird punctuation
+                const cleanMistakes = item.mistakes.filter(m => m !== "");
+                if (cleanMistakes.length > 0) {
+                    ansText += `<div class="review-ans">Incorrect Clicks: <span class="incorrect-text">${cleanMistakes.join(', ')}</span></div>`;
+                }
+            }
+
+            div.innerHTML = qText + ansText;
+            reviewList.appendChild(div);
+        });
+    }
+
+    function resetGame() {
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('setupScreen').classList.add('active');
+    }
+</script>
+
+</body>
+</html>

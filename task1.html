@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Data Trends</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="data_task1.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; display: flex; flex-direction: column; align-items: center; padding: 50px 20px; margin: 0; }
+        .container { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 800px; width: 100%; text-align: center; }
+        h1 { color: #2c3e50; margin-top: 0; }
+        .setup-screen, .game-screen, .end-screen { display: none; }
+        .active { display: block; }
+        
+        .setup-controls { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; align-items: center; }
+        .input-group { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 300px; }
+        .input-group label { font-weight: bold; margin-bottom: 5px; text-align: center; color: #2c3e50;}
+        input[type="number"] { padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 6px; text-align: center; }
+
+        button { background-color: #16a085; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; transition: background 0.3s ease; width: 100%; max-width: 300px; display: block; margin: 10px auto; font-weight: bold; }
+        button:hover { background-color: #1abc9c; }
+
+        .timer-wrapper { margin: 15px 0; width: 100%; }
+        .timer-bar-container { width: 100%; height: 12px; background-color: #ecf0f1; border-radius: 6px; overflow: hidden; margin-bottom: 8px; }
+        .timer-bar { height: 100%; width: 100%; background-color: #16a085; transition: width 0.1s linear; }
+        .timer-display { font-size: 18px; font-weight: bold; color: #7f8c8d; text-align: right; }
+        .stats { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 18px; color: #7f8c8d; }
+
+        .chart-container { position: relative; height: 350px; width: 100%; margin-bottom: 20px; }
+
+        .question-text { font-size: 18px; font-weight: bold; color: #2c3e50; margin-bottom: 20px; padding: 15px; background-color: #e8f8f5; border-left: 4px solid #16a085; border-radius: 4px; text-align: left; }
+        
+        .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        @media (max-width: 600px) { .options-grid { grid-template-columns: 1fr; } }
+        
+        .option-btn { background-color: #ecf0f1; color: #2c3e50; border: 2px solid #bdc3c7; max-width: 100%; text-align: left; font-weight: normal; }
+        .option-btn:hover { background-color: #d5dbdb; }
+
+        /* Updated Review Screen Styles */
+        .review-container { margin-top: 30px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 20px; max-height: 600px; overflow-y: auto; text-align: left; }
+        .review-item { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #ecf0f1; }
+        .review-item:last-child { border-bottom: none; }
+        .review-q { font-weight: bold; margin-bottom: 8px; font-size: 20px; color: #2c3e50; }
+        .review-chart-container { position: relative; height: 250px; width: 100%; margin: 15px 0; background: white; padding: 10px; border-radius: 8px; border: 1px solid #eee;}
+        .correct-text { color: #27ae60; font-weight: bold; }
+        .incorrect-text { color: #c0392b; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="setupScreen" class="setup-screen active">
+        <h1>Data Trends</h1>
+        <p>Master the vocabulary of proportions, comparisons, and trajectories for Band 7.5+.</p>
+        
+        <div class="setup-controls">
+            <div class="input-group" style="margin-top: 10px;">
+                <label for="graphCount">Number of Graphs to Analyze:</label>
+                <input type="number" id="graphCount" value="5" min="1">
+            </div>
+
+            <div class="input-group">
+                <label for="timeInput">Time per Question (Sec):</label>
+                <input type="number" id="timeInput" value="20" min="5" max="60">
+            </div>
+            
+            <button onclick="startGame()" style="margin-top: 20px;">Start Drill</button>
+            <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+        </div>
+    </div>
+
+    <div id="gameScreen" class="game-screen">
+        <div class="stats">
+            <span id="scoreDisplay">Score: 0</span>
+            <span id="questionCounter">Graph: 1/5 | Q: 1/3</span>
+        </div>
+        
+        <div class="timer-wrapper">
+            <div class="timer-bar-container">
+                <div id="timerBar" class="timer-bar"></div>
+            </div>
+            <div class="timer-display" id="timerDisplay">20.0s</div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <div class="question-text" id="questionText">Loading...</div>
+        <div class="options-grid" id="optionsGrid"></div>
+    </div>
+
+    <div id="endScreen" class="end-screen">
+        <h1>Drill Complete</h1>
+        <p id="finalScore" style="font-size: 24px; font-weight: bold;"></p>
+        <p id="feedbackText"></p>
+        <button onclick="resetGame()">Return to Setup</button>
+        <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+
+        <div id="reviewSection" class="review-container">
+            <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px;">Performance Review</h3>
+            <div id="reviewList"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentPool = [];
+    let currentGraphIndex = 0;
+    let currentSubIndex = 0;
+    let score = 0;
+    let totalQuestions = 0;
+    let globalTimeLimit = 20; 
+    let timeLeft = 20;
+    let timerInterval;
+    let chartInstance = null;
+    let sessionHistory = [];
+
+    // The core color palettes used to dynamically style the graphs
+    const chartColors = ['#16a085', '#2980b9', '#8e44ad', '#e67e22', '#c0392b'];
+    const chartBgColors = [
+        'rgba(22, 160, 133, 0.4)', 
+        'rgba(41, 128, 185, 0.4)', 
+        'rgba(142, 68, 173, 0.4)', 
+        'rgba(230, 126, 34, 0.4)', 
+        'rgba(192, 57, 43, 0.4)'
+    ];
+
+    function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
+    }
+
+    function startGame() {
+        if (typeof task1Data === 'undefined' || task1Data.length === 0) {
+            alert("Error: No data found in data_task1.js");
+            return;
+        }
+
+        const timeInput = document.getElementById('timeInput').value;
+        globalTimeLimit = parseInt(timeInput) > 0 ? parseInt(timeInput) : 20;
+        
+        const countInput = document.getElementById('graphCount').value;
+        let requestedCount = parseInt(countInput) > 0 ? parseInt(countInput) : 5;
+
+        currentPool = shuffleArray([...task1Data]).slice(0, requestedCount);
+        currentGraphIndex = 0;
+        currentSubIndex = 0;
+        score = 0;
+        sessionHistory = [];
+
+        totalQuestions = currentPool.reduce((acc, graph) => acc + graph.questions.length, 0);
+
+        document.getElementById('setupScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.add('active');
+        
+        loadTask();
+    }
+
+    function loadTask() {
+        clearInterval(timerInterval);
+        
+        if (currentGraphIndex >= currentPool.length) {
+            endGame();
+            return;
+        }
+
+        const currentGraph = currentPool[currentGraphIndex];
+        const currentQ = currentGraph.questions[currentSubIndex];
+        
+        document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+        document.getElementById('questionCounter').innerText = `Graph: ${currentGraphIndex + 1}/${currentPool.length} | Q: ${currentSubIndex + 1}/${currentGraph.questions.length}`;
+        document.getElementById('questionText').innerText = currentQ.prompt;
+
+        if (currentSubIndex === 0) {
+            renderChart(currentGraph, 'myChart');
+        }
+
+        const optionsGrid = document.getElementById('optionsGrid');
+        optionsGrid.innerHTML = '';
+        
+        const allOptions = shuffleArray([currentQ.correct, ...currentQ.wrong]);
+
+        allOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'option-btn';
+            btn.innerText = opt;
+            btn.onclick = () => checkAnswer(opt, currentQ.correct, currentGraph.title, currentQ.prompt);
+            optionsGrid.appendChild(btn);
+        });
+
+        timeLeft = globalTimeLimit;
+        document.getElementById('timerDisplay').innerText = timeLeft.toFixed(1) + "s";
+        document.getElementById('timerBar').style.width = "100%";
+        
+        timerInterval = setInterval(() => updateTimer(currentQ.correct, currentGraph.title, currentQ.prompt), 100);
+    }
+
+    // A unified rendering function that works for both the main game and the review screen
+    function renderChart(graphData, canvasId) {
+        const ctx = document.getElementById(canvasId).getContext('2d');
+        
+        // Only destroy the main game chart if we are reusing that canvas
+        if (canvasId === 'myChart' && chartInstance) {
+            chartInstance.destroy();
+        }
+
+        let formattedDatasets = graphData.datasets.map((ds, index) => {
+            let base = { label: ds.label, data: ds.data, borderWidth: 2 };
+
+            if (graphData.chartType === 'pie') {
+                base.backgroundColor = chartBgColors;
+                base.borderColor = chartColors;
+            } else {
+                base.borderColor = chartColors[index % chartColors.length];
+                base.backgroundColor = chartBgColors[index % chartBgColors.length];
+                
+                if (graphData.chartType === 'line') {
+                    base.fill = true;
+                    base.tension = 0.3;
+                    base.pointBackgroundColor = '#2c3e50';
+                    base.pointRadius = 5;
+                    base.pointHoverRadius = 8;
+                }
+            }
+            return base;
+        });
+
+        let scalesConfig = graphData.chartType === 'pie' ? {} : { y: { beginAtZero: true } };
+
+        const newChart = new Chart(ctx, {
+            type: graphData.chartType,
+            data: { labels: graphData.labels, datasets: formattedDatasets },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: { duration: (canvasId === 'myChart' ? 600 : 0) }, // Disable animation on review screen
+                plugins: { legend: { display: true, position: 'top' } },
+                scales: scalesConfig
+            }
+        });
+
+        if (canvasId === 'myChart') {
+            chartInstance = newChart;
+        }
+    }
+
+    function updateTimer(correctAnswer, graphTitle, promptText) {
+        timeLeft -= 0.1;
+        document.getElementById('timerDisplay').innerText = Math.max(0, timeLeft).toFixed(1) + "s";
+        document.getElementById('timerBar').style.width = `${Math.max(0, (timeLeft / globalTimeLimit) * 100)}%`;
+        
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            sessionHistory.push({ 
+                title: graphTitle, 
+                graphData: currentPool[currentGraphIndex], // Save raw data for review
+                prompt: promptText, 
+                userAnswer: "Timed Out", 
+                correctAnswer: correctAnswer, 
+                isCorrect: false 
+            });
+            advanceQuestion(); 
+        }
+    }
+
+    function checkAnswer(selected, correct, graphTitle, promptText) {
+        clearInterval(timerInterval);
+        const isCorrect = (selected === correct);
+        if (isCorrect) score++;
+
+        sessionHistory.push({ 
+            title: graphTitle, 
+            graphData: currentPool[currentGraphIndex], // Save raw data for review
+            prompt: promptText, 
+            userAnswer: selected, 
+            correctAnswer: correct, 
+            isCorrect: isCorrect 
+        });
+        advanceQuestion();
+    }
+
+    function advanceQuestion() {
+        currentSubIndex++;
+        if (currentSubIndex >= currentPool[currentGraphIndex].questions.length) {
+            currentGraphIndex++;
+            currentSubIndex = 0;
+        }
+        loadTask();
+    }
+
+    function endGame() {
+        document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.add('active');
+        
+        const percentage = (score / totalQuestions) * 100;
+        document.getElementById('finalScore').innerText = `${score} out of ${totalQuestions} (${percentage.toFixed(0)}%)`;
+        
+        let feedback = "";
+        if (percentage >= 80) feedback = "Excellent! You are perfectly deploying Band 7.5 vocabulary across all graph types.";
+        else if (percentage >= 50) feedback = "Good effort. Review the graphs below to see exactly how your vocabulary matches the visual shape.";
+        else feedback = "We need to memorize the vocabulary. Stop translating 'went up' and 'went down' in your head!";
+        document.getElementById('feedbackText').innerText = feedback;
+
+        generateReviewSection();
+    }
+
+    function generateReviewSection() {
+        const reviewList = document.getElementById('reviewList');
+        reviewList.innerHTML = ''; 
+
+        // 1. Group the questions by the Graph Title so we don't draw the same graph 3 times
+        let groupedHistory = [];
+        sessionHistory.forEach(item => {
+            let group = groupedHistory.find(g => g.title === item.title);
+            if (!group) {
+                group = { title: item.title, graphData: item.graphData, questions: [] };
+                groupedHistory.push(group);
+            }
+            group.questions.push(item);
+        });
+
+        // 2. Loop through each group, create a canvas, and list the questions
+        groupedHistory.forEach((group, index) => {
+            const div = document.createElement('div');
+            div.className = 'review-item';
+            
+            const canvasId = `reviewChart_${index}`;
+            const titleHtml = `<div class="review-q">${index + 1}. ${group.title}</div>`;
+            const canvasHtml = `<div class="review-chart-container"><canvas id="${canvasId}"></canvas></div>`;
+            
+            let questionsHtml = '';
+            group.questions.forEach((q, qIndex) => {
+                questionsHtml += `<div style="margin-top: 15px; background: #fff; padding: 10px; border-radius: 6px; border: 1px solid #ecf0f1;">`;
+                questionsHtml += `<div style="font-style: italic; margin-bottom: 5px; color: #555;">Q${qIndex + 1}: "${q.prompt}"</div>`;
+                
+                if (q.isCorrect) {
+                    questionsHtml += `<div>Your Answer: <span class="correct-text">${q.userAnswer}</span> (Correct)</div>`;
+                } else {
+                    questionsHtml += `<div>Your Answer: <span class="incorrect-text">${q.userAnswer}</span></div>`;
+                    questionsHtml += `<div>Correct Answer: <span class="correct-text">${q.correctAnswer}</span></div>`;
+                }
+                questionsHtml += `</div>`;
+            });
+
+            div.innerHTML = titleHtml + canvasHtml + questionsHtml;
+            reviewList.appendChild(div);
+
+            // 3. Render the chart inside the newly created canvas using the unified render function
+            renderChart(group.graphData, canvasId);
+        });
+    }
+
+    function resetGame() {
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('setupScreen').classList.add('active');
+    }
+</script>
+
+</body>
+</html>
