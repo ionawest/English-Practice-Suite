@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Task 2 Idea Sorter</title>
+    <script src="data_ideas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; display: flex; flex-direction: column; align-items: center; padding: 50px 20px; margin: 0; }
+        .container { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 1000px; width: 100%; text-align: center; }
+        h1 { color: #2c3e50; margin-top: 0; }
+        .setup-screen, .game-screen, .end-screen { display: none; }
+        .active { display: block; }
+        
+        .setup-controls { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; align-items: center; }
+        .input-group { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 300px; }
+        .input-group label { font-weight: bold; margin-bottom: 5px; text-align: center; color: #2c3e50;}
+        input[type="number"] { padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 6px; text-align: center; }
+
+        button { background-color: #2980b9; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; transition: background 0.3s ease; width: 100%; max-width: 300px; display: block; margin: 10px auto; font-weight: bold; }
+        button:hover { background-color: #2471a3; }
+        #nextBtn { background-color: #27ae60; display: none; }
+        #nextBtn:hover { background-color: #2ecc71; }
+
+        .timer-wrapper { margin: 15px 0; width: 100%; }
+        .timer-bar-container { width: 100%; height: 12px; background-color: #ecf0f1; border-radius: 6px; overflow: hidden; margin-bottom: 8px; }
+        .timer-bar { height: 100%; width: 100%; background-color: #2980b9; transition: width 0.1s linear; }
+        .timer-display { font-size: 18px; font-weight: bold; color: #7f8c8d; text-align: right; }
+        .stats { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 18px; color: #7f8c8d; }
+
+        /* Sorter Specific UI */
+        .prompt-box { font-size: 20px; font-weight: bold; color: #2c3e50; padding: 20px; background-color: #ebf5fb; border-left: 5px solid #2980b9; border-radius: 6px; margin-bottom: 30px; text-align: left; line-height: 1.5; }
+        
+        .bank-container { background: #fdfbf7; border: 2px dashed #bdc3c7; border-radius: 8px; padding: 15px; margin-bottom: 30px; min-height: 100px;}
+        .bank-label { font-weight: bold; color: #7f8c8d; margin-bottom: 15px; text-align: left;}
+
+        .buckets-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
+        @media (max-width: 768px) { .buckets-grid { grid-template-columns: 1fr; } }
+        
+        .bucket { background: #f4f6f7; border: 2px solid #bdc3c7; border-radius: 8px; padding: 15px; display: flex; flex-direction: column; min-height: 250px; }
+        .bucket-title { font-weight: bold; font-size: 16px; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #ddd; color: #2c3e50; }
+        .bucket-trap .bucket-title { color: #c0392b; }
+        
+        .sortable-list { display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+
+        .argument-block { background: white; padding: 12px; border-radius: 6px; border: 1px solid #ccc; cursor: grab; text-align: left; font-size: 15px; line-height: 1.4; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; align-items: flex-start; transition: border-color 0.2s, background-color 0.2s; }
+        .argument-block:active { cursor: grabbing; }
+        .drag-handle { color: #bdc3c7; margin-right: 10px; font-size: 18px; cursor: grab; padding-top: 2px; font-weight: bold;}
+        
+        .sortable-ghost { opacity: 0.4; background-color: #eaf2f8; border: 2px dashed #2980b9; }
+        
+        /* Feedback */
+        .correct-anim { border-color: #27ae60 !important; background-color: #eafaf1 !important; }
+        .wrong-anim { border-color: #e74c3c !important; background-color: #fdedec !important; }
+
+        /* Review Screen Styles */
+        .review-container { margin-top: 30px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 20px; max-height: 600px; overflow-y: auto; text-align: left; }
+        .review-item { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 2px solid #ecf0f1; }
+        .review-item:last-child { border-bottom: none; }
+        .review-q { font-weight: bold; margin-bottom: 15px; font-size: 18px; color: #2c3e50; line-height: 1.4; }
+        
+        .review-results-grid { display: flex; flex-direction: column; gap: 10px; }
+        .review-correct-box { background: #eafaf1; border: 1px solid #27ae60; padding: 15px; border-radius: 6px; }
+        .review-wrong-box { background: #fdedec; border: 1px solid #e74c3c; padding: 15px; border-radius: 6px; }
+        .review-arg-text { margin-bottom: 10px; font-size: 15px; color: #333; line-height: 1.4;}
+        
+        .correct-text { color: #27ae60; font-weight: bold; }
+        .incorrect-text { color: #c0392b; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div id="setupScreen" class="setup-screen active">
+        <h1>Task 2 Idea Sorter</h1>
+        <p>Brainstorming speed drill. Drag the arguments into the correct buckets. Beware of the off-topic traps!</p>
+        
+        <div class="setup-controls">
+            <div class="input-group" style="margin-top: 10px;">
+                <label for="promptCount">Number of Prompts:</label>
+                <input type="number" id="promptCount" value="5" min="1">
+            </div>
+
+            <div class="input-group">
+                <label for="timeInput">Time per Prompt (Sec):</label>
+                <input type="number" id="timeInput" value="60" min="20" max="120">
+            </div>
+            
+            <button onclick="startGame()" style="margin-top: 20px;">Start Drill</button>
+            <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+        </div>
+    </div>
+
+    <div id="gameScreen" class="game-screen">
+        <div class="stats">
+            <span id="scoreDisplay">Score: 0</span>
+            <span id="questionCounter">Prompt: 1/5</span>
+        </div>
+        
+        <div class="timer-wrapper">
+            <div class="timer-bar-container">
+                <div id="timerBar" class="timer-bar"></div>
+            </div>
+            <div class="timer-display" id="timerDisplay">60.0s</div>
+        </div>
+
+        <div id="promptBox" class="prompt-box">Loading...</div>
+
+        <div class="bank-container">
+            <div class="bank-label">Unsorted Arguments:</div>
+            <div id="bankList" class="sortable-list"></div>
+        </div>
+
+        <div class="buckets-grid">
+            <div class="bucket">
+                <div id="bucketATitle" class="bucket-title">Side A</div>
+                <div id="bucketAList" class="sortable-list" data-bucket="A"></div>
+            </div>
+            <div class="bucket">
+                <div id="bucketBTitle" class="bucket-title">Side B</div>
+                <div id="bucketBList" class="sortable-list" data-bucket="B"></div>
+            </div>
+            <div class="bucket bucket-trap">
+                <div class="bucket-title">Irrelevant / Off-Topic</div>
+                <div id="bucketTrapList" class="sortable-list" data-bucket="Trap"></div>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <button id="checkBtn" onclick="checkAnswer()">Submit Organization</button>
+            <button id="nextBtn" onclick="nextQuestion()">Next Prompt</button>
+        </div>
+    </div>
+
+    <div id="endScreen" class="end-screen">
+        <h1>Drill Complete</h1>
+        <p id="finalScore" style="font-size: 24px; font-weight: bold;"></p>
+        <p id="feedbackText"></p>
+        <button onclick="resetGame()">Return to Setup</button>
+        <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+
+        <div id="reviewSection" class="review-container">
+            <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px;">Detailed Performance Review</h3>
+            <div id="reviewList"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentPool = [];
+    let currentIndex = 0;
+    let score = 0;
+    let sortableInstances = [];
+    
+    let globalTimeLimit = 60; 
+    let timeLeft = 60;
+    let timerInterval;
+    let sessionHistory = [];
+
+    function shuffleArray(array) {
+        return array.sort(() => Math.random() - 0.5);
+    }
+
+    function startGame() {
+        if (typeof ideasData === 'undefined' || ideasData.length === 0) {
+            alert("Error: No data found in data_ideas.js");
+            return;
+        }
+
+        const timeInput = document.getElementById('timeInput').value;
+        globalTimeLimit = parseInt(timeInput) > 0 ? parseInt(timeInput) : 60;
+        
+        const countInput = document.getElementById('promptCount').value;
+        let requestedCount = parseInt(countInput) > 0 ? parseInt(countInput) : 5;
+
+        currentPool = shuffleArray([...ideasData]).slice(0, requestedCount);
+        currentIndex = 0;
+        score = 0;
+        sessionHistory = [];
+
+        document.getElementById('setupScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.add('active');
+        
+        loadPrompt();
+    }
+
+    function loadPrompt() {
+        clearInterval(timerInterval);
+        
+        if (currentIndex >= currentPool.length) {
+            endGame();
+            return;
+        }
+
+        const task = currentPool[currentIndex];
+        
+        document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+        document.getElementById('questionCounter').innerText = `Prompt: ${currentIndex + 1}/${currentPool.length}`;
+        document.getElementById('promptBox').innerText = task.prompt;
+        
+        document.getElementById('bucketATitle').innerText = task.bucketA_label;
+        document.getElementById('bucketBTitle').innerText = task.bucketB_label;
+
+        const bankList = document.getElementById('bankList');
+        const bucketAList = document.getElementById('bucketAList');
+        const bucketBList = document.getElementById('bucketBList');
+        const bucketTrapList = document.getElementById('bucketTrapList');
+
+        bankList.innerHTML = '';
+        bucketAList.innerHTML = '';
+        bucketBList.innerHTML = '';
+        bucketTrapList.innerHTML = '';
+
+        document.getElementById('checkBtn').style.display = 'block';
+        document.getElementById('nextBtn').style.display = 'none';
+
+        // Shuffle arguments and remove the word "TRAP:" so the student doesn't see it
+        let shuffledArgs = shuffleArray([...task.arguments]);
+        
+        shuffledArgs.forEach(arg => {
+            let cleanText = arg.text.replace("TRAP: ", "");
+            let div = document.createElement('div');
+            div.className = 'argument-block';
+            div.dataset.correct = arg.type; // "A", "B", or "Trap"
+            div.innerHTML = `<span class="drag-handle">≡</span> <span class="arg-text">${cleanText}</span>`;
+            bankList.appendChild(div);
+        });
+
+        // Initialize SortableJS across all 4 lists
+        if (sortableInstances.length > 0) {
+            sortableInstances.forEach(inst => inst.destroy());
+        }
+        sortableInstances = [];
+
+        const listElements = [bankList, bucketAList, bucketBList, bucketTrapList];
+        listElements.forEach(el => {
+            sortableInstances.push(new Sortable(el, {
+                group: 'shared', // Allows dragging between all buckets
+                animation: 150,
+                ghostClass: 'sortable-ghost',
+                onStart: function (evt) {
+                    clearFeedback();
+                }
+            }));
+        });
+
+        timeLeft = globalTimeLimit;
+        document.getElementById('timerDisplay').innerText = timeLeft.toFixed(1) + "s";
+        document.getElementById('timerBar').style.width = "100%";
+        
+        timerInterval = setInterval(updateTimer, 100);
+    }
+
+    function clearFeedback() {
+        const allBlocks = document.querySelectorAll('.argument-block');
+        allBlocks.forEach(b => b.classList.remove('correct-anim', 'wrong-anim'));
+    }
+
+    function updateTimer() {
+        timeLeft -= 0.1;
+        document.getElementById('timerDisplay').innerText = Math.max(0, timeLeft).toFixed(1) + "s";
+        document.getElementById('timerBar').style.width = `${Math.max(0, (timeLeft / globalTimeLimit) * 100)}%`;
+        
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            forceGrade(true); // Grade immediately as timeout
+        }
+    }
+
+    function checkAnswer() {
+        // Only allow check if the bank is completely empty
+        const bankList = document.getElementById('bankList');
+        if (bankList.children.length > 0) {
+            alert("Please sort all arguments into a bucket before submitting.");
+            return;
+        }
+        forceGrade(false);
+    }
+
+    function forceGrade(isTimeout) {
+        clearInterval(timerInterval);
+        clearFeedback();
+
+        const task = currentPool[currentIndex];
+        const labelA = task.bucketA_label;
+        const labelB = task.bucketB_label;
+        const labelTrap = "Irrelevant / Off-Topic";
+
+        let allCorrect = true;
+        let promptResults = []; // Stores detailed results for the review screen
+
+        // Helper function to grade and record a specific block
+        function recordResult(block, userBucketId, userBucketLabel) {
+            let cleanText = block.querySelector('.arg-text').innerText;
+            let correctType = block.dataset.correct;
+            
+            // Map the correct ID to the actual text label
+            let correctLabel = correctType === "A" ? labelA : (correctType === "B" ? labelB : labelTrap);
+            
+            let isRight = (userBucketId === correctType);
+            if (!isRight) allCorrect = false;
+            
+            // Apply visual feedback
+            if (isRight) {
+                block.classList.add('correct-anim');
+            } else {
+                block.classList.add('wrong-anim');
+            }
+
+            // Push to review log
+            promptResults.push({
+                text: cleanText,
+                userLabel: userBucketLabel,
+                correctLabel: correctLabel,
+                isRight: isRight
+            });
+        }
+
+        // Grade Bucket A
+        Array.from(document.getElementById('bucketAList').children).forEach(block => recordResult(block, "A", labelA));
+        
+        // Grade Bucket B
+        Array.from(document.getElementById('bucketBList').children).forEach(block => recordResult(block, "B", labelB));
+
+        // Grade Trap Bucket
+        Array.from(document.getElementById('bucketTrapList').children).forEach(block => recordResult(block, "Trap", labelTrap));
+
+        // Grade Unsorted Bank (If timed out)
+        Array.from(document.getElementById('bankList').children).forEach(block => {
+            allCorrect = false;
+            block.classList.add('wrong-anim');
+            
+            let cleanText = block.querySelector('.arg-text').innerText;
+            let correctType = block.dataset.correct;
+            let correctLabel = correctType === "A" ? labelA : (correctType === "B" ? labelB : labelTrap);
+            
+            promptResults.push({
+                text: cleanText,
+                userLabel: "Unsorted (Timed Out)",
+                correctLabel: correctLabel,
+                isRight: false
+            });
+        });
+
+        if (allCorrect) {
+            score++;
+            document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
+        }
+
+        // Save detailed results to session history
+        sessionHistory.push({
+            prompt: task.prompt,
+            isCorrect: allCorrect,
+            results: promptResults
+        });
+
+        document.getElementById('checkBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'block';
+        
+        // Lock the boards and change handles
+        sortableInstances.forEach(inst => inst.options.disabled = true);
+        document.querySelectorAll('.argument-block').forEach(b => {
+            b.style.cursor = 'default';
+            b.querySelector('.drag-handle').innerText = b.classList.contains('correct-anim') ? '✓' : '✗';
+            if (b.classList.contains('wrong-anim')) {
+                b.querySelector('.drag-handle').style.color = '#c0392b';
+            } else {
+                b.querySelector('.drag-handle').style.color = '#27ae60';
+            }
+        });
+    }
+
+    function nextQuestion() {
+        currentIndex++;
+        loadPrompt();
+    }
+
+    function endGame() {
+        document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.add('active');
+        
+        const percentage = (score / currentPool.length) * 100;
+        document.getElementById('finalScore').innerText = `${score} out of ${currentPool.length} sorted perfectly (${percentage.toFixed(0)}%)`;
+        
+        let feedback = "";
+        if (percentage >= 80) feedback = "Excellent! You can rapidly identify strong arguments and dodge irrelevant traps.";
+        else if (percentage >= 50) feedback = "Good effort. Be very careful with the 'Off-Topic' traps. Just because an argument is true doesn't mean it answers the prompt.";
+        else feedback = "We need to practice planning. Review the exact arguments below to see where they actually belong.";
+        document.getElementById('feedbackText').innerText = feedback;
+
+        generateReviewSection();
+    }
+
+    function generateReviewSection() {
+        const reviewList = document.getElementById('reviewList');
+        reviewList.innerHTML = ''; 
+
+        sessionHistory.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'review-item';
+            
+            const qText = `<div class="review-q">${index + 1}. ${item.prompt}</div>`;
+            
+            let resultsHtml = '<div class="review-results-grid">';
+            
+            item.results.forEach(res => {
+                if (res.isRight) {
+                    resultsHtml += `
+                    <div class="review-correct-box">
+                        <div class="review-arg-text">"${res.text}"</div>
+                        <div class="correct-text">✓ Correctly placed in: ${res.correctLabel}</div>
+                    </div>`;
+                } else {
+                    resultsHtml += `
+                    <div class="review-wrong-box">
+                        <div class="review-arg-text">"${res.text}"</div>
+                        <div style="color: #c0392b; font-weight: bold; margin-bottom: 5px;">✗ You placed in: ${res.userLabel}</div>
+                        <div class="correct-text">✓ Belongs in: ${res.correctLabel}</div>
+                    </div>`;
+                }
+            });
+            
+            resultsHtml += '</div>';
+
+            div.innerHTML = qText + resultsHtml;
+            reviewList.appendChild(div);
+        });
+    }
+
+    function resetGame() {
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('setupScreen').classList.add('active');
+    }
+</script>
+
+</body>
+</html>
