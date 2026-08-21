@@ -359,17 +359,6 @@
             const dateNow = new Date().toISOString();
             const finalPercentage = Math.round((score / totalPossibleScore) * 100); // Adjust denominator based on the specific game
 
-            // 1. Save Locally for the Student's Personal Dashboard
-            let localHistory = JSON.parse(localStorage.getItem("ielts_local_history")) || [];
-            localHistory.push({
-                date: dateNow,
-                drill: "Connections", // IMPORTANT: Change this text depending on which game file you are pasting this into!
-                score: score,
-                maxScore: totalPossibleScore, // Adjust based on the game
-                percentage: finalPercentage
-            });
-            localStorage.setItem("ielts_local_history", JSON.stringify(localHistory));
-
             // 2. Format mistakes for the tutor's Google Sheet (Optional but helpful)
             let mistakesLog = "No mistakes logged.";
             if (typeof sessionHistory !== 'undefined') {

@@ -307,17 +307,6 @@
             const dateNow = new Date().toISOString();
             const finalPercentage = Math.round((score / currentPool.length) * 100);
 
-            // 1. Save Locally for Dashboard
-            let localHistory = JSON.parse(localStorage.getItem("ielts_local_history")) || [];
-            localHistory.push({
-                date: dateNow,
-                drill: "Paragraph Scrambler",
-                score: score,
-                maxScore: currentPool.length,
-                percentage: finalPercentage
-            });
-            localStorage.setItem("ielts_local_history", JSON.stringify(localHistory));
-
             // 2. Format mistakes for Google Sheets
             let mistakesLog = "Flawless run! No help needed.";
             if (scramblerMistakes.length > 0) {

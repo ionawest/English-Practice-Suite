@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Progress Dashboard</title>
-    <!-- Loads Chart.js for data visualization -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; display: flex; flex-direction: column; align-items: center; padding: 50px 20px; margin: 0; }
@@ -36,35 +35,45 @@
         .history-title { font-weight: bold; font-size: 18px; color: #2c3e50; }
         .history-score { font-size: 20px; font-weight: bold; color: #27ae60; background: #eafaf1; padding: 5px 15px; border-radius: 20px;}
 
-        .empty-state { text-align: center; color: #7f8c8d; font-size: 18px; padding: 40px 0; }
-        .danger-zone { margin-top: 40px; text-align: right; border-top: 1px solid #eee; padding-top: 20px;}
-        .delete-btn { background-color: #e74c3c; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-size: 14px;}
-        .delete-btn:hover { background-color: #c0392b; }
+        /* UI States */
+        .status-state { text-align: center; color: #7f8c8d; font-size: 18px; padding: 40px 0; }
+        .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto 15px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header-flex">
-        <h1>My Progress Dashboard</h1>
+        <h1>My Cloud Dashboard</h1>
         <a href="index.html" class="back-btn">← Back to Hub</a>
     </div>
 
-    <div id="dashboardContent">
-        
-        <!-- Data Slicers -->
+    <!-- Loading State -->
+    <div id="loadingState" class="status-state">
+        <div class="spinner"></div>
+        Syncing your secure data from the cloud...
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="status-state" style="display: none;">
+        No data found! Make sure you enter your name exactly as you did on your other devices.
+    </div>
+
+    <!-- Main Content -->
+    <div id="dashboardContent" style="display: none;">
         <div class="filter-panel">
             <div class="filter-group">
                 <label for="drillFilter">Slice by Category:</label>
                 <select id="drillFilter" onchange="applyFilters()">
                     <option value="all">View All Drills</option>
+                    <option value="Spelling">Spelling & Dictation Sprint</option>
                     <option value="Data">Task 1 Trend Translator</option>
                     <option value="Ideas">Task 2 Idea Sorter</option>
                     <option value="Paragraph Scrambler">Paragraph Scrambler</option>
                     <option value="Connections">Collocation Connector</option>
                     <option value="Skimming">Skim & Scan Radar</option>
                     <option value="Grammar and Reading">Micro-Grammar Sprint</option>
-                    <option value="Spelling">Spelling & Dictation Sprint</option>
                 </select>
             </div>
             
@@ -79,55 +88,67 @@
             </div>
         </div>
 
-        <!-- Dynamic Average Card -->
         <div class="metric-card">
             <div class="metric-title">Average Accuracy (Filtered)</div>
             <div class="metric-value" id="averageDisplay">--%</div>
         </div>
 
-        <!-- Time Series Chart -->
         <div class="chart-container">
             <canvas id="progressChart"></canvas>
         </div>
 
         <h3>Recent Activity Log</h3>
         <div id="historyList" class="history-list"></div>
-
-        <div class="danger-zone">
-            <button class="delete-btn" onclick="clearData()">Delete All My Local Data</button>
-        </div>
-    </div>
-
-    <div id="emptyState" class="empty-state" style="display: none;">
-        No data found! Enable tracking on the Hub page and play a game to see your stats.
     </div>
 </div>
 
 <script>
-    let chartInstance = null; // Tracks the chart instance to allow clean destruction and rendering
+    // --- PASTE YOUR GOOGLE APPS SCRIPT URL HERE ---
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwAUYzRONdG5foqJ395nLu_0jAhNz1DgREUyTttFw5fBmGvzcpgHyJxtruXyIJiM7w76w/exec"; 
+    
+    let chartInstance = null; 
+    let cloudHistoryData = []; // Stores the fetched data globally for fast slicing
 
     document.addEventListener("DOMContentLoaded", () => {
-        applyFilters();
+        fetchCloudData();
     });
+
+    function fetchCloudData() {
+        const studentName = localStorage.getItem("ielts_student_name") || "Anonymous";
+        
+        // Append the student's name to the URL so the Google Sheet knows who to look for
+        const fetchUrl = WEB_APP_URL + "?studentName=" + encodeURIComponent(studentName);
+
+        fetch(fetchUrl)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('loadingState').style.display = 'none';
+                
+                if (data.length === 0) {
+                    document.getElementById('emptyState').style.display = 'block';
+                } else {
+                    cloudHistoryData = data; // Save the data to our global array
+                    document.getElementById('dashboardContent').style.display = 'block';
+                    applyFilters(); // Draw the initial chart
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching data:", error);
+                document.getElementById('loadingState').innerHTML = "⚠️ Error syncing data. Please check your internet connection and try again.";
+            });
+    }
 
     function applyFilters() {
         const drillFilter = document.getElementById('drillFilter').value;
         const timeFilter = document.getElementById('timeFilter').value;
-        const rawHistoryData = JSON.parse(localStorage.getItem("ielts_local_history")) || [];
+        
+        // Slice the cloud data instead of local data
+        let slicedData = cloudHistoryData;
 
-        if (rawHistoryData.length === 0) {
-            document.getElementById("dashboardContent").style.display = "none";
-            document.getElementById("emptyState").style.display = "block";
-            return;
-        }
-
-        // 1. Slice by Drill Category
-        let slicedData = rawHistoryData;
         if (drillFilter !== 'all') {
-            slicedData = rawHistoryData.filter(item => item.drill === drillFilter);
+            slicedData = cloudHistoryData.filter(item => item.drill === drillFilter);
         }
 
-        // 2. Slice by Time Frame
         const now = new Date();
         if (timeFilter !== 'all') {
             slicedData = slicedData.filter(item => {
@@ -153,7 +174,6 @@
         const listContainer = document.getElementById("historyList");
         const avgDisplay = document.getElementById("averageDisplay");
 
-        // Handle empty slice state
         if (data.length === 0) {
             avgDisplay.innerText = "--%";
             listContainer.innerHTML = '<div style="color:#7f8c8d; padding: 15px;">No recorded plays match these filters.</div>';
@@ -161,12 +181,10 @@
             return;
         }
 
-        // Calculate Mean Average
         const sum = data.reduce((acc, curr) => acc + curr.percentage, 0);
         const meanAverage = Math.round(sum / data.length);
         avgDisplay.innerText = meanAverage + "%";
 
-        // Format chronological X-axis labels (Date and Time)
         const labels = data.map(item => {
             const d = new Date(item.date);
             return d.toLocaleDateString([], { month: 'short', day: 'numeric' }) + ' ' + 
@@ -175,7 +193,6 @@
         
         const dataPoints = data.map(item => item.percentage);
 
-        // Flush and Render Chart
         if (chartInstance) {
             chartInstance.destroy();
         }
@@ -202,23 +219,13 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: { 
-                    y: { 
-                        beginAtZero: true, 
-                        max: 100,
-                        title: { display: true, text: 'Score (%)' }
-                    },
-                    x: {
-                        title: { display: true, text: 'Time of Attempt' },
-                        ticks: { maxRotation: 45, minRotation: 45 }
-                    }
+                    y: { beginAtZero: true, max: 100, title: { display: true, text: 'Score (%)' } },
+                    x: { title: { display: true, text: 'Time of Attempt' }, ticks: { maxRotation: 45, minRotation: 45 } }
                 },
-                plugins: {
-                    legend: { position: 'top' }
-                }
+                plugins: { legend: { position: 'top' } }
             }
         });
 
-        // Render Recent Activity List (reverse chronological)
         listContainer.innerHTML = '';
         [...data].reverse().forEach(item => {
             let dateStr = new Date(item.date).toLocaleString();
@@ -233,13 +240,6 @@
             `;
             listContainer.appendChild(card);
         });
-    }
-
-    function clearData() {
-        if(confirm("Are you sure you want to delete all your progress data? This cannot be undone.")) {
-            localStorage.removeItem("ielts_local_history");
-            location.reload();
-        }
     }
 </script>
 

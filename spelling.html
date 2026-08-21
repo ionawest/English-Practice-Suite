@@ -392,16 +392,6 @@
             const dateNow = new Date().toISOString();
             const finalPercentage = Math.round((score / currentQuestions.length) * 100);
 
-            let localHistory = JSON.parse(localStorage.getItem("ielts_local_history")) || [];
-            localHistory.push({
-                date: dateNow,
-                drill: "Spelling", 
-                score: score,
-                maxScore: currentQuestions.length,
-                percentage: finalPercentage
-            });
-            localStorage.setItem("ielts_local_history", JSON.stringify(localHistory));
-
             let mistakesLog = "No mistakes logged.";
             if (typeof sessionHistory !== 'undefined') {
                 mistakesLog = sessionHistory
