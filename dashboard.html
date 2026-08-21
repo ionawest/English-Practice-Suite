@@ -107,7 +107,15 @@
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwAUYzRONdG5foqJ395nLu_0jAhNz1DgREUyTttFw5fBmGvzcpgHyJxtruXyIJiM7w76w/exec"; 
     
     let chartInstance = null; 
-    let cloudHistoryData = []; // Stores the fetched data globally for fast slicing
+    let cloudHistoryData = []; 
+
+    // --- NEW: HTML Sanitizer to prevent XSS Attacks ---
+    function sanitizeHTML(str) {
+        if (str === null || str === undefined) return '';
+        const temp = document.createElement('div');
+        temp.textContent = str;
+        return temp.innerHTML;
+    }
 
     document.addEventListener("DOMContentLoaded", () => {
         fetchCloudData();
@@ -115,8 +123,6 @@
 
     function fetchCloudData() {
         const studentName = localStorage.getItem("ielts_student_name") || "Anonymous";
-        
-        // Append the student's name to the URL so the Google Sheet knows who to look for
         const fetchUrl = WEB_APP_URL + "?studentName=" + encodeURIComponent(studentName);
 
         fetch(fetchUrl)
@@ -127,9 +133,9 @@
                 if (data.length === 0) {
                     document.getElementById('emptyState').style.display = 'block';
                 } else {
-                    cloudHistoryData = data; // Save the data to our global array
+                    cloudHistoryData = data; 
                     document.getElementById('dashboardContent').style.display = 'block';
-                    applyFilters(); // Draw the initial chart
+                    applyFilters(); 
                 }
             })
             .catch(error => {
@@ -142,7 +148,6 @@
         const drillFilter = document.getElementById('drillFilter').value;
         const timeFilter = document.getElementById('timeFilter').value;
         
-        // Slice the cloud data instead of local data
         let slicedData = cloudHistoryData;
 
         if (drillFilter !== 'all') {
@@ -183,7 +188,9 @@
 
         const sum = data.reduce((acc, curr) => acc + curr.percentage, 0);
         const meanAverage = Math.round(sum / data.length);
-        avgDisplay.innerText = meanAverage + "%";
+        
+        // Sanitized metric display
+        avgDisplay.innerHTML = sanitizeHTML(String(meanAverage)) + "%";
 
         const labels = data.map(item => {
             const d = new Date(item.date);
@@ -201,9 +208,9 @@
         chartInstance = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: labels,
+                labels: labels, // Chart.js natively sanitizes canvas text rendering
                 datasets: [{
-                    label: currentDrillFilter === 'all' ? 'Overall Accuracy (%)' : `${currentDrillFilter} Accuracy (%)`,
+                    label: currentDrillFilter === 'all' ? 'Overall Accuracy (%)' : `${sanitizeHTML(currentDrillFilter)} Accuracy (%)`,
                     data: dataPoints,
                     borderColor: '#2980b9',
                     backgroundColor: 'rgba(41, 128, 185, 0.2)',
@@ -231,12 +238,14 @@
             let dateStr = new Date(item.date).toLocaleString();
             let card = document.createElement("div");
             card.className = "history-card";
+            
+            // NEW: Every single variable pulled from the cloud is now sanitized before rendering
             card.innerHTML = `
                 <div>
-                    <div class="history-date">${dateStr}</div>
-                    <div class="history-title">${item.drill}</div>
+                    <div class="history-date">${sanitizeHTML(String(dateStr))}</div>
+                    <div class="history-title">${sanitizeHTML(String(item.drill))}</div>
                 </div>
-                <div class="history-score">${item.percentage}%</div>
+                <div class="history-score">${sanitizeHTML(String(item.percentage))}%</div>
             `;
             listContainer.appendChild(card);
         });
