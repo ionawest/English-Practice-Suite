@@ -260,6 +260,54 @@
         else feedback = "You are likely trying to read the whole paragraph. Stop translating! Let your eyes jump around the text.";
         document.getElementById('feedbackText').innerText = feedback;
 
+        const trackingEnabled = localStorage.getItem("ielts_tracking_enabled") === "true";
+
+        if (trackingEnabled) {
+            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwAUYzRONdG5foqJ395nLu_0jAhNz1DgREUyTttFw5fBmGvzcpgHyJxtruXyIJiM7w76w/exec"; // Your Google Apps Script URL
+            const studentName = localStorage.getItem("ielts_student_name") || "Anonymous";
+            const dateNow = new Date().toISOString();
+            const finalPercentage = Math.round((score / currentPool.length) * 100); // Adjust denominator based on the specific game
+
+            // 1. Save Locally for the Student's Personal Dashboard
+            let localHistory = JSON.parse(localStorage.getItem("ielts_local_history")) || [];
+            localHistory.push({
+                date: dateNow,
+                drill: "Skimming", // IMPORTANT: Change this text depending on which game file you are pasting this into!
+                score: score,
+                maxScore: currentPool.length, // Adjust based on the game
+                percentage: finalPercentage
+            });
+            localStorage.setItem("ielts_local_history", JSON.stringify(localHistory));
+
+            // 2. Format mistakes for the tutor's Google Sheet (Optional but helpful)
+            let mistakesLog = "No mistakes logged.";
+            if (typeof sessionHistory !== 'undefined') {
+                mistakesLog = sessionHistory
+                    .filter(item => !item.isCorrect)
+                    .map(item => item.prompt ? item.prompt.substring(0,30) + "..." : "Error")
+                    .join(" | ");
+            }
+
+            // 3. Send Remotely to Tutor's Google Sheet
+            let payload = {
+                studentName: studentName,
+                drillName: "Skimming", // IMPORTANT: Change this text!
+                contentType: "Standard Run",
+                timeLimit: globalTimeLimit + "s",
+                score: score,
+                maxScore: currentPool.length, // Adjust based on game
+                percentage: finalPercentage,
+                mistakes: mistakesLog
+            };
+
+            fetch(WEB_APP_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).catch(err => console.log("Remote tracking failed:", err));
+        }
+
         generateReviewSection();
     }
 

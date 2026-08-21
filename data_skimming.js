@@ -274,11 +274,6 @@ const skimmingData = [
         text: "The financial sector is rapidly being transformed by the integration of highly secure, decentralized digital ledgers. By using complex mathematical encryption, the blockchain allows users to transfer massive amounts of money internationally without ever relying on a traditional bank. Consequently, this innovative technology threatens to completely disrupt the monopoly of legacy financial institutions."
     },
     {
-        prompt: "Find the specific noun that 'these traditional methods' refers to.",
-        target: "farming",
-        text: "Before the invention of chemical pesticides, rural communities heavily relied on natural crop rotation and manual weeding to protect their harvests. While organic farming was incredibly labor-intensive and yielded slightly smaller crops, it maintained the deep health of the soil. Modern agriculturalists are now desperately returning to these traditional methods to reverse severe ecological damage."
-    },
-    {
         prompt: "Find the specific noun that 'this historical artifact' refers to.",
         target: "manuscript",
         text: "Deep within the heavily guarded archives of the national library, an incredibly rare, hand-written medieval manuscript was finally uncovered by a visiting scholar. Written entirely in an extinct dialect, the delicate parchment details the lost medicinal recipes of a forgotten empire. Translating this historical artifact could fundamentally rewrite our understanding of ancient medical science."
@@ -761,7 +756,7 @@ const skimmingData = [
     },
     {
         prompt: "Find the specific noun that 'these venomous reptiles' refers to.",
-        target: "snakes",
+        target: "rattlesnakes",
         text: "In the incredibly harsh deserts of the American southwest, rattlesnakes rely heavily on highly advanced thermal sensors located near their nostrils. These biological heat-detecting pits allow them to perfectly track the warm bodies of passing rodents, even in absolute darkness. Because they cannot chew their food, these venomous reptiles must swallow their paralyzed prey completely whole."
     },
     {

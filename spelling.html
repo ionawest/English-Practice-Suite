@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IELTS Spelling Sprint</title>
+    <title>IELTS Spelling & Dictation Sprint</title>
     <script src="papaparse.min.js"></script>
     <script src="data.js"></script>
     <style>
@@ -30,7 +30,7 @@
         
         .setup-controls { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; align-items: center; }
         .selection-controls { display: flex; gap: 10px; width: 100%; max-width: 400px; margin-bottom: -5px; }
-        .btn-small { flex: 1; padding: 8px; font-size: 14px; margin: 0; background-color: #7f8c8d; }
+        .btn-small { flex: 1; padding: 8px; font-size: 14px; margin: 0; background-color: #7f8c8d; border: none; color: white; border-radius: 4px; cursor: pointer;}
         .btn-small:hover { background-color: #636e72; }
         
         .checkbox-group { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 400px; background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ddd; max-height: 250px; overflow-y: auto; }
@@ -41,14 +41,20 @@
         .input-group label { font-weight: bold; margin-bottom: 5px; text-align: center; }
         input[type="number"] { padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 6px; text-align: center; }
         
-        button { background-color: #3498db; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; transition: background 0.3s ease; width: 100%; max-width: 300px; display: block; margin: 10px auto 0 auto; }
-        button:hover { background-color: #2980b9; }
+        button.start-btn { background-color: #9b59b6; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; transition: background 0.3s ease; width: 100%; max-width: 300px; display: block; margin: 10px auto 0 auto; font-weight: bold;}
+        button.start-btn:hover { background-color: #8e44ad; }
+        button.menu-btn { background-color: #95a5a6; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; width: 100%; max-width: 300px; display: block; margin: 10px auto 0 auto; font-weight: bold;}
+        button.menu-btn:hover { background-color: #7f8c8d; }
 
-        .question-text { font-size: 20px; margin: 20px 0; line-height: 1.6; text-align: center; background: #f9f9f9; padding: 30px; border-left: 4px solid #9b59b6; border-radius: 4px;}
-        .cloze-blank { color: #e74c3c; font-family: monospace; font-size: 1.2em; font-weight: bold; letter-spacing: 2px; }
-        
+        /* TTS Audio Buttons */
+        .audio-controls { background: #fdfbf7; padding: 30px; border-left: 5px solid #9b59b6; border-radius: 8px; margin: 20px 0; text-align: center; }
+        .audio-btn { background-color: #9b59b6; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 6px; cursor: pointer; transition: background 0.3s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: bold;}
+        .audio-btn:hover { background-color: #8e44ad; transform: scale(1.02); }
+        .context-btn { background-color: #34495e; font-size: 14px; padding: 10px 20px; }
+        .context-btn:hover { background-color: #2c3e50; }
+
         /* The Typing Input */
-        .typing-input { font-size: 24px; padding: 15px; width: 100%; max-width: 400px; border: 2px solid #bdc3c7; border-radius: 8px; text-align: center; margin: 10px auto 30px auto; display: block; transition: border 0.3s; }
+        .typing-input { font-size: 24px; padding: 15px; width: 100%; max-width: 400px; border: 2px solid #bdc3c7; border-radius: 8px; text-align: center; margin: 10px auto 30px auto; display: block; transition: border 0.3s; box-sizing: border-box;}
         .typing-input:focus { border-color: #9b59b6; outline: none; box-shadow: 0 0 8px rgba(155, 89, 182, 0.3); }
 
         .timer-wrapper { margin: 15px 0; width: 100%; }
@@ -61,7 +67,7 @@
         .review-container { margin-top: 30px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 20px; max-height: 400px; overflow-y: auto; text-align: left; }
         .review-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #ecf0f1; }
         .review-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .review-q { font-weight: bold; margin-bottom: 8px; font-size: 16px; }
+        .review-q { margin-bottom: 8px; font-size: 16px; color: #2c3e50; }
         .review-ans { font-size: 15px; margin: 4px 0; }
         .correct-text { color: #27ae60; font-weight: bold; }
         .incorrect-text { color: #c0392b; font-weight: bold; }
@@ -72,7 +78,8 @@
 <div class="container">
     
     <div id="setupScreen" class="setup-screen active">
-        <h1>Spelling & Recall Sprint</h1>
+        <h1>Spelling & Dictation Sprint</h1>
+        <p style="text-align: center; color: #7f8c8d;">Listen to the audio and spell the target word accurately.</p>
         <div class="setup-controls">
             
             <label style="font-weight: bold;">Select Topics to Mix:</label>
@@ -82,10 +89,11 @@
             </div>
 
             <div id="checkboxContainer" class="checkbox-group">
-                </div>
+                <!-- Checkboxes populated via JS -->
+            </div>
             
             <div class="input-group" style="margin-top: 10px;">
-                <label for="questionCount">Number of Questions (Max):</label>
+                <label for="questionCount">Number of Words (Max):</label>
                 <input type="number" id="questionCount" value="10" min="1">
             </div>
 
@@ -94,15 +102,15 @@
                 <input type="number" id="timeInput" value="15" min="2" max="60">
             </div>
             
-            <button onclick="startGame()" style="margin-top: 20px; background-color: #9b59b6;">Start Drill</button>
-            <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+            <button class="start-btn" onclick="startGame()">Start Drill</button>
+            <button class="menu-btn" onclick="window.location.href='index.html'">Back to Menu</button>
         </div>
     </div>
 
     <div id="gameScreen" class="game-screen">
         <div class="stats">
             <span id="scoreDisplay">Score: 0</span>
-            <span id="questionCounter">Question: 1/10</span>
+            <span id="questionCounter">Word: 1/10</span>
         </div>
         
         <div class="timer-wrapper">
@@ -112,7 +120,14 @@
             <div class="timer-display" id="timerDisplay">15.0s</div>
         </div>
 
-        <div class="question-text" id="questionText">Loading...</div>
+        <!-- The Audio Controls replaced the visual text -->
+        <div class="audio-controls" id="audioControls">
+            <div style="margin-bottom: 20px; font-size: 18px; font-weight: bold; color: #2c3e50;">Listen to the audio and spell the word:</div>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <button type="button" id="playWordBtn" class="audio-btn">🔊 Play Word</button>
+                <button type="button" id="playContextBtn" class="audio-btn context-btn">🔈 Play Sentence Context</button>
+            </div>
+        </div>
         
         <input type="text" id="answerInput" class="typing-input" placeholder="Type here and press Enter..." autocomplete="off">
         
@@ -123,11 +138,11 @@
         <p id="finalScore" style="text-align: center; font-size: 24px; font-weight: bold; margin: 10px 0;"></p>
         <p id="feedbackText" style="text-align: center; margin-bottom: 20px;"></p>
         
-        <button onclick="resetGame()" style="background-color: #9b59b6;">Try Again</button>
-        <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+        <button class="start-btn" onclick="resetGame()">Try Again</button>
+        <button class="menu-btn" onclick="window.location.href='index.html'">Back to Menu</button>
 
         <div id="reviewSection" class="review-container">
-            <h3 style="margin-top: 0;">Spelling Review</h3>
+            <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px;">Dictation Review</h3>
             <div id="reviewList"></div>
         </div>
     </div>
@@ -142,7 +157,12 @@
     let timeLeft = 15;
     let timerInterval;
     let sessionHistory = []; 
+    
     let activeCorrectAnswer = "";
+    let activeContextSentence = "";
+
+    let englishVoices = [];
+    let currentQuestionVoice = null;
 
     window.onload = function() {
         if (typeof spellingCSVData === 'undefined') {
@@ -197,6 +217,33 @@
         return array.sort(() => Math.random() - 0.5);
     }
 
+    // Load available voices from the browser/OS
+    function loadVoices() {
+        const voices = window.speechSynthesis.getVoices();
+        // Filter strictly for English accents (GB, AU, US, IE, ZA, etc.)
+        englishVoices = voices.filter(voice => voice.lang.startsWith('en'));
+    }
+
+    // Browsers load voices asynchronously, so we must listen for them to be ready
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+
+    // NEW: Upgraded Text-to-Speech Function
+    function speakText(text, rate = 0.85) {
+        window.speechSynthesis.cancel(); // Stop any currently playing audio
+        const utterance = new SpeechSynthesisUtterance(text);
+        
+        // Use the voice locked in for this specific question
+        if (currentQuestionVoice) {
+            utterance.voice = currentQuestionVoice;
+        } else {
+            // Fallback if the browser fails to map voices
+            utterance.lang = 'en-GB'; 
+        }
+        
+        utterance.rate = rate; // Slightly slower for dictation clarity
+        window.speechSynthesis.speak(utterance);
+    }
+
     function startGame() {
         const checkboxes = document.querySelectorAll('#checkboxContainer input[type="checkbox"]:checked');
         if (checkboxes.length === 0) {
@@ -230,32 +277,43 @@
 
     function loadQuestion() {
         clearInterval(timerInterval);
+        window.speechSynthesis.cancel(); // Flush any pending speech
         
         if (currentQuestionIndex >= currentQuestions.length) {
             endGame();
             return;
         }
+        if (englishVoices.length === 0) loadVoices(); // Backup check
+        if (englishVoices.length > 0) {
+            currentQuestionVoice = englishVoices[Math.floor(Math.random() * englishVoices.length)];
+        } else {
+            currentQuestionVoice = null;
+        }
 
         const currentQ = currentQuestions[currentQuestionIndex];
-        
-        // Auto-Cloze Engine: Extracts the word in brackets and creates the blank spaces
         const regex = /\[(.*?)\]/;
         const match = currentQ.rawSentence.match(regex);
         
         if (match) {
             activeCorrectAnswer = match[1].trim().toLowerCase();
-            let firstLetter = match[1].charAt(0);
-            let underscores = " _".repeat(match[1].length - 1);
-            let displayHtml = currentQ.rawSentence.replace(regex, `<span class="cloze-blank">${firstLetter}${underscores}</span>`);
-            document.getElementById('questionText').innerHTML = displayHtml;
+            // Remove brackets for the context reading
+            activeContextSentence = currentQ.rawSentence.replace('[', '').replace(']', '');
+            
+            // Bind the audio buttons dynamically
+            document.getElementById('playWordBtn').onclick = () => speakText(activeCorrectAnswer, 0.85);
+            document.getElementById('playContextBtn').onclick = () => speakText(activeContextSentence, 0.95);
+
+            // Auto-play the target word after a slight delay to ensure UI loads
+            setTimeout(() => speakText(activeCorrectAnswer, 0.85), 400);
+
         } else {
-            // Fallback in case a sentence doesn't have brackets
-            document.getElementById('questionText').innerHTML = currentQ.rawSentence;
+            // Fallback error handler
             activeCorrectAnswer = "";
+            activeContextSentence = currentQ.rawSentence;
         }
 
         document.getElementById('scoreDisplay').innerText = `Score: ${score}`;
-        document.getElementById('questionCounter').innerText = `Question: ${currentQuestionIndex + 1}/${currentQuestions.length}`;
+        document.getElementById('questionCounter').innerText = `Word: ${currentQuestionIndex + 1}/${currentQuestions.length}`;
         
         // Reset and Focus Input
         const inputField = document.getElementById('answerInput');
@@ -290,16 +348,18 @@
     });
 
     function processAnswer(userInput) {
+        window.speechSynthesis.cancel(); // Stop audio immediately if they submit fast
+
         const cleanInput = userInput.trim().toLowerCase();
         const isCorrect = (cleanInput === activeCorrectAnswer);
         
         if (isCorrect) score++;
 
-        // Log history (remove the brackets for the review screen presentation)
-        const cleanQuestionText = currentQuestions[currentQuestionIndex].rawSentence.replace('[', '').replace(']', '');
+        // For the review screen, format the sentence with bold text instead of brackets
+        const reviewSentenceHtml = currentQuestions[currentQuestionIndex].rawSentence.replace(/\[(.*?)\]/, "<b>$1</b>");
 
         sessionHistory.push({
-            question: cleanQuestionText,
+            question: reviewSentenceHtml,
             userAnswer: userInput === "" ? "Left Blank" : userInput,
             correctAnswer: activeCorrectAnswer,
             isCorrect: isCorrect
@@ -310,6 +370,7 @@
     }
 
     function endGame() {
+        window.speechSynthesis.cancel();
         document.getElementById('gameScreen').classList.remove('active');
         document.getElementById('endScreen').classList.add('active');
         
@@ -317,10 +378,57 @@
         document.getElementById('finalScore').innerText = `${score} out of ${currentQuestions.length} (${percentage.toFixed(0)}%)`;
         
         let feedback = "";
-        if (percentage >= 90) feedback = "Excellent! Your spelling is extremely accurate.";
-        else if (percentage >= 70) feedback = "Good job, but you lost points to minor typos.";
-        else feedback = "We need to drill these words more. One wrong letter loses the IELTS mark!";
+        if (percentage >= 90) feedback = "Excellent! Your auditory spelling reflexes are highly accurate.";
+        else if (percentage >= 70) feedback = "Good job, but you lost points to minor typos. Listen closely for double letters.";
+        else feedback = "We need to drill these words more. If you mishear one letter, you lose the IELTS listening mark!";
         document.getElementById('feedbackText').innerText = feedback;
+        
+        // Tracking Logic
+        const trackingEnabled = localStorage.getItem("ielts_tracking_enabled") === "true";
+
+        if (trackingEnabled) {
+            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwAUYzRONdG5foqJ395nLu_0jAhNz1DgREUyTttFw5fBmGvzcpgHyJxtruXyIJiM7w76w/exec";
+            const studentName = localStorage.getItem("ielts_student_name") || "Anonymous";
+            const dateNow = new Date().toISOString();
+            const finalPercentage = Math.round((score / currentQuestions.length) * 100);
+
+            let localHistory = JSON.parse(localStorage.getItem("ielts_local_history")) || [];
+            localHistory.push({
+                date: dateNow,
+                drill: "Spelling", 
+                score: score,
+                maxScore: currentQuestions.length,
+                percentage: finalPercentage
+            });
+            localStorage.setItem("ielts_local_history", JSON.stringify(localHistory));
+
+            let mistakesLog = "No mistakes logged.";
+            if (typeof sessionHistory !== 'undefined') {
+                mistakesLog = sessionHistory
+                    .filter(item => !item.isCorrect)
+                    // We remove the HTML tags for the Google Sheets raw text log
+                    .map(item => item.correctAnswer + " (typed: " + item.userAnswer + ")")
+                    .join(" | ");
+            }
+
+            let payload = {
+                studentName: studentName,
+                drillName: "Spelling", 
+                contentType: "Dictation Mode",
+                timeLimit: globalTimeLimit + "s",
+                score: score,
+                maxScore: currentQuestions.length,
+                percentage: finalPercentage,
+                mistakes: mistakesLog
+            };
+
+            fetch(WEB_APP_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).catch(err => console.log("Remote tracking failed:", err));
+        }
 
         generateReviewSection();
     }

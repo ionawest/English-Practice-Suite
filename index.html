@@ -5,100 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IELTS Training Hub</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #f4f7f6; 
-            color: #333; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            padding: 50px 20px; 
-            margin: 0; 
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; display: flex; flex-direction: column; align-items: center; padding: 50px 20px; margin: 0; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #2c3e50; margin-top: 0; font-size: 36px; }
+        .header p { color: #7f8c8d; font-size: 18px; max-width: 600px; margin: 0 auto; }
 
-        .header h1 { 
-            color: #2c3e50; 
-            margin-top: 0; 
-            font-size: 36px;
-        }
-
-        .header p {
-            color: #7f8c8d;
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        /* Profile & Privacy Panel */
+        .profile-panel { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 600px; width: 100%; margin-bottom: 40px; border-left: 5px solid #34495e; text-align: left; }
+        .profile-panel h3 { margin-top: 0; color: #2c3e50; margin-bottom: 15px; }
+        .input-row { display: flex; gap: 15px; align-items: center; margin-bottom: 15px; flex-wrap: wrap; }
+        .input-row input[type="text"] { padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px; flex-grow: 1; min-width: 200px; }
+        .toggle-row { display: flex; align-items: center; gap: 10px; font-size: 15px; color: #555; }
+        .save-btn { background-color: #34495e; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.2s; }
+        .save-btn:hover { background-color: #2c3e50; }
+        .saved-msg { color: #27ae60; font-weight: bold; font-size: 14px; opacity: 0; transition: opacity 0.3s; }
 
         /* Grid Layout for the Hub */
-        .hub-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 25px; 
-            max-width: 1000px; 
-            width: 100%; 
-        }
+        .hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1000px; width: 100%; }
 
         /* Base Card Styling */
-        .menu-card { 
-            background: #fff; 
-            padding: 30px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-            text-align: left; 
-            text-decoration: none;
-            color: #333;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-        
-        .menu-card h2 { 
-            margin-top: 0; 
-            margin-bottom: 10px;
-            font-size: 24px;
-        }
-        
-        .menu-card p {
-            margin: 0;
-            color: #555;
-            line-height: 1.5;
-        }
+        .menu-card { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; text-decoration: none; color: #333; border: 2px solid transparent; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: flex-start; }
+        .menu-card h2 { margin-top: 0; margin-bottom: 10px; font-size: 24px; }
+        .menu-card p { margin: 0; color: #555; line-height: 1.5; }
 
-        /* Specific Card Themes (Colors & Hover Effects) */
-        
-        /* 1. Grammar/Quiz */
+        /* Card Themes */
+        .card-dash { background-color: #34495e; color: white; }
+        .card-dash h2, .card-dash p { color: white; }
+        .card-dash:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(52, 73, 94, 0.3); }
+
         .card-quiz { background-color: #eaf2f8; }
         .card-quiz:hover { border-color: #3498db; background-color: #d4e6f1; transform: translateY(-5px); box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2); }
         .card-quiz h2 { color: #3498db; }
+        
+        .card-spell { background-color: #fce4ec; }
+        .card-spell:hover { border-color: #e91e63; background-color: #f8bbd0; transform: translateY(-5px); box-shadow: 0 8px 20px rgba(233, 30, 99, 0.2); }
+        .card-spell h2 { color: #e91e63; }
 
-        /* 2. Scrambler */
         .card-scramble { background-color: #fef5e7; }
         .card-scramble:hover { border-color: #e67e22; background-color: #fdebd0; transform: translateY(-5px); box-shadow: 0 8px 20px rgba(230, 126, 34, 0.2); }
         .card-scramble h2 { color: #e67e22; }
 
-        /* 3. Skim & Scan */
         .card-skim { background-color: #fdedec; }
         .card-skim:hover { border-color: #e74c3c; background-color: #fadbd8; transform: translateY(-5px); box-shadow: 0 8px 20px rgba(231, 76, 60, 0.2); }
         .card-skim h2 { color: #e74c3c; }
 
-        /* 4. Collocations */
         .card-colloc { background-color: #f5eef8; }
         .card-colloc:hover { border-color: #8e44ad; background-color: #e8daef; transform: translateY(-5px); box-shadow: 0 8px 20px rgba(142, 68, 173, 0.2); }
         .card-colloc h2 { color: #8e44ad; }
 
-        /* 5. Task 1 Trend Translator */
         .card-task1 { background-color: #e8f8f5; }
         .card-task1:hover { border-color: #16a085; background-color: #d1f2eb; transform: translateY(-5px); box-shadow: 0 8px 20px rgba(22, 160, 133, 0.2); }
         .card-task1 h2 { color: #16a085; }
 
-        /* 6. Idea Sorter */
         .card-ideas { background-color: #ebf5fb; }
         .card-ideas:hover { border-color: #2980b9; background-color: #d6eaf8;}
         .card-ideas h2 { color: #2980b9; }
@@ -111,44 +69,93 @@
         <p>Targeted, gamified drills to build your academic vocabulary, reading speed, and writing logic for Band 7.5+.</p>
     </div>
 
+    <!-- Profile & Privacy Panel -->
+    <div class="profile-panel">
+        <h3>Student Profile & Privacy</h3>
+        <div class="input-row">
+            <input type="text" id="studentName" placeholder="Enter your name (e.g., Kenji)">
+            <button class="save-btn" onclick="saveSettings()">Save</button>
+            <span id="savedMsg" class="saved-msg">Saved!</span>
+        </div>
+        <div class="toggle-row">
+            <input type="checkbox" id="trackingToggle" style="transform: scale(1.3); cursor: pointer;">
+            <label for="trackingToggle" style="cursor: pointer;">
+                <b>Enable Progress Tracking</b> (Saves scores to your personal dashboard and shares with your tutor)
+            </label>
+        </div>
+    </div>
+
     <div class="hub-grid">
-        
-        <!-- Tool 1: Grammar/Spelling Quiz -->
+        <!-- Dashboard Card -->
+        <a href="dashboard.html" class="menu-card card-dash">
+            <h2>📈 My Progress Dashboard</h2>
+            <p>View your personal statistics, track your scores over time, and see how your skills are improving.</p>
+        </a>
+
+        <!-- Spelling/Listening Card (NEW) -->
+        <a href="spelling.html" class="menu-card card-spell">
+            <h2>Spelling & Dictation Sprint</h2>
+            <p>Audio-based spelling trainer simulating IELTS Listening Parts 1 & 4. Listen to the native speaker and type exactly what you hear.</p>
+        </a>
+
+        <!-- Grammar Card -->
         <a href="quiz.html" class="menu-card card-quiz">
-            <h2>Grammar Sprint</h2>
+            <h2>Micro-Grammar Sprint</h2>
             <p>Rapid-fire drills to eliminate common Japanese-to-English translation errors and perfect your spelling.</p>
         </a>
 
-        <!-- Tool 2: Paragraph Scrambler -->
         <a href="scrambler.html" class="menu-card card-scramble">
             <h2>Paragraph Scrambler</h2>
             <p>Master logical flow and cohesive devices. Drag and drop sentences to rebuild Band 7.5 body paragraphs.</p>
         </a>
 
-        <!-- Tool 3: Skimming Radar -->
         <a href="skimming.html" class="menu-card card-skim">
-            <h2>Skim & Scan Drills</h2>
+            <h2>Skim & Scan Radar</h2>
             <p>Reading speed drills. Stop translating words and train your eyes to rapidly scan for data, names, and synonyms under pressure.</p>
         </a>
 
-        <!-- Tool 4: Collocations -->
         <a href="collocations.html" class="menu-card card-colloc">
-            <h2>Connections</h2>
+            <h2>Collocation Connector</h2>
             <p>Lexical resource trainer. Match Band 6-7 verbs and nouns to build natural, native-sounding academic vocabulary chunks.</p>
         </a>
 
-        <!-- Tool 5: Task 1 Charts -->
         <a href="task1.html" class="menu-card card-task1">
-            <h2>Data Trends</h2>
-            <p>Data reporting drills. Map dynamically generated graphs, pie charts, and bar charts to Band 7+ academic vocabulary.</p>
+            <h2>Task 1 Trend Translator</h2>
+            <p>Data reporting drills. Map dynamically generated graphs and charts to Band 7+ academic vocabulary.</p>
         </a>
 
-        <!-- Tool 6: Idea Sorter -->
         <a href="ideas.html" class="menu-card card-ideas">
-            <h2>Idea Sorter</h2>
-            <p>Brainstorming reflexes. Rapidly sort valid arguments into Side A and Side B while dodging irrelevant, off-topic traps.</p>
+            <h2>Task 2 Idea Sorter</h2>
+            <p>Brainstorming reflexes. Rapidly sort valid arguments into Side A and Side B while dodging irrelevant traps.</p>
         </a>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedName = localStorage.getItem("ielts_student_name");
+            const trackingEnabled = localStorage.getItem("ielts_tracking_enabled");
+
+            if (savedName) document.getElementById("studentName").value = savedName;
+            
+            if (trackingEnabled === "false") {
+                document.getElementById("trackingToggle").checked = false;
+            } else {
+                document.getElementById("trackingToggle").checked = true;
+                localStorage.setItem("ielts_tracking_enabled", "true");
+            }
+        });
+
+        function saveSettings() {
+            const name = document.getElementById("studentName").value || "Anonymous";
+            const isTracking = document.getElementById("trackingToggle").checked;
+
+            localStorage.setItem("ielts_student_name", name);
+            localStorage.setItem("ielts_tracking_enabled", isTracking ? "true" : "false");
+
+            const msg = document.getElementById("savedMsg");
+            msg.style.opacity = 1;
+            setTimeout(() => { msg.style.opacity = 0; }, 2000);
+        }
+    </script>
 </body>
 </html>
