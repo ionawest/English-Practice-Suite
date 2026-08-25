@@ -2668,5 +2668,410 @@ const task1Data = [
                 wrong: ["It closed completely in 2020", "It remained perfectly parallel", "It narrowed to a marginal difference"]
             }
         ]
+    },
+    // ==========================================
+    // BATCH 4 - ADVANCED DATA (Band 7.5 - 8.0)
+    // ==========================================
+    {
+        title: "Projected Urban vs Rural Population (Millions)",
+        chartType: "line",
+        labels: ["2000", "2010", "2020", "2030 (est)", "2040 (est)"],
+        datasets: [
+            { label: "Urban", data: [40, 55, 70, 95, 120] },
+            { label: "Rural", data: [80, 75, 60, 45, 30] }
+        ],
+        questions: [
+            {
+                prompt: "Looking at the period beyond 2020, how would you describe the forecast for rural populations?",
+                correct: "It is projected to continue its steep, uninterrupted downward trajectory.",
+                wrong: ["It will have suffered a dramatic and sudden crash.", "It is bound to experience an exponential surge.", "It is anticipated to level off completely."]
+            },
+            {
+                prompt: "How would you describe the overall relationship between the two demographic trends?",
+                correct: "They exhibit diametrically opposed trajectories that intersected around 2015.",
+                wrong: ["They closely mirror one another's proportional growth.", "They are expected to run perfectly parallel into the future.", "They both suffered a sudden collapse and rapid recovery."]
+            }
+        ]
+    },
+    {
+        title: "Annual Foreign Investment Volatility ($ Billions)",
+        chartType: "line",
+        labels: ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6"],
+        datasets: [{ label: "FDI", data: [12, 85, 10, 90, 8, 95] }],
+        questions: [
+            {
+                prompt: "Which phrase best encapsulates the behavior of foreign investment across the six quarters?",
+                correct: "It was characterized by extreme and erratic volatility.",
+                wrong: ["It maintained a remarkably stable plateau.", "It experienced a smooth, exponential surge.", "It suffered a consistent and steady decline."]
+            },
+            {
+                prompt: "What occurred between Q1 and Q2, and again between Q3 and Q4?",
+                correct: "Investment saw dramatic, unprecedented spikes.",
+                wrong: ["It bottomed out completely.", "It experienced a marginal, steady increase.", "It levelled off to a high plateau."]
+            }
+        ]
+    },
+    {
+        title: "Wealth Distribution by Age Demographic (%)",
+        chartType: "bar",
+        labels: ["Under 30", "30-45", "46-60", "Over 60"],
+        datasets: [
+            { label: "1990", data: [15, 30, 35, 20] }, 
+            { label: "2020", data: [5, 20, 45, 30] }
+        ],
+        questions: [
+            {
+                prompt: "Compare the 'Under 30' wealth share between 1990 and 2020.",
+                correct: "Their proportion of wealth diminished to exactly a third of its former size.",
+                wrong: ["They experienced an exponential surge in wealth.", "Their financial standing remained relatively static.", "They vastly outperformed the 'Over 60' demographic."]
+            },
+            {
+                prompt: "What is the most striking overarching trend across the thirty-year period?",
+                correct: "A stark and widening disparity favoring older demographics.",
+                wrong: ["A completely uniform distribution of wealth.", "A sudden collapse in the financial standing of older citizens.", "A direct correlation between youth and wealth accumulation."]
+            }
+        ]
+    },
+    {
+        title: "Corporate Spending Drop (Millions)",
+        chartType: "line",
+        labels: ["Jan", "Feb", "Mar", "Apr"],
+        datasets: [{ label: "Marketing", data: [100, 95, 15, 12] }],
+        questions: [
+            {
+                prompt: "Look closely at the plummet from February to March. Which phrasing is grammatically accurate?",
+                correct: "Spending plummeted by 80 million.",
+                wrong: ["Spending plummeted to 80 million.", "Spending surged by 15 million.", "Spending dropped to 80 million."]
+            },
+            {
+                prompt: "How else could you accurately describe the March figure relative to January?",
+                correct: "It collapsed to a mere fraction of its original peak.",
+                wrong: ["It remained relatively stable.", "It represented a marginal decrease.", "It more than doubled its initial value."]
+            }
+        ]
+    },
+    {
+        title: "Sources of National Energy (2022)",
+        chartType: "pie",
+        labels: ["Fossil Fuels", "Nuclear", "Hydroelectric", "Solar & Wind"],
+        datasets: [{ label: "Energy (%)", data: [78, 12, 8, 2] }],
+        questions: [
+            {
+                prompt: "How would you describe the role of Solar & Wind energy combined?",
+                correct: "They accounted for a highly marginal fraction of the total.",
+                wrong: ["They constituted a significant majority.", "They were the predominant source of national power.", "They comprised precisely a quarter."]
+            },
+            {
+                prompt: "How does Fossil Fuel usage compare to the other three categories combined?",
+                correct: "It completely dwarfed all alternative sources combined.",
+                wrong: ["It stood in identical proportion to the renewable sectors.", "It accounted for roughly a third of the total.", "It represented a tiny, negligible minority."]
+            }
+        ]
+    },
+    // ==========================================
+    // BATCH 5 - ADVANCED DATA EXPANSION (Band 7.5 - 8.0)
+    // ==========================================
+    {
+        title: "Vintage Film Camera Valuations ($)",
+        chartType: "line",
+        labels: ["2015", "2017", "2019", "2021", "2023"],
+        datasets: [
+            { label: "SLR Cameras", data: [150, 140, 200, 450, 800] }, 
+            { label: "Rangefinders", data: [300, 290, 280, 260, 250] }
+        ],
+        questions: [
+            {
+                prompt: "Describe the trend for SLR Cameras after 2019.",
+                correct: "They experienced a stark, exponential surge in market value.",
+                wrong: ["They suffered a dramatic and sudden crash.", "They maintained a remarkably stable plateau.", "They experienced a smooth, marginal decline."]
+            },
+            {
+                prompt: "Compare the two trajectories over the 8-year period.",
+                correct: "They exhibited diametrically opposed trajectories, intersecting around 2020.",
+                wrong: ["They closely mirrored one another's proportional growth.", "They ran perfectly parallel into the future.", "They both suffered a sudden collapse and rapid recovery."]
+            }
+        ]
+    },
+    {
+        title: "Coastal Wetland Avian Populations (Thousands)",
+        chartType: "bar",
+        labels: ["2000", "2010", "2020"],
+        datasets: [
+            { label: "Migratory", data: [120, 80, 25] }, 
+            { label: "Native", data: [40, 42, 45] }
+        ],
+        questions: [
+            {
+                prompt: "What is the overarching pattern for the migratory species?",
+                correct: "A steep, uninterrupted downward trajectory towards a fraction of its original peak.",
+                wrong: ["A stark, exponential rise.", "A completely uniform distribution.", "A direct correlation with the native population."]
+            },
+            {
+                prompt: "Contrast the native species with the migratory ones.",
+                correct: "While the native population remained relatively static, the migratory numbers collapsed entirely.",
+                wrong: ["They displayed broadly similar, dominant figures.", "The native species completely dwarfed the migratory ones in 2000.", "They experienced identical growth."]
+            }
+        ]
+    },
+    {
+        title: "Computational Processing Volume (Terabytes/Sec)",
+        chartType: "line",
+        labels: ["Q1", "Q2", "Q3", "Q4", "Q5"],
+        datasets: [
+            { label: "Stochastic Models", data: [5, 15, 80, 150, 300] }, 
+            { label: "Deterministic PDEs", data: [100, 105, 110, 112, 115] }
+        ],
+        questions: [
+            {
+                prompt: "How would you describe the progression of stochastic modeling processing?",
+                correct: "It underwent a parabolic surge, ultimately dwarfing the alternative method.",
+                wrong: ["It suffered a drastic plummet.", "It levelled off completely.", "It experienced wild and erratic volatility."]
+            },
+            {
+                prompt: "What is the defining characteristic of the deterministic PDE data?",
+                correct: "It maintained a highly stable, marginal upward progression.",
+                wrong: ["It plummeted abruptly.", "It intersected and overtook the stochastic models.", "It showed a completely inverse trend."]
+            }
+        ]
+    },
+    {
+        title: "3D Medical Imaging Diagnostics (2025)",
+        chartType: "pie",
+        labels: ["CT Scans", "MRI", "Ultrasound", "PET"],
+        datasets: [{ label: "Usage (%)", data: [55, 30, 10, 5] }],
+        questions: [
+            {
+                prompt: "How would you describe the reliance on CT Scans?",
+                correct: "They constituted the absolute majority of all diagnostic procedures.",
+                wrong: ["They accounted for a tiny, negligible minority.", "They comprised exactly a quarter.", "They represented a highly marginal fraction."]
+            },
+            {
+                prompt: "Compare the combined usage of Ultrasound and PET to MRI.",
+                correct: "Together, they accounted for exactly half the proportion of MRI usage.",
+                wrong: ["They represented an identical proportion.", "They significantly outperformed MRI.", "They constituted a significant majority."]
+            }
+        ]
+    },
+    {
+        title: "Suspicious Financial Transaction Flags (Thousands)",
+        chartType: "line",
+        labels: ["2018", "2019", "2020", "2021", "2022"],
+        datasets: [
+            { label: "Domestic", data: [50, 48, 45, 42, 40] }, 
+            { label: "Cross-Border", data: [10, 15, 60, 120, 250] }
+        ],
+        questions: [
+            {
+                prompt: "Describe the trajectory of Cross-Border anomalies.",
+                correct: "They skyrocketed abruptly, representing a twenty-five-fold increase over the period.",
+                wrong: ["They bottomed out completely.", "They remained highly static, forming a long plateau.", "They experienced a moderate decline."]
+            },
+            {
+                prompt: "What happened to the gap between Domestic and Cross-Border flags?",
+                correct: "The initial discrepancy was entirely inverted as cross-border flags surged.",
+                wrong: ["The gap remained completely static.", "Domestic flags plummeted below Cross-Border flags.", "The lines ran perfectly parallel."]
+            }
+        ]
+    },
+    {
+        title: "National Energy Grid Integration (Gigawatts)",
+        chartType: "line",
+        labels: ["2005", "2010", "2015", "2020", "2025 (est)"],
+        datasets: [
+            { label: "Fossil Fuels", data: [200, 195, 150, 80, 30] }, 
+            { label: "Renewables", data: [10, 25, 90, 160, 250] }
+        ],
+        questions: [
+            {
+                prompt: "How would you describe the relationship between the two energy sectors?",
+                correct: "They exhibited completely inverse trajectories, decisively intersecting between 2010 and 2015.",
+                wrong: ["They showed a completely identical pattern.", "They fluctuated entirely independently.", "They both suffered a sudden collapse."]
+            },
+            {
+                prompt: "Looking at the 2025 projection for Fossil Fuels, what is the expected outcome?",
+                correct: "It is projected to collapse to a mere fraction of its 2005 peak.",
+                wrong: ["It is anticipated to level off completely.", "It is bound to experience an exponential surge.", "It will recover swiftly to previous levels."]
+            }
+        ]
+    },
+    {
+        title: "Graduate Employability within 6 Months (%)",
+        chartType: "bar",
+        labels: ["Applied Mathematics", "Pure Mathematics", "Physics", "General Science"],
+        datasets: [
+            { label: "2015", data: [65, 40, 50, 45] }, 
+            { label: "2025", data: [95, 42, 55, 48] }
+        ],
+        questions: [
+            {
+                prompt: "Contrast Applied Mathematics with the other disciplines in 2025.",
+                correct: "It completely outstripped the other fields, achieving near-universal employability.",
+                wrong: ["They shared a broadly similar figure.", "It experienced a sharp decline compared to Physics.", "It stood in identical proportions to Pure Mathematics."]
+            },
+            {
+                prompt: "What is the defining characteristic of the Pure Mathematics data?",
+                correct: "It remained highly static, forming a prolonged, low-level plateau.",
+                wrong: ["It saw a twofold increase.", "It surged dramatically.", "It suffered a drastic plummet."]
+            }
+        ]
+    },
+    {
+        title: "Social Services Budget Allocation",
+        chartType: "pie",
+        labels: ["Aged Care", "Disability Support", "Family Benefits", "Housing"],
+        datasets: [{ label: "Allocation (%)", data: [45, 35, 15, 5] }],
+        questions: [
+            {
+                prompt: "Summarize the allocation for Aged Care and Disability Support.",
+                correct: "Combined, they commanded an overwhelming majority of the total expenditure.",
+                wrong: ["They accounted for exactly half.", "They constituted a mere fraction.", "They were the least preferred subjects."]
+            },
+            {
+                prompt: "Describe the funding directed towards Housing.",
+                correct: "It represented a highly marginal, negligible proportion of the overall budget.",
+                wrong: ["It constituted the absolute majority.", "It made up exactly a quarter.", "It was the primary expenditure."]
+            }
+        ]
+    },
+    {
+        title: "Mechanical Restoration Wait Times (Months)",
+        chartType: "line",
+        labels: ["Jan", "Mar", "May", "Jul", "Sep"],
+        datasets: [
+            { label: "Standard Repair", data: [1, 1.5, 2, 2.5, 3] }, 
+            { label: "Full Repaint & Leatherette", data: [2, 4, 8, 14, 22] }
+        ],
+        questions: [
+            {
+                prompt: "How would you characterize the wait time for Full Repaint & Leatherette services?",
+                correct: "It underwent a parabolic surge, compounding drastically over the year.",
+                wrong: ["It remained relatively stable.", "It suffered a marginal dip.", "It levelled off completely."]
+            },
+            {
+                prompt: "Compare the two service trajectories.",
+                correct: "While standard repairs saw a marginal, linear increase, comprehensive restorations widened the gap exponentially.",
+                wrong: ["They closely mirrored one another.", "They exhibited completely inverse trajectories.", "They intersected and overtook one another repeatedly."]
+            }
+        ]
+    },
+    {
+        title: "National Olympiad Participation (Thousands)",
+        chartType: "bar",
+        labels: ["2010", "2015", "2020", "2025"],
+        datasets: [
+            { label: "Physics", data: [5, 8, 15, 25] }, 
+            { label: "Chemistry", data: [6, 7, 8, 7.5] }
+        ],
+        questions: [
+            {
+                prompt: "Describe the trajectory of Physics participation.",
+                correct: "It experienced a five-fold multiplication, exhibiting a stark upward trajectory.",
+                wrong: ["It remained completely static.", "It suffered a dramatic and sudden crash.", "It levelled out to a gradual plateau."]
+            },
+            {
+                prompt: "How does Chemistry compare over the fifteen-year period?",
+                correct: "It remained relatively stagnant, plateauing entirely after 2015.",
+                wrong: ["It significantly outperformed Physics.", "It skyrocketed abruptly.", "It displayed wild and erratic volatility."]
+            }
+        ]
+    },
+    {
+        title: "Algorithm Diagnostic Accuracy (%)",
+        chartType: "line",
+        labels: ["Epoch 10", "Epoch 20", "Epoch 30", "Epoch 40", "Epoch 50"],
+        datasets: [
+            { label: "Model A", data: [40, 85, 92, 94, 95] }, 
+            { label: "Model B", data: [35, 45, 55, 60, 58] }
+        ],
+        questions: [
+            {
+                prompt: "What happened to Model A between Epoch 10 and 20?",
+                correct: "It witnessed a dramatic, almost vertical spike before gradually leveling off.",
+                wrong: ["It suffered a drastic plummet.", "It maintained a highly static, unwavering baseline.", "It fluctuated wildly."]
+            },
+            {
+                prompt: "Describe Model B's performance.",
+                correct: "It exhibited a sluggish, marginal climb followed by a slight degradation.",
+                wrong: ["It saw a continuous, exponential surge.", "It intersected and overtook Model A.", "It remained exactly double that of Model A."]
+            }
+        ]
+    },
+    {
+        title: "Industrial Carbon Output (Million Tonnes)",
+        chartType: "line",
+        labels: ["2018", "2019", "2020", "2021", "2022"],
+        datasets: [
+            { label: "Regulated Sector", data: [500, 480, 300, 150, 100] }, 
+            { label: "Unregulated Sector", data: [200, 210, 250, 350, 480] }
+        ],
+        questions: [
+            {
+                prompt: "What occurred within the Regulated Sector between 2019 and 2021?",
+                correct: "Emissions plummeted sharply, collapsing to less than a third of previous levels.",
+                wrong: ["Emissions remained completely static.", "Emissions surged exponentially.", "Emissions experienced a slight, marginal dip."]
+            },
+            {
+                prompt: "Describe the overarching relationship between the two sectors.",
+                correct: "They experienced diametrically opposed trajectories, resulting in a complete inversion of their initial standing.",
+                wrong: ["They mirrored one another perfectly.", "They both suffered a sudden collapse and rapid recovery.", "They shared broadly similar figures."]
+            }
+        ]
+    },
+    {
+        title: "Peer-Reviewed Publications (Thousands)",
+        chartType: "bar",
+        labels: ["1990", "2000", "2010", "2020"],
+        datasets: [
+            { label: "Data Science", data: [2, 5, 25, 120] }, 
+            { label: "Traditional Statistics", data: [40, 42, 45, 43] }
+        ],
+        questions: [
+            {
+                prompt: "Compare Data Science in 1990 to 2020.",
+                correct: "The volume of publications exploded, representing a sixty-fold amplification.",
+                wrong: ["The volume plummeted drastically.", "It remained relatively stable.", "It halved abruptly."]
+            },
+            {
+                prompt: "Describe the pattern for Traditional Statistics.",
+                correct: "It maintained a highly static, unwavering baseline across all three decades.",
+                wrong: ["It saw a twofold increase.", "It experienced wild volatility.", "It surged dramatically."]
+            }
+        ]
+    },
+    {
+        title: "Global Surface Temperature Anomalies (°C)",
+        chartType: "line",
+        labels: ["1980", "1990", "2000", "2010", "2020"],
+        datasets: [{ label: "Deviation from Mean", data: [0.1, 0.25, 0.4, 0.65, 1.0] }],
+        questions: [
+            {
+                prompt: "How would you describe the overarching climatic trend?",
+                correct: "An unabated, progressively steepening upward trajectory.",
+                wrong: ["A drastic, sudden collapse.", "A completely static plateau.", "An erratic series of fluctuations."]
+            },
+            {
+                prompt: "Look at the shift from 2010 to 2020.",
+                correct: "The anomaly experienced an aggressive, accelerated surge.",
+                wrong: ["It leveled off completely.", "It plummeted sharply.", "It maintained a steady, marginal decline."]
+            }
+        ]
+    },
+    {
+        title: "Urban Transport Subsidies ($ Millions)",
+        chartType: "pie",
+        labels: ["Rail Networks", "Electric Buses", "Ferry Services", "Cycling Infrastructure"],
+        datasets: [{ label: "Allocation (%)", data: [52, 38, 7, 3] }],
+        questions: [
+            {
+                prompt: "Describe the funding directed toward Rail Networks.",
+                correct: "It commanded an absolute majority of the total financial allocation.",
+                wrong: ["It constituted a negligible fraction.", "It made up exactly a quarter.", "It accounted for roughly a third."]
+            },
+            {
+                prompt: "Compare Cycling Infrastructure to Electric Buses.",
+                correct: "Cycling received a completely negligible fraction compared to the substantial bus subsidies.",
+                wrong: ["They represented an identical proportion.", "Cycling significantly outperformed Electric Buses.", "They constituted the overwhelming majority combined."]
+            }
+        ]
     }
 ];

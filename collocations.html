@@ -50,13 +50,19 @@
         .matched { background-color: #27ae60 !important; color: white !important; border-color: #2ecc71 !important; cursor: default; opacity: 0.8; transform: scale(1); }
         .wrong { background-color: #e74c3c !important; color: white !important; border-color: #c0392b !important; }
 
-        /* Review Screen Styles */
-        .review-container { margin-top: 30px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 20px; max-height: 400px; overflow-y: auto; text-align: left; }
-        .review-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #ecf0f1; }
+        /* Enhanced Review Screen Styles */
+        .review-container { margin-top: 30px; display: flex; flex-direction: column; gap: 20px; text-align: left; max-height: 500px; overflow-y: auto; padding-right: 10px; }
+        .review-category { background: #fdfbf7; border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .review-category h3 { margin-top: 0; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px; font-size: 18px; }
+        
+        .cat-perfect h3 { color: #27ae60; border-color: #27ae60; }
+        .cat-struggled h3 { color: #e67e22; border-color: #e67e22; }
+        .cat-missed h3 { color: #c0392b; border-color: #c0392b; }
+        
+        .review-item { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dashed #eee; font-size: 16px; }
         .review-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .review-q { font-weight: bold; margin-bottom: 8px; font-size: 16px; color: #2c3e50; }
-        .correct-text { color: #27ae60; font-weight: bold; }
-        .incorrect-text { color: #c0392b; font-weight: bold; }
+        .colloc-correct { font-weight: bold; color: #2c3e50; }
+        .colloc-wrong { color: #e74c3c; font-size: 14px; margin-top: 4px; }
     </style>
 </head>
 <body>
@@ -117,8 +123,7 @@
         <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
 
         <div id="reviewSection" class="review-container">
-            <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px;">Performance Review</h3>
-            <div id="reviewList"></div>
+            <!-- JavaScript will inject the categorized review data here -->
         </div>
     </div>
 </div>
@@ -354,28 +359,31 @@
         const trackingEnabled = localStorage.getItem("ielts_tracking_enabled") === "true";
 
         if (trackingEnabled) {
-            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwAUYzRONdG5foqJ395nLu_0jAhNz1DgREUyTttFw5fBmGvzcpgHyJxtruXyIJiM7w76w/exec"; // Your Google Apps Script URL
+            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwAUYzRONdG5foqJ395nLu_0jAhNz1DgREUyTttFw5fBmGvzcpgHyJxtruXyIJiM7w76w/exec"; 
             const studentName = localStorage.getItem("ielts_student_name") || "Anonymous";
             const dateNow = new Date().toISOString();
-            const finalPercentage = Math.round((score / totalPossibleScore) * 100); // Adjust denominator based on the specific game
+            const finalPercentage = Math.round((score / totalPossibleScore) * 100); 
 
-            // 2. Format mistakes for the tutor's Google Sheet (Optional but helpful)
+            // Format mistakes for the tutor's Google Sheet
             let mistakesLog = "No mistakes logged.";
-            if (typeof sessionHistory !== 'undefined') {
-                mistakesLog = sessionHistory
-                    .filter(item => !item.isCorrect)
-                    .map(item => item.prompt ? item.prompt.substring(0,30) + "..." : "Error")
-                    .join(" | ");
+            if (typeof sessionHistory !== 'undefined' && sessionHistory.length > 0) {
+                const errors = sessionHistory.filter(item => !item.matched || item.mistakes.length > 0);
+                if (errors.length > 0) {
+                    mistakesLog = errors.map(item => {
+                        if (!item.matched) return `${item.verb} (Timed out)`;
+                        return `${item.verb} (Wrong clicks: ${item.mistakes.join(', ')})`;
+                    }).join(" | ");
+                }
             }
 
-            // 3. Send Remotely to Tutor's Google Sheet
+            // Send Remotely to Tutor's Google Sheet
             let payload = {
                 studentName: studentName,
-                drillName: "Connections", // IMPORTANT: Change this text!
+                drillName: "Collocation Connector", 
                 contentType: "Standard Run",
                 timeLimit: globalTimeLimit + "s",
                 score: score,
-                maxScore: totalPossibleScore, // Adjust based on game
+                maxScore: totalPossibleScore, 
                 percentage: finalPercentage,
                 mistakes: mistakesLog
             };
@@ -392,28 +400,45 @@
     }
 
     function generateReviewSection() {
-        const reviewList = document.getElementById('reviewList');
-        reviewList.innerHTML = ''; 
+        const reviewSection = document.getElementById('reviewSection');
+        reviewSection.innerHTML = '<h2 style="margin-top: 0; color: #2c3e50; text-align: center;">Performance Review</h2>'; 
 
-        sessionHistory.forEach((item, index) => {
-            const div = document.createElement('div');
-            div.className = 'review-item';
-            
-            const qText = `<div class="review-q">${index + 1}. <span style="color:#8e44ad">${item.verb}</span> + <span style="color:#2980b9">${item.noun}</span></div>`;
-            
-            let statusBadge = item.matched 
-                ? `<span class="correct-text">Matched successfully</span>` 
-                : `<span class="incorrect-text">Timed out before matching</span>`;
+        const perfect = sessionHistory.filter(item => item.matched && item.mistakes.length === 0);
+        const struggled = sessionHistory.filter(item => item.matched && item.mistakes.length > 0);
+        const missed = sessionHistory.filter(item => !item.matched);
 
-            let ansText = `<div>Status: ${statusBadge}</div>`;
-            
-            if (item.mistakes.length > 0) {
-                ansText += `<div style="margin-top: 5px;">Incorrect attempts: <span class="incorrect-text">${item.verb} + ${item.mistakes.join(', ')}</span></div>`;
-            }
+        if (perfect.length > 0) {
+            let html = `<div class="review-category cat-perfect"><h3>✅ Perfect Matches</h3>`;
+            perfect.forEach(item => {
+                html += `<div class="review-item"><span class="colloc-correct">${item.verb} + ${item.noun}</span></div>`;
+            });
+            html += `</div>`;
+            reviewSection.innerHTML += html;
+        }
 
-            div.innerHTML = qText + ansText;
-            reviewList.appendChild(div);
-        });
+        if (struggled.length > 0) {
+            let html = `<div class="review-category cat-struggled"><h3>⚠️ Matched (With Mistakes)</h3>`;
+            struggled.forEach(item => {
+                html += `<div class="review-item">
+                            <div class="colloc-correct">${item.verb} + ${item.noun}</div>
+                            <div class="colloc-wrong">❌ You clicked: ${item.mistakes.join(', ')}</div>
+                         </div>`;
+            });
+            html += `</div>`;
+            reviewSection.innerHTML += html;
+        }
+
+        if (missed.length > 0) {
+            let html = `<div class="review-category cat-missed"><h3>❌ Missed (Timed Out)</h3>`;
+            missed.forEach(item => {
+                html += `<div class="review-item">
+                            <div class="colloc-correct">${item.verb} + ${item.noun}</div>
+                            <div class="colloc-wrong">Ran out of time before matching.</div>
+                         </div>`;
+            });
+            html += `</div>`;
+            reviewSection.innerHTML += html;
+        }
     }
 
     function resetGame() {

@@ -65,6 +65,24 @@
         
         .correct-anim { border-color: #27ae60 !important; background-color: #eafaf1 !important; }
         .wrong-anim { border-color: #e74c3c !important; background-color: #fdedec !important; }
+
+        /* Enhanced Review Screen Styles */
+        .review-container { margin-top: 30px; display: flex; flex-direction: column; gap: 20px; text-align: left; max-height: 500px; overflow-y: auto; padding-right: 10px; }
+        .review-category { background: #fdfbf7; border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .review-category h3 { margin-top: 0; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px; font-size: 18px; }
+        
+        .cat-perfect h3 { color: #27ae60; border-color: #27ae60; }
+        .cat-struggled h3 { color: #e67e22; border-color: #e67e22; }
+        .cat-missed h3 { color: #c0392b; border-color: #c0392b; }
+        
+        .review-item { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed #eee; font-size: 16px; }
+        .review-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .review-topic { font-weight: bold; color: #2c3e50; font-size: 18px;}
+        .review-detail { font-size: 14px; margin-top: 4px; }
+        .text-correct { color: #27ae60; font-weight: bold;}
+        .text-wrong { color: #e74c3c; font-weight: bold;}
+        .text-warning { color: #e67e22; font-weight: bold;}
+        .correct-flow-box { margin-top: 10px; font-size: 14px; color: #444; background: #fff; padding: 15px; border-radius: 6px; border-left: 4px solid #3498db; line-height: 1.6; }
     </style>
 </head>
 <body>
@@ -120,6 +138,10 @@
         <p id="feedbackText"></p>
         <button onclick="resetGame()">Return to Setup</button>
         <button onclick="window.location.href='index.html'" style="background-color: #95a5a6; margin-top: 10px;">Back to Menu</button>
+
+        <div id="reviewSection" class="review-container">
+            <!-- JavaScript will inject the categorized review data here -->
+        </div>
     </div>
 </div>
 
@@ -129,7 +151,10 @@
     let score = 0;
     let originalSentences = []; 
     let sortableInstance = null; 
-    let scramblerMistakes = [];
+
+    // --- NEW TRACKING VARIABLES ---
+    let sessionHistory = [];
+    let currentAttempts = 0;
 
     function shuffleArray(array) {
         return array.sort(() => Math.random() - 0.5);
@@ -148,13 +173,10 @@
             filteredPool = scramblerData.filter((item, index) => {
                 const topic = item.topic.toLowerCase();
                 if (bandChoice === '5.5') {
-                    // Match items categorized as band 5.5-6.0 or fallback to first batch of indices
                     return topic.includes('5.5') || topic.includes('6.0') || index < 10;
                 } else if (bandChoice === '7.0') {
-                    // Match intermediate items
                     return topic.includes('6.5') || topic.includes('7.0') || (index >= 10 && index < 30);
                 } else if (bandChoice === '7.5') {
-                    // Match advanced items
                     return topic.includes('7.5') || index >= 30;
                 }
                 return true;
@@ -168,7 +190,8 @@
         currentPool = shuffleArray(filteredPool).slice(0, requestedCount);
         currentIndex = 0;
         score = 0;
-        scramblerMistakes = [];
+        
+        sessionHistory = []; // Reset tracking
 
         document.getElementById('setupScreen').classList.remove('active');
         document.getElementById('endScreen').classList.remove('active');
@@ -182,6 +205,8 @@
             endGame();
             return;
         }
+
+        currentAttempts = 0; // Reset attempts for the new paragraph
 
         const currentPara = currentPool[currentIndex];
         document.getElementById('topicDisplay').innerText = `Topic: ${currentPara.topic}`;
@@ -229,7 +254,14 @@
     }
 
     function showCorrectAnswer() {
-        scramblerMistakes.push(currentPool[currentIndex].topic);
+        // Log that they gave up on this paragraph
+        sessionHistory.push({
+            topic: currentPool[currentIndex].topic,
+            attempts: currentAttempts,
+            usedHelp: true,
+            sentences: [...originalSentences]
+        });
+
         const listEl = document.getElementById('sortableList');
         listEl.innerHTML = '';
 
@@ -248,6 +280,8 @@
     }
 
     function checkAnswer() {
+        currentAttempts++; // Count the attempt
+
         const listEl = document.getElementById('sortableList');
         const userBlocks = listEl.children;
         let allCorrect = true;
@@ -266,6 +300,14 @@
         }
 
         if (allCorrect) {
+            // Log that they succeeded!
+            sessionHistory.push({
+                topic: currentPool[currentIndex].topic,
+                attempts: currentAttempts,
+                usedHelp: false,
+                sentences: [...originalSentences]
+            });
+
             score++;
             document.getElementById('checkBtn').style.display = 'none';
             document.getElementById('showAnswerBtn').style.display = 'none';
@@ -298,26 +340,27 @@
         else feedback = "We need to practice essay structuring. Look for clues like 'However', 'Therefore', and 'For instance'.";
         document.getElementById('feedbackText').innerText = feedback;
 
-        // --- OPT-IN TRACKING LOGIC FOR SCRAMBLER ---
         const trackingEnabled = localStorage.getItem("ielts_tracking_enabled") === "true";
 
         if (trackingEnabled) {
-            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwAUYzRONdG5foqJ395nLu_0jAhNz1DgREUyTttFw5fBmGvzcpgHyJxtruXyIJiM7w76w/exec"; // <-- Paste your URL here!
+            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwAUYzRONdG5foqJ395nLu_0jAhNz1DgREUyTttFw5fBmGvzcpgHyJxtruXyIJiM7w76w/exec";
             const studentName = localStorage.getItem("ielts_student_name") || "Anonymous";
             const dateNow = new Date().toISOString();
             const finalPercentage = Math.round((score / currentPool.length) * 100);
 
-            // 2. Format mistakes for Google Sheets
+            // Format precise mistake log for Google Sheets
             let mistakesLog = "Flawless run! No help needed.";
-            if (scramblerMistakes.length > 0) {
-                mistakesLog = "Needed answer key for: " + scramblerMistakes.join(" | ");
+            const errors = sessionHistory.filter(item => item.usedHelp || item.attempts > 1);
+            if (errors.length > 0) {
+                mistakesLog = errors.map(item => {
+                    if (item.usedHelp) return `${item.topic} (Gave up after ${item.attempts} checks)`;
+                    return `${item.topic} (${item.attempts} attempts)`;
+                }).join(" | ");
             }
 
-            // 3. Get the active Difficulty Band setting
             const bandSelect = document.getElementById('bandSelect');
             const selectedBand = bandSelect.options[bandSelect.selectedIndex].text;
 
-            // 4. Send Remotely
             let payload = {
                 studentName: studentName,
                 drillName: "Paragraph Scrambler",
@@ -336,7 +379,61 @@
                 body: JSON.stringify(payload)
             }).catch(err => console.log("Remote tracking failed:", err));
         }
-        // --- END OPT-IN TRACKING LOGIC ---
+        
+        // Build the visual review board
+        generateReviewSection();
+    }
+
+    function generateReviewSection() {
+        const reviewSection = document.getElementById('reviewSection');
+        reviewSection.innerHTML = '<h2 style="margin-top: 0; color: #2c3e50; text-align: center;">Performance Review</h2>'; 
+
+        const perfect = sessionHistory.filter(item => !item.usedHelp && item.attempts === 1);
+        const struggled = sessionHistory.filter(item => !item.usedHelp && item.attempts > 1);
+        const missed = sessionHistory.filter(item => item.usedHelp);
+
+        if (perfect.length > 0) {
+            let html = `<div class="review-category cat-perfect"><h3>✅ First-Try Success</h3>`;
+            perfect.forEach(item => {
+                html += `<div class="review-item">
+                            <div class="review-topic">${item.topic}</div>
+                            <div class="review-detail text-correct">Arranged perfectly on the first attempt.</div>
+                         </div>`;
+            });
+            html += `</div>`;
+            reviewSection.innerHTML += html;
+        }
+
+        if (struggled.length > 0) {
+            let html = `<div class="review-category cat-struggled"><h3>⚠️ Multiple Attempts Needed</h3>`;
+            struggled.forEach(item => {
+                html += `<div class="review-item">
+                            <div class="review-topic">${item.topic}</div>
+                            <div class="review-detail text-warning">Solved in ${item.attempts} attempts.</div>
+                            <div class="correct-flow-box">
+                                <b>Correct Flow:</b><br>${item.sentences.join(' <br><span style="color:#bdc3c7;">↓</span> ')}
+                            </div>
+                         </div>`;
+            });
+            html += `</div>`;
+            reviewSection.innerHTML += html;
+        }
+
+        if (missed.length > 0) {
+            let html = `<div class="review-category cat-missed"><h3>❌ Used Answer Key</h3>`;
+            missed.forEach(item => {
+                let attemptText = item.attempts === 0 ? "Showed answer immediately." : `Showed answer after ${item.attempts} check(s).`;
+                html += `<div class="review-item">
+                            <div class="review-topic">${item.topic}</div>
+                            <div class="review-detail text-wrong">${attemptText}</div>
+                            <div class="correct-flow-box">
+                                <b>Correct Flow:</b><br>${item.sentences.join(' <br><span style="color:#bdc3c7;">↓</span> ')}
+                            </div>
+                         </div>`;
+            });
+            html += `</div>`;
+            reviewSection.innerHTML += html;
+        }
     }
 
     function resetGame() {
