@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IELTS Spelling & Dictation Sprint</title>
     <script src="papaparse.min.js"></script>
-    <script src="data.js"></script>
+    <script src="data_spelling.js"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -166,7 +166,7 @@
 
     window.onload = function() {
         if (typeof spellingCSVData === 'undefined') {
-            alert("Error: Could not find spellingCSVData in data.js");
+            alert("Error: Could not find spellingCSVData in data_spelling.js");
             return;
         }
 
