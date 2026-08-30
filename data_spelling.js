@@ -1354,4 +1354,704 @@ Core Academic Words (AWL),The new law will severely [restrict] the sale of tobac
 Core Academic Words (AWL),Please ensure that you tightly [secure] your luggage before the flight.
 Core Academic Words (AWL),Many refugees cross the border to [seek] safety and a better life.
 Core Academic Words (AWL),You must [select] three elective subjects for your final semester.
+Japanese L & R Traps,The coastal ecosystem is highly [vulnerable] to climate change.
+Japanese L & R Traps,The two railway lines run completely [parallel] to each other.
+Japanese L & R Traps,The professor asked the student to [clarify] the difficult concept.
+Japanese L & R Traps,The government must [declare] a national state of emergency.
+Japanese L & R Traps,The new bridge suffered a severe [structural] failure during the storm.
+Japanese L & R Traps,Developing nations rely heavily on the [agricultural] sector.
+Japanese L & R Traps,You must use a [plural] noun when speaking generally about people.
+Japanese L & R Traps,The company needs to find a highly [lucrative] market to survive.
+Japanese L & R Traps,He made a [brilliant] observation during the biology seminar.
+Japanese L & R Traps,We must gather [relevant] data before writing the final report.
+Japanese L & R Traps,The internet is not always a [reliable] source of medical information.
+Japanese L & R Traps,The factory must [release] its environmental impact statement today.
+Japanese L & R Traps,The medicine will quickly [relieve] the tension in your muscles.
+Japanese L & R Traps,The mirror will clearly [reflect] the light from the sun.
+Japanese L & R Traps,The city plans to [replace] the old buses with electric ones.
+Japanese L & R Traps,The manager did not [reply] to the urgent email I sent.
+Japanese L & R Traps,The final [result] of the chemistry experiment was surprising.
+Japanese L & R Traps,The diplomatic meeting failed to [resolve] the border conflict.
+Japanese L & R Traps,Many modern teenagers [rely] entirely on their smartphones.
+Japanese L & R Traps,There is a strong [relation] between a bad diet and heart disease.
+Japanese L & R Traps,The ancient text describes their culture and [religion].
+Japanese L & R Traps,The company must set a [realistic] budget for the new project.
+Japanese L & R Traps,Programming requires a highly [logical] approach to problem-solving.
+Japanese L & R Traps,The rainforest is known for its massive [biological] diversity.
+Japanese L & R Traps,The citizens will vote in the national [election] next week.
+Japanese L & R Traps,You are not allowed to use [electronic] devices during the flight.
+Japanese L & R Traps,The mechanic fixed the [electric] motor on the washing machine.
+Japanese L & R Traps,The pilot lost [control] of the airplane during the heavy storm.
+Japanese L & R Traps,You can [scroll] down the webpage to read the rest of the article.
+Japanese L & R Traps,The teacher used a plastic [ruler] to draw a straight line.
+Japanese L & R Traps,The king was known as a very harsh and [cruel] leader.
+Japanese L & R Traps,The city festival is a massive [cultural] celebration for the locals.
+Japanese L & R Traps,We must preserve the [natural] beauty of the mountain range.
+Japanese L & R Traps,The main train station is located in the [central] business district.
+Japanese L & R Traps,The new tax law was passed by the [federal] government.
+Japanese L & R Traps,The [general] consensus is that smoking is terrible for your health.
+Japanese L & R Traps,The rocks in this cave are full of a rare [mineral].
+Japanese L & R Traps,I have visited the capital city [several] times in my life.
+Japanese L & R Traps,The judge must remain completely [neutral] during the trial.
+Japanese L & R Traps,The story teaches children a very important [moral] lesson.
+Japanese L & R Traps,The artist painted a massive [mural] on the side of the building.
+Japanese L & R Traps,The funny video went completely [viral] on social media.
+Japanese L & R Traps,The smoke from the fire rose in a tall [spiral].
+Japanese L & R Traps,She wore a beautiful dress with a bright [floral] pattern.
+Japanese L & R Traps,The Great Barrier Reef is made of fragile living [coral].
+Japanese L & R Traps,The politician won the election with a massive [plurality] of votes.
+Japanese L & R Traps,The team must [collaborate] to finish the project on time.
+Japanese L & R Traps,We need to [calculate] the total cost of the holiday.
+Japanese L & R Traps,The hospital uses advanced equipment to [circulate] the clean air.
+Japanese L & R Traps,The police officer used a flashlight to [illuminate] the dark alley.
+Katakana Spelling Traps,The main [theme] of the novel is the danger of technology.
+Katakana Spelling Traps,The patient was given a [vaccine] to prevent the disease.
+Katakana Spelling Traps,The computer was destroyed by a malicious software [virus].
+Katakana Spelling Traps,You should not consume [alcohol] before driving a car.
+Katakana Spelling Traps,She has a severe [allergy] to peanuts and dairy products.
+Katakana Spelling Traps,The store gave me my groceries in a cheap [plastic] bag.
+Katakana Spelling Traps,Old records are pressed onto heavy black [vinyl].
+Katakana Spelling Traps,Eating fresh fruit provides you with essential [vitamin] C.
+Katakana Spelling Traps,Solar panels capture [energy] directly from the sun.
+Katakana Spelling Traps,He put thick styling [gel] in his hair before the party.
+Katakana Spelling Traps,The train traveled through the dark underground [tunnel].
+Katakana Spelling Traps,Please use a dry [towel] to wipe up the spilled water.
+Katakana Spelling Traps,The corporate [hierarchy] makes it hard for juniors to speak up.
+Katakana Spelling Traps,You must create an online [profile] to use the application.
+Katakana Spelling Traps,The deep [irony] of the situation was lost on the manager.
+Katakana Spelling Traps,Please leave a voice [message] if I do not answer the phone.
+Katakana Spelling Traps,The athlete received a deep tissue [massage] after the race.
+Katakana Spelling Traps,She is pursuing a [career] in international business law.
+Katakana Spelling Traps,We booked a guided walking [tour] of the ancient ruins.
+Katakana Spelling Traps,You should wear a warm wool [sweater] because it is cold.
+Katakana Spelling Traps,The musicians recorded their new album in a professional [studio].
+Katakana Spelling Traps,I prefer listening to news on the [radio] while driving.
+Katakana Spelling Traps,The lecture was recorded on [video] for the absent students.
+Katakana Spelling Traps,You need to use a hot [iron] to remove the wrinkles from the shirt.
+Katakana Spelling Traps,Please ask the cashier to print a paper [receipt] for the purchase.
+Katakana Spelling Traps,The medicine is enclosed in a small plastic [capsule].
+Katakana Spelling Traps,The artist painted a beautiful sunset on the blank [canvas].
+Katakana Spelling Traps,I love eating sweet [caramel] sauce on my ice cream.
+Katakana Spelling Traps,Dark [chocolate] is actually quite good for your heart health.
+Katakana Spelling Traps,I used a digital [camera] to take photos of the landscape.
+Katakana Spelling Traps,Please write the appointment down on your desk [calendar].
+Katakana Spelling Traps,The ring features a massive and expensive [diamond].
+Katakana Spelling Traps,The company gave all employees a cash [bonus] for their hard work.
+Katakana Spelling Traps,The dentist fixed the broken tooth with hard white [enamel].
+Katakana Spelling Traps,You must read the warning [label] before taking the medicine.
+Katakana Spelling Traps,The water [level] in the river rises dangerously during the spring.
+Katakana Spelling Traps,The taxi driver checked the distance on the digital [meter].
+Katakana Spelling Traps,The internet runs on a massive global [network] of cables.
+Katakana Spelling Traps,The complex mathematical [algorithm] predicts consumer behavior.
+Katakana Spelling Traps,The internal [mechanism] of the clock is broken.
+Katakana Spelling Traps,He felt deep [sympathy] for the victims of the earthquake.
+Katakana Spelling Traps,Good teachers demonstrate a high degree of [empathy] for students.
+Katakana Spelling Traps,The physical [therapy] helped heal his broken leg.
+Katakana Spelling Traps,We ate a small light [appetizer] before the main course.
+Katakana Spelling Traps,I would like a slice of chocolate cake for [dessert].
+Katakana Spelling Traps,The chef chopped the green [cabbage] for the salad.
+Katakana Spelling Traps,She washed the crisp [lettuce] and put it in the bowl.
+Katakana Spelling Traps,The recipe requires a lot of fresh garlic and [onion].
+Katakana Spelling Traps,The tropical climate is perfect for growing [mango] trees.
+Katakana Spelling Traps,He squeezed the juice of a fresh yellow [lemon] into his tea.
+Japanese L & R Traps,You should exercise [regularly] to maintain good health.
+Japanese L & R Traps,The translation of the poem was [literally] word for word.
+Japanese L & R Traps,The cost of living in the city is [relatively] high.
+Japanese L & R Traps,The economy is [primarily] based on tourism and agriculture.
+Japanese L & R Traps,The fire was [deliberately] started by an unknown suspect.
+Japanese L & R Traps,The company released a [preliminary] report on the incident.
+Japanese L & R Traps,She is writing a [literature] review for her thesis.
+Japanese L & R Traps,The heartbeat was highly [irregular] during the medical test.
+Japanese L & R Traps,"We could go by train or, [alternatively], we could drive."
+Japanese L & R Traps,There is a strong [correlation] between poverty and crime.
+Japanese L & R Traps,Eating junk food increases your [cholesterol] levels.
+Japanese L & R Traps,The banking industry faces strict [regulatory] challenges.
+Japanese L & R Traps,The army used heavy [artillery] during the battle.
+Japanese L & R Traps,The two nations signed a [bilateral] trade agreement.
+Japanese L & R Traps,The bank required [collateral] before approving the loan.
+Japanese L & R Traps,The country acted [unilaterally] without consulting its allies.
+Japanese L & R Traps,Many people are migrating from [rural] areas to the city.
+Japanese L & R Traps,He studies [cellular] biology at the medical university.
+Japanese L & R Traps,The researchers analyzed the [molecular] structure of the virus.
+Japanese L & R Traps,Pay [particular] attention to the spelling of this word.
+Japanese L & R Traps,The robot uses [artificial] intelligence to learn.
+Japanese L & R Traps,The damage to the building was only [superficial].
+Japanese L & R Traps,Older citizens are highly [vulnerable] to the winter flu.
+Japanese L & R Traps,The computer [algorithm] determines what ads you see.
+Japanese L & R Traps,The professor explained the complex theory very [clearly].
+Japanese L & R Traps,The gas is stored in a highly pressurized metal [cylinder].
+Japanese L & R Traps,Sports drinks help replace lost water and every [electrolyte].
+Japanese L & R Traps,The mechanical [failure] caused the engine to stop working.
+Japanese L & R Traps,You need to clean the air [filter] in the air conditioner.
+Japanese L & R Traps,English is widely spoken [globally] for international business.
+Japanese L & R Traps,The museum contains many valuable [historical] artifacts.
+Japanese L & R Traps,The company is conducting an [internal] audit of its finances.
+Japanese L & R Traps,The building's [external] walls were damaged by the storm.
+Japanese L & R Traps,The new policy had only a [marginal] impact on the economy.
+Japanese L & R Traps,The government increased the [military] budget this year.
+Japanese L & R Traps,The password must contain [multiple] numbers and letters.
+Japanese L & R Traps,The disease causes severe [neurological] damage over time.
+Japanese L & R Traps,The new law was passed by the national [parliament].
+Japanese L & R Traps,Social media is incredibly [popular] among young teenagers.
+Japanese L & R Traps,Ensure you [properly] save your data before closing the program.
+Japanese L & R Traps,The scientists followed a strict safety [protocol].
+Japanese L & R Traps,The company publishes a [quarterly] financial report.
+Japanese L & R Traps,The internet caused a [radical] change in how we communicate.
+Japanese L & R Traps,The two competing products are [similarly] priced.
+Japanese L & R Traps,The use of mobile phones is [strictly] prohibited during the exam.
+Japanese L & R Traps,The [translation] of the document took three weeks.
+Japanese L & R Traps,Hard work will [ultimately] lead to long-term success.
+Japanese L & R Traps,The scientist questioned the [validity] of the test results.
+Japanese L & R Traps,The charity relies on [voluntary] donations from the public.
+Japanese L & R Traps,The weather is an unpredictable [variable] in farming.
+Katakana Spelling Traps,Soda cans are typically made of lightweight [aluminum].
+Katakana Spelling Traps,Wind and solar power produce clean [energy].
+Katakana Spelling Traps,Traditional watches have been replaced by [digital] screens.
+Katakana Spelling Traps,The city has a very exciting and [dynamic] culture.
+Katakana Spelling Traps,"This painting is the [original], not a cheap copy."
+Katakana Spelling Traps,Learning a language is a slow and difficult [process].
+Katakana Spelling Traps,The hotel offers a very high [standard] of customer service.
+Katakana Spelling Traps,Modern [technology] makes communication much faster.
+Katakana Spelling Traps,Please turn down the [volume] on the television.
+Katakana Spelling Traps,You must strike a careful [balance] between work and rest.
+Katakana Spelling Traps,Starting a new [business] requires a lot of capital.
+Katakana Spelling Traps,I love listening to [classic] rock music from the 1970s.
+Katakana Spelling Traps,Effective [communication] is vital for a successful marriage.
+Katakana Spelling Traps,The programmer wrote code on his laptop [computer].
+Katakana Spelling Traps,The patient is in stable [condition] at the hospital.
+Katakana Spelling Traps,You can pay for the meal using a [credit] card.
+Katakana Spelling Traps,The heavy storm caused severe [damage] to the roof.
+Katakana Spelling Traps,The architect will [design] a new public library.
+Katakana Spelling Traps,The local [ecology] is threatened by plastic pollution.
+Katakana Spelling Traps,The national [economy] is growing at a rapid pace.
+Katakana Spelling Traps,The Olympic athletes are considered [elite] sports professionals.
+Katakana Spelling Traps,The city hosted a massive cultural [event] in the park.
+Katakana Spelling Traps,The court called a medical [expert] to testify.
+Katakana Spelling Traps,Please attach the document [file] to your email.
+Katakana Spelling Traps,You must [focus] completely on your academic studies.
+Katakana Spelling Traps,Climate change is a massive [global] challenge.
+Katakana Spelling Traps,The teacher divided the class into a small [group].
+Katakana Spelling Traps,The tour [guide] showed us around the ancient ruins.
+Katakana Spelling Traps,The company is trying to improve its public [image].
+Katakana Spelling Traps,The new law will have a massive [impact] on small businesses.
+Katakana Spelling Traps,You must wear a formal suit to the job [interview].
+Katakana Spelling Traps,The factory uses a massive industrial [machine].
+Katakana Spelling Traps,The children watched a wonderful [magic] show.
+Katakana Spelling Traps,The news [media] reported on the recent political scandal.
+Katakana Spelling Traps,I have a very clear [memory] of my childhood holiday.
+Katakana Spelling Traps,The scientist built a computational [model] of the virus.
+Katakana Spelling Traps,You should not stare at a computer [monitor] all day.
+Katakana Spelling Traps,The detective is trying to solve a complex murder [mystery].
+Katakana Spelling Traps,The wallpaper has a beautiful floral [pattern].
+Katakana Spelling Traps,"Nobody is [perfect], so do not be afraid to make mistakes."
+Katakana Spelling Traps,The software [program] crashed and deleted my work.
+Katakana Spelling Traps,The construction [project] will take three years to complete.
+Katakana Spelling Traps,They ate dinner together at a [romantic] French restaurant.
+Katakana Spelling Traps,The train is running exactly on its daily [schedule].
+Katakana Spelling Traps,The cinema has a massive projector [screen].
+Katakana Spelling Traps,Winter is my absolute favorite [season] of the year.
+Katakana Spelling Traps,You must promise to keep this information a [secret].
+Katakana Spelling Traps,The restaurant provided excellent food and [service].
+Katakana Spelling Traps,The football team is looking for a corporate [sponsor].
+Katakana Spelling Traps,The body's immune [system] fights off dangerous viruses.
+L & R Transformations,The virtual simulation was completely indistinguishable from [reality].
+L & R Transformations,The software update patched a critical security [vulnerability].
+L & R Transformations,The smartphone application saw a massive surge in [popularity].
+L & R Transformations,The researchers noticed a striking [similarity] between the two datasets.
+L & R Transformations,Her deep [familiarity] with the software saved the team hours of work.
+L & R Transformations,The professor explained the complex theory with absolute [clarity].
+L & R Transformations,The auditor noticed a massive financial [irregularity] in the report.
+L & R Transformations,The community showed great [solidarity] during the economic crisis.
+L & R Transformations,The philosopher debated the strict [morality] of artificial intelligence.
+L & R Transformations,The judge must maintain complete [neutrality] during the long trial.
+L & R Transformations,Public transport [reliability] is essential for a functioning city.
+L & R Transformations,The company holds zero legal [liability] for personal injuries.
+L & R Transformations,Please check your calendar and confirm your [availability] for next week.
+L & R Transformations,Remote work offers incredible [flexibility] for young parents.
+L & R Transformations,The new military jet has supersonic flight [capability].
+L & R Transformations,Electric wheelchairs grant increased [mobility] to elderly citizens.
+L & R Transformations,The Swiss army knife is famous for its everyday [utility].
+L & R Transformations,The stock market experienced severe [volatility] during the pandemic.
+L & R Transformations,The structural [stability] of the bridge was compromised by the storm.
+L & R Transformations,The agricultural chemicals completely destroyed the soil [fertility].
+L & R Transformations,The controversial decision was met with open public [hostility].
+L & R Transformations,The documentary exposed the harsh [brutality] of nature.
+L & R Transformations,Many people visit the ancient temple seeking deep [spirituality].
+L & R Transformations,The engineer approached the problem with cold, logical [rationality].
+L & R Transformations,The city center has lost its economic [vitality] over the years.
+L & R Transformations,The new laws aim to promote total gender [equality] in the workplace.
+L & R Transformations,Consumers are willing to pay more for high [quality] products.
+L & R Transformations,The candidate won the election with a slim [plurality] of votes.
+L & R Transformations,The art teacher praised the student for their brilliant [originality].
+L & R Transformations,German railway systems are famous for their strict [punctuality].
+L & R Transformations,The psychological test evaluates your unique [personality] traits.
+L & R Transformations,The luxury hotel is known for its warm and welcoming [hospitality].
+L & R Transformations,The development of vaccines drastically reduced infant [mortality].
+L & R Transformations,There is a high [probability] of severe thunderstorms tomorrow.
+L & R Transformations,The CEO must increase the overall [profitability] of the business.
+L & R Transformations,The conference focused on the long-term [sustainability] of ocean fishing.
+L & R Transformations,It is your personal [responsibility] to submit the form on time.
+L & R Transformations,The heavy winter fog severely reduced driving [visibility].
+L & R Transformations,The new train station design drastically improves wheelchair [accessibility].
+L & R Transformations,A poor diet increases your [susceptibility] to cardiovascular disease.
+L & R Transformations,The computer performed a massive [calculation] in just three seconds.
+L & R Transformations,Exercise significantly improves the [circulation] of blood in your body.
+L & R Transformations,The automatic internet [translation] was completely inaccurate.
+L & R Transformations,There is a direct [correlation] between education and income.
+L & R Transformations,Deep sea [exploration] requires highly specialized robotic equipment.
+L & R Transformations,The tailor made a slight [alteration] to the length of the dress.
+L & R Transformations,The government issued a formal [declaration] of independence.
+L & R Transformations,The archaeological dig resulted in a stunning historical [revelation].
+L & R Transformations,The army launched a swift [retaliation] against the enemy forces.
+L & R Transformations,The chemical [formulation] of the new drug is highly classified.
+L & R Adverbs & Endings,The chef applied salt and pepper [liberally] to the meat.
+L & R Adverbs & Endings,The local diet consists [primarily] of rice and fresh fish.
+L & R Adverbs & Endings,The safety equipment must be inspected [regularly].
+L & R Adverbs & Endings,The shy nocturnal animal is [rarely] seen during the day.
+L & R Adverbs & Endings,The music was so quiet I could [barely] hear it.
+L & R Adverbs & Endings,The fine was [merely] a slap on the wrist for the wealthy company.
+L & R Adverbs & Endings,The performance was [utterly] disastrous from start to finish.
+L & R Adverbs & Endings,The two politicians are [bitterly] opposed to each other.
+L & R Adverbs & Endings,You must learn to [properly] format your academic essay.
+L & R Adverbs & Endings,The two twin brothers behave very [similarly] in social situations.
+L & R Adverbs & Endings,The final chapter of the book was [particularly] difficult to understand.
+L & R Adverbs & Endings,The fireworks display ended [spectacularly] with a massive explosion.
+L & R Adverbs & Endings,Wild animals will [naturally] avoid human settlements.
+L & R Adverbs & Endings,The festival is highly [culturally] significant for the indigenous people.
+L & R Adverbs & Endings,The old wooden bridge is [structurally] unsound and dangerous.
+L & R Adverbs & Endings,The old car was [literally] crushed by the falling tree.
+L & R Adverbs & Endings,The success of the project rests [entirely] on your shoulders.
+L & R Adverbs & Endings,The national bank [recently] increased the interest rates.
+L & R Adverbs & Endings,The buses run very [frequently] during the morning rush hour.
+L & R Adverbs & Endings,The CEO is [currently] attending a conference in London.
+L & R Adverbs & Endings,It is [apparent] that the current strategy is completely failing.
+L & R Adverbs & Endings,The company must be fully [transparent] about its environmental impact.
+L & R Adverbs & Endings,Please ensure your arguments are [relevant] to the essay topic.
+L & R Adverbs & Endings,Type 2 diabetes is highly [prevalent] in modern Western societies.
+L & R Adverbs & Endings,A mile is roughly [equivalent] to one point six kilometers.
+L & R Adverbs & Endings,The school will not [tolerate] any bullying in the classroom.
+L & R Adverbs & Endings,The vehicle began to [accelerate] rapidly down the empty highway.
+L & R Adverbs & Endings,The two scientists will [collaborate] on the upcoming research paper.
+L & R Adverbs & Endings,The professor asked the student to [elaborate] on his complex theory.
+L & R Adverbs & Endings,The manager will [evaluate] your performance at the end of the year.
+L & R Adverbs & Endings,The medication will help [relieve] the severe pain in your back.
+L & R Adverbs & Endings,The dog was trained to [retrieve] the ball from the water.
+L & R Adverbs & Endings,Dogs can [perceive] high-frequency sounds that humans cannot hear.
+L & R Adverbs & Endings,The scammer tried to [deceive] the elderly woman out of her money.
+L & R Adverbs & Endings,It is difficult to [conceive] of a universe without time.
+L & R Adverbs & Endings,The magician created a spectacular visual [illusion] on stage.
+L & R Adverbs & Endings,The children's book features a beautiful watercolor [illustration].
+L & R Adverbs & Endings,The United Nations passed a peaceful [resolution] to end the war.
+L & R Adverbs & Endings,The invention of the internet sparked a technological [revolution].
+L & R Adverbs & Endings,The factory was fined heavily for causing severe water [pollution].
+L & R Adverbs & Endings,She decided to study classic English [literature] at university.
+L & R Adverbs & Endings,The global [temperature] is rising due to greenhouse gas emissions.
+L & R Adverbs & Endings,The rural economy depends entirely on traditional [agriculture].
+L & R Adverbs & Endings,The city is famous for its stunning medieval [architecture].
+L & R Adverbs & Endings,The government must invest billions to repair the crumbling [infrastructure].
+L & R Adverbs & Endings,The new tax laws were debated fiercely in the national [legislature].
+L & R Adverbs & Endings,Please write your official [signature] at the bottom of the document.
+L & R Adverbs & Endings,The flight [departure] was delayed by three hours due to the storm.
+L & R Adverbs & Endings,You must follow the correct safety [procedure] in the laboratory.
+L & R Adverbs & Endings,The catastrophic engine [failure] caused the airplane to crash.
+Academic Reading (Ecology & Science),The documentary explained the complex [mechanism] of oceanic temperature shifts.
+Academic Reading (Ecology & Science),Severe [droughts] can have devastating economic and agricultural impacts.
+Academic Reading (Ecology & Science),We must preserve the [biodiversity] of our endangered coral reefs.
+Academic Reading (Ecology & Science),The movement of [tectonic] plates causes massive earthquakes.
+Academic Reading (Ecology & Science),The global [temperature] is rising at an unprecedented rate.
+Academic Reading (Ecology & Science),They watched a television [documentary] about the natural water cycle.
+Academic Reading (Ecology & Science),The [encyclopedia] provides a detailed history of the Roman Empire.
+Academic Reading (Ecology & Science),The book outlines the [ecological] consequences of deforestation.
+Academic Reading (Ecology & Science),Modern [agriculture] requires vast amounts of fresh drinking water.
+Academic Reading (Ecology & Science),Multinational companies must take [accountability] for their pollution.
+Academic Reading (Ecology & Science),Ecotourism can disrupt the natural [breeding] cycles of wild animals.
+Academic Reading (Ecology & Science),The protection of [endangered] avian species must take priority.
+Academic Reading (Ecology & Science),The natural [habitat] of the polar bear is melting rapidly.
+Academic Reading (Ecology & Science),The scientific [methodology] used in this research is highly advanced.
+Academic Reading (Ecology & Science),The shift in wind patterns is a fascinating weather [phenomenon].
+Academic Reading (Ecology & Science),The [sustainability] of ocean fishing is a major global concern.
+Academic Reading (Ecology & Science),The satellite [technology] is used to monitor climate change.
+Academic Reading (Ecology & Science),The [atmosphere] traps heat and warms the surface of the earth.
+Academic Reading (Ecology & Science),The rapid [erosion] of the soil makes farming impossible.
+Academic Reading (Ecology & Science),The rainforest is a highly complex and fragile [ecosystem].
+Academic Reading (Ecology & Science),They read an interesting [article] in the science magazine.
+Academic Reading (Ecology & Science),The [conservation] of water is essential during the dry summer.
+Academic Reading (Ecology & Science),The museum features an interactive [exhibition] on dinosaurs.
+Academic Reading (Ecology & Science),The [environmental] degradation caused by mining is severe.
+Academic Reading (Ecology & Science),We must find an [alternative] source of clean renewable energy.
+Task 2 Argumentation (PMI Framework),What is the broader societal [implication] of this new policy?
+Task 2 Argumentation (PMI Framework),You must provide a concrete [example] to support your argument.
+Task 2 Argumentation (PMI Framework),Free public transport would significantly reduce urban [congestion].
+Task 2 Argumentation (PMI Framework),The government needs to invest in better physical [infrastructure].
+Task 2 Argumentation (PMI Framework),Preventative healthcare is the personal [responsibility] of the individual.
+Task 2 Argumentation (PMI Framework),Digital platforms should be legally [penalized] for spreading misinformation.
+Task 2 Argumentation (PMI Framework),The [globalisation] of media threatens traditional cultural narratives.
+Task 2 Argumentation (PMI Framework),Automation will eventually replace the need for human [analysts].
+Task 2 Argumentation (PMI Framework),The shift to renewable energy should be heavily [subsidised] by the state.
+Task 2 Argumentation (PMI Framework),The new tax law will heavily burden the working [demographic].
+Task 2 Argumentation (PMI Framework),Cashless societies exclude vulnerable and unbanked [populations].
+Task 2 Argumentation (PMI Framework),The policy is a [double-edged] sword with both pros and cons.
+Task 2 Argumentation (PMI Framework),We must tackle the [underlying] root cause of the housing crisis.
+Task 2 Argumentation (PMI Framework),The transition to electric vehicles is a [paradigm] shift in transport.
+Task 2 Argumentation (PMI Framework),It is [undeniable] that technology has improved medical diagnostics.
+Task 2 Argumentation (PMI Framework),The economic [consequences] of the war were felt for decades.
+Task 2 Argumentation (PMI Framework),The strict [prohibition] of single-use plastics is a necessary step.
+Task 2 Argumentation (PMI Framework),The government must strike a careful [balance] between economy and nature.
+Task 2 Argumentation (PMI Framework),Universal basic income remains a highly [contentious] issue.
+Task 2 Argumentation (PMI Framework),There is a [prevailing] consensus among leading economists.
+Task 2 Argumentation (PMI Framework),A sedentary lifestyle is highly [detrimental] to cardiovascular health.
+Task 2 Argumentation (PMI Framework),We must [prioritise] funding for public schools over military spending.
+Task 2 Argumentation (PMI Framework),The two politicians have completely [opposing] views on the subject.
+Task 2 Argumentation (PMI Framework),The empirical [evidence] strongly supports the new medical theory.
+Task 2 Argumentation (PMI Framework),The rapid [expansion] of the city caused terrible traffic jams.
+Cognitive & Phonetic Traps,The [algorithm] is designed to optimize the emergency response.
+Cognitive & Phonetic Traps,We must stop the spread of [misinformation] on the internet.
+Cognitive & Phonetic Traps,The [transition] to a cashless society is accelerating globally.
+Cognitive & Phonetic Traps,The [integration] of artificial intelligence will change the economy.
+Cognitive & Phonetic Traps,The internet creates dangerous digital [echo] chambers.
+Cognitive & Phonetic Traps,The [interactive] storybook helps children learn to read.
+Cognitive & Phonetic Traps,The [vocabulary] used in this textbook is highly advanced.
+Cognitive & Phonetic Traps,Please write a short [summary] of the academic paragraph.
+Cognitive & Phonetic Traps,He is practicing his English [pronunciation] using the audio clips.
+Cognitive & Phonetic Traps,The student struggled with the complex [grammatical] rules.
+Cognitive & Phonetic Traps,A Japanese sentence has a very different [structural] format.
+Cognitive & Phonetic Traps,The [syllable] timing of Japanese is different from English stress timing.
+Cognitive & Phonetic Traps,The [fluency] of his spoken English improved dramatically.
+Cognitive & Phonetic Traps,The [lexical] resource score depends on using advanced words.
+Cognitive & Phonetic Traps,The [candidate] gave a very confident answer to the examiner.
+Cognitive & Phonetic Traps,The [examiner] will ask you questions about your hometown.
+Cognitive & Phonetic Traps,You must maintain eye [contact] during the speaking test.
+Cognitive & Phonetic Traps,The [cognitive] load of translating from Japanese is very high.
+Cognitive & Phonetic Traps,The [spontaneous] generation of English sentences takes practice.
+Cognitive & Phonetic Traps,You must use [idiomatic] language to achieve a Band 8.
+Cognitive & Phonetic Traps,The [evaluation] of your writing is based on four criteria.
+Cognitive & Phonetic Traps,The [cohesion] of the essay was broken by poor logic.
+Cognitive & Phonetic Traps,Please provide a clear [thesis] statement in the introduction.
+Cognitive & Phonetic Traps,The [conclusion] paragraph should not introduce new ideas.
+Cognitive & Phonetic Traps,The [overview] paragraph must summarize the main data trends.
+Core Uncountable Noun Traps,She gave me some excellent [advice] regarding my future career.
+Core Uncountable Noun Traps,I need to buy some new [furniture] for my empty apartment.
+Core Uncountable Noun Traps,Please do not leave your [luggage] unattended at the airport.
+Core Uncountable Noun Traps,The teacher assigned a lot of [homework] for the weekend.
+Core Uncountable Noun Traps,I found some useful [information] on the university website.
+Core Uncountable Noun Traps,The scientist collected a massive amount of [data] for the study.
+Core Uncountable Noun Traps,The laboratory requires funding for further scientific [research].
+Core Uncountable Noun Traps,We purchased new [equipment] for the chemistry department.
+Core Uncountable Noun Traps,The bad [news] was a terrible shock to the whole community.
+Core Uncountable Noun Traps,The student has made incredible [progress] in their speaking skills.
+Core Uncountable Noun Traps,The storm caused massive [damage] to the coastal infrastructure.
+Core Uncountable Noun Traps,Finding affordable [accommodation] is very difficult in this city.
+Core Uncountable Noun Traps,I love to listen to classical [music] while I am studying.
+Core Uncountable Noun Traps,Commuting during rush hour causes a lot of [stress].
+Core Uncountable Noun Traps,We are waiting for the [transport] to arrive at the station.
+Core Uncountable Noun Traps,The heavy [machinery] in the factory is very dangerous.
+Core Uncountable Noun Traps,The tourist bought beautiful gold [jewellery] at the market.
+Core Uncountable Noun Traps,The artist painted the beautiful mountain [scenery].
+Core Uncountable Noun Traps,I have a lot of prior [experience] in the marketing industry.
+Core Uncountable Noun Traps,Please throw your [rubbish] in the correct recycling bin.
+Core Uncountable Noun Traps,The [weather] in Melbourne can be highly unpredictable.
+Core Uncountable Noun Traps,They sell fresh fruit and [produce] at the local market.
+Core Uncountable Noun Traps,You need to show your official [identification] at the border.
+Core Uncountable Noun Traps,The wealthy man owns a lot of expensive [property].
+Core Uncountable Noun Traps,The [evidence] presented in court was highly circumstantial.
+Advanced L & R Traps,The team demonstrated their tactical [superiority] during the match.
+Advanced L & R Traps,An independent [mediator] was hired to resolve the dispute.
+Advanced L & R Traps,The highly anticipated movie [premiere] is scheduled for next week.
+Advanced L & R Traps,Constantly comparing yourself to others leads to an [inferiority] complex.
+Advanced L & R Traps,Environmental protection must be a top [priority] for the new government.
+Advanced L & R Traps,Promotions in this company are based strictly on [seniority].
+Advanced L & R Traps,The scientist noticed a strange [peculiarity] in the data.
+Advanced L & R Traps,The ancient army relied heavily on its horse-mounted [cavalry].
+Advanced L & R Traps,There is a fierce [rivalry] between the two competing software companies.
+Advanced L & R Traps,The firefighter was awarded a medal for his incredible [bravery].
+Advanced L & R Traps,She is studying at a famous [culinary] arts school in Paris.
+Advanced L & R Traps,The deleted computer files are unfortunately not [recoverable].
+Advanced L & R Traps,The police arrested the suspect for the midnight [burglary].
+Advanced L & R Traps,The tiny blood vessel is known as a [capillary].
+Advanced L & R Traps,The immediate [corollary] of this decision is a massive drop in sales.
+Advanced L & R Traps,The author wrote an [epistolary] novel consisting entirely of letters.
+Advanced L & R Traps,The student was praised for her [exemplary] academic performance.
+Advanced L & R Traps,The employee faced strict [disciplinary] action for being late.
+Advanced L & R Traps,The hotel provides [complimentary] breakfast for all its guests.
+Advanced L & R Traps,Attending the safety orientation is strictly [mandatory].
+Advanced L & R Traps,The heart is the center of the human [circulatory] system.
+Advanced L & R Traps,The hospital ward is designed for [ambulatory] patients who can walk.
+Advanced L & R Traps,The politician apologized for his highly [derogatory] remarks.
+Advanced L & R Traps,The surgeons performed an [exploratory] procedure to find the problem.
+Advanced L & R Traps,Passengers must remain seated while using the airplane [lavatory].
+Advanced L & R Traps,The university library is a massive [repository] of human knowledge.
+Advanced L & R Traps,You may use a scientific [calculator] during the mathematics exam.
+Advanced L & R Traps,The technician must carefully [calibrate] the sensitive medical equipment.
+Advanced L & R Traps,The university requires students of a very high academic [caliber].
+Advanced L & R Traps,The satellite orbits the Earth in a perfectly [circular] path.
+Advanced L & R Traps,You must obtain security [clearance] to enter the laboratory.
+Advanced L & R Traps,The accounting error was caused by a simple [clerical] mistake.
+Advanced L & R Traps,The factory stores the gas in large [cylindrical] steel tanks.
+Advanced L & R Traps,The high fever made the sick patient completely [delirious].
+Advanced L & R Traps,Believing you can win the lottery without a ticket is a pure [delusion].
+Advanced L & R Traps,The villain in the movie had a [diabolical] plan to rule the world.
+Advanced L & R Traps,The engineer fixed the broken [electrical] circuit in the wall.
+Advanced L & R Traps,The queen wore a beautiful necklace featuring a large green [emerald].
+Advanced L & R Traps,The ancient Roman [emperor] ruled over a vast and wealthy territory.
+Advanced L & R Traps,An [equilateral] triangle has three sides of exactly the same length.
+Advanced L & R Traps,The fast roller coaster ride will completely [exhilarate] the children.
+Advanced L & R Traps,The software interface is highly [familiar] to most modern users.
+Advanced L & R Traps,The musician delivered an absolutely [flawless] piano performance.
+Advanced L & R Traps,The office is brightly lit by white [fluorescent] ceiling lights.
+Advanced L & R Traps,Dragons and fairies are common creatures in traditional European [folklore].
+Advanced L & R Traps,The committee must [formulate] a completely new strategy for the business.
+Advanced L & R Traps,The criminal was arrested for his highly [fraudulent] banking activities.
+Advanced L & R Traps,The judge dismissed the [frivolous] lawsuit immediately.
+Advanced L & R Traps,The bright sunlight caused a harsh [glare] on the computer screen.
+Advanced L & R Traps,The soldiers celebrated their [glorious] victory in battle.
+Advanced L & R Traps,The silverback [gorilla] is a highly intelligent primate.
+Advanced L & R Traps,The company made a [gargantuan] profit during the holiday season.
+Advanced L & R Traps,The beach sand has a very coarse and [granular] texture.
+Advanced L & R Traps,The comedian told a [hilarious] joke that made everyone laugh.
+Advanced L & R Traps,You must draw a perfectly straight [horizontal] line on the paper.
+Advanced L & R Traps,The museum displays artifacts from the old [imperial] palace.
+Advanced L & R Traps,The manager is completely [intolerant] of laziness in the workplace.
+Advanced L & R Traps,A century ago, a large portion of the population was entirely [illiterate].
+Advanced L & R Traps,The humid summer heat in the city is almost [intolerable].
+Advanced L & R Traps,He is studying broadcast [journalism] at the national university.
+Advanced L & R Traps,The CEO made a [lateral] move to a different department.
+Advanced L & R Traps,The snake bite is highly [lethal] without immediate medical treatment.
+Advanced L & R Traps,We ate fresh red [lobster] at the expensive seafood restaurant.
+Advanced L & R Traps,The astronauts collected rocks from the dusty [lunar] surface.
+Advanced L & R Traps,The poem is famous for its beautiful and [lyrical] language.
+Advanced L & R Traps,Mosquitoes transmit the dangerous [malaria] virus in tropical climates.
+Advanced L & R Traps,The engineer designed a truly [marvelous] new bridge for the city.
+Advanced L & R Traps,The mother bear has very strong [maternal] instincts to protect her cubs.
+Advanced L & R Traps,The rainy weather fills me with a deep sense of [melancholy].
+Advanced L & R Traps,The town built a stone [memorial] to honor the fallen soldiers.
+Advanced L & R Traps,Tokyo is a massive, bustling [metropolitan] city with millions of residents.
+Advanced L & R Traps,Finding survivors in the wreckage was described as a medical [miracle].
+Advanced L & R Traps,The protons and neutrons are located in the [nucleus] of the atom.
+Advanced L & R Traps,There is a significant [overlap] between the two different scientific theories.
+Advanced L & R Traps,The venom from the spider will completely [paralyze] its prey.
+Advanced L & R Traps,The large white [pelican] scooped a fish out of the ocean.
+Advanced L & R Traps,Climbing the icy mountain is a highly [perilous] adventure.
+Advanced L & R Traps,The melting [polar] ice caps are causing sea levels to rise.
+Advanced L & R Traps,The internet helped to [popularize] this specific style of music.
+Advanced L & R Traps,Bad weather does not [preclude] the possibility of a fun holiday.
+Advanced L & R Traps,The leader will [proclaim] a new national holiday tomorrow.
+Advanced L & R Traps,Stephen King is an incredibly [prolific] author of horror novels.
+Advanced L & R Traps,You should not [prolong] the meeting if there is nothing else to discuss.
+Advanced L & R Traps,The jet engine will [propel] the airplane forward at incredible speeds.
+Advanced L & R Traps,The doctor specializes in [radiology] and reads X-ray scans.
+Advanced L & R Traps,The angry teenagers were going through a [rebellious] phase.
+Advanced L & R Traps,I cannot [recollect] exactly where I left my car keys.
+Advanced L & R Traps,The king was forced to [relinquish] his control of the throne.
+Advanced L & R Traps,She was highly [reluctant] to sign the contract without a lawyer.
+Advanced L & R Traps,The chemical spray will effectively [repel] mosquitoes and insects.
+Advanced L & R Traps,The museum sells a perfect [replica] of the ancient sword.
+Advanced L & R Traps,If attacked, the army will immediately [retaliate] with full force.
+Advanced L & R Traps,It is cruel to [ridicule] someone for making a simple mistake.
+Advanced L & R Traps,Customers show immense brand [loyalty] to their favorite technology company.
+Advanced L & R Traps,The country operates under a strictly [secular] government.
+Advanced L & R Traps,The monk lived a peaceful, [solitary] life in the remote mountains.
+Advanced L & R Traps,Sugar and salt are highly [soluble] in warm water.
+Advanced L & R Traps,We watched an exciting psychological [thriller] at the cinema.
+Advanced L & R Traps,He offered to help, but I suspect he has an [ulterior] motive.
+Advanced L & R Traps,The brave soldier was given a medal for his incredible [valor].
+Listening Part 1: Everyday & Admin,We need to book the [accommodation] before the flight.
+Listening Part 1: Everyday & Admin,Please fill out the medical [questionnaire] in the waiting room.
+Listening Part 1: Everyday & Admin,The museum is closed for [maintenance] on Mondays.
+Listening Part 1: Everyday & Admin,You will need to provide a professional [reference].
+Listening Part 1: Everyday & Admin,The autumn term begins in the second week of [September].
+Listening Part 1: Everyday & Admin,The next train arrives on [Wednesday] morning.
+Listening Part 1: Everyday & Admin,You can pick up a travel [brochure] at the front desk.
+Listening Part 1: Everyday & Admin,They require your official [signature] at the bottom of the form.
+Listening Part 1: Everyday & Admin,The guest [lounge] is located on the second floor of the hotel.
+Listening Part 1: Everyday & Admin,Please keep your printed [receipt] for the return policy.
+Listening Part 1: Everyday & Admin,The apartment has a small outdoor [balcony] overlooking the street.
+Listening Part 1: Everyday & Admin,You must park your vehicle in the underground [garage].
+Listening Part 1: Everyday & Admin,We are hiring a [temporary] assistant for the busy summer season.
+Listening Part 1: Everyday & Admin,The event will be held on the corner of the fifth [avenue].
+Listening Part 1: Everyday & Admin,Please ensure your [luggage] is clearly labeled before check-in.
+Listening Part 1: Everyday & Admin,You will need a warm [sweater] for the cool evening wind.
+Listening Part 1: Everyday & Admin,The washing machine is located downstairs in the [basement].
+Listening Part 1: Everyday & Admin,You can find the baking ingredients in the middle [aisle].
+Listening Part 1: Everyday & Admin,I lost my leather wallet near the main building [entrance].
+Listening Part 1: Everyday & Admin,The hotel provides a complimentary [breakfast] every single day.
+Listening Part 2: Campus & Facilities,The new sports [gymnasium] opens to the public next week.
+Listening Part 2: Campus & Facilities,The [cafeteria] serves hot food until two o'clock in the afternoon.
+Listening Part 2: Campus & Facilities,All university [personnel] must wear a name badge on campus.
+Listening Part 2: Campus & Facilities,The steering [committee] meets every Tuesday afternoon to vote.
+Listening Part 2: Campus & Facilities,You must attend the safety [orientation] on your first day of class.
+Listening Part 2: Campus & Facilities,The biology [laboratory] requires all students to wear safety goggles.
+Listening Part 2: Campus & Facilities,The main university [library] is open until midnight during exams.
+Listening Part 2: Campus & Facilities,The printed [certificate] will be officially mailed to your house.
+Listening Part 2: Campus & Facilities,She is studying hard to earn her professional teaching [diploma].
+Listening Part 2: Campus & Facilities,You need to check the updated course [syllabus] on the website.
+Listening Part 2: Campus & Facilities,The final [assessment] is worth exactly fifty percent of your grade.
+Listening Part 2: Campus & Facilities,The school has recently updated its entire academic [curriculum].
+Listening Part 2: Campus & Facilities,There is a strict [attendance] policy for this specific module.
+Listening Part 2: Campus & Facilities,The [faculty] members are readily available for student consultation.
+Listening Part 2: Campus & Facilities,The winter [semester] officially begins immediately after the holiday.
+Listening Part 2: Campus & Facilities,The student union organized a welcome [festival] in the courtyard.
+Listening Part 2: Campus & Facilities,You can apply for a financial [scholarship] through the online portal.
+Listening Part 2: Campus & Facilities,The afternoon history [seminar] has been moved to room four.
+Listening Part 2: Campus & Facilities,The professor leads a small group [tutorial] every Friday morning.
+Listening Part 2: Campus & Facilities,The formal [graduation] ceremony is held in the grand main hall.
+Listening Part 3: Academic Discussion,We absolutely need to finish the group [assignment] by tomorrow.
+Listening Part 3: Academic Discussion,The student is writing a massive [dissertation] on marine ecology.
+Listening Part 3: Academic Discussion,The research requires a highly specific and rigorous [methodology].
+Listening Part 3: Academic Discussion,The team delivered a fantastic visual [presentation] to the board.
+Listening Part 3: Academic Discussion,The complex data [analysis] took over three weeks to complete.
+Listening Part 3: Academic Discussion,The scientists must rigorously test their initial working [hypothesis].
+Listening Part 3: Academic Discussion,The two competing theories run completely [parallel] to each other.
+Listening Part 3: Academic Discussion,The professor will heavily [recommend] a specific list of textbooks.
+Listening Part 3: Academic Discussion,We must carefully [evaluate] the final results of the experiment.
+Listening Part 3: Academic Discussion,The mathematical [calculation] was extremely complex and time-consuming.
+Listening Part 3: Academic Discussion,The ongoing study focuses entirely on developmental [psychology].
+Listening Part 3: Academic Discussion,He is currently majoring in physical [geography] and mapping.
+Listening Part 3: Academic Discussion,The core course covers ancient history and classical [architecture].
+Listening Part 3: Academic Discussion,The collaborative group project requires a massive time [commitment].
+Listening Part 3: Academic Discussion,The statistical [parameter] was slightly adjusted to ensure accuracy.
+Listening Part 3: Academic Discussion,The heated debate centered on a highly [controversial] societal topic.
+Listening Part 3: Academic Discussion,The three students must [collaborate] to finish the final report.
+Listening Part 3: Academic Discussion,The textbook provides a very clear [explanation] of the economic theory.
+Listening Part 3: Academic Discussion,The final results were recorded on a completely [separate] sheet of paper.
+Listening Part 3: Academic Discussion,The researchers published a peer-reviewed academic [article] yesterday.
+Listening Part 4: Lecture Vocabulary,The average global [temperature] is rising at a highly concerning rate.
+Listening Part 4: Lecture Vocabulary,We must aggressively protect the natural [environment] from toxic pollution.
+Listening Part 4: Lecture Vocabulary,Modern commercial [agriculture] requires massive amounts of fresh water.
+Listening Part 4: Lecture Vocabulary,The coral reef is internationally famous for its rich [biodiversity].
+Listening Part 4: Lecture Vocabulary,The machine operates using a highly complex internal [mechanism].
+Listening Part 4: Lecture Vocabulary,The government officially introduced a new conservation [strategy].
+Listening Part 4: Lecture Vocabulary,A significant [proportion] of the national budget goes directly to healthcare.
+Listening Part 4: Lecture Vocabulary,The coastal ecosystem is highly [vulnerable] to unpredictable tropical storms.
+Listening Part 4: Lecture Vocabulary,The growing city is investing heavily in [renewable] energy sources.
+Listening Part 4: Lecture Vocabulary,The extreme heat causes rapid [evaporation] of the fresh surface water.
+Listening Part 4: Lecture Vocabulary,The local farmers use chemical [fertilizer] to grow crops more efficiently.
+Listening Part 4: Lecture Vocabulary,The small birds must actively hide from dangerous airborne [predators].
+Listening Part 4: Lecture Vocabulary,The software program updates itself [automatically] every single night.
+Listening Part 4: Lecture Vocabulary,The rigid corporate [hierarchy] dictates the strict flow of information.
+Listening Part 4: Lecture Vocabulary,The afternoon lecture discussed the first ancient Roman [millennium].
+Listening Part 4: Lecture Vocabulary,This specific weather pattern is a very rare and unusual [occurrence].
+Listening Part 4: Lecture Vocabulary,The highly contagious disease caused a massive [epidemic] in the region.
+Listening Part 4: Lecture Vocabulary,The industrial revolution fundamentally changed the global [economy].
+Listening Part 4: Lecture Vocabulary,The invention of the wheel was a massive technological [innovation].
+Listening Part 4: Lecture Vocabulary,The heavy engine requires a specific type of liquid [lubricant].
+Listening: The Plural 'S' Trap,The university strictly expects all [students] to attend the morning lecture.
+Listening: The Plural 'S' Trap,The brand new smartphone has many highly interesting new [features].
+Listening: The Plural 'S' Trap,Accelerating climate change has severe and lasting environmental [impacts].
+Listening: The Plural 'S' Trap,The country is incredibly rich in valuable natural [resources] like coal.
+Listening: The Plural 'S' Trap,The two rare species share many identical physical [characteristics].
+Listening: The Plural 'S' Trap,There are many proven health [benefits] to eating fresh green vegetables.
+Listening: The Plural 'S' Trap,The local [residents] formally complained about the noisy highway traffic.
+Listening: The Plural 'S' Trap,The famous artist used highly traditional oil painting [techniques].
+Listening: The Plural 'S' Trap,The industrial factory must strictly follow all safety [regulations].
+Listening: The Plural 'S' Trap,The [scientists] finally published their breakthrough findings in a journal.
+Listening: The Plural 'S' Trap,The ancient stone castle has stood on the hill for many [centuries].
+Listening: The Plural 'S' Trap,Electric [vehicles] are becoming increasingly popular in urban city centers.
+Listening: The Plural 'S' Trap,Dolphins and whales are both formally classified as marine [mammals].
+Listening: The Plural 'S' Trap,The hospital doctor asked the sick patient about his physical [symptoms].
+Listening: The Plural 'S' Trap,The traditional Italian recipe requires several fresh [ingredients].
+Listening: The Plural 'S' Trap,The dry desert soil lacks the necessary [nutrients] for growing crops.
+Listening: The Plural 'S' Trap,The town invested heavily in building brand new public sports [facilities].
+Listening: The Plural 'S' Trap,The sudden heavy floods destroyed several rural farming [communities].
+Listening: The Plural 'S' Trap,The synthesized chemical has several highly unique physical [properties].
+Listening: The Plural 'S' Trap,The summer holiday camp offers many outdoor recreational [activities].
+Listening: The Plural 'S' Trap 2,The government introduced several new [policies] this year.
+Listening: The Plural 'S' Trap 2,We must develop better [strategies] for urban development.
+Listening: The Plural 'S' Trap 2,The interview process is difficult for all [candidates].
+Listening: The Plural 'S' Trap 2,The book offers many different [perspectives] on the issue.
+Listening: The Plural 'S' Trap 2,The library sorts books into various [categories].
+Listening: The Plural 'S' Trap 2,Modern [technologies] have completely changed the workplace.
+Listening: The Plural 'S' Trap 2,The students faced numerous [challenges] during the exam.
+Listening: The Plural 'S' Trap 2,The survey asked local [employers] about their hiring needs.
+Listening: The Plural 'S' Trap 2,The software [developers] released a massive new update.
+Listening: The Plural 'S' Trap 2,Medical [researchers] are working hard to find a cure.
+Listening: The Plural 'S' Trap 2,Social media uses complex [algorithms] to track users.
+Listening: The Plural 'S' Trap 2,The scientist must adjust the testing [parameters] carefully.
+Listening: The Plural 'S' Trap 2,The professor handed out the final [assignments] today.
+Listening: The Plural 'S' Trap 2,Some animals thrive in harsh desert [environments].
+Listening: The Plural 'S' Trap 2,The bank handles large financial [investments] for clients.
+Listening: The Plural 'S' Trap 2,The manager received several [complaints] from angry customers.
+Listening: The Plural 'S' Trap 2,The questionnaire gathered multiple [responses] from the public.
+Listening: The Plural 'S' Trap 2,The official [statistics] show a clear downward trend.
+Listening: The Plural 'S' Trap 2,The newspaper hired three new [journalists] this month.
+Listening: The Plural 'S' Trap 2,The corporate [executives] held a private meeting upstairs.
+Listening: The Plural 'S' Trap 2,The study included exactly fifty active [participants].
+Listening: The Plural 'S' Trap 2,The city provides grants for young [entrepreneurs].
+Listening: The Plural 'S' Trap 2,The charity supports several educational [foundations].
+Listening: The Plural 'S' Trap 2,The artist paints beautiful mountain [landscapes].
+Listening: The Plural 'S' Trap 2,The decision will have severe economic [consequences].
+Listening: The Plural 'S' Trap 2,The contract depends on specific legal [circumstances].
+Listening: The Plural 'S' Trap 2,The river forms the natural [boundaries] of the town.
+Listening: The Plural 'S' Trap 2,You must establish clear [priorities] for your career.
+Listening: The Plural 'S' Trap 2,The hospital requires highly trained medical [professionals].
+Listening: The Plural 'S' Trap 2,The engine consists of many small moving [components].
+Listening: The Plural 'S' Trap 2,The climate exhibits slight seasonal [variations].
+Listening: The Plural 'S' Trap 2,The experiment failed due to unknown [variables].
+Listening: The Plural 'S' Trap 2,The architectural drawing shows all three [dimensions].
+Listening: The Plural 'S' Trap 2,The older software has many frustrating [limitations].
+Listening: The Plural 'S' Trap 2,The government imposed strict travel [restrictions].
+Listening: The Plural 'S' Trap 2,We must explore all available [alternatives] right now.
+Listening: The Plural 'S' Trap 2,The architect made slight [modifications] to the design.
+Listening: The Plural 'S' Trap 2,The stock market is prone to wild [fluctuations].
+Listening: The Plural 'S' Trap 2,The discovery has profound biological [implications].
+Listening: The Plural 'S' Trap 2,The tutor provided clear [explanations] for the errors.
+Listening: The Plural 'S' Trap 2,The engineer made final [adjustments] to the machine.
+Listening: The Plural 'S' Trap 2,Please read the written [instructions] very carefully.
+Listening: The Plural 'S' Trap 2,The dictionary contains precise [definitions] for every word.
+Listening: The Plural 'S' Trap 2,We made special [arrangements] for the visiting guest.
+Listening: The Plural 'S' Trap 2,The receptionist handles all medical [appointments].
+Listening: The Plural 'S' Trap 2,The hotel cancelled our dinner [reservations] by mistake.
+Listening: The Plural 'S' Trap 2,The computer performs complex mathematical [calculations].
+Listening: The Plural 'S' Trap 2,The scientist recorded her daily [observations] in a notebook.
+Listening: The Plural 'S' Trap 2,The students delivered impressive oral [presentations].
+Listening: The Plural 'S' Trap 2,The library stores thousands of academic [publications].
+Listening: Phantom 'S' & Consonant Endings,We must always [respect] the natural environment.
+Listening: Phantom 'S' & Consonant Endings,The thick glass will [protect] the fragile item.
+Listening: Phantom 'S' & Consonant Endings,The new law will heavily [impact] local businesses.
+Listening: Phantom 'S' & Consonant Endings,The construction [project] will take three years.
+Listening: Phantom 'S' & Consonant Endings,The builders will [construct] a new public hospital.
+Listening: Phantom 'S' & Consonant Endings,The teacher gave very [strict] instructions to the class.
+Listening: Phantom 'S' & Consonant Endings,Please give a [direct] answer to the simple question.
+Listening: Phantom 'S' & Consonant Endings,You must [select] three subjects for your final semester.
+Listening: Phantom 'S' & Consonant Endings,The artist drew a [perfect] circle on the white paper.
+Listening: Phantom 'S' & Consonant Endings,The researchers [collect] water samples every morning.
+Listening: Phantom 'S' & Consonant Endings,The bridge will [connect] the two separate islands.
+Listening: Phantom 'S' & Consonant Endings,Finding a new job is a difficult [prospect] right now.
+Listening: Phantom 'S' & Consonant Endings,The mechanic will [inspect] the car engine for faults.
+Listening: Phantom 'S' & Consonant Endings,The famous [architect] designed the new city museum.
+Listening: Phantom 'S' & Consonant Endings,The police arrested the primary [suspect] in the robbery.
+Listening: Phantom 'S' & Consonant Endings,The heavy metal [object] fell from the tall building.
+Listening: Phantom 'S' & Consonant Endings,Mathematics is my favorite [subject] to study at school.
+Listening: Phantom 'S' & Consonant Endings,The painting is a highly [abstract] piece of modern art.
+Listening: Phantom 'S' & Consonant Endings,The machine requires [exact] measurements to work safely.
+Listening: Phantom 'S' & Consonant Endings,Please choose the [correct] answer on the final exam.
+Listening: Phantom 'S' & Consonant Endings,The shiny mirror will clearly [reflect] the morning sunlight.
+Listening: Phantom 'S' & Consonant Endings,Experts [predict] a massive economic crash next year.
+Listening: Phantom 'S' & Consonant Endings,The angry dispute caused a serious international [conflict].
+Listening: Phantom 'S' & Consonant Endings,You must establish eye [contact] during the formal interview.
+Listening: Phantom 'S' & Consonant Endings,The employee signed a strict legal [contract] yesterday.
+Listening: Phantom 'S' & Consonant Endings,We must consider every single [aspect] of the problem.
+Listening: Phantom 'S' & Consonant Endings,The scientific [concept] is very difficult to understand.
+Listening: Phantom 'S' & Consonant Endings,The historical [context] is essential for understanding the book.
+Listening: Phantom 'S' & Consonant Endings,Please read the original academic [text] before the lecture.
+Listening: Phantom 'S' & Consonant Endings,The difficult [test] covers everything we learned this year.
+Listening: Phantom 'S' & Consonant Endings,The overall [cost] of living is rising very rapidly.
+Listening: Phantom 'S' & Consonant Endings,The bank offers a very low [interest] rate on the loan.
+Listening: Phantom 'S' & Consonant Endings,The stark [contrast] between the two cities is amazing.
+Listening: Phantom 'S' & Consonant Endings,The company will [invest] millions into renewable energy.
+Listening: Phantom 'S' & Consonant Endings,You must submit a formal [request] to take a holiday.
+Listening: Phantom 'S' & Consonant Endings,The doctor will [suggest] a new treatment for the illness.
+Listening: Phantom 'S' & Consonant Endings,The mountain peak is the [highest] point in the country.
+Listening: Phantom 'S' & Consonant Endings,The deep valley is the [lowest] point on the entire map.
+Listening: Phantom 'S' & Consonant Endings,The internet caused a massive [shift] in modern communication.
+Listening: Phantom 'S' & Consonant Endings,The author wrote the first [draft] of her novel quickly.
+Listening: Phantom 'S' & Consonant Endings,The skilled worker learned his [craft] over many years.
+Listening: Phantom 'S' & Consonant Endings,You must bend your knees to [lift] the heavy box safely.
+Listening: Phantom 'S' & Consonant Endings,The government will [adopt] a new environmental policy soon.
+Listening: Phantom 'S' & Consonant Endings,Animals must quickly [adapt] to their changing natural habitats.
+Listening: Phantom 'S' & Consonant Endings,The loud noise will [disrupt] the quiet study environment.
+Listening: Phantom 'S' & Consonant Endings,The university will [accept] your application next week.
+Listening: Phantom 'S' & Consonant Endings,The quick worker finished the task in a [prompt] manner.
+Listening: Phantom 'S' & Consonant Endings,You should [attempt] to answer every question on the test.
+Listening: Phantom 'S' & Consonant Endings,Please do not [interrupt] the speaker during the presentation.
+Listening: Phantom 'S' & Consonant Endings,The sudden loud bang was completely [unexpected].
 `
