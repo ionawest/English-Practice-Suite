@@ -1,0 +1,85 @@
+{
+  "id": "infrastructure_04",
+  "topic": "Case Study: The California Energy Crisis",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "California is the most populous state in the United States, and consequently, it has the second-highest total energy demand in the country. Despite leading the nation in non-hydroelectric renewable energy generation, the state simply cannot produce enough power internally to satisfy its massive urban populations. To meet this demand, it relies heavily on a limited network of transmission cables to import electricity from neighbouring states. For example, the massive transmission line responsible for importing hydroelectric power from the Pacific Northwest to southern regions is known as the Pacific Intertie."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "This heavy reliance on imported energy along limited routes leaves the state highly vulnerable to supply disruptions. In 2000 and 2001, a severe drought in the Pacific Northwest drastically reduced the amount of hydroelectricity available for export, triggering a series of rolling blackouts across California. The fragility of this system was exposed again in 2011. Following a minor short circuit during a repair in neighbouring Arizona, a massive cascading grid failure ultimately forced the precautionary shutdown of the San Onofre Nuclear Generation Station."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "To prevent total system collapse during these shortages, the flow of power must be strictly controlled. The impartial management of high-voltage lines and the overseeing of the open wholesale energy market is exclusively handled by the California ISO. As a non-profit organization, it continuously predicts energy needs and directs the physical flow of electricity. If available energy drops to dangerously low levels, the ISO immediately instructs local utility companies to reduce the load on the system, which is typically achieved by initiating localized, temporary blackouts."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "While these rolling blackouts protect the physical grid, they cause significant disruption to the state's economy and society. Large corporations lose millions of dollars in productivity, as heavy industrial machinery takes considerable time to restart after a sudden loss of power. For ordinary citizens, sudden electrical losses lead to traffic accidents, airport delays, and life-threatening situations for vulnerable populations during extreme weather. The severe public backlash over these widespread disruptions was a primary factor in the 2003 removal from office of Governor Gray Davis."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "In response to these historical failures, the state government has implemented a comprehensive Energy Action Plan to secure its infrastructure. Alongside setting strict environmental goals—such as requiring 33% of electricity to come from renewable sources by 2020—utilities are actively upgrading the grid. A key component of this upgrade is the installation of smart meters. By providing highly specific, real-time data, these devices allow electric companies to instantly identify network faults and charge consumers higher rates for using energy during peak hours, thereby encouraging widespread conservation."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "An overview of the state's energy consumption and importation", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The cascading causes of historical power failures", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The independent regulation and distribution of electricity", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The severe consequences for businesses, citizens, and political leaders", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Strategic plans and technological upgrades to prevent future crises", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The environmental benefits of nuclear power plants", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The financial collapse of national electric companies", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity or individual to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Which entity was forced into a precautionary shutdown due to a massive cascading grid failure?",
+        "options": ["The Pacific Intertie", "The California ISO", "The San Onofre Nuclear Generation Station", "Governor Gray Davis"],
+        "correct": "The San Onofre Nuclear Generation Station",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Which entity is responsible for importing hydroelectric power from the Pacific Northwest?",
+        "options": ["The California ISO", "The Pacific Intertie", "Governor Gray Davis", "The San Onofre Nuclear Generation Station"],
+        "correct": "The Pacific Intertie",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Who was removed from office due to severe public backlash over electrical disruptions?",
+        "options": ["Governor Gray Davis", "The California ISO", "The Pacific Intertie", "Smart Meters"],
+        "correct": "Governor Gray Davis",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "California currently produces enough electricity internally to meet the high energy demands of its population.",
+        "type": "False",
+        "explanation": "Paragraph A states that despite leading in renewable generation, 'the state simply cannot produce enough power internally to satisfy its massive urban populations.'",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "The 2011 blackout caused more financial damage to large corporations than the rolling blackouts of 2000 and 2001.",
+        "type": "Not Given",
+        "explanation": "While Paragraph D mentions that corporations lose millions of dollars during blackouts, the text never compares the specific financial damage of the 2011 blackout to the 2000-2001 blackouts.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Implementing smart meter technology allows utility companies to charge customers different rates based on the time of day.",
+        "type": "True",
+        "explanation": "Paragraph E states that smart meters 'allow electric companies to... charge consumers higher rates for using energy during peak hours'.",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

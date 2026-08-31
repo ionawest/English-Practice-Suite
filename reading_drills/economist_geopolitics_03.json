@@ -1,0 +1,91 @@
+{
+  "id": "geopolitics_03",
+  "topic": "Australia's Geopolitical Realignment in an Era of Uncertainty",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "For over two centuries, Australia's national strategy has been shaped by its geographic isolation. Despite becoming a wealthy democracy with abundant natural resources, the country has heavily relied on two external pillars to survive: American military power for security and Chinese industrial demand for economic growth. However, as global trade rules break down and superpowers change their priorities, both of these pillars are becoming unstable. Interestingly, this constant anxiety has forced Australian policymakers to deal with these vulnerabilities much earlier than their European allies."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "This ongoing sense of vulnerability is deeply rooted in 20th-century history. Following Britain’s military withdrawal from Asia, a permanent 'fear of abandonment' began to shape the nation's diplomatic history, according to the well-known diplomat and foreign policy analyst Allan Gyngell. To make up for this loss of protection, the capital city of Canberra built a vital alliance with Washington. During the 1960s, Australian leaders justified sending troops to the Vietnam War by describing it as paying the premium on a bilateral insurance policy. This transactional mindset continues to influence how the country interacts with modern American governments."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Today, the modern foundation of this defense strategy is the recently established AUKUS agreement between Australia, the United Kingdom, and the United States. Expected to cost up to $228 billion, this long-term project involves the joint design of nuclear-powered submarines, alongside the temporary purchase of American-built ships. To prove its commitment, Australia provided a $500 million subsidy to support the American naval manufacturing industry. This is supported by multi-billion-dollar upgrades to maritime facilities near Perth, which will give allied navies essential access to the Indian and Pacific Oceans."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "However, changing political attitudes in Washington have created significant tension. Australian officials are currently facing the threat of new tariffs, despite maintaining a trade deficit with America since the Truman presidency. Furthermore, American politicians are increasingly demanding strict guarantees that any submarines bought by Australia would be used to help the U.S. in a potential conflict over Taiwan. Adding to this uncertainty, highly ambiguous statements regarding the likelihood of American submarine manufacturing schedules remaining on time were recently made by U.S. Defense Secretary Pete Hegseth."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "At the same time, the economic pillar supporting Australian prosperity is facing major challenges. As urban growth slows down and steel recycling becomes more common, a massive 40% reduction in Chinese demand for iron ore over the next three decades has been projected by Australian National University economist Huw McKay. In response to frequent trade punishments and cyber-attacks on its digital infrastructure, Australia is rapidly strengthening its diplomatic and security ties with regional partners like Japan and India. This reflects a practical strategy that attempts to balance economic defense with careful international engagement."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "How constant anxiety led to early strategic planning", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "A history of replacing old alliances with transactional agreements", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Massive financial investments to secure vital ocean routes", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Tensions caused by strict demands and uncertain manufacturing schedules", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Managing economic risks by partnering with new regional allies", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The complete failure of three-way maritime agreements", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Expanding the military to achieve total independence", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding action, role, or strategic assessment.",
+    "questions": [
+      {
+        "prompt": "Who described the country's diplomatic history as being shaped by a constant 'fear of abandonment'?",
+        "options": ["Huw McKay", "Allan Gyngell", "Pete Hegseth", "Richard Nixon"],
+        "correct": "Allan Gyngell",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Who projected a massive long-term decline in Chinese demand for iron ore?",
+        "options": ["Allan Gyngell", "Harry Truman", "Huw McKay", "Pete Hegseth"],
+        "correct": "Huw McKay",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Who made highly ambiguous statements about whether submarine manufacturing schedules would stay on time?",
+        "options": ["Pete Hegseth", "Huw McKay", "Allan Gyngell", "Donald Trump"],
+        "correct": "Pete Hegseth",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The bilateral trade balance between Australia and the United States has favored Australia since the mid-20th century.",
+        "type": "False",
+        "explanation": "Paragraph D states that Australia has maintained a 'trade deficit' with America (meaning the balance favors America, not Australia) since the Truman presidency.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "American politicians require assurances that Australian submarines would be used in a potential conflict regarding Taiwan.",
+        "type": "True",
+        "explanation": "Paragraph D explicitly states that American politicians are demanding 'strict guarantees' that bought submarines would be used to help the U.S. in a conflict over Taiwan.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "The Australian government plans to phase out all iron ore extraction within the next thirty years.",
+        "type": "Not Given",
+        "explanation": "Paragraph E projects that Chinese demand for iron ore may fall by 40%, but there is absolutely no mention of Australian domestic plans to entirely eliminate their own extraction.",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "The trilateral AUKUS framework was originally drafted and enacted prior to the 21st century.",
+        "type": "False",
+        "explanation": "Paragraph C refers to AUKUS as a 'recently established' and 'modern foundation' of strategy, making it a 21st-century development, not something enacted prior to it.",
+        "found_in_paragraph": "C"
+      }
+    ]
+  }
+}

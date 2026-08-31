@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS 3-Stage Reading Comprehension</title>
+    <style>
+        :root {
+            --primary: #2980b9;
+            --primary-dark: #1f618d;
+            --accent: #8e44ad;
+            --success: #27ae60;
+            --error: #c0392b;
+            --warning: #d35400;
+            --bg: #f4f7f6;
+            --card-bg: #ffffff;
+            --border: #dcdde1;
+            --text: #2c3e50;
+            --text-light: #7f8c8d;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); display: flex; justify-content: center; min-height: 100vh; padding: 20px; }
+        .app-container { width: 100%; max-width: 1200px; background: var(--card-bg); border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; }
+
+        /* Screens */
+        .screen { display: none; padding: 30px; height: 100%; }
+        .screen.active { display: flex; flex-direction: column; }
+
+        /* Setup Screen */
+        .setup-screen { max-width: 650px; margin: auto; text-align: center; gap: 20px; }
+        .setup-screen h1 { font-size: 28px; color: var(--primary); }
+        .setup-screen p { color: var(--text-light); line-height: 1.6; }
+        .setup-controls { display: flex; flex-direction: column; gap: 15px; margin-top: 15px; text-align: left; }
+        .input-group label { display: block; font-weight: bold; margin-bottom: 6px; font-size: 14px; }
+        select, input[type="text"] { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; background: #fff; }
+
+        /* Buttons */
+        .btn { background-color: var(--primary); color: white; border: none; padding: 12px 20px; font-size: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: background 0.2s, transform 0.1s; text-align: center; }
+        .btn:hover { background-color: var(--primary-dark); }
+        .btn:active { transform: scale(0.98); }
+        .btn-secondary { background-color: #95a5a6; }
+        .btn-secondary:hover { background-color: #7f8c8d; }
+        .btn-accent { background-color: var(--accent); }
+        .btn-accent:hover { background-color: #732d91; }
+
+        /* Split-Screen Main Layout */
+        .workspace { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; height: calc(100vh - 100px); min-height: 550px; }
+
+        /* Top / Left Panel: Text Viewer */
+        .text-panel { background: #fdfbf7; border: 1px solid var(--border); border-radius: 8px; padding: 25px; overflow-y: auto; display: flex; flex-direction: column; gap: 20px; }
+        .text-panel h2 { font-size: 20px; color: var(--primary); border-bottom: 2px solid #ecf0f1; padding-bottom: 8px; }
+        .paragraph-block { background: #fff; border: 1px solid #e1e8ed; border-radius: 8px; padding: 16px; line-height: 1.7; font-size: 15px; position: relative; }
+        .paragraph-block.highlight { border-color: var(--primary); box-shadow: 0 0 0 2px rgba(41, 128, 185, 0.2); }
+        .para-label { font-weight: bold; color: var(--accent); margin-bottom: 8px; display: inline-block; font-size: 14px; }
+        .heading-dropdown { margin-bottom: 12px; width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; background: #fff; color: var(--text); }
+        .heading-dropdown.correct { border-color: var(--success); background-color: #eafaf1; color: var(--success); font-weight: bold; pointer-events: none; }
+        .heading-dropdown.wrong { border-color: var(--error); background-color: #fdedec; }
+
+        /* Bottom / Right Panel: Interactive Stage Controller */
+        .control-panel { display: flex; flex-direction: column; gap: 15px; justify-content: space-between; border: 1px solid var(--border); border-radius: 8px; padding: 25px; background: #fafbfc; }
+        .stage-badge { align-self: flex-start; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+        .badge-stage1 { background: #e8f4f8; color: var(--primary); }
+        .badge-stage2 { background: #f4ecf7; color: var(--accent); }
+        .badge-stage3 { background: #fef5e7; color: var(--warning); }
+
+        .stage-header h3 { font-size: 18px; margin: 8px 0 4px 0; color: var(--text); }
+        .stage-header p { font-size: 13px; color: var(--text-light); }
+
+        .question-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 15px; }
+        .prompt-text { font-size: 16px; font-weight: 600; line-height: 1.5; }
+        .options-grid { display: flex; flex-direction: column; gap: 10px; }
+        .option-btn { background: #fff; border: 2px solid var(--border); padding: 12px; border-radius: 8px; text-align: left; font-size: 14px; font-weight: 600; color: var(--text); cursor: pointer; transition: all 0.2s; }
+        .option-btn:hover { border-color: var(--primary); background: #f0f7fb; }
+        .option-btn.selected-correct { border-color: var(--success); background: #eafaf1; color: var(--success); }
+        .option-btn.selected-wrong { border-color: var(--error); background: #fdedec; color: var(--error); }
+
+        .tfng-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .tfng-btn { padding: 14px 10px; border: 2px solid var(--border); border-radius: 8px; background: white; font-weight: bold; font-size: 14px; cursor: pointer; text-align: center; transition: all 0.2s; }
+        .tfng-btn:hover { border-color: var(--primary); background: #f0f7fb; }
+
+        .feedback-box { padding: 12px 15px; border-radius: 6px; font-size: 14px; line-height: 1.5; display: none; }
+        .feedback-box.correct { background: #eafaf1; border: 1px solid var(--success); color: #1e8449; }
+        .feedback-box.wrong { background: #fdedec; border: 1px solid var(--error); color: #922b21; }
+
+        /* Progress Tracker */
+        .stage-progress { font-size: 13px; font-weight: bold; color: var(--text-light); text-align: right; }
+
+        /* End Screen & Review */
+        .end-screen { max-width: 800px; margin: auto; text-align: center; gap: 20px; }
+        .score-banner { font-size: 24px; font-weight: bold; color: var(--primary); }
+        .review-container { max-height: 450px; overflow-y: auto; text-align: left; display: flex; flex-direction: column; gap: 15px; margin-top: 15px; padding-right: 5px; }
+        .review-card { background: #fdfbf7; border: 1px solid var(--border); border-radius: 8px; padding: 16px; font-size: 14px; }
+        .review-card h4 { font-size: 15px; margin-bottom: 6px; }
+
+        /* Responsive Mobile Split */
+        @media (max-width: 850px) {
+            body { padding: 10px; }
+            .workspace { grid-template-columns: 1fr; grid-template-rows: 45vh 1fr; height: auto; min-height: calc(100vh - 40px); }
+            .text-panel { height: 45vh; }
+            .control-panel { min-height: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- Setup Screen -->
+    <div id="setupScreen" class="screen setup-screen active">
+        <h1>Reading Progression Matrix</h1>
+        <p>Master multi-gear academic reading: structural paragraph mapping, high-speed entity scanning, and deterministic logic traps.</p>
+        
+        <div class="setup-controls">
+            <div class="input-group">
+                <label for="drillSelect">Select Academic Reading Text:</label>
+                <select id="drillSelect">
+                    <option value="">Loading drills...</option>
+                </select>
+            </div>
+            
+            <button class="btn btn-accent" style="margin-top: 10px;" onclick="loadDrill()">Launch Progression Drill</button>
+            <button class="btn btn-secondary" onclick="window.location.href='index.html'">Back to Menu</button>
+        </div>
+    </div>
+
+    <!-- Main Drill Screen -->
+    <div id="drillScreen" class="screen" style="padding: 15px;">
+        <div class="workspace">
+            
+            <!-- Left / Top Panel: Text Viewer -->
+            <div class="text-panel" id="textViewer">
+                <h2 id="passageTitle">Passage Title</h2>
+                <div id="paragraphsContainer"></div>
+            </div>
+
+            <!-- Right / Bottom Panel: Interactive Progression Panel -->
+            <div class="control-panel">
+                
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span id="stageBadge" class="stage-badge badge-stage1">Stage 1: Architecture Map</span>
+                    <span id="stageProgress" class="stage-progress"></span>
+                </div>
+
+                <div class="stage-header">
+                    <h3 id="stageTitle">Stage Title</h3>
+                    <p id="stageInstructions">Stage Instructions</p>
+                </div>
+
+                <!-- Dynamic Workspace Target -->
+                <div class="question-card" id="questionCard"></div>
+
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button id="primaryBtn" class="btn" style="flex: 1;" onclick="handlePrimaryAction()">Validate Structure</button>
+                    <button id="giveUpBtn" class="btn btn-secondary" style="flex: 1; display: none;" onclick="showStage1Answers()">I'm Stuck (Show Answers)</button>
+                    <button id="nextBtn" class="btn btn-accent" style="flex: 1; display: none;" onclick="handleNextStep()">Continue</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- End Screen -->
+    <div id="endScreen" class="screen end-screen">
+        <h1>Drill Complete</h1>
+        <div class="score-banner" id="finalScoreDisplay"></div>
+        <p id="feedbackSummary" style="color: var(--text-light);"></p>
+
+        <div class="review-container" id="reviewList"></div>
+
+        <div style="display: flex; gap: 15px; margin-top: 10px;">
+            <button class="btn" style="flex: 1;" onclick="resetToSetup()">Select Another Drill</button>
+            <button class="btn btn-secondary" style="flex: 1;" onclick="window.location.href='index.html'">Main Menu</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let currentDrill = null;
+    let currentStage = 1; 
+
+    // Tracking variables
+    let stage1Attempts = 0;
+    let stage1Correct = 0;
+    let stage2Index = 0;
+    let stage2Correct = 0;
+    let stage3Index = 0;
+    let stage3Correct = 0;
+    
+    let drillHistory = {
+        stage1: { passed: false, attempts: 0, usedHelp: false },
+        stage2: [],
+        stage3: []
+    };
+
+    // --- AUTO-LOAD THE DROPDOWN LIST ---
+    window.onload = async function() {
+        try {
+            const response = await fetch('reading_drills/index.json');
+            if (!response.ok) throw new Error("Index not found.");
+            const drills = await response.json();
+            
+            const selectEl = document.getElementById('drillSelect');
+            selectEl.innerHTML = ''; 
+            
+            drills.forEach(drill => {
+                let option = document.createElement('option');
+                option.value = drill.file;
+                option.innerText = `${drill.topic} (${drill.difficulty})`;
+                selectEl.appendChild(option);
+            });
+        } catch (error) {
+            console.log("Could not load index.json. Did you run the Python script?", error);
+        }
+    };
+
+    async function loadDrill() {
+        const path = document.getElementById('drillSelect').value;
+        if (!path) return alert("Please select a drill first.");
+        
+        try {
+            const response = await fetch(path);
+            if (!response.ok) throw new Error("Network response error.");
+            currentDrill = await response.json();
+            startDrillSession();
+        } catch (error) {
+            console.error("Local JSON fetch failed:", error);
+            alert("Could not load the JSON file via fetch. Ensure your local server is running.");
+        }
+    }
+
+    function startDrillSession() {
+        currentStage = 1;
+        stage1Attempts = 0;
+        stage1Correct = 0;
+        stage2Index = 0;
+        stage2Correct = 0;
+        stage3Index = 0;
+        stage3Correct = 0;
+        drillHistory = { stage1: { passed: false, attempts: 0, usedHelp: false }, stage2: [], stage3: [] };
+
+        document.getElementById('setupScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('drillScreen').classList.add('active');
+
+        document.getElementById('passageTitle').innerText = currentDrill.topic;
+        renderTextPassage();
+        setupStage1();
+    }
+
+    function renderTextPassage() {
+        const container = document.getElementById('paragraphsContainer');
+        container.innerHTML = '';
+
+        currentDrill.text.forEach(p => {
+            const div = document.createElement('div');
+            div.className = 'paragraph-block';
+            div.id = `paraBlock_${p.paragraph_id}`;
+            
+            const selectHtml = `
+                <select class="heading-dropdown" id="select_${p.paragraph_id}" data-para="${p.paragraph_id}">
+                    <option value="">-- Match Paragraph Function --</option>
+                    ${currentDrill.stage_1_headings.options.map(opt => `<option value="${opt.id}">${opt.text}</option>`).join('')}
+                </select>
+            `;
+
+            div.innerHTML = `
+                <span class="para-label">Paragraph ${p.paragraph_id}</span>
+                <div id="slot_${p.paragraph_id}">${selectHtml}</div>
+                <div class="para-text">${p.content}</div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    // ==========================================
+    // STAGE 1: ARCHITECTURE MAP
+    // ==========================================
+    function setupStage1() {
+        currentStage = 1;
+        document.getElementById('stageBadge').className = 'stage-badge badge-stage1';
+        document.getElementById('stageBadge').innerText = 'Stage 1: Architecture Map';
+        document.getElementById('stageProgress').innerText = `Target: ${currentDrill.text.length} Paragraphs`;
+        document.getElementById('stageTitle').innerText = 'Structural Heading Matrix';
+        document.getElementById('stageInstructions').innerText = currentDrill.stage_1_headings.instructions;
+
+        const card = document.getElementById('questionCard');
+        card.innerHTML = `
+            <div style="font-size: 14px; line-height: 1.6; color: var(--text);">
+                Read each paragraph's core function. Assign the matching structural tag using the dropdown selectors above each text block in the left panel.
+            </div>
+        `;
+
+        document.getElementById('feedbackBox').style.display = 'none';
+        document.getElementById('primaryBtn').style.display = 'block';
+        document.getElementById('primaryBtn').innerText = 'Validate Structure';
+        document.getElementById('giveUpBtn').style.display = 'block';
+        document.getElementById('nextBtn').style.display = 'none';
+    }
+
+    function checkStage1() {
+        stage1Attempts++;
+        let allCorrect = true;
+
+        currentDrill.text.forEach(p => {
+            const select = document.getElementById(`select_${p.paragraph_id}`);
+            const selectedVal = select.value;
+            const matchedOption = currentDrill.stage_1_headings.options.find(o => o.matches === p.paragraph_id);
+
+            if (matchedOption && selectedVal === matchedOption.id) {
+                select.className = 'heading-dropdown correct';
+            } else {
+                select.className = 'heading-dropdown wrong';
+                allCorrect = false;
+            }
+        });
+
+        const feedback = document.getElementById('feedbackBox');
+        feedback.style.display = 'block';
+
+        if (allCorrect) {
+            stage1Correct = currentDrill.text.length; // Full points awarded
+            feedback.className = 'feedback-box correct';
+            feedback.innerText = `Structure successfully mapped in ${stage1Attempts} validation check(s). Stage 2 Scanning unlocked.`;
+            drillHistory.stage1 = { passed: true, attempts: stage1Attempts, usedHelp: false };
+            
+            document.getElementById('primaryBtn').style.display = 'none';
+            document.getElementById('giveUpBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'block';
+            document.getElementById('nextBtn').innerText = 'Proceed to Stage 2 (Scanning)';
+        } else {
+            feedback.className = 'feedback-box wrong';
+            feedback.innerText = `Inaccuracies detected. Red dropdowns indicate distractor traps or mismatches. Re-evaluate and check again.`;
+        }
+    }
+
+    function showStage1Answers() {
+        drillHistory.stage1.usedHelp = true;
+        drillHistory.stage1.attempts = stage1Attempts;
+        
+        let currentCorrectCount = 0;
+
+        currentDrill.text.forEach(p => {
+            const select = document.getElementById(`select_${p.paragraph_id}`);
+            const matchedOption = currentDrill.stage_1_headings.options.find(o => o.matches === p.paragraph_id);
+            
+            // Check if they currently had it right before giving up to salvage partial points
+            if (matchedOption && select.value === matchedOption.id) {
+                currentCorrectCount++;
+            }
+
+            // Force the UI to show the correct answer
+            if (matchedOption) {
+                select.value = matchedOption.id;
+                select.className = 'heading-dropdown correct';
+            }
+        });
+
+        stage1Correct = currentCorrectCount; // Assign partial points
+        const feedback = document.getElementById('feedbackBox');
+        feedback.style.display = 'block';
+        feedback.className = 'feedback-box wrong';
+        feedback.innerText = 'Answer key applied. Review the structural tags before proceeding to Stage 2.';
+
+        document.getElementById('primaryBtn').style.display = 'none';
+        document.getElementById('giveUpBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'block';
+        document.getElementById('nextBtn').innerText = 'Proceed to Stage 2 (Scanning)';
+    }
+
+    // ==========================================
+    // STAGE 2: SPEAKER & ENTITY SCANNING
+    // ==========================================
+    function setupStage2() {
+        currentStage = 2;
+        document.getElementById('stageBadge').className = 'stage-badge badge-stage2';
+        document.getElementById('stageBadge').innerText = 'Stage 2: Scanning Radar';
+        document.getElementById('stageTitle').innerText = 'High-Speed Entity Match';
+        document.getElementById('stageInstructions').innerText = currentDrill.stage_2_scanning.instructions;
+
+        currentDrill.text.forEach(p => {
+            const slot = document.getElementById(`slot_${p.paragraph_id}`);
+            if (slot) slot.style.display = 'none';
+        });
+
+        loadStage2Question();
+    }
+
+    function loadStage2Question() {
+        clearHighlights();
+        document.getElementById('feedbackBox').style.display = 'none';
+        document.getElementById('primaryBtn').style.display = 'none';
+        document.getElementById('giveUpBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'none';
+
+        const questions = currentDrill.stage_2_scanning.questions;
+        document.getElementById('stageProgress').innerText = `Question ${stage2Index + 1} of ${questions.length}`;
+
+        const q = questions[stage2Index];
+        const card = document.getElementById('questionCard');
+        
+        let optionsHtml = q.options.map((opt, idx) => `
+            <button class="option-btn" onclick="handleStage2Answer(this, ${idx})">${opt}</button>
+        `).join('');
+
+        card.innerHTML = `
+            <div class="prompt-text">${q.prompt}</div>
+            <div class="options-grid">${optionsHtml}</div>
+        `;
+    }
+
+    function handleStage2Answer(btn, optIndex) {
+        const q = currentDrill.stage_2_scanning.questions[stage2Index];
+        const chosen = q.options[optIndex];
+        const correct = q.correct;
+        const isCorrect = (chosen === correct);
+        if (isCorrect) stage2Correct++;
+
+        drillHistory.stage2.push({
+            prompt: q.prompt,
+            chosen: chosen,
+            correct: correct,
+            isCorrect: isCorrect
+        });
+
+        const targetBlock = document.getElementById(`paraBlock_${q.found_in_paragraph}`);
+        if (targetBlock) {
+            targetBlock.classList.add('highlight');
+            targetBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        const buttons = document.querySelectorAll('.option-btn');
+        buttons.forEach(b => {
+            b.style.pointerEvents = 'none';
+            if (b.innerText === correct) b.className = 'option-btn selected-correct';
+            if (b.innerText === chosen && !isCorrect) b.className = 'option-btn selected-wrong';
+        });
+
+        const feedback = document.getElementById('feedbackBox');
+        feedback.style.display = 'block';
+        feedback.className = isCorrect ? 'feedback-box correct' : 'feedback-box wrong';
+        feedback.innerText = isCorrect ? `Correct identification. Found in Paragraph ${q.found_in_paragraph}.` : `Incorrect. Correct target: ${correct} (Paragraph ${q.found_in_paragraph}).`;
+
+        document.getElementById('nextBtn').style.display = 'block';
+        document.getElementById('nextBtn').innerText = (stage2Index + 1 < currentDrill.stage_2_scanning.questions.length) ? 'Next Item' : 'Proceed to Stage 3 (Logic)';
+    }
+
+    // ==========================================
+    // STAGE 3: LOGIC TRAPS (T / F / NG)
+    // ==========================================
+    function setupStage3() {
+        currentStage = 3;
+        document.getElementById('stageBadge').className = 'stage-badge badge-stage3';
+        document.getElementById('stageBadge').innerText = 'Stage 3: Logic Matrix';
+        document.getElementById('stageTitle').innerText = 'Deterministic Logic Analysis';
+        document.getElementById('stageInstructions').innerText = currentDrill.stage_3_logic.instructions;
+
+        loadStage3Question();
+    }
+
+    function loadStage3Question() {
+        clearHighlights();
+        document.getElementById('feedbackBox').style.display = 'none';
+        document.getElementById('primaryBtn').style.display = 'none';
+        document.getElementById('giveUpBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'none';
+
+        const questions = currentDrill.stage_3_logic.questions;
+        document.getElementById('stageProgress').innerText = `Statement ${stage3Index + 1} of ${questions.length}`;
+
+        const q = questions[stage3Index];
+        const card = document.getElementById('questionCard');
+
+        card.innerHTML = `
+            <div class="prompt-text">"${q.prompt}"</div>
+            <div class="tfng-grid">
+                <button class="tfng-btn" onclick="handleStage3Answer('True')">TRUE</button>
+                <button class="tfng-btn" onclick="handleStage3Answer('False')">FALSE</button>
+                <button class="tfng-btn" onclick="handleStage3Answer('Not Given')">NOT GIVEN</button>
+            </div>
+        `;
+    }
+
+    function handleStage3Answer(chosen) {
+        const q = currentDrill.stage_3_logic.questions[stage3Index];
+        const isCorrect = (chosen.toLowerCase() === q.type.toLowerCase());
+        if (isCorrect) stage3Correct++;
+
+        drillHistory.stage3.push({
+            prompt: q.prompt,
+            chosen: chosen,
+            correct: q.type,
+            explanation: q.explanation, // No longer injected directly as a string parameter
+            isCorrect: isCorrect
+        });
+
+        const targetBlock = document.getElementById(`paraBlock_${q.found_in_paragraph}`);
+        if (targetBlock) {
+            targetBlock.classList.add('highlight');
+            targetBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        const buttons = document.querySelectorAll('.tfng-btn');
+        buttons.forEach(b => {
+            b.style.pointerEvents = 'none';
+            if (b.innerText.toLowerCase() === q.type.toLowerCase()) {
+                b.style.backgroundColor = '#eafaf1';
+                b.style.borderColor = '#27ae60';
+                b.style.color = '#27ae60';
+            }
+            if (b.innerText.toLowerCase() === chosen.toLowerCase() && !isCorrect) {
+                b.style.backgroundColor = '#fdedec';
+                b.style.borderColor = '#c0392b';
+                b.style.color = '#c0392b';
+            }
+        });
+
+        const feedback = document.getElementById('feedbackBox');
+        feedback.style.display = 'block';
+        feedback.className = isCorrect ? 'feedback-box correct' : 'feedback-box wrong';
+        feedback.innerHTML = `<b>${q.type.toUpperCase()}</b>: ${q.explanation} (Paragraph ${q.found_in_paragraph})`;
+
+        document.getElementById('nextBtn').style.display = 'block';
+        document.getElementById('nextBtn').innerText = (stage3Index + 1 < currentDrill.stage_3_logic.questions.length) ? 'Next Statement' : 'Finalize Session';
+    }
+
+    // ==========================================
+    // ACTION CONTROLLERS & PROGRESSION ROUTING
+    // ==========================================
+    function handlePrimaryAction() {
+        if (currentStage === 1) checkStage1();
+    }
+
+    function handleNextStep() {
+        if (currentStage === 1) {
+            setupStage2();
+        } else if (currentStage === 2) {
+            stage2Index++;
+            if (stage2Index < currentDrill.stage_2_scanning.questions.length) {
+                loadStage2Question();
+            } else {
+                setupStage3();
+            }
+        } else if (currentStage === 3) {
+            stage3Index++;
+            if (stage3Index < currentDrill.stage_3_logic.questions.length) {
+                loadStage3Question();
+            } else {
+                renderEndScreen();
+            }
+        }
+    }
+
+    function clearHighlights() {
+        document.querySelectorAll('.paragraph-block').forEach(b => b.classList.remove('highlight'));
+    }
+
+    // ==========================================
+    // END SCREEN & GOOGLE SHEETS INTEGRATION
+    // ==========================================
+    function renderEndScreen() {
+        document.getElementById('drillScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.add('active');
+
+        // Total questions equal the number of paragraphs (Stage 1) plus scanning/logic questions
+        const stage1Total = currentDrill.text.length;
+        const totalQuestions = stage1Total + currentDrill.stage_2_scanning.questions.length + currentDrill.stage_3_logic.questions.length;
+        const totalEarned = stage1Correct + stage2Correct + stage3Correct;
+        const totalPercentage = Math.round((totalEarned / totalQuestions) * 100);
+
+        const stage1Text = drillHistory.stage1.usedHelp 
+            ? `Used Answer Key (${stage1Correct}/${stage1Total} pre-help)` 
+            : `${drillHistory.stage1.attempts} attempt(s)`;
+
+        document.getElementById('finalScoreDisplay').innerText = `Accuracy: ${totalEarned}/${totalQuestions} (${totalPercentage}%) | Stage 1: ${stage1Text}`;
+
+        let feedbackText = "";
+        if (totalPercentage >= 85 && !drillHistory.stage1.usedHelp) feedbackText = "Excellent Performance: Strong structural mapping and reliable logic.";
+        else if (totalPercentage >= 70) feedbackText = "Solid Performance: Competent scanning, but watch out for subtle Logic and Heading distractors.";
+        else feedbackText = "Review Needed: Notable translation bottlenecks. Review the paragraph functions and rationales below.";
+        document.getElementById('feedbackSummary').innerText = feedbackText;
+
+        const reviewList = document.getElementById('reviewList');
+        reviewList.innerHTML = '';
+
+        // Stage 1 Summary
+        const s1Card = document.createElement('div');
+        s1Card.className = 'review-card';
+        s1Card.innerHTML = `<h4>Stage 1: Architecture Mapping (${stage1Correct}/${stage1Total})</h4><p>${drillHistory.stage1.usedHelp ? 'Required answer key assistance.' : `Validated independently in <b>${drillHistory.stage1.attempts}</b> attempt(s).`}</p>`;
+        reviewList.appendChild(s1Card);
+
+        // Stage 2 Summary
+        drillHistory.stage2.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'review-card';
+            card.innerHTML = `
+                <h4>Stage 2 Scan: ${item.prompt}</h4>
+                <p>Your Selection: <b style="color:${item.isCorrect ? 'var(--success)' : 'var(--error)'}">${item.chosen}</b> | Correct: <b>${item.correct}</b></p>
+            `;
+            reviewList.appendChild(card);
+        });
+
+        // Stage 3 Summary
+        drillHistory.stage3.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'review-card';
+            card.innerHTML = `
+                <h4>Stage 3 Logic: "${item.prompt}"</h4>
+                <p>Your Selection: <b style="color:${item.isCorrect ? 'var(--success)' : 'var(--error)'}">${item.chosen}</b> | Target: <b>${item.correct}</b></p>
+                <p style="font-size: 13px; color: var(--text-light); margin-top: 4px;">Rationale: ${item.explanation}</p>
+            `;
+            reviewList.appendChild(card);
+        });
+
+        // --- GOOGLE SHEETS CLOUD SAVING ---
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwAUYzRONdG5foqJ395nLu_0jAhNz1DgREUyTttFw5fBmGvzcpgHyJxtruXyIJiM7w76w/exec";
+        const studentName = localStorage.getItem("ielts_student_name") || "Student";
+
+        let mistakes = [];
+        if (drillHistory.stage1.usedHelp) mistakes.push(`Stage 1: Used Help`);
+        else if (drillHistory.stage1.attempts > 1) mistakes.push(`Stage 1: ${drillHistory.stage1.attempts} checks`);
+        
+        drillHistory.stage2.filter(i => !i.isCorrect).forEach(i => mistakes.push(`Scan Miss: ${i.correct}`));
+        drillHistory.stage3.filter(i => !i.isCorrect).forEach(i => mistakes.push(`Logic Miss: ${i.correct}`));
+
+        let payload = {
+            studentName: studentName,
+            drillName: "Reading",
+            contentType: currentDrill.topic,
+            timeLimit: "Untimed Progression",
+            score: totalEarned,
+            maxScore: totalQuestions,
+            percentage: totalPercentage,
+            mistakes: mistakes.length > 0 ? mistakes.join(" | ") : "Flawless Execution"
+        };
+
+        fetch(WEB_APP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        }).catch(err => console.log("Remote tracking failed:", err));
+    }
+
+    function resetToSetup() {
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('drillScreen').classList.remove('active');
+        document.getElementById('setupScreen').classList.add('active');
+        
+        // Refresh the dropdown dynamically upon reset
+        window.onload(); 
+    }
+</script>
+
+</body>
+</html>

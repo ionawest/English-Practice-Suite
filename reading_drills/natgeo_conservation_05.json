@@ -1,0 +1,85 @@
+{
+  "id": "conservation_05",
+  "topic": "Building Community Through Environmental Conservation",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "During the summer months, a small group of teenagers can often be found maintaining sections of the historic Wonderland Trail in Mount Rainier National Park. Using specialized tools to clear brush and build urgent infrastructure, these teenagers are learning essential backcountry survival and trail management skills. This unique program, which operates as the nation’s first LGBTQ youth conservation initiative, is known as the Rainbow Conservation Crew. Rather than a traditional summer camp, the program serves as a demanding, paid professional experience where participants must learn to navigate both environmental hazards and communal responsibilities."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "Beyond providing a safe environment for participants to learn practical career skills, the program also offers essential exposure to adult role models within the community. The profound impact of this representation was experienced firsthand by the group’s current leader-in-training, Mel Hanby. He notes that many young people are hesitant to participate in traditional wilderness programs due to a fear of discrimination. By removing these social barriers, participants can focus entirely on their physical tasks. Similarly, the physical confidence gained by performing heavy manual labour in a supportive environment was highlighted by former crew leader Ernie Callaghan."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "The initiative was originally established to address a distinct lack of outdoor career pathways for marginalized teenagers. This gap in the industry was initially identified through a collaboration between the founder of OUT There Adventures, Elyse Rylander, and a senior director at the Northwest Youth Corps, Jay Satz. Since its formation in 2017, the program has expanded significantly due to millions of dollars in external funding. Consequently, the organization now offers multiple crews for different age groups, operating across several major national parks in the Pacific Northwest."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "The success of this identity-specific model is beginning to fundamentally alter the broader culture of conservation work across the country. In 2020, one of the highest honors in the environmental community, the Project of the Year award, was presented to the Rainbow Crew. As a result of this visibility, many traditional conservation corps are now implementing more inclusive language and policies. Furthermore, similar specialized programs have recently been launched by other regional organizations, including the Eastern Sierra Conservation Corps in California and the Washington Trails Association, which now offer extended wilderness immersion trips for adults."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Looking toward the future, experts believe that these specialized conservation crews will continue to multiply. This growth is driven both by a social demand for inclusive spaces and a severe need for maintenance workers on national public lands. The critical importance of building a diverse generation of future environmental advocates was recently emphasized by the president of the National Park Foundation, Will Shafroth. Ultimately, creating welcoming environments in nature ensures that public lands are protected by a wider variety of passionate supporters."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The daily operations and professional nature of the program", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Building physical confidence and finding community mentors", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The founding partnership and subsequent expansion of the initiative", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Influencing industry standards and inspiring similar regional programs", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The long-term necessity of cultivating diverse environmental advocates", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The financial challenges of maintaining national park facilities", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The negative impacts of tourism on historical hiking trails", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who emphasized the critical importance of building a diverse generation of future environmental advocates?",
+        "options": ["Mel Hanby", "Will Shafroth", "Ernie Callaghan", "Elyse Rylander"],
+        "correct": "Will Shafroth",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Who highlighted the physical confidence gained by performing heavy manual labour in a supportive environment?",
+        "options": ["Will Shafroth", "Jay Satz", "Ernie Callaghan", "Mel Hanby"],
+        "correct": "Ernie Callaghan",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Which organization recently launched extended wilderness immersion trips for adults in California?",
+        "options": ["The Rainbow Conservation Crew", "The National Park Foundation", "OUT There Adventures", "The Eastern Sierra Conservation Corps"],
+        "correct": "The Eastern Sierra Conservation Corps",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The Rainbow Conservation Crew operates as an unpaid, volunteer-based summer camp for teenagers.",
+        "type": "False",
+        "explanation": "Paragraph A states the opposite: 'Rather than a traditional summer camp, the program serves as a demanding, paid professional experience...'",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "The Rainbow Conservation Crew currently receives the majority of its annual funding directly from the Washington state government.",
+        "type": "Not Given",
+        "explanation": "Paragraph C mentions that the program expanded due to 'millions of dollars in external funding,' but it never specifies that the Washington state government provides the majority of this money.",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Many traditional conservation groups have started adopting more inclusive policies due to the visibility of the Rainbow Crew.",
+        "type": "True",
+        "explanation": "Paragraph D explicitly states: 'As a result of this visibility, many traditional conservation corps are now implementing more inclusive language and policies.'",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "space_01",
+  "topic": "Human Space Exploration: Beyond the Space Race",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "The Apollo 17 mission in 1972 marked the last time humans traveled beyond low-Earth orbit. By the time the first lunar landing occurred in 1969, the priorities for human space exploration had already shifted. U.S. President Richard Nixon appointed a committee that ultimately abandoned expensive deep-space missions in favour of developing a reusable space plane. When the space shuttle Columbia launched in 1981, it was intended to be a reliable and inexpensive way to carry out experiments and deliver satellites. However, the shuttle program averaged only four launches a year at a much higher cost than originally expected."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The underlying technology of early orbital flight was closely linked to military development. The pioneering German V-2 rocket of World War II laid the groundwork for both American and Soviet launch vehicles. The technology required to send humans into space could also be used to deliver military weapons, providing superpowers with a convenient excuse to develop rockets during the Cold War. Interestingly, Japan was the exception to this trend. Following the dismantling of its aerospace industry after World War II, Japan launched its first satellite in 1970 using a rocket based entirely on a civilian project led by Professor Hideo Itokawa."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "In contrast to NASA’s centralized structure, the Soviet Union’s space program suffered from internal politics and competing agencies. The chief Soviet rocket designer, Sergei Korolëv, found his lunar plans delayed by Valentin Glushko, a former colleague who had become a professional rival. Glushko insisted on using fuel better suited for military missiles, rather than the specific cryogenic fuel needed to provide the massive lift for a moon mission. This disagreement caused significant delays, and after several technical failures, the Soviet Union was forced to abandon its planned crewed missions to the moon."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "As the race to the moon ended, focus shifted towards space stations, leading to both tragedy and international cooperation. The Soviet Union launched the first space station in 1971, but the mission ended in disaster when the crew died from sudden depressurization upon re-entry. At the time, cosmonauts did not wear spacesuits that would have protected them. Despite this, space stations eventually became a symbol of diplomatic collaboration. By 1975, an American Apollo spacecraft successfully docked with a Soviet Soyuz. This early cooperation eventually grew into the International Space Station (ISS) program, which now includes partners from Europe, Japan, and Canada."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Since the turn of the new millennium, the landscape of space exploration has changed significantly. China solidified its independence in space by deploying its own multipart space station in 2022. At the same time, the United States government began providing subsidies to private corporations, such as SpaceX and Boeing, to transport astronauts and cargo to the ISS. While involving commercial companies has made space access cheaper, it has also shifted responsibility. Unlike government agencies, private enterprises are primarily accountable to their shareholders, which has raised concerns about transparency and public trust."
+    },
+    {
+      "paragraph_id": "F",
+      "content": "Today, space programs are no longer satisfied with remaining in low-Earth orbit. The United States plans to return humans to the moon through NASA’s Artemis program, having already completed a successful uncrewed test flight in 2022. China shares these ambitions and plans to send a crewed mission to the lunar surface by 2030. For both nations, these planned lunar bases are not just final destinations; they are intended to serve as vital stepping stones for future crewed missions to Mars."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "A shift in focus from deep space to low-Earth orbit", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The military background of rocket technology and a civilian exception", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "How internal rivalries delayed a national space program", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The transition to space stations and international partnerships", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The rise of private companies and new national powers", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "Future plans to use the moon as a base for further exploration", "isDistractor": false, "matches": "F" },
+      { "id": "h7", "text": "The technological superiority of Soviet rockets", "isDistractor": true, "matches": null },
+      { "id": "h8", "text": "The financial failure of early commercial space companies", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity or researcher to their associated action or discovery.",
+    "questions": [
+      {
+        "prompt": "Who insisted on using fuel designed for military missiles instead of moon missions?",
+        "options": ["Sergei Korolëv", "Valentin Glushko", "Professor Hideo Itokawa", "Richard Nixon"],
+        "correct": "Valentin Glushko",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who led the civilian project that resulted in Japan's first satellite launch?",
+        "options": ["Valentin Glushko", "Richard Nixon", "Professor Hideo Itokawa", "Sergei Korolëv"],
+        "correct": "Professor Hideo Itokawa",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Who established the committee that abandoned expensive deep-space ambitions?",
+        "options": ["Professor Hideo Itokawa", "SpaceX", "NASA", "Richard Nixon"],
+        "correct": "Richard Nixon",
+        "found_in_paragraph": "A"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The space shuttle Columbia was much cheaper to operate than the U.S. government originally predicted.",
+        "type": "False",
+        "explanation": "The text states the shuttle program averaged only four launches a year 'at a much higher cost than originally expected'.",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Following the 1971 space station disaster, the Soviet Union required all cosmonauts to wear pressurized spacesuits.",
+        "type": "Not Given",
+        "explanation": "The text states that spacesuits would have protected them, but it never mentions whether the Soviet Union changed its policies or mandated spacesuits *after* the disaster.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Private aerospace companies are more accountable to the general public than government space agencies are.",
+        "type": "False",
+        "explanation": "The text explicitly states the opposite: 'Unlike government agencies, private enterprises are primarily accountable to their shareholders, which has raised concerns about transparency and public trust.'",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

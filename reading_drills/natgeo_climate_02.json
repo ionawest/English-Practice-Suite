@@ -1,0 +1,85 @@
+{
+  "id": "climate_02",
+  "topic": "The Greenhouse Effect: Human Acceleration",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Global warming refers to the continuous rise in the average temperature of Earth’s atmosphere and oceans. While the planet has naturally gone through warm and cold periods over millennia, the current warming trend is happening at a speed not seen in the past 650,000 years. The first empirical evidence proving that human activities were increasing atmospheric carbon dioxide was provided in the 1950s. These pioneering atmospheric measurements were recorded at the Mauna Loa Observatory by geochemist Dr. Charles Keeling."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "This rapid temperature increase is primarily driven by the worsening of the greenhouse effect. Naturally occurring gases, such as carbon dioxide, methane, and nitrous oxide, act like the glass walls of a greenhouse. They trap reflected solar heat to keep the planet warm enough to sustain life. However, since the Industrial Revolution, the mass burning of fossil fuels and widespread deforestation have caused these gas levels to skyrocket. Furthermore, global heat retention has been severely worsened by the introduction of artificial fluorinated gases, such as the chlorofluorocarbons (CFCs) widely used in commercial refrigeration."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "To systematically evaluate the escalating risks of this phenomenon, the Intergovernmental Panel on Climate Change (IPCC) was established in 1988 by the World Meteorological Organization and the United Nations Environment Programme. Future climate scenarios are now projected by the IPCC using foundational computer models originally developed in the 1960s by climatologist Dr. Syukuro Manabe. According to their comprehensive reports, global surface temperatures have risen by 0.74 degrees Celsius over the past century. Interestingly, landmasses in northern latitudes are experiencing the most rapid warming."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Even slight increases in global temperatures can trigger severe environmental consequences, most notably the accelerated melting of ice caps. A devastating positive feedback loop, where melting exposes dark, heat-absorbing rocks that further accelerate ice loss, can currently be observed at the Chacaltaya Glacier in Bolivia. As a direct result of global ice melt, the IPCC reports that sea levels are rising faster than before. Prior to 1993, the oceans rose by roughly 1.8 millimeters annually, but they are now ascending at a rate of 3.1 millimeters per year, threatening millions of coastal residents."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Reducing the impact of these changes requires unprecedented international cooperation and infrastructural planning. The first major international treaty committing industrialized nations to strict greenhouse gas reduction targets was the Kyoto Protocol, adopted in 1997. Alongside emission reductions, scientists are actively exploring carbon sequestration, which involves capturing carbon dioxide and storing it underground. At the same time, governments are being urged to invest in physical adaptations. Critical initiatives include constructing storm surge barriers, expanding water desalination facilities, and breeding agricultural crops that can survive prolonged droughts."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The measurement of unusually rapid atmospheric changes", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "How natural heat retention is worsened by human industry", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The creation of organizations to predict future climate trends", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The mechanics of ice loss and rising ocean levels", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Global agreements and practical strategies for adaptation", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The positive agricultural effects of carbon dioxide", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The historical discovery of the Mauna Loa volcano", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity or researcher to their associated action or discovery.",
+    "questions": [
+      {
+        "prompt": "Who provided the first empirical data proving that human activities were increasing atmospheric carbon dioxide?",
+        "options": ["Dr. Syukuro Manabe", "Dr. Charles Keeling", "The WMO", "The UNEP"],
+        "correct": "Dr. Charles Keeling",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Which entity accelerated its own melting process by exposing heat-absorbing materials?",
+        "options": ["The Mauna Loa Observatory", "The Chacaltaya Glacier", "The IPCC", "Chlorofluorocarbons"],
+        "correct": "The Chacaltaya Glacier",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Who developed the foundational computer models that are now used to project future climate scenarios?",
+        "options": ["Dr. Charles Keeling", "The United Nations", "Dr. Syukuro Manabe", "The WMO"],
+        "correct": "Dr. Syukuro Manabe",
+        "found_in_paragraph": "C"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The Kyoto Protocol successfully forced industrialized nations to achieve their emission targets.",
+        "type": "Not Given",
+        "explanation": "The text states the protocol was adopted in 1997 and committed nations to targets, but does not state whether they successfully achieved them.",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Global sea levels rose at a faster annual rate before 1993 than they do today.",
+        "type": "False",
+        "explanation": "The text states the opposite: they rose by roughly 1.8 millimeters annually before 1993, but are now rising faster at a rate of 3.1 millimeters per year.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Chlorofluorocarbons (CFCs) are naturally occurring gases that help keep the planet warm enough to sustain life.",
+        "type": "False",
+        "explanation": "The text explicitly distinguishes CFCs from naturally occurring gases, describing them as 'artificial fluorinated gases'.",
+        "found_in_paragraph": "B"
+      }
+    ]
+  }
+}

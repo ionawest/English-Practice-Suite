@@ -1,0 +1,32 @@
+[
+    {
+        "file": "reading_drills/economist_geopolitics_03.json",
+        "topic": "Australia's Geopolitical Realignment in an Era of Uncertainty",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_climate_02.json",
+        "topic": "The Greenhouse Effect: Human Acceleration",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_conservation_05.json",
+        "topic": "Building Community Through Environmental Conservation",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_infrastructure_04.json",
+        "topic": "Case Study: The California Energy Crisis",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_space_01.json",
+        "topic": "Human Space Exploration: Beyond the Space Race",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/noahsmith_economics_06.json",
+        "topic": "The Japanese Future: Technology, Demographics, and Economic Stagnation",
+        "difficulty": "Band 7.5"
+    }
+]

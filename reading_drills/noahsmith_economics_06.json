@@ -1,0 +1,85 @@
+{
+  "id": "economics_06",
+  "topic": "The Japanese Future: Technology, Demographics, and Economic Stagnation",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "During the early 2000s, Japan was widely perceived as the global center of futuristic technology. While Western nations were still transitioning from older electronics, Japanese society had already seamlessly integrated advanced digital appliances, mobile internet, and high-speed rail networks into daily life. This overwhelming sense of accelerated technological progress was famously documented by the creator of the cyberpunk science fiction genre, William Gibson. Observing the neon-lit urban landscape, he declared that the country had successfully emerged from a period of rapid change to firmly establish itself in the 21st century."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "Remarkably, this era of high-tech prosperity occurred a full decade after the infamous collapse of the Japanese asset price bubble. Rather than experiencing continuous decline, the nation enjoyed a prolonged period of slow but steady economic recovery. Full employment and stable economic growth were successfully restored during the administration of Prime Minister Koizumi Junichiro. Although overall growth appeared slower than in Western Europe, this was primarily caused by rapid population aging rather than systemic failure. When measured by productivity per worker, the nation’s economic performance actually outpaced many other advanced economies between 1990 and 2007."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "This economic stability directly translated into improved living standards for average citizens. The famously cramped housing of the post-war period gradually expanded, providing families with significantly larger living spaces. Furthermore, the domestic food market and daily home cooking were fundamentally revolutionized by large corporate grocery chains such as Aeon. Culturally, the nation maintained its position at the global cutting edge, exporting highly influential street fashion, animation, and digital media, thereby proving that the so-called 'lost decade' was actually a period of vital cultural innovation."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "However, a definitive turning point occurred in 2008, after which genuine economic stagnation began to set in. Over the subsequent fifteen years, overall living standards barely grew, and the minimal growth that did occur was achieved entirely by increasing the number of people in the workforce, rather than through improvements in productivity. A combination of factors, including the global financial crisis, severe natural disasters, and the retirement of the Baby Boom generation, resulted in Japanese workers producing less per hour than they had a decade prior. Consequently, the nation began to lose its dominance in consumer electronics and automotive manufacturing to overseas competitors."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Today, while major cities remain highly attractive, safe, and comfortable, the economic reality for the average family has become increasingly difficult. To cope with stagnant wages and a weakening currency, there has been a massive shift toward dual-income households. Unfortunately, this transition can only happen once; as the elderly population continues to grow, working-age citizens will be forced to toil longer hours simply to maintain their current lifestyle. Ultimately, securing a comfortable future for the population will require the country to reclaim its position at the forefront of global technological innovation."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The international perception of a technologically advanced society", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The successful restoration of growth despite demographic challenges", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The cultural and material benefits of steady economic recovery", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "A sudden decline in productivity and global industrial dominance", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The necessity of innovation to alleviate future economic burdens", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The environmental consequences of rapid technological expansion", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The complete collapse of the global financial market", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who successfully restored full employment and stable economic growth after the asset price bubble?",
+        "options": ["William Gibson", "Prime Minister Koizumi Junichiro", "Aeon", "The Baby Boom generation"],
+        "correct": "Prime Minister Koizumi Junichiro",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Which entity fundamentally revolutionized the domestic food market and daily home cooking?",
+        "options": ["Western Europe", "William Gibson", "Aeon", "Prime Minister Koizumi Junichiro"],
+        "correct": "Aeon",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who famously documented the overwhelming sense of accelerated technological progress in the early 2000s?",
+        "options": ["Aeon", "Prime Minister Koizumi Junichiro", "The Baby Boom generation", "William Gibson"],
+        "correct": "William Gibson",
+        "found_in_paragraph": "A"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Japan's slow overall economic growth between 1990 and 2007 was primarily caused by a severe lack of technological innovation.",
+        "type": "False",
+        "explanation": "Paragraph B states that the slower overall growth 'was primarily caused by rapid population aging rather than systemic failure', not a lack of innovation.",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "The Japanese automotive industry currently receives massive financial subsidies from the national government to compete with overseas brands.",
+        "type": "Not Given",
+        "explanation": "Paragraph D mentions that the nation began to lose its dominance in automotive manufacturing to overseas competitors, but there is absolutely no mention of government financial subsidies.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "The minimal economic growth achieved after 2008 was the result of higher workforce participation rather than increased efficiency.",
+        "type": "True",
+        "explanation": "Paragraph D explicitly states that growth 'was achieved entirely by increasing the number of people in the workforce, rather than through improvements in productivity'.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}
