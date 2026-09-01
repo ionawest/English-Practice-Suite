@@ -1,0 +1,85 @@
+{
+  "id": "history_20",
+  "topic": "The Evolution of Kingdoms: From Absolute Rule to Constitutional Monarchy",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Originating around 3000 B.C.E., the earliest monarchical societies emerged when localized leaders began conquering adjacent settlements to form centralized states. In exchange for providing military protection, these early rulers demanded regular tax payments and labor from their subjects. The construction of complex irrigation canals and massive temples known as ziggurats was famously undertaken by one of these foundational civilizations. Located between the Tigris and Euphrates Rivers in modern-day Iraq, this ancient kingdom was known as Sumer."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "During the medieval period, highly sophisticated monarchies emerged well beyond the borders of Europe. Relying on extensive trans-Saharan trade routes, major hubs for the exchange of gold, salt, and cultural ideas flourished across the African continent. A massive kingdom stretching from the Atlantic coast to the inland regions of southeast Africa was established around 1200. This wealthy trading empire, which uniquely possessed its own domestic gold mines, was successfully consolidated under the leadership of King Sundiata."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "As global exploration expanded in the 15th century, monarchies began establishing complex diplomatic and commercial ties with distant territories. While some Asian kingdoms strictly rejected European interference, foreign concepts of free trade and domestic manufacturing were deliberately utilized to modernize a major Southeast Asian nation. This period of rapid integration, which included the establishment of the region's first newspaper, was spearheaded by the progressive leader of Siam, King Mongkut."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Today, the political structure of monarchies has evolved significantly. While a small minority of nations, such as Saudi Arabia and Brunei, are still governed by absolute monarchs who retain final political authority, the vast majority have transitioned to constitutional systems. Under a constitutional monarchy, a nation is formally governed by an elected legislature and an executive prime minister, while the royal family is largely restricted to ceremonial duties and the promotion of national culture."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Even within constitutional systems, modern monarchs can occasionally exert considerable informal influence over national politics. For example, a formal transition from an absolute monarchy to a democratic system with elected leaders occurred in Thailand in 1932. Despite this legal restriction on royal power, tremendous public support and occasional political intervention were hallmarks of the nation's longest-serving modern monarch. His name was King Bhumibol Adulyadej. Following his death, however, the exact political role of the monarchy has become increasingly uncertain."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The emergence and infrastructure of the earliest centralized states", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The economic foundations of medieval African trading empires", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Utilizing foreign concepts to proactively modernize a nation", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The global transition toward ceremonial and constitutional leadership", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The enduring informal political influence of modern monarchs", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The military collapse of early democratic governments", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The financial burden of maintaining ceremonial royal families", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Which ancient kingdom famously undertook the construction of complex irrigation canals and massive temples known as ziggurats?",
+        "options": ["King Sundiata", "King Bhumibol Adulyadej", "King Mongkut", "Sumer"],
+        "correct": "Sumer",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Who successfully consolidated a wealthy African trading empire that uniquely possessed its own domestic gold mines?",
+        "options": ["Sumer", "King Sundiata", "King Mongkut", "King Bhumibol Adulyadej"],
+        "correct": "King Sundiata",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Who spearheaded a period of rapid integration by deliberately utilizing foreign concepts of free trade to modernize Siam?",
+        "options": ["King Mongkut", "Sumer", "King Sundiata", "King Bhumibol Adulyadej"],
+        "correct": "King Mongkut",
+        "found_in_paragraph": "C"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "In a modern constitutional monarchy, the royal family retains the final legal authority to create and enforce national laws.",
+        "type": "False",
+        "explanation": "Paragraph D states the opposite: under a constitutional monarchy, the nation is 'formally governed by an elected legislature and an executive prime minister,' while the royal family is 'largely restricted to ceremonial duties.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "The medieval African empire consolidated around 1200 was notable for containing active gold mines within its own territorial borders.",
+        "type": "True",
+        "explanation": "Paragraph B explicitly confirms this, describing it as a 'wealthy trading empire, which uniquely possessed its own domestic gold mines.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "King Mongkut traveled extensively throughout Europe to study the printing press before establishing Siam's first newspaper.",
+        "type": "Not Given",
+        "explanation": "Paragraph C notes that King Mongkut spearheaded modernization and the establishment of the region's first newspaper, but it provides absolutely no information regarding him traveling to Europe to study printing presses.",
+        "found_in_paragraph": "C"
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "resources_17",
+  "topic": "Asia: Natural Resources, Conflict, and Environmental Management",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "From Siberian energy reserves to Southeast Asian timber forests, Asia possesses an immense wealth of natural resources that remain in high global demand. Historically, the pursuit of these valuable commodities served as a major justification for foreign colonial expansion and military conquest. In the modern era, unequal resource distribution continues to generate geopolitical tension, civil unrest, and territorial disputes. Furthermore, because many extractive operations occur in nations with weak infrastructure and limited regulatory oversight, the extraction of valuable minerals and fossil fuels frequently results in severe environmental degradation and human rights violations."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "Due to the continent's vast geographical size, extreme climate variations present distinct challenges for agricultural production. In northern regions, rising temperatures are melting permafrost, yet the resulting landscape of swamps and uneven ground remains largely unsuitable for farming. Further south, intensive livestock grazing in Mongolia accelerates desertification, forcing pastoralists onto smaller grazing areas. Meanwhile, monsoon-dependent crops like rice face growing vulnerability from erratic weather patterns and contribute significantly to global emissions. Developing sustainable methods to cultivate this staple grain in fragile ecosystems is the primary focus of the environmental researcher Om Katel."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "In addition to agriculture, forestry and marine industries represent vital economic sectors that face increasing ecological pressure. While several Asian countries lead global exports of valuable timber such as teak, widespread deforestation and illegal logging continue to threaten native ecosystems. Similarly, marine fisheries across the region account for the majority of global seafood production, though overfishing by industrial fleets has raised international concerns. The catastrophic consequence of unmanaged resource exploitation is exemplified by the historical diversion of tributary rivers for cotton farming, which led to the near-total disappearance of the Aral Sea."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Extractive industries are undergoing a major realignment as global demand shifts toward renewable energy technologies. Nations like China and Russia are investing heavily in international mining projects to secure critical minerals such as cobalt, lithium, and nickel for rechargeable batteries. However, these extractive activities often spur intense political rivalries between regional powers and Western coalitions seeking supply chain security. Furthermore, in fossil fuel hubs across the Middle East and Southeast Asia, competition for oil revenues continues to exacerbate internal conflict while leaving local populations burdened by toxic pollution and inadequate public infrastructure."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Alongside resource extraction, Asian urban centers are experiencing unprecedented economic expansion driven by technological innovation. Cities like Hyderabad and Ho Chi Minh City have rapidly developed advanced manufacturing and semiconductor industries, though this rapid growth has widened domestic income inequality. In affluent financial hubs, foreign migrant workers frequently face exploitative working conditions despite legislative reform efforts. Moreover, large-scale infrastructure projects designed to provide clean energy carry immense ecological costs, as demonstrated by the displacement of over one million residents and the loss of critical biodiversity caused by the Three Gorges Dam."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The historical and modern link between resource wealth and regional conflict", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Climatic constraints and sustainability efforts in continental agriculture", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Overexploitation and ecological decline in marine and forest habitats", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Geopolitical competition surrounding energy and battery mineral extraction", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Technological growth, labor disparities, and the consequences of mega-projects", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The total economic self-sufficiency of landlocked Central Asian nations", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "National policies successfully eliminating industrial air pollution", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who investigates sustainable techniques for cultivating staple food crops in fragile environments?",
+        "options": ["Om Katel", "The Aral Sea", "The Three Gorges Dam", "Ho Chi Minh City"],
+        "correct": "Om Katel",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Which body of water underwent catastrophic shrinkage following large-scale river diversion for agriculture?",
+        "options": ["The Three Gorges Dam", "The Aral Sea", "Om Katel", "Hyderabad"],
+        "correct": "The Aral Sea",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Which infrastructure project resulted in the displacement of more than one million residents to generate clean power?",
+        "options": ["The Aral Sea", "Om Katel", "The Three Gorges Dam", "Hyderabad"],
+        "correct": "The Three Gorges Dam",
+        "found_in_paragraph": "E"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The thawing of permafrost in northern Asia naturally converts frozen soil into highly productive agricultural land.",
+        "type": "False",
+        "explanation": "Paragraph B states that 'melting permafrost... remains largely unsuitable for farming' due to the formation of swamps and uneven terrain.",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "The construction of the Three Gorges Dam contributed to severe habitat loss for local wildlife species.",
+        "type": "True",
+        "explanation": "Paragraph E confirms that the dam project resulted in 'the loss of critical biodiversity' in addition to human displacement.",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Indonesian forestry regulations require logging companies to donate a fixed percentage of timber revenues to local communities.",
+        "type": "Not Given",
+        "explanation": "Paragraph C mentions illegal logging and teak deforestation in Southeast Asia, but the text contains no information regarding mandatory profit donations to local communities.",
+        "found_in_paragraph": "C"
+      }
+    ]
+  }
+}

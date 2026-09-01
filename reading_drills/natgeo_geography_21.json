@@ -1,0 +1,91 @@
+{
+  "id": "geography_19",
+  "topic": "North America: Human Geography and Economic Migration",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Long before European contact, the physical environment of North America profoundly shaped the development of its earliest human inhabitants. While nomadic groups followed the seasonal migrations of the American bison across the Great Plains, sedentary agricultural societies emerged further south. These stable food supplies allowed certain cultures to develop highly sophisticated urban centers and complex scientific traditions. For example, an advanced mathematical system capable of representing extraordinarily large numbers using only three symbols, including the first known written character for zero, was successfully developed by the Maya."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The demographic landscape of the continent was violently restructured during the era of European colonization. As foreign explorers claimed vast territories, millions of Indigenous people were displaced, forced into restrictive reservation systems, or decimated by infectious diseases to which they lacked natural immunity. Interestingly, despite Christopher Columbus initiating this widespread European contact, the realization that these newly discovered territories were an entirely separate landmass rather than a part of the East Indies was first proposed by the Italian navigator Amerigo Vespucci."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Today, the continent’s political geography is deeply influenced by international economic policies and shifting demographic trends. While regional treaties successfully eliminated tariffs on agricultural exports, they simultaneously caused severe economic disruption for small-scale farmers who could not compete with subsidized international prices. Furthermore, the relocation of numerous manufacturing industries into cheaper labor markets featuring significantly fewer health and safety regulations was heavily accelerated by the North American Free Trade Agreement (NAFTA)."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "This uneven distribution of economic opportunity has fueled massive waves of both legal and undocumented immigration across the continent. Driven by extreme poverty, natural disasters, or political persecution, millions of individuals from low- and middle-income countries frequently migrate toward high-income nations. Because the legal immigration process often relies on randomized lottery systems, highly strict national quotas, or bureaucratic delays, many impoverished individuals are ultimately forced to cross international borders illegally in search of better living conditions."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Looking toward the future, the political and financial stability of North America rests heavily on its ability to mitigate international security threats and global environmental crises. As rising temperatures continue to threaten coastal and agricultural regions, the strict regulation of carbon emissions has become a critical diplomatic priority. A formal commitment to significantly reduce greenhouse gas emissions by 17 percent below 2005 levels was officially made as part of a 2009 international environmental agreement known as the Copenhagen Accord."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The advanced achievements of early Indigenous civilizations", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Historical colonization and the reshaping of continental demographics", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The economic consequences of regional free trade agreements", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The social and political complexities of modern immigration", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Looming environmental and diplomatic challenges for the continent", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The complete eradication of traditional indigenous languages", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why modern tourism has collapsed in the Caribbean Sea", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Which entity heavily accelerated the relocation of numerous manufacturing industries into cheaper labor markets?",
+        "options": ["The Copenhagen Accord", "The Maya", "The North American Free Trade Agreement (NAFTA)", "Amerigo Vespucci"],
+        "correct": "The North American Free Trade Agreement (NAFTA)",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who first proposed that the newly discovered territories were an entirely separate landmass rather than a part of the East Indies?",
+        "options": ["The Maya", "Amerigo Vespucci", "Christopher Columbus", "The North American Free Trade Agreement (NAFTA)"],
+        "correct": "Amerigo Vespucci",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Which entity was an international environmental agreement that included formal commitments to reduce greenhouse gas emissions?",
+        "options": ["The North American Free Trade Agreement (NAFTA)", "Amerigo Vespucci", "The Copenhagen Accord", "The Maya"],
+        "correct": "The Copenhagen Accord",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Who successfully developed an advanced mathematical system that included the first known written character for zero?",
+        "options": ["Amerigo Vespucci", "The Maya", "The Copenhagen Accord", "Christopher Columbus"],
+        "correct": "The Maya",
+        "found_in_paragraph": "A"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The mathematical system developed by the Maya included a specific written symbol representing the concept of zero.",
+        "type": "True",
+        "explanation": "Paragraph A explicitly states that their mathematical system was capable of representing large numbers 'using only three symbols, including the first known written character for zero.'",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "The North American Free Trade Agreement (NAFTA) strictly enforced higher health and safety regulations across all its member countries.",
+        "type": "False",
+        "explanation": "Paragraph C states the opposite: NAFTA 'heavily accelerated' the relocation of industries into cheaper labor markets featuring 'significantly fewer health and safety regulations.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The Canadian government currently accepts a significantly higher number of political refugees each year than the United States.",
+        "type": "Not Given",
+        "explanation": "While Paragraph D discusses the general flow of immigrants and refugees toward high-income nations, it provides absolutely no information comparing the specific number of refugees accepted by Canada versus the United States.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

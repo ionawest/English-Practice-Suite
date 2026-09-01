@@ -1,0 +1,85 @@
+{
+  "id": "wildlife_21",
+  "topic": "How to Save the Red Wolf From Going Extinct",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Once roaming across the entire southeastern United States, the red wolf (Canis rufus) holds the unique distinction of being a large predator whose historic range was located entirely within American borders. Decimated by excessive hunting, the species was officially declared extinct in the wild in 1980. However, following a groundbreaking experiment in 1987, captive wolves were successfully reintroduced into North Carolina, eventually establishing a thriving population of over 100 animals. Tragically, a recent combination of severe federal mismanagement, illegal poaching, and vehicular collisions has caused this wild population to plummet to fewer than twenty surviving individuals."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "To reverse this catastrophic decline, biologists are heavily relying on an extensive network of zoos to maintain genetic diversity. A crucial component of this survival plan is managed by an animal supervisor at the North Carolina Zoo, Chris Lasher. He coordinates the nationwide breeding program, publicly stating the urgent need to expand the captive population to a total of 400 individuals. When breeding is successful, captive-born pups are secretly placed into wild litters. This delicate fostering process boasts a remarkable success rate, allowing the introduced pups to absorb vital generational wisdom—such as hunting techniques and road avoidance—directly from experienced wild parents."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Before captive adults can be released into the hostile wild, they undergo rigorous behavioral conditioning within large, specialized enclosures. To prepare these predators for survival, keepers carefully experiment with positive environmental stimulation and negative associations regarding vehicle noises. The director who detailed these specific behavioral conditioning techniques operates out of the Endangered Wolf Center in Missouri. Her name is Regina Mossotti. By varying daily feeding schedules, she ensures that the wolves never associate human presence with food, thereby minimizing the chance of dangerous human-wildlife encounters after their release."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Because vehicular strikes constitute a primary cause of mortality, government agencies are aggressively implementing infrastructural modifications along major local transit routes, particularly Highway 64. Recognizing this crisis, massive federal funding from a recent infrastructure bill has been specifically designated to construct expensive, dedicated wildlife crossings over and under busy roads. Furthermore, wildlife managers are outfitting future wolves with bright orange, highly reflective tracking collars. By strategically timing future releases outside of the busy agricultural and tourist seasons, officials hope to significantly reduce the probability of nighttime traffic fatalities."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Ultimately, the biological success of the red wolf depends heavily on the social acceptance of local communities. Overcoming rural hostility requires dedicated advocacy from organizations like the Wildlands Network. Their lead regional researcher, Ron Sutherland, emphasizes that the global conservation community must immediately enter a state of crisis mode to save the species. Through aggressive advocacy, he aims to combat the dangerous minority of local hunters who have openly admitted their willingness to illegally shoot wandering wolves. To foster coexistence, innovative federal programs like 'Prey for the Pack' are currently offering private landowners lucrative financial incentives to maintain wolf-friendly habitats on their properties."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The historic collapse and modern crisis of a native predator", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Fostering captive youth to rebuild genetic diversity", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Utilizing behavioral conditioning to prepare animals for the wild", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Implementing infrastructural solutions to prevent traffic mortalities", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Promoting community coexistence and private land conservation", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The financial collapse of international zoo programs", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "How natural climate change destroyed predator habitats", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who coordinates a nationwide breeding program and publicly stated the urgent need to expand the captive population to 400 individuals?",
+        "options": ["Ron Sutherland", "Chris Lasher", "Regina Mossotti", "Wildlands Network"],
+        "correct": "Chris Lasher",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Who detailed specific behavioral conditioning techniques involving positive stimulation and negative associations regarding vehicle noises?",
+        "options": ["Chris Lasher", "Ron Sutherland", "Wildlands Network", "Regina Mossotti"],
+        "correct": "Regina Mossotti",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who emphasizes that the global conservation community must immediately enter a state of crisis mode to save the species?",
+        "options": ["Regina Mossotti", "Chris Lasher", "Ron Sutherland", "Endangered Wolf Center"],
+        "correct": "Ron Sutherland",
+        "found_in_paragraph": "E"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The biological range of the red wolf historically extended into the forests of northern Mexico and southern Canada.",
+        "type": "False",
+        "explanation": "Paragraph A states the exact opposite, noting that the red wolf holds the unique distinction of being a large predator 'whose historic range was located entirely within American borders.'",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Placing captive-born pups into wild litters allows them to learn essential survival skills directly from experienced wild parents.",
+        "type": "True",
+        "explanation": "Paragraph B confirms this, stating that the fostering process allows 'introduced pups to absorb vital generational wisdom—such as hunting techniques and road avoidance—directly from experienced wild parents.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "The construction of new wildlife crossings along Highway 64 was entirely funded by private donations from local landowners.",
+        "type": "Not Given",
+        "explanation": "Paragraph D mentions that 'massive federal funding from a recent infrastructure bill' has been designated to construct the crossings. The text contains absolutely no mention of private donations from local landowners funding these crossings.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "environment_16",
+  "topic": "Restoring the Ecological Foundation of the Hudson-Raritan Estuary",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "In 1609, the immense natural wealth of the Hudson-Raritan Estuary was first witnessed by European explorers. When navigating the vast waterways that would later bear his name, local Indigenous people approached a famous ship captain to offer him an extraordinary abundance of fresh oysters. His name was Henry Hudson. Historically, this estuary was overflowing with densely packed underwater oyster communities. Unfortunately, due to severe overharvesting and rapid industrial development, these natural reefs have been completely eradicated from the region."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The complete disappearance of these vital marine communities was driven by a combination of human consumption and resource mismanagement. During the late 19th century, an insatiable public appetite led to the severe overharvesting of local populations. Furthermore, rather than returning the shells to the water—a crucial step required for baby oysters to develop—the discarded shells were repurposed for chicken feed and building materials. Eventually, the remaining oyster beds were shut down completely after the harbor became heavily polluted with sewage, which contaminated the surviving mollusks with dangerous diseases such as cholera and typhoid."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "To reverse this ecological devastation, an ambitious initiative has been launched to artificially rebuild the estuary's oyster reefs. Because the surviving wild population is too small to naturally reproduce, massive quantities of baby oysters must be purchased from external laboratories to jump-start the breeding process. The organization spearheading this massive regional restoration effort is the New York-New Jersey Baykeeper. Since 1999, they have successfully recruited local citizens to participate in hands-on 'oyster gardening' programs."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Before being allowed to cultivate their own marine life, citizen volunteers are required to attend a mandatory two-hour training session. Following this preparation, participants are provided with a specialized float containing up to 1,000 baby oysters, which they monitor closely for approximately an entire year. The educational value of this hands-on monitoring has been particularly emphasized by the restoration program director. Her name is Meredith Comi. She notes that middle and high school students who participate in the program become deeply invested in the long-term health of their local waterways."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Beyond serving as an educational tool, returning these mollusks to the estuary provides immense ecological benefits. Because they provide the foundational habitat for countless other marine species, including crabs, mussels, and bass, oysters are considered a critical keystone species. Additionally, these creatures possess an astonishing capacity for biological filtration. By naturally extracting algae and sediment from their environment, a single adult oyster can filter up to 50 gallons of water per day, thereby dramatically improving the overall clarity and quality of the estuary."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The historical abundance and subsequent eradication of marine reefs", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Overharvesting, mismanagement, and the impact of urban pollution", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Launching an artificial breeding and community restoration program", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Utilizing hands-on volunteer cultivation as an educational tool", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The structural importance and natural filtration capacity of a keystone species", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The massive financial costs of purchasing baby oysters from foreign laboratories", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "How modern sewage treatment plants successfully eliminated waterborne diseases", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who emphasized the educational value of hands-on monitoring for middle and high school students?",
+        "options": ["Meredith Comi", "New York-New Jersey Baykeeper", "Henry Hudson", "Indigenous people"],
+        "correct": "Meredith Comi",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Who was approached by local Indigenous people offering an extraordinary abundance of fresh oysters?",
+        "options": ["New York-New Jersey Baykeeper", "Meredith Comi", "Henry Hudson", "Citizen volunteers"],
+        "correct": "Henry Hudson",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Which organization has successfully recruited local citizens to participate in hands-on 'oyster gardening' programs since 1999?",
+        "options": ["Indigenous people", "Henry Hudson", "Meredith Comi", "New York-New Jersey Baykeeper"],
+        "correct": "New York-New Jersey Baykeeper",
+        "found_in_paragraph": "C"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The current wild oyster population in the estuary is large enough to naturally rebuild the damaged reefs without human intervention.",
+        "type": "False",
+        "explanation": "Paragraph C states the exact opposite: 'Because the surviving wild population is too small to naturally reproduce, massive quantities of baby oysters must be purchased from external laboratories...'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "In the late 19th century, people frequently utilized discarded oyster shells as materials for agricultural feed and construction.",
+        "type": "True",
+        "explanation": "Paragraph B explicitly confirms this, stating that 'the discarded shells were repurposed for chicken feed and building materials.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Volunteers in the 'oyster gardening' program are required to pay a small annual fee to receive their specialized oyster floats.",
+        "type": "Not Given",
+        "explanation": "Paragraph D details the mandatory training session and the provision of the oyster floats, but it never mentions whether volunteers must pay a fee to participate in the program.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}
