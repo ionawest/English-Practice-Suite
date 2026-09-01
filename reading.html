@@ -256,6 +256,9 @@
         const container = document.getElementById('paragraphsContainer');
         container.innerHTML = '';
 
+        // Create a shuffled copy of the Stage 1 headings
+        const shuffledHeadings = [...currentDrill.stage_1_headings.options].sort(() => Math.random() - 0.5);
+
         currentDrill.text.forEach(p => {
             const div = document.createElement('div');
             div.className = 'paragraph-block';
@@ -264,7 +267,7 @@
             const selectHtml = `
                 <select class="heading-dropdown" id="select_${p.paragraph_id}" data-para="${p.paragraph_id}">
                     <option value="">-- Match Paragraph Function --</option>
-                    ${currentDrill.stage_1_headings.options.map(opt => `<option value="${opt.id}">${opt.text}</option>`).join('')}
+                    ${shuffledHeadings.map(opt => `<option value="${opt.id}">${opt.text}</option>`).join('')}
                 </select>
             `;
 
@@ -403,8 +406,12 @@
         const q = questions[stage2Index];
         const card = document.getElementById('questionCard');
         
-        let optionsHtml = q.options.map((opt, idx) => `
-            <button class="option-btn" onclick="handleStage2Answer(this, ${idx})">${opt}</button>
+        // Shuffle the multiple-choice options for Stage 2
+        const shuffledOptions = [...q.options].sort(() => Math.random() - 0.5);
+        
+        // Pass the string value directly instead of the array index
+        let optionsHtml = shuffledOptions.map(opt => `
+            <button class="option-btn" onclick="handleStage2Answer(this, '${opt.replace(/'/g, "\\'")}')">${opt}</button>
         `).join('');
 
         card.innerHTML = `
@@ -413,9 +420,8 @@
         `;
     }
 
-    function handleStage2Answer(btn, optIndex) {
+    function handleStage2Answer(btn, chosen) {
         const q = currentDrill.stage_2_scanning.questions[stage2Index];
-        const chosen = q.options[optIndex];
         const correct = q.correct;
         const isCorrect = (chosen === correct);
         if (isCorrect) stage2Correct++;

@@ -1,0 +1,85 @@
+{
+  "id": "philanthropy_08",
+  "topic": "The Disruption of Global Philanthropy by Technology Wealth",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "For generations, wealthy individuals established private foundations and hired dedicated teams of experts to manage their charitable donations over several decades. However, this slow and cautious model is being completely rejected by a new generation of impatient technology entrepreneurs. Rather than wasting resources on building new organizations, these young billionaires prefer to trust existing experts to distribute their wealth rapidly. For instance, after selling a portion of his software business in 2021, a massive sum of money was immediately handed over to an established British charity organization by entrepreneur Andrew White."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "At the turn of the millennium, business leaders began treating charitable donations like financial investments, cutting funding to any project that failed to deliver a measurable social return. The standard-bearer for this highly analytical, data-driven approach was the massive organization started by the founder of Microsoft, the Bill and Melinda Gates Foundation. However, modern tech billionaires view this intense level of paperwork as unbearably slow. Instead, a new strategy involving trusting charities with massive, unconditional funds after a brief initial data analysis was recently pioneered by the ex-wife of Amazon's founder, Mackenzie Scott."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "To distribute their wealth with maximum flexibility, these young billionaires are increasingly utilizing entirely new financial structures. Rather than setting up traditional foundations, which legally must distribute at least 5% of their assets annually, many donors are using specialized savings accounts known as Donor-Advised Funds (DAFs). Alternatively, other entrepreneurs combine their philanthropic goals with for-profit investments and political advocacy by utilizing Limited Liability Corporations (LLCs). A prominent example of using an LLC to fund both social art installations and commercial technology magazines is the Emerson Collective, founded by Laurene Powell Jobs."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "This preference for flexible corporate structures reflects a widespread belief in Silicon Valley that private businesses can improve the world just as effectively as traditional charities. Many modern entrepreneurs argue that building a successful commercial product is a highly ethical achievement in itself, blurring the lines between commercial entrepreneurship and philanthropy. For example, the ambitious goal of extending human lifespans through commercial medical research is the primary focus of an anti-aging company heavily funded by Google co-founder Sergey Brin, known as Calico."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "As the preferences of these wealthy donors shift, traditional charities are being forced to drastically alter their fundraising strategies. Because technology billionaires prefer to fund ambitious, world-changing ideas, charities must now market themselves as solving massive global problems rather than small local issues. Furthermore, charitable organizations must incorporate high-tech elements into their operations to attract attention. For instance, detailed satellite images of the exact water wells funded by donations are routinely provided to wealthy contributors by the highly successful Silicon Valley charity, charity: water."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The rejection of traditional charitable foundations", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Transitioning from strict analytics to unconditional funding", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Utilizing modern financial structures for flexible giving", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The belief that commercial enterprises act as a public good", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Adapting fundraising strategies to appeal to modern billionaires", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The severe financial decline of traditional tech companies", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Government attempts to heavily tax wealthy entrepreneurs", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who pioneered a new strategy of trusting charities with massive, unconditional funds?",
+        "options": ["Andrew White", "Mackenzie Scott", "Laurene Powell Jobs", "Sergey Brin"],
+        "correct": "Mackenzie Scott",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Which entity is an anti-aging company heavily funded to extend human lifespans through commercial medical research?",
+        "options": ["The Emerson Collective", "The Bill and Melinda Gates Foundation", "Calico", "charity: water"],
+        "correct": "Calico",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Which entity utilizes a Limited Liability Corporation to fund both social art installations and commercial technology magazines?",
+        "options": ["The Emerson Collective", "Calico", "charity: water", "Donor-Advised Funds"],
+        "correct": "The Emerson Collective",
+        "found_in_paragraph": "C"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Traditional charitable foundations are legally required to distribute a minimum percentage of their total wealth every single year.",
+        "type": "True",
+        "explanation": "Paragraph C explicitly states that traditional foundations 'legally must distribute at least 5% of their assets annually.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The Bill and Melinda Gates Foundation is currently the wealthiest charitable organization operating in the world.",
+        "type": "Not Given",
+        "explanation": "Paragraph B refers to the Gates Foundation as a 'massive organization' and a 'standard-bearer,' but it never explicitly claims it is currently the absolute wealthiest in the world.",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Modern technology billionaires generally prefer to fund charities that focus entirely on small, local community issues.",
+        "type": "False",
+        "explanation": "Paragraph E states the exact opposite: 'Because technology billionaires prefer to fund ambitious, world-changing ideas, charities must now market themselves as solving massive global problems rather than small local issues.'",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

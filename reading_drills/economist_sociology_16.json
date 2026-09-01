@@ -1,0 +1,85 @@
+{
+  "id": "sociology_14",
+  "topic": "The Growing Ideological Divide Between Young Men and Women",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Across the developed world, a profound ideological divide is rapidly opening up between young men and women. While young women are increasingly leaning towards progressive liberal politics to address ongoing inequalities, their male peers are consistently shifting towards traditional or conservative platforms. This stark polarization in political and social attitudes was recently highlighted through an extensive analysis of survey data from twenty rich nations conducted by the research team at The Economist."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "A primary driver of this growing ideological division is a widening disparity in educational attainment. Over the past two decades, male students have consistently fallen behind their female counterparts in achieving university degrees across Europe and the United States. Consequently, the progressive, egalitarian values typically absorbed within higher education are increasingly concentrated among young women. The profound social consequences of this educational gender gap, which has created severe friction within the modern dating market, were recently analyzed by the liberal scholar Richard Reeves."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Furthermore, the rapid advancement of women in the public sphere is often perceived as a direct economic threat by young men entering a highly competitive labor market. Unlike older, established generations, young men are more likely to resent gender equality initiatives, mistakenly believing that better opportunities for women naturally result in worse outcomes for themselves. The strong correlation between rising local unemployment, a sense of institutional unfairness, and intense anti-feminist resentment among young European men was recently documented by researchers at Gothenburg University."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "This deep-seated societal resentment is heavily aggravated by the architecture of modern social media, which traps users in highly polarized echo chambers. To maximize engagement, digital algorithms deliberately feed young men and women increasingly terrifying or infuriating content, vastly exaggerating the social risks each gender faces. When isolated groups of frustrated young men congregate online, the discourse frequently descends into aggressive misogyny. Unfortunately, the psychological pressure to remain within these toxic online environments is incredibly difficult for young men to overcome."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "While certain politicians actively exploit these male grievances for electoral gain, addressing the root causes of this polarization requires fundamental institutional reform. Rather than simply dismissing the legitimate struggles of young men, policymakers must actively restructure educational and vocational pathways to help underperforming boys adjust to a rapidly changing economy. For example, delaying the default school starting age for boys to account for their slower developmental maturity is a highly practical intervention that has been proposed by numerous educational sociologists. Ultimately, mitigating this gender divide is essential for the future stability of global family formation."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The global emergence of a severe gender-based ideological divide", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "How unequal academic achievement alters social and romantic dynamics", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Economic anxiety and the perception of equality as a threat", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The role of digital algorithms in amplifying radical grievances", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The urgent need for institutional reform to support struggling demographics", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The success of social media campaigns in promoting gender equality", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The financial collapse of traditional university education systems", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who recently highlighted a stark polarization in political attitudes through an extensive analysis of survey data from twenty rich nations?",
+        "options": ["Gothenburg University", "Richard Reeves", "The Economist", "Educational sociologists"],
+        "correct": "The Economist",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Who recently documented the strong correlation between rising local unemployment and intense anti-feminist resentment among young European men?",
+        "options": ["Richard Reeves", "The Economist", "Gothenburg University", "Educational sociologists"],
+        "correct": "Gothenburg University",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who recently analyzed the profound social consequences of the educational gender gap and its impact on the dating market?",
+        "options": ["The Economist", "Richard Reeves", "Gothenburg University", "Educational sociologists"],
+        "correct": "Richard Reeves",
+        "found_in_paragraph": "B"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Young men are more likely to develop anti-feminist views if they live in an area that has recently experienced significant job losses.",
+        "type": "True",
+        "explanation": "Paragraph C explicitly confirms this by stating there is a 'strong correlation between rising local unemployment... and intense anti-feminist resentment among young European men.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Digital algorithms actively encourage social media users to engage with viewpoints that contradict their own political beliefs.",
+        "type": "False",
+        "explanation": "Paragraph D states the exact opposite: social media 'traps users in highly polarized echo chambers' by deliberately feeding them content that exaggerates their existing fears.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Richard Reeves believes that hiring a larger number of male teachers will completely eliminate the gender gap in university admissions.",
+        "type": "Not Given",
+        "explanation": "While Paragraph B mentions Richard Reeves, and Paragraph E mentions educational reforms to help boys, the text never explicitly claims that hiring male teachers will completely eliminate the university gap.",
+        "found_in_paragraph": "B"
+      }
+    ]
+  }
+}

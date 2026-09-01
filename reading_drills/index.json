@@ -1,7 +1,32 @@
 [
     {
+        "file": "reading_drills/economist_business_10.json",
+        "topic": "The Technological Disruption of the Culture Business",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/economist_genetics_08.json",
+        "topic": "Designer Children and the Future of Predictive Genetics",
+        "difficulty": "Band 7.5"
+    },
+    {
         "file": "reading_drills/economist_geopolitics_03.json",
         "topic": "Australia's Geopolitical Realignment in an Era of Uncertainty",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/economist_philanthropy_09.json",
+        "topic": "The Disruption of Global Philanthropy by Technology Wealth",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/economist_sociology_16.json",
+        "topic": "The Growing Ideological Divide Between Young Men and Women",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_agriculture_15.json",
+        "topic": "The Next Green Revolution: Genetics vs. Organic Agriculture",
         "difficulty": "Band 7.5"
     },
     {
@@ -20,8 +45,33 @@
         "difficulty": "Band 7.5"
     },
     {
+        "file": "reading_drills/natgeo_science_14.json",
+        "topic": "The Psychology of Science Denial and Public Skepticism",
+        "difficulty": "Band 7.5"
+    },
+    {
         "file": "reading_drills/natgeo_space_01.json",
         "topic": "Human Space Exploration: Beyond the Space Race",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/newscientist_agriculture_12.json",
+        "topic": "The Precarious Future of the Global Banana Industry",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/newscientist_health_11.json",
+        "topic": "The Science of the Longevity Diet",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/newscientist_technology_13.json",
+        "topic": "Quantum Computing and the Impending Cryptographic Crisis",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/noahsmith_culture_07.json",
+        "topic": "The Globalization of Japanese Pop Culture and Urbanism",
         "difficulty": "Band 7.5"
     },
     {

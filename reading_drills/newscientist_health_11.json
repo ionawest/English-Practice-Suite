@@ -1,0 +1,85 @@
+{
+  "id": "health_10",
+  "topic": "The Science of the Longevity Diet",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Traditional Western diets, which are heavily reliant on processed meats and refined sugars, are currently responsible for millions of premature deaths globally each year. To understand the potential benefits of changing these habits, a theoretical model demonstrating how switching to a plant-based diet could extend human life expectancy by nearly a decade was recently developed by the Norwegian researcher Lars Fadnes. According to his data, while a 20-year-old would gain the most time, even a 60-year-old who permanently abandoned Western food could increase their overall life expectancy by more than seven years."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "While these theoretical models are promising, real-world data is necessary to prove the long-term impact of food on the aging process. Consequently, the daily dietary habits of thousands of remarkably healthy centenarians living independently across East Asia and Europe were recently analysed by the Australian academic Zhaoli Dai-Keller. The research revealed that these exceptionally old individuals shared very specific traits: they primarily ate diverse meals rich in legumes and fish, and they consumed significantly less salt than the general population, thereby avoiding cardiovascular disease."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Reaching an advanced age without suffering from chronic illnesses requires consistent habits much earlier in life. To investigate this, decades of health data from over 100,000 middle-aged adults were recently reviewed. The firm conclusion that sticking to a Mediterranean-style diet throughout middle age is absolutely crucial for maintaining physical and mental fitness into one's seventies was published by Harvard scientists Anne-Julie Tessier and Marta Guasch-Ferré. Conversely, the study found that participants who frequently consumed fatty and salty foods during middle age rarely aged in good health."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Beyond the specific types of food consumed, overall body weight plays a highly complex role in the aging process. While Dai-Keller’s study noted that the vast majority of healthy centenarians were relatively slim, carrying a small amount of extra weight can actually provide specific late-life benefits. When researchers evaluated the ability of elderly participants to independently carry out basic daily tasks, they found that being slightly overweight was actually more beneficial for day-to-day physical functioning than being a normal weight. In contrast, being underweight increased the risk of severe physical impairment by roughly 25 percent."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Because a lower body mass is generally associated with longevity, extreme calorie restriction is sometimes aggressively promoted as an anti-aging strategy. In laboratory settings, restricting an animal’s preferred calorie intake by a quarter has proven to be a highly reliable way to significantly extend its lifespan. However, enforcing this severe dietary restriction in humans is incredibly difficult, and it remains unproven whether the resulting physical weakness would outweigh the potential benefits of living longer. Ultimately, consuming a balanced, plant-heavy diet remains the most practical method for maximizing human lifespan."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "Calculating the years gained by abandoning Western diets", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Observational evidence from exceptionally long-lived populations", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The importance of mid-life dietary choices for aging well", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The complex relationship between body mass and physical independence", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The practical limitations of extreme dietary restriction", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The financial costs of treating diet-related cardiovascular diseases", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why regular exercise is more important than calorie counting", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who developed a theoretical model demonstrating that diet changes could extend human life expectancy by nearly a decade?",
+        "options": ["Zhaoli Dai-Keller", "Anne-Julie Tessier and Marta Guasch-Ferré", "Lars Fadnes", "Harvard scientists"],
+        "correct": "Lars Fadnes",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Who published the conclusion that a Mediterranean-style diet is absolutely crucial for maintaining physical fitness in later life?",
+        "options": ["Lars Fadnes", "Anne-Julie Tessier and Marta Guasch-Ferré", "Zhaoli Dai-Keller", "The Norwegian government"],
+        "correct": "Anne-Julie Tessier and Marta Guasch-Ferré",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who analysed the dietary habits of thousands of healthy centenarians living independently across East Asia and Europe?",
+        "options": ["Anne-Julie Tessier and Marta Guasch-Ferré", "Lars Fadnes", "Zhaoli Dai-Keller", "Harvard scientists"],
+        "correct": "Zhaoli Dai-Keller",
+        "found_in_paragraph": "B"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Switching to a healthy, plant-based diet at age 60 provides exactly the same increase in life expectancy as making the switch at age 20.",
+        "type": "False",
+        "explanation": "Paragraph A clarifies that a 20-year-old would gain 'nearly a decade,' while a 60-year-old making the exact same switch would gain 'more than seven years,' showing the increases are not exactly the same.",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "In Zhaoli Dai-Keller's study, centenarians who consumed moderate amounts of alcohol lived significantly longer than those who abstained entirely.",
+        "type": "Not Given",
+        "explanation": "Paragraph B details what the centenarians ate and notes they consumed significantly less salt, but the text contains absolutely no information regarding their alcohol consumption.",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Being severely underweight increases an older person's risk of struggling with basic, day-to-day physical activities.",
+        "type": "True",
+        "explanation": "Paragraph D explicitly states that 'being underweight increased the risk of severe physical impairment by roughly 25 percent.'",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "science_13",
+  "topic": "The Psychology of Science Denial and Public Skepticism",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "We live in an era where established scientific knowledge, ranging from the safety of public water fluoridation to the reality of climate change, faces highly organized opposition. Despite living in a world profoundly shaped by technological advancement, distinguishing genuine hazards from imaginary ones has become increasingly difficult for the general public. Consequently, individuals frequently reject the consensus of experts, relying instead on personal interpretations and alternative sources of information."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "A significant reason for this rejection is that the scientific method often leads to truths that defy human intuition. Even when individuals intellectually accept modern scientific precepts, they subconsciously cling to naive, intuitive beliefs. This psychological phenomenon was extensively documented in a recent study regarding advanced science students who struggled to process counterintuitive facts. The researcher behind this revelation was Andrew Shtulman. His findings indicate that while scientific literacy represses naive beliefs, it never eliminates them entirely."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "While professional scientists are just as vulnerable to confirmation bias as the general public, they are trained to counteract these intuitive flaws through rigorous peer review and statistical analysis. Because scientific results are fundamentally provisional, researchers expect their findings to be constantly tested and occasionally overturned. However, biomedical research is sometimes plagued by a disturbing trend of irreproducible results. The concern that some researchers rely on secret, undisclosed procedures was recently voiced by the director of the National Institutes of Health, Francis Collins."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Beyond individual cognitive biases, public acceptance of science is heavily influenced by social identity. Dan Kahan is a prominent researcher studying how people decide what to believe. In a comprehensive study of American adults, he shockingly discovered that higher science literacy actually promoted political polarization rather than consensus. People tend to use scientific knowledge to reinforce beliefs that have already been shaped by their social worldview. Essentially, individuals reject established science not because they misunderstand it, but because accepting it might alienate them from their social peers."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "The consequences of this science denial are profound and enduring. In the medical field, affluent individuals who incorrectly believe that vaccines cause autism are actively undermining community immunity to preventable diseases. Similarly, organized opposition has successfully stalled necessary legislative action to combat global warming. Because the internet allows individuals to live in isolated information bubbles, simply presenting deniers with more facts is rarely effective. Overcoming this crisis requires teaching the public to value objective truth over their own social identity."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The widespread rejection of expert consensus in the modern era", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "How naive intuition complicates the acceptance of scientific facts", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The self-correcting nature of research and concerns over methodology", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "How social identity and peer groups dictate the interpretation of data", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The societal dangers of prioritizing personal beliefs over objective facts", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The financial costs of expanding national medical research", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why modern students struggle with basic mathematical literacy", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who shockingly discovered that higher science literacy actually promoted political polarization rather than consensus?",
+        "options": ["Andrew Shtulman", "Francis Collins", "Dan Kahan", "The National Institutes of Health"],
+        "correct": "Dan Kahan",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Who voiced the concern that some researchers rely on secret, undisclosed procedures?",
+        "options": ["Dan Kahan", "Andrew Shtulman", "Francis Collins", "The National Institutes of Health"],
+        "correct": "Francis Collins",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who documented a psychological phenomenon regarding advanced science students struggling to process counterintuitive facts?",
+        "options": ["Francis Collins", "Dan Kahan", "The National Institutes of Health", "Andrew Shtulman"],
+        "correct": "Andrew Shtulman",
+        "found_in_paragraph": "B"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Professional scientists are naturally immune to the intuitive cognitive biases that affect the general public.",
+        "type": "False",
+        "explanation": "Paragraph C explicitly states the opposite: 'While professional scientists are just as vulnerable to confirmation bias as the general public, they are trained to counteract these intuitive flaws...'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The internet has made it easier for people to isolate themselves from opinions that contradict their existing beliefs.",
+        "type": "True",
+        "explanation": "Paragraph E confirms this by stating that 'the internet allows individuals to live in isolated information bubbles.'",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Dan Kahan believes that scientists should avoid getting involved in political advocacy to protect their professional reputation.",
+        "type": "Not Given",
+        "explanation": "Paragraph D discusses Dan Kahan's research on how social identity influences belief, but it never mentions his personal opinions regarding whether scientists should engage in political advocacy.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

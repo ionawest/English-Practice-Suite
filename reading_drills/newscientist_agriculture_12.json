@@ -1,0 +1,85 @@
+{
+  "id": "agriculture_11",
+  "topic": "The Precarious Future of the Global Banana Industry",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "In tropical regions such as North Queensland, Australia, the climate provides an ideal environment for rapid agricultural growth. In these optimal conditions, towering banana palms can produce giant bunches of fruit with remarkable speed and abundance. This fascinating biological fecundity is the central focus of a recently published and highly influential book titled 'The Future of Bananas'. A detailed exploration of both the history and the precarious future of this globally vital crop was written by a leading agricultural researcher at the Queensland University of Technology, James Dale."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "For decades, agricultural scientists have warned about the severe biological threats facing the world’s most commonly consumed banana variety. While it may not be the most flavourful option available, its tough skin and cheap production costs have made it the undisputed king of the global market. This ubiquitous variety is scientifically classified as Musa acuminata, though it is universally known to consumers as the Cavendish. However, like every banana variety in history, its existence has been continuously threatened by various destructive strains of the Fusarium fungus."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "To guarantee the uninterrupted supply of this globally important commodity, immense effort has been invested by farmers and scientists over the centuries. Unfortunately, because the Cavendish is seedless and reproduces through cloning, it completely lacks the genetic diversity required to naturally adapt to new diseases. Without a significant scientific intervention, experts warn that this variety can no longer outrun the highly lethal fungal strain known as TR4. Consequently, a completely new, disease-resistant banana must be urgently developed to prevent the total collapse of the global industry."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "To combat this impending agricultural disaster, researchers have turned to advanced genetic engineering rather than relying on slow, conventional breeding methods. By successfully altering the genetic structure of the Cavendish, scientists were able to create a unique variant that is highly resistant to the TR4 fungus. In 2024, official regulatory approval for the commercial release of this genetically modified fruit was successfully obtained in both Australia and New Zealand. This newly engineered, disease-resistant banana variety is officially designated as QCAV-4."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Despite these scientific breakthroughs, a widespread public distrust of genetic engineering remains a significant obstacle. Therefore, the core of Dale’s book serves as an impassioned plea for consumers to accept modern scientific agriculture. He argues that this technology is necessary not only to save the Cavendish but also to eventually introduce a wide variety of colourful, nutritious, and better-tasting bananas to international markets. Ultimately, securing the future of the world's favourite fruit will require society to fully embrace these necessary technological advancements."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The introduction of a crucial book on agricultural fecundity", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The commercial dominance and biological vulnerability of the Cavendish", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The genetic limitations that prevent natural disease adaptation", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The successful engineering and regulatory approval of a resistant variant", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "A call for public acceptance to secure the future of the fruit", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The severe financial cost of importing exotic banana varieties", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "How traditional breeding methods successfully defeated fungal diseases", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who wrote a detailed exploration regarding the history and precarious future of the globally vital banana crop?",
+        "options": ["James Dale", "Musa acuminata", "TR4", "Fusarium"],
+        "correct": "James Dale",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "What is the official scientific classification of the world's most commonly consumed banana variety?",
+        "options": ["QCAV-4", "TR4", "Musa acuminata", "Fusarium"],
+        "correct": "Musa acuminata",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Which specific entity is the newly engineered, disease-resistant banana variety that received regulatory approval?",
+        "options": ["QCAV-4", "Musa acuminata", "TR4", "Fusarium"],
+        "correct": "QCAV-4",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The Cavendish banana is unable to naturally adapt to new diseases because it reproduces through cloning.",
+        "type": "True",
+        "explanation": "Paragraph C explicitly states that 'because the Cavendish is seedless and reproduces through cloning, it completely lacks the genetic diversity required to naturally adapt to new diseases.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Scientists believe that slow, conventional breeding methods are the best way to combat the TR4 fungal strain.",
+        "type": "False",
+        "explanation": "Paragraph D states the opposite: 'researchers have turned to advanced genetic engineering rather than relying on slow, conventional breeding methods.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "The genetically modified QCAV-4 banana variety is currently cheaper to cultivate than the traditional Cavendish banana.",
+        "type": "Not Given",
+        "explanation": "Paragraph D discusses the creation and regulatory approval of the QCAV-4 variety, but it never compares its cultivation costs to the traditional Cavendish.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

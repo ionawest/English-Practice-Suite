@@ -1,0 +1,85 @@
+{
+  "id": "genetics_06",
+  "topic": "Designer Children and the Future of Predictive Genetics",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "In the near future, a couple in California is expected to have a child selected using a revolutionary genetic technology. While pre-implantation testing has been used for years to prevent single-gene disorders like Tay-Sachs disease, a company called Genomic Prediction is offering something much more comprehensive. They are screening embryos for almost one million single-nucleotide polymorphisms (SNPs). While individual SNP differences rarely have much effect on their own, adding them together can significantly raise or lower the likelihood of a person suffering from a particular disease. This allows parents to select the embryo that is statistically most likely to grow up healthy."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The scientific journey leading to this technology began in the mid-19th century. The first fundamental rules of genetic heredity were worked out by the Moravian abbot and amateur botanist Gregor Mendel. For decades, researchers searched for single genes with massive effects, hoping to easily cure diseases. However, scientists soon realized that human genetics is incredibly complex. For example, a person's adult height is influenced by approximately 100,000 different SNPs, rather than a single 'height gene'. To capture this massive complexity, a new technique called Genome-Wide Association Studies (GWAS) was developed."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Utilizing GWAS, scientists have discovered that genetics influence far more than just physical health. For many years, it was assumed that behavioural traits were entirely shaped by a child's environment. However, a surprising heritability of 45% for television-watching habits was discovered during a 1990 study led by Robert Plomin. Similarly, researchers have found that a child’s tendency to be bullied at school, their likelihood of being accident-prone, and even their chances of getting divorced all have significant genetic components."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "This research is now being accelerated by 'biobanks,' which store tissue samples and medical data from hundreds of thousands of volunteers. Using this vast data pool, scientists can now calculate predictive risk scores for severe diseases. For instance, polygenic risk scores that successfully predict a woman’s average ten-year risk of developing breast cancer were calculated by Cambridge researcher Nasim Mavaddat. This predictive ability will allow national health services to offer earlier screening and preventative drugs to young individuals who are at the highest genetic risk."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Despite the medical benefits, applying these predictive scores to human embryos raises severe ethical and biological concerns. The historical fear that intelligence testing could be misused as a tool to weed out the 'feebleminded' from the gene pool was recently observed by Johns Hopkins University historian Nathaniel Comfort. Furthermore, geneticists worry about 'pleiotropy'—the phenomenon where the same piece of DNA influences multiple unrelated traits. Consequently, choosing an embryo with a low risk of heart disease might accidentally give that child a significantly higher chance of developing epilepsy."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The modern application of comprehensive embryo screening", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The historical shift from single genes to complex genetic mapping", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The unexpected genetic influence on human behaviour", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Using large databases to predict and prevent future illnesses", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The moral and biological dangers of genetic selection", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The financial costs of storing medical data in biobanks", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The successful elimination of single-gene disorders globally", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who led a study that discovered a significant genetic link to television-watching habits?",
+        "options": ["Nathaniel Comfort", "Nasim Mavaddat", "Robert Plomin", "Gregor Mendel"],
+        "correct": "Robert Plomin",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who observed that intelligence testing was historically misused to remove certain people from the gene pool?",
+        "options": ["Robert Plomin", "Nathaniel Comfort", "Gregor Mendel", "Nasim Mavaddat"],
+        "correct": "Nathaniel Comfort",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Who established the first fundamental rules of genetic heredity?",
+        "options": ["Gregor Mendel", "Robert Plomin", "Nasim Mavaddat", "Nathaniel Comfort"],
+        "correct": "Gregor Mendel",
+        "found_in_paragraph": "B"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Individual single-nucleotide polymorphisms (SNPs) usually have a massive impact on a person's overall physical health.",
+        "type": "False",
+        "explanation": "Paragraph A states the opposite: 'individual SNP differences rarely have much effect on their own.' They only have a major impact when added together.",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Biobanks require volunteers to pay a monthly fee to have their tissue samples and medical data securely stored.",
+        "type": "Not Given",
+        "explanation": "Paragraph D explains that biobanks store tissue samples and medical data from volunteers, but it never mentions whether volunteers must pay a fee to participate.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Selecting an embryo to prevent one specific illness could unintentionally increase its risk of developing a completely different medical condition.",
+        "type": "True",
+        "explanation": "Paragraph E confirms this through the concept of pleiotropy, stating that 'choosing an embryo with a low risk of heart disease might accidentally give that child a significantly higher chance of developing epilepsy.'",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

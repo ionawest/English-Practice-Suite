@@ -1,0 +1,85 @@
+{
+  "id": "business_09",
+  "topic": "The Technological Disruption of the Culture Business",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "As it celebrates its centenary, the Walt Disney Company remains a dominant financial force in global entertainment. Despite generating massive profits from streaming subscriptions and international theme parks, the studio is currently facing severe corporate instability. Uncertainty regarding future profitability recently led to the sudden dismissal of its chief executive and the restructuring of its board. Furthermore, the most significant corporate confrontation in nearly two decades is currently drawing comparisons to the famous 2005 ousting of former CEO Michael Eisner."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The continued dominance of legacy studios has surprised many analysts who originally predicted that the internet would destroy mainstream media. While infinite online choice did ruin companies that produced average television broadcasts, it actually benefited the highest tier of the industry. Because audiences now have unlimited options, they tend to flock collectively to the highest-quality, familiar content. Consequently, massive financial investments into established intellectual property and famous cinematic franchises are routinely made by legacy studios like Warner Bros and Disney."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "However, this traditional hierarchy is now being severely disrupted by multinational technology firms based in Silicon Valley. Because these hardware and software giants use streaming simply as an addition to their primary businesses, they can afford to produce premium content at a deliberate financial loss. The ability of these wealthy tech giants to take massive creative risks was proven when the prestigious Academy Award for Best Picture was unexpectedly won by Apple. As these technology firms produce more premium content below cost, traditional Hollywood studios risk losing their elite status."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Simultaneously, accessible technology is drastically lowering the barriers to entry for international competitors. Tools such as virtual game engines and generative artificial intelligence are allowing foreign studios to produce world-class special effects that previously only American companies could afford. For example, two of the highest-grossing films globally last year were produced in China. Furthermore, the world's highest-earning mobile video game, 'Honour of Kings', was successfully developed and published by the Chinese technology conglomerate Tencent."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Perhaps the most dramatic technological disruption is the rise of video gaming as the dominant category of entertainment for young adults. While traditional Hollywood studios have been slow to adapt, massive investments in gaming intellectual property are currently being made by Silicon Valley rivals. For instance, an acquisition proposal worth nearly ten times the value of a major Hollywood film studio was recently initiated by Microsoft. As movies based on video games become increasingly popular, the traditional creative factories of Hollywood will have to fundamentally reinvent themselves to survive the coming century."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "Corporate instability despite massive industry success", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "How legacy studios survived the rise of internet media", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The financial threat posed by Silicon Valley tech giants", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "How accessible technology is empowering international competitors", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The transition of intellectual property from cinema to video gaming", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The environmental impact of global entertainment theme parks", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The legal regulation of artificial intelligence in cinema", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who was famously ousted as a chief executive during a major corporate confrontation in 2005?",
+        "options": ["Michael Eisner", "Tencent", "Microsoft", "Warner Bros"],
+        "correct": "Michael Eisner",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Which entity unexpectedly won a prestigious Academy Award by taking massive creative risks?",
+        "options": ["Tencent", "Apple", "Microsoft", "Disney"],
+        "correct": "Apple",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Which entity successfully developed and published the world's highest-earning mobile video game?",
+        "options": ["Apple", "Warner Bros", "Tencent", "Microsoft"],
+        "correct": "Tencent",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The rise of infinite online choice caused severe financial damage to the highest tier of the entertainment industry.",
+        "type": "False",
+        "explanation": "Paragraph B states the exact opposite: 'While infinite online choice did ruin companies that produced average television broadcasts, it actually benefited the highest tier of the industry.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Silicon Valley technology firms are willing to produce premium streaming content at a financial loss.",
+        "type": "True",
+        "explanation": "Paragraph C explicitly states that these giants 'can afford to produce premium content at a deliberate financial loss' because streaming is just an addition to their main business.",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The Chinese video game 'Honour of Kings' has been successfully adapted into a high-grossing Hollywood film.",
+        "type": "Not Given",
+        "explanation": "Paragraph D mentions that 'Honour of Kings' is the world's highest-earning mobile video game, but there is absolutely no mention of it being adapted into a Hollywood film.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

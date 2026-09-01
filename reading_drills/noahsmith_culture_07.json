@@ -1,0 +1,85 @@
+{
+  "id": "culture_07",
+  "topic": "The Globalization of Japanese Pop Culture and Urbanism",
+  "difficulty": "Band 7.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "For decades, international journalists and economic analysts have speculated about Japan's deliberate strategies to increase its cultural exports. However, the global explosion of Japanese pop culture was not engineered by corporate boardrooms or government ministries. In fact, when questioned about their international strategies in 2015, managers at major publishing companies like Kodansha admitted they had no specific plans to target overseas consumers. Despite this lack of formal strategy, elements of Japanese media—particularly anime, manga, and gaming—organically captured the imagination of global audiences, transforming from niche hobbies into dominant forces in mainstream international entertainment."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "This cultural phenomenon extends far beyond animated television shows and comic books. Across the United States and Europe, Japanese aesthetics are increasingly utilized by businesses to signal high social status and refined taste. High-end restaurants routinely incorporate ingredients like matcha and yuzu, while wealthy consumers willingly pay premium prices for Japanese-made ceramics and minimalist home furnishings. Interestingly, this represents a significant historical shift; while high-class American culture in the 20th century was defined by an obsession with everything French, the 21st century has seen Japanese culture take its place as the ultimate marker of modern sophistication."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "As international appreciation for Japanese culture has grown, so too has the desire to experience the country firsthand. Originally encouraged by government campaigns in the early 2000s, the recent boom in international tourism has vastly exceeded all official predictions. By 2019, the number of annual visitors had nearly quadrupled compared to 2007. This massive influx of tourists has forced major cities like Tokyo to rapidly adapt, resulting in a proliferation of multi-language signage and a retail workforce increasingly accustomed to interacting with non-Japanese speakers."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "While natural landscapes and historic temples attract many visitors, it is the unique design of Japanese cities that leaves the most lasting impression on foreigners. Unlike American cities, where daily life is often experienced by driving between isolated destinations, Japanese urban centers are built for immense walkability and serendipitous discovery. Furthermore, small businesses are heavily protected by local zoning laws and government subsidies. This deliberate policy ensures that downtown areas maintain an incredibly high density of independent restaurants and specialized boutiques, fostering a vibrant commercial environment that is rare in other developed nations."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "To maximize this commercial density in crowded central districts like Shinjuku and Ginza, urban planners utilize a unique architectural solution. Rather than restricting shops to the ground floor, businesses are stacked vertically inside multi-story 'zakkyo' buildings. These structures, characterized by exterior neon signs and direct street access via elevators, allow a massive amount of retail to exist within a very small footprint. Ultimately, this vertical design creates a visually stunning, hyper-dense environment that offers visitors a sense of safe, endless urban adventure."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The unintentional global success of Japanese media", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The adoption of Japanese aesthetics as a symbol of high status", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The dramatic rise in tourism and its impact on urban infrastructure", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "How urban planning protects small businesses and encourages walkability", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "A vertical architectural solution to maximize retail density", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The financial failure of government tourism campaigns", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The historical influence of French architecture on Tokyo", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity or individual to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Which entity admitted in 2015 that they had no specific plans to target overseas consumers?",
+        "options": ["The Japanese Government", "Kodansha", "Shinjuku", "American tourists"],
+        "correct": "Kodansha",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Which entity was considered the ultimate marker of high-class American culture during the 20th century?",
+        "options": ["Japanese pop culture", "Everything French", "Zakkyo buildings", "Kodansha"],
+        "correct": "Everything French",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Which entities are heavily protected by local zoning laws and government subsidies?",
+        "options": ["Zakkyo buildings", "Large corporate supermarkets", "Small businesses", "Historical temples"],
+        "correct": "Small businesses",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The global popularity of Japanese pop culture was carefully planned and executed by government ministries.",
+        "type": "False",
+        "explanation": "Paragraph A states the exact opposite: the explosion of pop culture 'was not engineered by corporate boardrooms or government ministries.'",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "The number of annual tourists visiting Japan nearly quadrupled between 2007 and 2019.",
+        "type": "True",
+        "explanation": "Paragraph C explicitly states that 'By 2019, the number of annual visitors had nearly quadrupled compared to 2007.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The majority of 'zakkyo' buildings in Shinjuku are owned by large, international corporations.",
+        "type": "Not Given",
+        "explanation": "While Paragraph E describes the function and design of zakkyo buildings in Shinjuku, it never mentions who actually owns the buildings.",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}
