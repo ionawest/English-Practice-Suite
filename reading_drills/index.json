@@ -40,8 +40,38 @@
         "difficulty": "Band 7.5"
     },
     {
+        "file": "reading_drills/natgeo_energy_20.json",
+        "topic": "The Complexities and Trade-offs of Biomass Energy",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_environment_18.json",
+        "topic": "Restoring the Ecological Foundation of the Hudson-Raritan Estuary",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_geography_17.json",
+        "topic": "The Evolution of Geographic Study and Spatial Analysis",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_geography_21.json",
+        "topic": "North America: Human Geography and Economic Migration",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_history_22.json",
+        "topic": "The Evolution of Kingdoms: From Absolute Rule to Constitutional Monarchy",
+        "difficulty": "Band 7.5"
+    },
+    {
         "file": "reading_drills/natgeo_infrastructure_04.json",
         "topic": "Case Study: The California Energy Crisis",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_resources_19.json",
+        "topic": "Asia: Natural Resources, Conflict, and Environmental Management",
         "difficulty": "Band 7.5"
     },
     {
@@ -52,6 +82,11 @@
     {
         "file": "reading_drills/natgeo_space_01.json",
         "topic": "Human Space Exploration: Beyond the Space Race",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/natgeo_wildlife_23.json",
+        "topic": "How to Save the Red Wolf From Going Extinct",
         "difficulty": "Band 7.5"
     },
     {
