@@ -1,0 +1,85 @@
+{
+  "id": "biography_31",
+  "topic": "Alexander Fleming and the Discovery of Penicillin",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "A hundred years ago, a simple scratch from a rose bush or a small cut on the knee could easily kill a healthy person. Before modern medicine existed, doctors had no reliable way to fight dangerous bacteria that entered the human body. Even a minor infection could spread quickly and cause death. Hospitals desperately needed a strong medicine that could kill dangerous germs without hurting the human patient."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The miracle medicine that solved this massive problem was discovered completely by accident. In 1928, a messy scientist went on a long vacation and forgot to clean the dirty glass plates in his laboratory. When he returned, he noticed that a strange green mold had grown on one of the plates, completely destroying the harmful bacteria around it. The scientist who accidentally discovered this germ-killing mold was Alexander Fleming."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Although the discovery was amazing, there was a major problem. Because the original scientist was a biologist and not a chemistry expert, he could not figure out how to pull the pure medicine out of the green mold. He wrote a paper about his interesting discovery and then moved on to other research. For ten years, the mold was completely ignored by the rest of the medical world."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Eventually, two brilliant scientists at Oxford University read the old research paper and decided to try again. Using advanced chemistry techniques, they spent months carefully purifying the green mold until they produced a tiny amount of brown powder. By injecting this powder into sick mice, they successfully proved that the medicine worked perfectly. These two dedicated researchers were Howard Florey and Ernst Chain."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "During the Second World War, this new medicine was mass-produced in giant factories in the United States. It was sent to the battlefields, where it successfully saved the lives of millions of injured soldiers. After the war, this incredible antibiotic became widely available to regular families around the world. Because it completely changed the way doctors fight disease, Penicillin remains one of the greatest discoveries in human history."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The deadly danger of simple infections in the past", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "A messy laboratory and a lucky green mold", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The failure to turn the mold into pure medicine", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Two chemists who finally created a usable powder", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "How mass production saved lives and changed medicine", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "Why mice are highly dangerous to human health", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The high cost of buying antibiotics today", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who accidentally discovered the germ-killing mold on a dirty glass plate after returning from vacation?",
+        "options": ["Alexander Fleming", "Howard Florey and Ernst Chain", "Penicillin", "American soldiers"],
+        "correct": "Alexander Fleming",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Who spent months carefully purifying the green mold into a brown powder using advanced chemistry?",
+        "options": ["Alexander Fleming", "Howard Florey and Ernst Chain", "Penicillin", "American soldiers"],
+        "correct": "Howard Florey and Ernst Chain",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "What incredible antibiotic was mass-produced during the war and completely changed the way doctors fight disease?",
+        "options": ["Howard Florey and Ernst Chain", "Penicillin", "Alexander Fleming", "American soldiers"],
+        "correct": "Penicillin",
+        "found_in_paragraph": "E"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Alexander Fleming used his expert knowledge of chemistry to turn the mold into a pure, usable medicine.",
+        "type": "False",
+        "explanation": "Paragraph C states the exact opposite: 'Because the original scientist was a biologist and not a chemistry expert, he could not figure out how to pull the pure medicine out of the green mold.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The new medicine was mass-produced in giant factories in the United States during the Second World War.",
+        "type": "True",
+        "explanation": "Paragraph E explicitly confirms this: 'During the Second World War, this new medicine was mass-produced in giant factories in the United States.'",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Howard Florey and Ernst Chain won the Nobel Prize for their work purifying the green mold.",
+        "type": "Not Given",
+        "explanation": "Paragraph D discusses Florey and Chain's success in purifying the mold and testing it on mice, but it provides absolutely no information about them winning a Nobel Prize.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

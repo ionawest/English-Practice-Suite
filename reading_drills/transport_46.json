@@ -1,0 +1,85 @@
+{
+  "id": "transport_42",
+  "topic": "The Invention and Evolution of the Bicycle",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Before the 19th century, people who wanted to travel on land had to either walk or ride a horse. However, horses were very expensive to feed and keep healthy. Regular people desperately needed a cheap, mechanical way to travel from one town to another. To solve this problem, several inventors began trying to build a machine powered entirely by human muscle."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "In 1817, the very first version of this machine was created. It was made almost entirely of heavy wood and featured two wheels in a straight line. Because it did not have any pedals, the rider had to push their feet directly against the ground to move forward. The German inventor who built this early running machine was named Karl Drais."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Fifty years later, French inventors finally added foot pedals to the front wheel. This allowed the rider to move much faster without touching the ground. However, the wheels were made of solid wood surrounded by a hard iron band. Because riding this heavy metal machine over rough stone streets was incredibly uncomfortable, the public quickly nicknamed it the 'boneshaker'."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Engineers later realized that a larger front wheel would allow the machine to travel at much faster speeds. They built a new version featuring one massive wheel in the front and a tiny wheel in the back. Because the rider sat very high up on the giant wheel, falling off the machine was extremely dangerous. This fast but highly dangerous machine was known as the Penny Farthing."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Finally, in the 1880s, the design was changed to feature two wheels of the exact same size connected by a metal chain. This comfortable, easy-to-ride machine became incredibly popular around the world. Because it finally allowed women to travel independently and wear more practical clothing, the safety bicycle is considered a major tool of social change."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The high cost of horses and the need for human transport", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "A heavy wooden machine pushed by the rider's feet", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Adding pedals but creating an uncomfortable ride", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "A fast machine with one giant wheel that caused dangerous falls", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "A comfortable design that gave people new social freedom", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The invention of rubber tires to prevent flat wheels", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why trains completely replaced personal transport", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who was the German inventor that originally built the wooden running machine pushed by the rider's feet?",
+        "options": ["Karl Drais", "The Penny Farthing", "The safety bicycle", "French inventors"],
+        "correct": "Karl Drais",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "What fast but highly dangerous machine featured one massive front wheel and a tiny back wheel?",
+        "options": ["The Penny Farthing", "Karl Drais", "The safety bicycle", "The boneshaker"],
+        "correct": "The Penny Farthing",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "What comfortable, easy-to-ride machine featured two equal wheels and allowed women to travel independently?",
+        "options": ["The safety bicycle", "The Penny Farthing", "Karl Drais", "The boneshaker"],
+        "correct": "The safety bicycle",
+        "found_in_paragraph": "E"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Karl Drais built his early running machine using large wheels made out of solid metal.",
+        "type": "False",
+        "explanation": "Paragraph B states the exact opposite: 'It was made almost entirely of heavy wood...'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "The Penny Farthing was very dangerous because the rider sat high off the ground on top of the giant wheel.",
+        "type": "True",
+        "explanation": "Paragraph D clearly states: 'Because the rider sat very high up on the giant wheel, falling off the machine was extremely dangerous.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "The safety bicycle was originally designed specifically for the use of wealthy women.",
+        "type": "Not Given",
+        "explanation": "Paragraph E mentions that it allowed women to travel independently and change their clothing, but the text provides no information about it being designed specifically for them or their wealth.",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

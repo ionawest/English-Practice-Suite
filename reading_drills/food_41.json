@@ -1,0 +1,85 @@
+{
+  "id": "food_37",
+  "topic": "The Bitter Origins and Sweet History of Chocolate",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Today, chocolate is one of the most popular sweet treats in the entire world. However, for most of its history, it was not sweet at all. The cacao tree, which produces the beans used to make chocolate, originally grew in the tropical rainforests of Central America. The ancient people who first roasted these beans to make a bitter, spicy drink were a powerful native civilization. This group was known as the Maya."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "In the 1500s, Spanish explorers arrived in Central America and discovered this bitter drink. They brought the dark cacao beans back across the ocean to Europe. Because the European people did not like the bitter and spicy taste, they decided to mix the drink with honey and sugar. For hundreds of years, this sweet, warm drink was very expensive and could only be enjoyed by rich kings and queens."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "The way people consumed chocolate completely changed in the 1840s. A clever inventor discovered a way to press the cacao beans and mix them with extra cocoa butter and sugar. By pouring this mixture into a special mold, it cooled down and became a hard block. The man who successfully created the world's first solid chocolate bar was a British chocolate maker. His name was Joseph Fry."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "A few decades later, another major improvement was made in Switzerland. An inventor built a special machine that continuously mixed and crushed the chocolate for several days. This heavy machine made the chocolate incredibly smooth and creamy by removing all the rough pieces. The heavy, grinding machine that forever changed the texture of modern chocolate is known as the conching machine."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Today, the chocolate industry is a massive global business worth billions of dollars. However, the farmers who grow the cacao beans in Africa and South America are often paid very little money for their hard work. To help solve this problem, many modern chocolate companies now promise to pay farmers a fair price to ensure they can support their families. This ethical business practice is known as fair trade."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The ancient native people who drank a bitter liquid", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Bringing the beans to Europe and adding sweet sugar", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The invention of the world's first solid chocolate bar", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "A machine that made the treat smooth and creamy", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Modern ethical efforts to pay farmers a fair price", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "Why dark chocolate is better for human health", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The high cost of shipping sugar on wooden boats", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who successfully created the world's first solid chocolate bar by pressing beans and mixing them with extra cocoa butter?",
+        "options": ["Joseph Fry", "The Maya", "The conching machine", "Spanish explorers"],
+        "correct": "Joseph Fry",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "What heavy, grinding machine made chocolate incredibly smooth and creamy by removing all the rough pieces?",
+        "options": ["The conching machine", "Joseph Fry", "The Maya", "Fair trade"],
+        "correct": "The conching machine",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Who were the powerful native civilization that first roasted cacao beans to make a bitter, spicy drink?",
+        "options": ["The Maya", "Joseph Fry", "Spanish explorers", "The conching machine"],
+        "correct": "The Maya",
+        "found_in_paragraph": "A"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "When chocolate was first brought to Europe in the 1500s, it was very cheap and enjoyed by everyone.",
+        "type": "False",
+        "explanation": "Paragraph B states the exact opposite: 'For hundreds of years, this sweet, warm drink was very expensive and could only be enjoyed by rich kings and queens.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "The conching machine improves the texture of chocolate by continuously mixing and crushing it for several days.",
+        "type": "True",
+        "explanation": "Paragraph D explicitly confirms this: 'An inventor built a special machine that continuously mixed and crushed the chocolate for several days.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Joseph Fry kept the recipe for his solid chocolate bar a secret until the day he died.",
+        "type": "Not Given",
+        "explanation": "Paragraph C discusses Joseph Fry inventing the solid chocolate bar, but it provides no information regarding whether he kept the recipe a secret.",
+        "found_in_paragraph": "C"
+      }
+    ]
+  }
+}

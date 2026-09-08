@@ -1,0 +1,85 @@
+{
+  "id": "travel_38",
+  "topic": "The Golden Age of Train Travel: The Orient Express",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "During the late 1800s, traveling long distances across Europe by train was a very unpleasant experience. The trains were dirty, the seats were incredibly hard, and there was no place to sleep or eat a hot meal. Wealthy travelers desperately wanted a way to cross the continent in safety and comfort. To solve this problem, a smart businessman decided to create a train that felt like a rolling, five-star hotel."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "This new train featured beautiful wooden walls, comfortable beds with clean sheets, and a restaurant car serving expensive wine and hot food. The visionary businessman who successfully built this famous network of luxury trains was a Belgian engineer. His name was Georges Nagelmackers. He wanted to make sure that traveling across Europe was just as enjoyable as arriving at the final destination."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "In 1883, the most famous route of this luxury train began operating. The journey started in the busy city of Paris, France, and traveled all the way across the mountains and valleys of Europe. The final destination of this long, romantic journey was a massive, historic city located in Turkey. This famous destination city at the end of the line was Istanbul."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Because the tickets were very expensive, the train was frequently used by kings, queens, rich politicians, and famous spies. The train became so famous that many authors used it as a setting for their stories. The most famous book about the train is a thrilling murder mystery where all the passengers are hiding dark secrets. The British author who wrote this highly famous mystery book was Agatha Christie."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "The famous luxury train continued to operate for decades, but it eventually lost its popularity. After the invention of fast commercial airplanes in the 20th century, wealthy travelers preferred to fly across Europe in a few hours rather than spending several days on a train. Although the original service stopped running completely in 2009, private companies still operate special, expensive holiday trips for tourists who want to experience the magic of the past."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The uncomfortable reality of early train travel", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "A Belgian engineer and his rolling five-star hotel", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The famous route connecting France to Turkey", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Rich passengers and a famous murder mystery book", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The rise of airplanes and the end of the original service", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "How modern trains run quietly on electrical power", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The specific food served in the restaurant cars", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who was the visionary Belgian engineer that successfully built a network of luxury trains resembling a five-star hotel?",
+        "options": ["Georges Nagelmackers", "Agatha Christie", "Istanbul", "French politicians"],
+        "correct": "Georges Nagelmackers",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Who wrote a highly famous murder mystery book set on the train where all the passengers are hiding dark secrets?",
+        "options": ["Agatha Christie", "Georges Nagelmackers", "Istanbul", "French politicians"],
+        "correct": "Agatha Christie",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "What was the massive, historic destination city located in Turkey at the end of the famous train line?",
+        "options": ["Istanbul", "Paris", "Agatha Christie", "Georges Nagelmackers"],
+        "correct": "Istanbul",
+        "found_in_paragraph": "C"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Before the Orient Express was built, train travel across Europe was generally uncomfortable and lacked places to sleep.",
+        "type": "True",
+        "explanation": "Paragraph A confirms this, stating that 'The trains were dirty, the seats were incredibly hard, and there was no place to sleep or eat a hot meal.'",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "The original Orient Express train service continues to run every day for normal business commuters.",
+        "type": "False",
+        "explanation": "Paragraph E states the opposite: 'the original service stopped running completely in 2009,' and now only private holiday trips operate.",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Georges Nagelmackers got the idea for his luxury train after taking a trip to the United States.",
+        "type": "Not Given",
+        "explanation": "Paragraph B discusses Georges Nagelmackers building the luxury train, but it provides absolutely no information about him taking a trip to the United States.",
+        "found_in_paragraph": "B"
+      }
+    ]
+  }
+}

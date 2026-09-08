@@ -1,0 +1,85 @@
+{
+  "id": "marine_46",
+  "topic": "The Musical Communication of Whales",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "The deep ocean is a vast, dark environment where sunlight completely disappears after a few hundred meters. Because seeing far away in the dark water is physically impossible, marine animals cannot rely on their eyes to find each other. Instead, they rely almost entirely on their ears. Sound travels much faster and farther in water than it does in the open air."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "To communicate across hundreds of kilometers, the largest animals in the ocean have developed a highly complex system. They produce a series of deep, beautiful noises that repeat in a predictable, musical pattern. These complex underwater melodies are commonly known as whale songs. They are so loud that they can echo across entire ocean basins."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "For a long time, humans did not even know these beautiful sounds existed. During the Cold War, the military placed secret microphones deep in the ocean to listen for enemy submarines. While studying these old military recordings, an American marine biologist accidentally discovered the musical sounds of the animals. His name was Roger Payne."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "After discovering the recordings, scientists realized that these sounds are highly structured. They discovered that only the adult males sing these long songs, and all the males in a specific ocean area sing the exact same tune. Interestingly, the melody of the song slowly changes every single year, very similar to how modern human pop music trends change over time."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Unfortunately, the modern ocean is becoming a very noisy place to live. Huge commercial cargo ships and military sonar systems create a massive amount of loud, continuous background noise. This man-made problem is known as artificial noise pollution. Because this terrible noise makes it incredibly difficult for the animals to hear each other, it severely disrupts their ancient communication network."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "Why animals rely on sound in a dark environment", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Deep, musical noises that repeat in a specific pattern", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Accidentally discovering the sounds on military recordings", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "How the melodies change over time like human music", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The dangerous impact of loud human machinery", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "Why whales use sharp teeth to hunt for fish", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The high cost of building underwater microphones", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "What are the complex underwater melodies that repeat in a predictable, musical pattern commonly known as?",
+        "options": ["Whale songs", "Roger Payne", "Artificial noise pollution", "Military submarines"],
+        "correct": "Whale songs",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Who accidentally discovered the musical sounds of the animals while studying old military recordings?",
+        "options": ["Roger Payne", "Whale songs", "Artificial noise pollution", "American military soldiers"],
+        "correct": "Roger Payne",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "What is the massive amount of loud background noise created by huge commercial cargo ships known as?",
+        "options": ["Artificial noise pollution", "Whale songs", "Roger Payne", "Military sonar"],
+        "correct": "Artificial noise pollution",
+        "found_in_paragraph": "E"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Marine animals rely heavily on sound rather than sight because the deep ocean is a vast, dark environment.",
+        "type": "True",
+        "explanation": "Paragraph A states this directly: 'Because seeing far away in the dark water is physically impossible, marine animals cannot rely on their eyes... Instead, they rely almost entirely on their ears.'",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Roger Payne was an American military soldier who operated the secret underwater microphones during the Cold War.",
+        "type": "False",
+        "explanation": "Paragraph C explicitly states the opposite: he was an 'American marine biologist' who was simply 'studying these old military recordings'.",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Female whales sing much shorter and quieter songs than the large male whales.",
+        "type": "Not Given",
+        "explanation": "Paragraph D states that 'only the adult males sing these long songs', but the text provides absolutely no information regarding whether females sing shorter songs, quieter songs, or any songs at all.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

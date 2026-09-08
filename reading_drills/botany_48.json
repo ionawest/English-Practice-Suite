@@ -1,0 +1,85 @@
+{
+  "id": "botany_44",
+  "topic": "The Secret Underground Network of Trees",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "When you walk through a forest, the tall trees look like independent individuals. Because they stand far apart from each other, humans usually assume that trees compete for sunlight and water in a selfish battle to survive. However, modern scientists have recently discovered that this is completely false. Instead of competing, the trees in a healthy forest actually work together to share resources."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "This secret cooperation happens entirely underground. The connection is made by millions of tiny, white threads of a special fungus. These natural threads wrap tightly around the tree roots to form a massive, hidden web connecting the entire forest. This highly complex underground biological system is scientifically known as a mycorrhizal network."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "By acting like a biological highway, this underground web allows the plants to share vital food and water. For example, older, stronger trees with large leaves can produce a massive amount of sweet sugar using the sun. These older trees will purposefully pump their extra sugar down into the underground network to feed younger trees that are trapped in the dark shade."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "In addition to sharing food, the trees also use the network to talk to each other. When a tree is suddenly attacked by hungry bugs, it pumps a chemical warning signal down into the fungus. This signal travels through the web to warn the other trees to prepare their natural defenses. The prominent scientist who first discovered this amazing chemical warning system is named Suzanne Simard."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "This incredible discovery completely changes how human beings view the natural world. Forests are not just collections of lonely plants fighting against each other for survival. Instead, they are highly cooperative communities that act like a single living organism. By protecting the older, mother trees and the delicate fungus in the soil, humans can ensure that the entire forest stays healthy and strong."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The false human assumption that trees compete to survive", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The tiny fungus threads that form a massive hidden web", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "How older trees send extra sugar to feed younger trees", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Sending chemical warning signals to prepare for attacks", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Changing our view of forests into cooperative communities", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "Why cutting down trees destroys the local animal habitats", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "How to grow edible mushrooms in a dark forest", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "What highly complex underground biological system is formed by tiny, white threads wrapping around tree roots?",
+        "options": ["A mycorrhizal network", "Suzanne Simard", "Chemical warning signals", "Fungus"],
+        "correct": "A mycorrhizal network",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Who was the prominent scientist that first discovered the amazing chemical warning system used by the trees?",
+        "options": ["Suzanne Simard", "A mycorrhizal network", "Older trees", "Fungus"],
+        "correct": "Suzanne Simard",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "What pumps a chemical warning signal into the underground web when a tree is suddenly attacked by hungry bugs?",
+        "options": ["Chemical warning signals", "Suzanne Simard", "A mycorrhizal network", "Older trees"],
+        "correct": "Chemical warning signals",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The tiny white threads of fungus wrap around the tree roots to selfishly steal sugar from the plant.",
+        "type": "False",
+        "explanation": "Paragraph A and B state the exact opposite: the trees use the network to 'work together to share resources' rather than steal from each other.",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Older, stronger trees can pump extra sugar underground to feed younger trees that are hidden in the shade.",
+        "type": "True",
+        "explanation": "Paragraph C clearly confirms this: 'These older trees will purposefully pump their extra sugar down into the underground network to feed younger trees...'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Suzanne Simard first discovered the underground network while studying tall trees in Canada.",
+        "type": "Not Given",
+        "explanation": "Paragraph D mentions that Suzanne Simard discovered the warning system, but it provides absolutely no information regarding her nationality or where she conducted her studies.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

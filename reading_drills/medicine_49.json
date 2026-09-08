@@ -1,0 +1,85 @@
+{
+  "id": "medicine_45",
+  "topic": "Edward Jenner and the First Vaccine",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "In the 18th century, a terrible disease was killing millions of people across Europe. Even if a person managed to survive the terrible fever, they were usually left with deep, permanent scars on their skin. The disease was so highly contagious that entire towns were frequently destroyed in just a few weeks. This highly dangerous and deadly virus was officially called smallpox."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "During this terrible time, a doctor working in the English countryside noticed something extremely strange. The local women who milked the cows on the farms often caught a very mild sickness from the animals. However, after recovering from this mild sickness, the women never caught the deadly human virus. The mild illness that these farm women caught from the animals was known as cowpox."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "The smart country doctor believed that surviving the mild animal sickness somehow protected the body from the deadly human disease. To test his theory, he collected a tiny amount of the mild animal sickness and carefully scratched it into the arm of a healthy young boy. The brave scientist who successfully conducted this famous medical experiment was Edward Jenner."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "After a few days of feeling slightly tired, the young boy completely recovered from the mild animal sickness. Next, the doctor purposefully exposed the boy to the deadly human virus. Amazingly, the boy did not get sick at all. The doctor proved that the mild animal disease had successfully taught the boy's body exactly how to fight off the deadly human version."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "This simple experiment led to the invention of vaccines. By safely teaching the human body how to fight diseases before they become dangerous, vaccines have saved billions of lives over the last two hundred years. Thanks to this brilliant idea of using a mild sickness to prevent a deadly one, the terrible disease of smallpox was completely eliminated from the planet in 1980."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "A terrible, highly contagious disease that killed millions", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Noticing that farm women were protected by a mild sickness", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Testing the theory by scratching the sickness into a boy's arm", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Proving that the mild sickness successfully protected the body", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The invention of vaccines and the elimination of the disease", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "How modern hospitals safely store cold vaccines", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The high cost of treating sick farm animals", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "What highly dangerous and deadly virus frequently destroyed entire towns in the 18th century?",
+        "options": ["Smallpox", "Cowpox", "Edward Jenner", "Farm women"],
+        "correct": "Smallpox",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "What was the mild illness that local farm women caught from the animals known as?",
+        "options": ["Cowpox", "Smallpox", "Edward Jenner", "Farm women"],
+        "correct": "Cowpox",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Who successfully conducted a famous medical experiment by scratching a sickness into a boy's arm?",
+        "options": ["Edward Jenner", "Smallpox", "Cowpox", "Farm women"],
+        "correct": "Edward Jenner",
+        "found_in_paragraph": "C"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Before the vaccine was invented, people who survived the deadly virus were often left with permanent scars.",
+        "type": "True",
+        "explanation": "Paragraph A explicitly confirms this: 'Even if a person managed to survive the terrible fever, they were usually left with deep, permanent scars on their skin.'",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Edward Jenner tested his theory by giving the deadly human virus to an elderly man who was already sick.",
+        "type": "False",
+        "explanation": "Paragraph C states the exact opposite: he tested his theory on 'a healthy young boy.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The British government paid Edward Jenner a massive amount of money as a reward for his discovery.",
+        "type": "Not Given",
+        "explanation": "The text discusses his experiment and the creation of vaccines, but it provides absolutely no information regarding him receiving money or a reward from the government.",
+        "found_in_paragraph": "C"
+      }
+    ]
+  }
+}

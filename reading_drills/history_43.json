@@ -1,0 +1,85 @@
+{
+  "id": "history_39",
+  "topic": "The Hidden City of the Inca: Machu Picchu",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "High up in the dangerous Andes mountains of South America, a powerful native empire built a beautiful city of stone. Built in the 1400s, the city featured massive stone temples, green agricultural terraces, and a system of running water. Because it was hidden entirely above the clouds, this secret city was completely protected from enemy attacks. The powerful native people who built this amazing mountain city were the Inca."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "In the 1500s, violent Spanish soldiers arrived in South America and destroyed the Inca empire. However, because the secret city was hidden so high in the mountains, the Spanish soldiers never found it. Eventually, the surviving Inca people abandoned the city entirely. For hundreds of years, the beautiful stone buildings sat completely empty, slowly covered by thick, green jungle vines and tall trees."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "The lost city remained a secret until the summer of 1911. A university teacher from the United States was traveling through the mountains, searching for the lost capital of the Inca empire. He asked local farmers if they knew about any ancient ruins hiding in the jungle. The American explorer who finally revealed the lost city to the outside world was a historian. His name was Hiram Bingham."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Although the American explorer took the credit for the discovery, he did not find the city by himself. A local farmer told him about the ruins, and a very young boy was ordered to lead the explorer up the dangerous mountain path. The eleven-year-old native boy who actually guided the famous explorer to the secret ruins was named Pablito Alvarez."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Today, the thick jungle has been carefully cleared away, revealing the beautiful stone city to the world. It is now considered one of the most important archaeological sites on Earth. Every year, more than a million tourists travel to Peru to climb the mountains and take pictures of the ancient temples. To protect the old stones from being damaged by too many footsteps, the government now strictly limits how many people can visit the city each day."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "A beautiful stone city built high above the clouds", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Escaping the Spanish soldiers and being hidden by the jungle", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The American explorer who searched for ancient ruins", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The young local boy who actually led the way", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Modern tourism and rules to protect the ancient stones", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The exact tools used to cut the massive stones", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why the Spanish soldiers left South America", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or group to their corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who was the American historian and explorer that finally revealed the lost city to the outside world in 1911?",
+        "options": ["Hiram Bingham", "Pablito Alvarez", "The Inca", "Spanish soldiers"],
+        "correct": "Hiram Bingham",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who were the powerful native people that originally built the secret mountain city in the 1400s?",
+        "options": ["The Inca", "Hiram Bingham", "Spanish soldiers", "Pablito Alvarez"],
+        "correct": "The Inca",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Who was the eleven-year-old native boy that actually guided the famous explorer up the dangerous mountain path?",
+        "options": ["Pablito Alvarez", "Hiram Bingham", "The Inca", "Spanish soldiers"],
+        "correct": "Pablito Alvarez",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The Spanish soldiers found the secret city in the 1500s and destroyed most of its stone buildings.",
+        "type": "False",
+        "explanation": "Paragraph B states the exact opposite: 'because the secret city was hidden so high in the mountains, the Spanish soldiers never found it.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "The government of Peru strictly limits the number of tourists who can visit the city each day to protect the stones.",
+        "type": "True",
+        "explanation": "Paragraph E confirms this: 'To protect the old stones from being damaged by too many footsteps, the government now strictly limits how many people can visit the city each day.'",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Hiram Bingham was originally searching for a large amount of hidden gold when he found the city.",
+        "type": "Not Given",
+        "explanation": "Paragraph C mentions that Hiram Bingham was 'searching for the lost capital of the Inca empire,' but it provides absolutely no information about him looking for hidden gold.",
+        "found_in_paragraph": "C"
+      }
+    ]
+  }
+}

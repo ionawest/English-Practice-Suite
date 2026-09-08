@@ -1,0 +1,85 @@
+{
+  "id": "biology_23",
+  "topic": "The Global Migration of the Arctic Tern",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Every year, one specific animal experiences more daylight than any other creature on Earth. To do this, it travels from its breeding grounds in the high Arctic all the way to the frozen ice of Antarctica, and then returns. This massive annual journey, which often covers more than 70,000 kilometers, is completed by a small seabird. It is known to biologists as the Arctic Tern."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "To survive this long flight, the bird relies on several important physical features. Because it weighs very little, the bird requires much less energy to stay in the air. Furthermore, instead of continuously flapping its wings, it uses long, pointed wings designed to catch the wind. This efficient body shape allows the bird to glide over the ocean for hundreds of kilometers without getting tired."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Scientists have long wondered how these birds know exactly where to go. Because they travel across empty oceans, they cannot use visual landmarks like mountains or trees to find their way. Instead, researchers believe that the migration is guided by an internal biological compass. By feeling the invisible magnetic fields of the Earth, the birds can navigate the open water with incredible accuracy."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Rather than flying in a straight line from north to south, the bird's travel route is actually highly curved. This specific path is chosen so the birds can follow global ocean currents where food is easy to find. During the journey, they survive by diving into the water to catch small fish. They also eat huge amounts of a tiny, shrimp-like ocean animal known as krill."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Unfortunately, this ancient travel route is facing modern problems. As global ocean temperatures rise, the cold-water fish and krill that the birds eat are moving to different areas. As a result, these small birds must now fly even further away from their normal path to find enough food. If these ocean food sources continue to move or disappear, the world’s longest animal migration could be in serious danger."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "Introducing the longest annual trip in the animal kingdom", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The physical features that make long flights possible", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Using the Earth's natural forces to navigate empty oceans", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Following ocean currents to find reliable food", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "How rising temperatures are changing the migration path", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The dangers of commercial fishing in the Arctic", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why coastal wind currents are slowing down globally", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "What relies on long, pointed wings to catch the wind and glide over the ocean?",
+        "options": ["The Arctic Tern", "Krill", "Magnetic fields", "Cold-water fish"],
+        "correct": "The Arctic Tern",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "What tiny, shrimp-like ocean animal is eaten in huge amounts by migrating seabirds?",
+        "options": ["Magnetic fields", "The Arctic Tern", "Cold-water fish", "Krill"],
+        "correct": "Krill",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "What invisible natural forces are felt by the birds to act as an internal biological compass?",
+        "options": ["Krill", "Magnetic fields", "The Arctic Tern", "Cold-water fish"],
+        "correct": "Magnetic fields",
+        "found_in_paragraph": "C"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The Arctic Tern navigates across the ocean by following visual landmarks like mountains and trees.",
+        "type": "False",
+        "explanation": "Paragraph C states the opposite: 'Because they travel across empty oceans, they cannot use visual landmarks like mountains or trees to find their way.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The Arctic Tern's travel route from north to south is highly curved.",
+        "type": "True",
+        "explanation": "Paragraph D confirms that 'Rather than flying in a straight line from north to south, the bird's travel route is actually highly curved.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Adult Arctic Terns usually live for around 20 years in the wild.",
+        "type": "Not Given",
+        "explanation": "The text discusses the bird's migration, diet, and physical features, but it provides no information about how long the birds live.",
+        "found_in_paragraph": "C"
+      }
+    ]
+  }
+}

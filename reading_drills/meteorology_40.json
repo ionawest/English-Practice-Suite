@@ -1,0 +1,85 @@
+{
+  "id": "meteorology_36",
+  "topic": "The Formation and Danger of Hurricanes",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Every summer, the people who live near the warm coasts of North America watch the weather reports very closely. They are waiting for news about massive, spinning storms that form out over the open ocean. These giant storms bring terrible winds and heavy rain that can easily destroy houses and flood entire cities. These massive, dangerous ocean storms are commonly known as hurricanes."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "Hurricanes can only form when the conditions in the ocean are absolutely perfect. First, the ocean water must be very warm, which is why these storms only happen during the summer and early autumn. As the warm water heats the air above it, the wet air slowly rises high into the sky. When this wet air cools down, it creates giant, heavy rain clouds that begin to spin together."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "As the spinning storm gets bigger and faster, it creates a very specific shape. The most dangerous, violent winds are found in a tight ring right in the middle of the storm. However, directly inside that ring of terrible winds, the weather is completely different. The completely calm, clear area located directly in the center of the spinning storm is called the eye."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "To help the public keep track of these dangerous storms, scientists give each major hurricane a human name, like Katrina or Andrew. The names are chosen from a pre-written alphabetical list that alternates between male and female names. The international group responsible for creating these official lists of names is the World Meteorological Organization."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "While the extreme winds of a hurricane are very dangerous, the biggest threat to human life actually comes from the ocean itself. As the spinning storm moves toward the beach, the terrible winds push a massive amount of seawater directly onto the land. This dangerous event can quickly flood entire towns in just a few minutes. This massive wall of ocean water pushed onto the land is known as a storm surge."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "Watching the ocean for massive, dangerous storms", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "How warm water and rising air create the spinning clouds", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The calm, clear area in the exact center of the winds", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "How scientists organize and name the major storms", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The deadly danger of a massive wall of ocean water", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "Why cold winter weather destroys hurricane clouds", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "How to safely rebuild a house after a flood", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "What is the completely calm, clear area located directly in the center of the spinning storm called?",
+        "options": ["The eye", "Storm surge", "The World Meteorological Organization", "Hurricane"],
+        "correct": "The eye",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "What international group is responsible for creating the official alphabetical lists of names for these massive storms?",
+        "options": ["The World Meteorological Organization", "The eye", "Storm surge", "American scientists"],
+        "correct": "The World Meteorological Organization",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "What is the massive wall of ocean water pushed onto the land by the powerful winds known as?",
+        "options": ["Storm surge", "The eye", "The World Meteorological Organization", "A rain cloud"],
+        "correct": "Storm surge",
+        "found_in_paragraph": "E"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Hurricanes can easily form during the winter months if the wind is blowing hard enough.",
+        "type": "False",
+        "explanation": "Paragraph B states the exact opposite: 'the ocean water must be very warm, which is why these storms only happen during the summer and early autumn.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "To help the public keep track of the storms, scientists give each major hurricane a human name.",
+        "type": "True",
+        "explanation": "Paragraph D confirms this directly: 'To help the public keep track of these dangerous storms, scientists give each major hurricane a human name, like Katrina or Andrew.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "The most expensive hurricane in American history caused over one hundred billion dollars in damage.",
+        "type": "Not Given",
+        "explanation": "While the text discusses the destructive nature of hurricanes and mentions names like Katrina, it provides absolutely no information regarding the financial cost of any specific storm.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

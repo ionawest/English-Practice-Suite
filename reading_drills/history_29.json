@@ -1,0 +1,85 @@
+{
+  "id": "history_24",
+  "topic": "The Invention and Evolution of Photography",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "For thousands of years, humans wanted a way to perfectly capture the world around them. Before cameras existed, the only way to record a scene was to paint or draw it by hand. However, ancient scientists discovered that if they made a small hole in the wall of a completely dark room, an upside-down image of the outside world would project onto the opposite wall. This natural optical effect was known as the camera obscura."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "While the camera obscura could project an image, it could not save it. The image disappeared as soon as the light changed. In the 1820s, a French inventor decided to coat a metal plate with special chemicals that reacted to sunlight. He placed the plate inside a small wooden box and left it pointing out of his window for several days. The man who successfully created the world's first permanent photograph was Joseph Nicéphore Niépce."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Although the first photograph was a huge achievement, the process took far too long to be practical. A few years later, another French inventor improved the chemical recipe. By using silver and iodine, he created a new type of metal plate that only needed a few minutes of sunlight to capture a clear, sharp image. This new, faster method of photography became incredibly popular and was called the daguerreotype."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Early cameras were heavy, expensive, and required dangerous chemicals. Therefore, only professional scientists and rich individuals could take photographs. This changed completely in 1888 when an American businessman invented a flexible roll of film that could be placed inside a small, cheap, handheld camera. The man who brought cheap photography to regular people around the world was George Eastman, the founder of the Kodak company."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "The invention of cheap, flexible film changed society forever. For the first time in history, regular families could afford to record their memories and see exactly what their ancestors looked like. Furthermore, photographs allowed people to see detailed images of foreign countries, wild animals, and famous leaders without ever having to travel. The camera fundamentally changed how human beings understand and document their world."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "An ancient discovery of projecting images using light", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Using chemicals to create the first permanent picture", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Improving the chemical recipe to make photography faster", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Inventing flexible film to make cameras cheap and portable", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "How photographs changed family history and global awareness", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The invention of the first digital camera screen", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why early photographs were entirely in black and white", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description.",
+    "questions": [
+      {
+        "prompt": "What natural optical effect was created by putting a small hole in the wall of a completely dark room?",
+        "options": ["The camera obscura", "Joseph Nicéphore Niépce", "George Eastman", "The daguerreotype"],
+        "correct": "The camera obscura",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Who successfully created the world's first permanent photograph by coating a metal plate with chemicals?",
+        "options": ["George Eastman", "The camera obscura", "Joseph Nicéphore Niépce", "Louis Daguerre"],
+        "correct": "Joseph Nicéphore Niépce",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Who brought cheap photography to regular people by inventing a flexible roll of film?",
+        "options": ["Joseph Nicéphore Niépce", "George Eastman", "The camera obscura", "Louis Daguerre"],
+        "correct": "George Eastman",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The camera obscura could project an image on a wall, but it could not permanently save the picture.",
+        "type": "True",
+        "explanation": "Paragraph B states clearly: 'While the camera obscura could project an image, it could not save it.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "The daguerreotype was a very slow method of photography that required several days of sunlight to capture an image.",
+        "type": "False",
+        "explanation": "Paragraph C states the opposite: the daguerreotype was a 'faster method' that 'only needed a few minutes of sunlight to capture a clear, sharp image.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "George Eastman's Kodak cameras were initially sold in only three different colors.",
+        "type": "Not Given",
+        "explanation": "Paragraph D mentions that George Eastman's cameras were small, cheap, and handheld, but it provides no information about what colors they were sold in.",
+        "found_in_paragraph": "D"
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "biography_22",
+  "topic": "Ada Lovelace and the Dawn of Computer Science",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Born in London in 1815, Augusta Ada Byron was the only child of a famous British writer. Fearing that the child would inherit her father's wild behavior, Ada’s mother insisted on a very strict education. Instead of studying literature or poetry, the young girl was taught science and mathematics. This unusual education was specifically designed to distance her from the legacy of her father, the famous poet Lord Byron."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "As a young adult, Ada met many important scientists in London. During a party in 1833, she was shown a small model of a remarkable calculating machine. Fascinated by what it could do, she began a lifelong friendship with the man who built it. The complex machine, which used metal gears to solve math problems, was designed by the British inventor Charles Babbage. He called his invention the Analytical Engine."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "A few years later, a detailed article about the Analytical Engine was published in a French scientific magazine. The original paper explaining how the machine worked was written by an Italian military engineer. His name was Luigi Menabrea. Because Babbage was too busy to translate the article himself, Ada was asked to translate the text into English. Since she understood the machine perfectly, she decided to add her own notes to the translation."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Ada’s added notes ended up being three times longer than the original article. In one specific section, she wrote a step-by-step mathematical plan for the Analytical Engine to calculate a sequence of numbers. Because this is the first published plan specifically written for a computing machine, Ada Lovelace is celebrated today as the world's first computer programmer."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "While Babbage focused entirely on math, Ada possessed a much larger vision for the machine. She guessed that if a machine could understand numbers, it could eventually be programmed to understand other things, such as musical notes or letters. This brilliant idea, predicting that computers could eventually be used to create music and graphics, proved that her understanding of computing was a full century ahead of her time."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "A strict education focused on science and math", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Meeting the inventor of a mechanical calculator", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Translating and adding to a foreign scientific article", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Writing the world's first computer program", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Predicting the creative future of modern computers", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The high cost of building early computers", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "How modern computers solve mathematical problems", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual to their corresponding description or action.",
+    "questions": [
+      {
+        "prompt": "Who wrote the original French article explaining how the Analytical Engine worked?",
+        "options": ["Charles Babbage", "Lord Byron", "Luigi Menabrea", "Ada Lovelace"],
+        "correct": "Luigi Menabrea",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who was a famous poet and the biological father of Ada Lovelace?",
+        "options": ["Charles Babbage", "Lord Byron", "Luigi Menabrea", "Ada Lovelace"],
+        "correct": "Lord Byron",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "Who invented and designed the complex calculating machine known as the Analytical Engine?",
+        "options": ["Luigi Menabrea", "Lord Byron", "Charles Babbage", "Ada Lovelace"],
+        "correct": "Charles Babbage",
+        "found_in_paragraph": "B"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Charles Babbage built a full-sized, working version of the Analytical Engine before he died.",
+        "type": "Not Given",
+        "explanation": "Paragraph B says Babbage showed Ada a 'small model' of the machine, but the text never mentions if he successfully built a full-sized version.",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Ada Lovelace's personal notes on the Analytical Engine were significantly longer than the original article.",
+        "type": "True",
+        "explanation": "Paragraph D clearly states that 'Ada’s added notes ended up being three times longer than the original article.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Ada Lovelace believed that computing machines would only ever be used to solve math problems.",
+        "type": "False",
+        "explanation": "Paragraph E states the opposite: she guessed that the machine 'could eventually be programmed to understand other things, such as musical notes or letters.'",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

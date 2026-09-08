@@ -1,0 +1,85 @@
+{
+  "id": "culture_28",
+  "topic": "The Discovery of the Rosetta Stone",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "For hundreds of years, the massive monuments and pyramids of ancient Egypt stood as a total mystery to modern historians. The walls of these old buildings were covered in beautiful picture writing, but no living person knew how to read it. The knowledge of how to translate these ancient pictures had been completely lost for over a thousand years. This beautiful, mysterious writing system is known as hieroglyphics."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The key to unlocking this ancient mystery was found completely by accident. In 1799, a military army was traveling through Egypt and decided to rebuild an old, broken fort near the town of Rosetta. While digging in the dirt to build a stronger wall, a large, dark piece of rock was discovered by a group of French soldiers. They immediately noticed that the heavy rock was covered in strange writing."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "When experts examined the heavy stone, they realized it was a very special document. The exact same message was carved into the rock three different times using three different languages. The top section was written in ancient hieroglyphics, the middle section used a common Egyptian script, and the bottom section was written in an old European language. This final language at the bottom of the stone was ancient Greek."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Because modern historians could already read ancient Greek, they finally had a way to translate the Egyptian pictures. For decades, many smart people tried to decode the text without success. Finally, a brilliant scholar realized that the Egyptian pictures represented individual sounds rather than whole words. The man who successfully unlocked the secret of ancient Egyptian writing was Jean-François Champollion."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Today, the Rosetta Stone is considered one of the most important historical objects ever discovered. By providing the key to the ancient language, it allowed historians to finally read the stories of the pharaohs and understand the true history of Egypt. After the French army lost a major war, the famous stone was taken to London, England. It has been on display for the public since 1802 at the British Museum."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The lost knowledge of an ancient picture language", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "An accidental discovery in the dirt during a military trip", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "A single message written in three different languages", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The brilliant scholar who finally decoded the pictures", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The historical importance and current location of the stone", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "How ancient Egyptians built the great pyramids", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The financial value of ancient gold coins", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who successfully unlocked the secret of the pictures by realizing they represented individual sounds?",
+        "options": ["Jean-François Champollion", "French soldiers", "The British Museum", "Egyptian pharaohs"],
+        "correct": "Jean-François Champollion",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "What famous institution has publicly displayed the stone in London since 1802?",
+        "options": ["French soldiers", "The British Museum", "Jean-François Champollion", "Egyptian pharaohs"],
+        "correct": "The British Museum",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Who discovered the heavy rock covered in strange writing while rebuilding an old fort?",
+        "options": ["Jean-François Champollion", "Egyptian pharaohs", "The British Museum", "French soldiers"],
+        "correct": "French soldiers",
+        "found_in_paragraph": "B"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The Rosetta Stone was found inside a hidden room inside the largest pyramid in Egypt.",
+        "type": "False",
+        "explanation": "Paragraph B states that the stone was found in the dirt while soldiers were 'rebuilding an old, broken fort near the town of Rosetta.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "The exact same message was carved into the Rosetta Stone using three different languages.",
+        "type": "True",
+        "explanation": "Paragraph C clearly states that 'The exact same message was carved into the rock three different times using three different languages.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The Rosetta Stone is currently the heaviest object on display in the British Museum.",
+        "type": "Not Given",
+        "explanation": "Paragraph E mentions that the stone is on display at the British Museum, but it provides absolutely no information about whether it is the heaviest object in the building.",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

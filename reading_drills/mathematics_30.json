@@ -1,0 +1,85 @@
+{
+  "id": "biology_25",
+  "topic": "Mathematics in Nature: The Fibonacci Sequence",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "People usually think of mathematics as something that only belongs in a classroom or a textbook. However, math is actually a natural language that describes the physical world. One of the most famous mathematical patterns on Earth was discovered in the 13th century by an Italian scholar. While studying the breeding habits of rabbits, he noticed a repeating sequence of numbers. His name was Leonardo Fibonacci."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The mathematical rule behind this famous sequence is incredibly simple. To find the next number in the pattern, you simply add the previous two numbers together. Therefore, the sequence starts with 0 and 1. By adding those together, you get 1. Adding 1 and 1 gives you 2. Adding 1 and 2 gives you 3, followed by 5, 8, 13, 21, and so on. This simple rule creates a pattern that stretches into infinity."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Surprisingly, this specific number pattern appears frequently in the plant kingdom. If you count the number of petals on a flower, the total is almost always a Fibonacci number. Lilies have 3 petals, buttercups have 5, and daisies usually have 34 or 55. Furthermore, if you look closely at the center of a sunflower, the seeds grow in curved spiral lines. The number of these spirals is always a Fibonacci number."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "This mathematical pattern is not just limited to plants; it also dictates the shape of many animals and natural events. As the sequence of numbers grows larger, it forms a very specific, expanding spiral shape. This exact mathematical spiral can be seen perfectly in the hard shells of ocean snails. Even the curved shape of ocean waves crashing onto a beach matches this famous mathematical proportion."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Scientists believe that nature uses this mathematical pattern because it is highly efficient. For a sunflower, growing seeds in a Fibonacci spiral is the best physical way to pack as many seeds as possible into a small, tight circle. For tree branches and leaves, growing in this pattern ensures that every single leaf gets the maximum amount of sunlight without blocking the others. Nature simply uses this math to survive."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The discovery of a mathematical pattern by an Italian scholar", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The simple addition rule that creates the endless sequence", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "How the number sequence dictates flower petals and seed spirals", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The spiral shape appearing in animal shells and ocean waves", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Why biological efficiency makes this pattern so common in nature", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "How to calculate the sequence on a modern computer", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The reason why some flowers have bright red petals", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who discovered a famous repeating sequence of numbers while studying the breeding habits of rabbits?",
+        "options": ["Leonardo Fibonacci", "Sunflowers", "Ocean snails", "Italian farmers"],
+        "correct": "Leonardo Fibonacci",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "What relies on a specific mathematical spiral to pack as many seeds as possible into a small circle?",
+        "options": ["Ocean snails", "Sunflowers", "Leonardo Fibonacci", "Ocean waves"],
+        "correct": "Sunflowers",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "What animals perfectly demonstrate the expanding mathematical spiral shape in their hard outer layers?",
+        "options": ["Leonardo Fibonacci", "Sunflowers", "Ocean snails", "Buttercups"],
+        "correct": "Ocean snails",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "To find the next number in the Fibonacci sequence, you must multiply the previous two numbers together.",
+        "type": "False",
+        "explanation": "Paragraph B states the exact opposite: 'To find the next number in the pattern, you simply add the previous two numbers together.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Growing leaves in a Fibonacci pattern helps a tree ensure that its leaves get the maximum amount of sunlight.",
+        "type": "True",
+        "explanation": "Paragraph E explicitly states that growing in this pattern 'ensures that every single leaf gets the maximum amount of sunlight without blocking the others.'",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "Leonardo Fibonacci originally wrote down his famous mathematical sequence in a book published in 1202.",
+        "type": "Not Given",
+        "explanation": "Paragraph A states he discovered the pattern in the 13th century, but the text provides no information regarding the specific year or the book he published it in.",
+        "found_in_paragraph": "A"
+      }
+    ]
+  }
+}

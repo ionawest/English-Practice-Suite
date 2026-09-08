@@ -1,0 +1,85 @@
+{
+  "id": "environment_35",
+  "topic": "The Biology and Dangers of the Great Barrier Reef",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Located off the warm, sunny coast of Australia, the Great Barrier Reef is one of the most beautiful natural wonders on Earth. It stretches for over 2,300 kilometers through the clear, blue ocean. The massive underwater structure is so incredibly large that it can actually be seen by astronauts looking down from outer space. However, despite looking like a collection of colorful rocks, the reef is entirely made of living creatures."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The foundation of this massive underwater city is built by millions of tiny, soft-bodied animals. When these animals die, they leave behind hard, white skeletons made of limestone. Over thousands of years, these empty skeletons pile up on top of each other to create the solid shape of the reef. The tiny animals that slowly build these massive limestone structures are called coral polyps."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Because the reef provides a safe place to hide and plenty of food to eat, it is home to an amazing variety of ocean life. Thousands of different types of bright, colorful fish swim through the coral every day. It also provides a vital home for larger animals, such as heavy sea turtles, gentle dugongs, and hunting reef sharks. This huge variety of plant and animal life makes the reef one of the most complex ecosystems in the world."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "The bright, beautiful colors of the coral do not actually come from the animal itself. Instead, the color comes from tiny, microscopic plants that live safely inside the clear body of the coral. During the day, these tiny plants use sunlight to produce sugar, which they share with the coral to keep it alive. The colorful, microscopic plants that provide this vital food are known as zooxanthellae."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Unfortunately, this delicate biological relationship is currently in terrible danger. When the ocean water gets too warm due to climate change, the stressed coral animals spit the colorful plants out of their bodies. Without the plants, the coral turns completely white and will eventually starve to death. This dangerous and deadly process is referred to by marine biologists as coral bleaching."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "Introducing a massive, living structure visible from space", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The tiny animals that leave behind hard limestone skeletons", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "A complex ecosystem providing a home for thousands of species", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The tiny plants that provide beautiful colors and essential food", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "How warm water causes the coral to turn white and starve", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The dangerous sharks that attack swimmers near the reef", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why tourists are no longer allowed to visit the reef", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "What are the tiny, soft-bodied animals that slowly build the massive limestone structures over thousands of years called?",
+        "options": ["Coral polyps", "Zooxanthellae", "Coral bleaching", "Reef sharks"],
+        "correct": "Coral polyps",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "What are the colorful, microscopic plants that live safely inside the coral and provide it with vital food known as?",
+        "options": ["Zooxanthellae", "Coral polyps", "Coral bleaching", "Sea turtles"],
+        "correct": "Zooxanthellae",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "What is the dangerous process where stressed corals lose their colorful plants and eventually starve to death referred to as?",
+        "options": ["Coral bleaching", "Zooxanthellae", "Coral polyps", "Climate change"],
+        "correct": "Coral bleaching",
+        "found_in_paragraph": "E"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The bright, beautiful colors of the coral come directly from the body of the animal itself.",
+        "type": "False",
+        "explanation": "Paragraph D clearly states: 'The bright, beautiful colors of the coral do not actually come from the animal itself. Instead, the color comes from tiny, microscopic plants...'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "When ocean water becomes too warm, the coral spits the colorful plants out of its body.",
+        "type": "True",
+        "explanation": "Paragraph E explicitly confirms this: 'When the ocean water gets too warm due to climate change, the stressed coral animals spit the colorful plants out of their bodies.'",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "The Australian government recently banned all fishing boats from entering the Great Barrier Reef.",
+        "type": "Not Given",
+        "explanation": "The text discusses the biology of the reef and the threat of coral bleaching, but it provides absolutely no information about the Australian government or fishing boat regulations.",
+        "found_in_paragraph": "C"
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "geology_30",
+  "topic": "The Sudden Destruction and Discovery of Pompeii",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Nearly two thousand years ago, Pompeii was a wealthy and beautiful city in the ancient Roman empire. Located near the warm coast of Italy, it was a popular vacation spot for rich Romans. The city was filled with beautiful art, busy markets, and large public baths where citizens would wash and socialize. The people of the city lived happy, comfortable lives right next to a very large, peaceful mountain."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "Unfortunately, the peaceful mountain was actually a highly dangerous volcano. In the year 79 AD, the ground suddenly shook, and the top of the mountain exploded. A massive cloud of dark smoke, hot rocks, and toxic gas shot high into the sky, completely blocking out the sun. The mountain that suddenly destroyed the beautiful Roman city was known as Mount Vesuvius."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "The people of Pompeii did not have time to escape. Within a few hours, the entire city was completely buried under millions of tons of gray dirt falling from the sky. While this thick blanket of dirt killed everyone in the city, it also acted as a magical time capsule. The buildings, the artwork, and even the food sitting on the tables were perfectly preserved under the volcanic ash."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "The city remained hidden and forgotten for over a thousand years until researchers slowly began digging it up. In the 1860s, a clever archaeologist realized that the buried bodies had turned to dust, leaving empty, human-shaped spaces in the hard dirt. By carefully pouring wet plaster into these empty spaces, he created perfect, lifelike statues of the victims. This brilliant Italian researcher was named Giuseppe Fiorelli."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Today, Pompeii is one of the most famous tourist attractions in the entire world. Because the tragedy happened so quickly, the ruins give modern historians a perfect, frozen picture of exactly how ancient Romans lived on a normal day. Millions of people travel to Italy every year to walk down the ancient streets and see a lost world that was perfectly saved by a terrible disaster."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "A wealthy vacation city next to a peaceful mountain", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The sudden and deadly explosion of the volcano", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "How a thick blanket of dirt perfectly saved the city", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Pouring plaster to recreate the victims of the tragedy", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "What the frozen ruins teach modern tourists today", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The high cost of rebuilding the Roman empire", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why Roman citizens rarely took warm baths", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who created perfect, lifelike statues of the victims by pouring wet plaster into empty spaces in the dirt?",
+        "options": ["Giuseppe Fiorelli", "Mount Vesuvius", "Roman tourists", "Volcanic ash"],
+        "correct": "Giuseppe Fiorelli",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "What completely buried the city and acted as a magical time capsule to preserve the buildings?",
+        "options": ["Volcanic ash", "Mount Vesuvius", "Giuseppe Fiorelli", "Roman baths"],
+        "correct": "Volcanic ash",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "What exploded suddenly in the year 79 AD, destroying the beautiful Roman city?",
+        "options": ["Giuseppe Fiorelli", "Mount Vesuvius", "Volcanic ash", "Roman baths"],
+        "correct": "Mount Vesuvius",
+        "found_in_paragraph": "B"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Before the eruption, Pompeii was considered a very poor and highly dangerous city to live in.",
+        "type": "False",
+        "explanation": "Paragraph A states the exact opposite: 'Pompeii was a wealthy and beautiful city... a popular vacation spot for rich Romans.'",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "When the top of the mountain exploded, a massive cloud of smoke and rocks completely blocked out the sun.",
+        "type": "True",
+        "explanation": "Paragraph B confirms this, stating that 'A massive cloud of dark smoke, hot rocks, and toxic gas shot high into the sky, completely blocking out the sun.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Today, it costs twenty euros to buy a ticket to walk through the ancient streets of Pompeii.",
+        "type": "Not Given",
+        "explanation": "Paragraph E mentions that millions of people travel to see the ruins every year, but it provides absolutely no information regarding the price of an entry ticket.",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

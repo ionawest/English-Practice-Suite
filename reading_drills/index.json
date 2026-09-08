@@ -1,5 +1,60 @@
 [
     {
+        "file": "reading_drills/agriculture_26.json",
+        "topic": "The Global Spread of the Potato",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/agriculture_34.json",
+        "topic": "The Vital Role of Honey Bees in Agriculture",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/archaeology_47.json",
+        "topic": "The Ancient Computer: The Antikythera Mechanism",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/architecture_38.json",
+        "topic": "The Construction of the Great Wall",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/biography_24.json",
+        "topic": "Ada Lovelace and the Dawn of Computer Science",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/biography_35.json",
+        "topic": "Alexander Fleming and the Discovery of Penicillin",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/biology_25.json",
+        "topic": "The Global Migration of the Arctic Tern",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/botany_48.json",
+        "topic": "The Secret Underground Network of Trees",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/culture_33.json",
+        "topic": "The Discovery of the Rosetta Stone",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/economics_31.json",
+        "topic": "The History and Impact of the Silk Road",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/economics_45.json",
+        "topic": "Tulip Mania and the World's First Economic Crash",
+        "difficulty": "Band 6.5"
+    },
+    {
         "file": "reading_drills/economist_business_10.json",
         "topic": "The Technological Disruption of the Culture Business",
         "difficulty": "Band 7.5"
@@ -23,6 +78,71 @@
         "file": "reading_drills/economist_sociology_16.json",
         "topic": "The Growing Ideological Divide Between Young Men and Women",
         "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/environment_39.json",
+        "topic": "The Biology and Dangers of the Great Barrier Reef",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/food_41.json",
+        "topic": "The Bitter Origins and Sweet History of Chocolate",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/geology_28.json",
+        "topic": "The Formation of the Himalayas",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/geology_35.json",
+        "topic": "The Sudden Destruction and Discovery of Pompeii",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/history_29.json",
+        "topic": "The Invention and Evolution of Photography",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/history_43.json",
+        "topic": "The Hidden City of the Inca: Machu Picchu",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/infrastructure_27.json",
+        "topic": "The Construction of the London Underground",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/infrastructure_32.json",
+        "topic": "The Construction of the Panama Canal",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/literature_44.json",
+        "topic": "The Ghost Story Competition That Created Frankenstein",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/marine_50.json",
+        "topic": "The Musical Communication of Whales",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/mathematics_30.json",
+        "topic": "Mathematics in Nature: The Fibonacci Sequence",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/medicine_49.json",
+        "topic": "Edward Jenner and the First Vaccine",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/meteorology_40.json",
+        "topic": "The Formation and Danger of Hurricanes",
+        "difficulty": "Band 6.5"
     },
     {
         "file": "reading_drills/natgeo_agriculture_15.json",
@@ -113,5 +233,25 @@
         "file": "reading_drills/noahsmith_economics_06.json",
         "topic": "The Japanese Future: Technology, Demographics, and Economic Stagnation",
         "difficulty": "Band 7.5"
+    },
+    {
+        "file": "reading_drills/space_36.json",
+        "topic": "Apollo 11 and the Journey to the Moon",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/technology_37.json",
+        "topic": "The Invention of the Printing Press",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/transport_46.json",
+        "topic": "The Invention and Evolution of the Bicycle",
+        "difficulty": "Band 6.5"
+    },
+    {
+        "file": "reading_drills/travel_42.json",
+        "topic": "The Golden Age of Train Travel: The Orient Express",
+        "difficulty": "Band 6.5"
     }
 ]

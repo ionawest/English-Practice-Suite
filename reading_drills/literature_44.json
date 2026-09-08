@@ -1,0 +1,85 @@
+{
+  "id": "literature_40",
+  "topic": "The Ghost Story Competition That Created Frankenstein",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "In the summer of 1816, a group of young, intelligent friends decided to take a long vacation near a beautiful lake in Switzerland. Unfortunately, the weather was absolutely terrible. A massive volcano had erupted in Asia, filling the sky with dark ash and causing freezing rain to fall across Europe. Because they were trapped inside their large house by the dark, stormy weather, the friends became very bored."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "To entertain themselves, the group began reading old German ghost stories by the fire. After reading several books, one of the men suggested that they play a creative game. He challenged everyone in the room to write their own original, terrifying ghost story. The famous writer who originally challenged the group to this scary writing competition was a British poet. His name was Lord Byron."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "One of the people in the house was an eighteen-year-old girl. For several days, she struggled to think of a scary idea for the competition. One night, while trying to sleep, she had a terrible, vivid nightmare. She dreamed about a pale student of science kneeling beside a horrible, stitched-together creature that had suddenly come to life. The young female author who experienced this famous nightmare was Mary Shelley."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "When she woke up, she quickly began writing her story. She wrote about an ambitious young doctor who steals body parts from graveyards to build a living giant. While many people today mistakenly believe that the monster itself is named Frankenstein, this is incorrect. The name of the ambitious young scientist who actually created the monster in the book is Victor Frankenstein."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "The story was eventually published as a full book in 1818, and it became a massive success. Readers were terrified by the idea that human science could go too far and create something dangerous. Because it combined modern scientific ideas with a fictional horror story, many modern experts consider Mary Shelley's book to be the very first science fiction novel ever written."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "A terrible summer trapped inside by dark, stormy weather", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "A famous poet suggests a scary writing competition", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "A young girl has a terrible nightmare about a monster", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Writing the story of an ambitious doctor who builds a giant", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The success of the world's first science fiction novel", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "How modern movies changed the monster's appearance", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The true medical history of human body transplants", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific individual to their corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who experienced a famous, terrifying nightmare about a pale student of science and a stitched-together creature?",
+        "options": ["Mary Shelley", "Lord Byron", "Victor Frankenstein", "Swiss doctors"],
+        "correct": "Mary Shelley",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who was the ambitious young scientist that stole body parts from graveyards to create the monster in the book?",
+        "options": ["Victor Frankenstein", "Mary Shelley", "Lord Byron", "Swiss doctors"],
+        "correct": "Victor Frankenstein",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Who was the famous British poet that originally challenged the group to a scary writing competition?",
+        "options": ["Lord Byron", "Mary Shelley", "Victor Frankenstein", "Swiss doctors"],
+        "correct": "Lord Byron",
+        "found_in_paragraph": "B"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The group of friends was forced to stay inside their house because a volcano eruption caused terrible, freezing weather.",
+        "type": "True",
+        "explanation": "Paragraph A states clearly: 'A massive volcano had erupted... causing freezing rain to fall across Europe. Because they were trapped inside... the friends became very bored.'",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "In the original book, the terrifying monster created by the scientist is officially named Frankenstein.",
+        "type": "False",
+        "explanation": "Paragraph D states the opposite: 'While many people today mistakenly believe that the monster itself is named Frankenstein, this is incorrect. The name of the ambitious young scientist... is Victor Frankenstein.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Mary Shelley won a gold prize for having the best story in the writing competition.",
+        "type": "Not Given",
+        "explanation": "The text discusses the competition and how Mary Shelley wrote her famous book, but it provides absolutely no information about a gold prize or who officially won the competition.",
+        "found_in_paragraph": "B"
+      }
+    ]
+  }
+}

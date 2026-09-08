@@ -1,0 +1,85 @@
+{
+  "id": "geology_26",
+  "topic": "The Formation of the Himalayas",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "The Himalayas are the most famous mountain range on Earth. Stretching across Asia, they create a natural border between India and China. These mountains are incredibly high, and their peaks are always covered in snow and ice. The mountain range contains the highest point of land on the entire planet. This famous peak is called Mount Everest. For many years, scientists wondered how such giant mountains were formed."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "To understand how the mountains were made, we have to look at how the Earth is built. The ground we stand on feels perfectly still, but it is actually moving very slowly. The outer layer of the Earth is broken into several massive, moving pieces of rock. Scientists call these pieces tectonic plates. About 200 million years ago, the land we now call India was actually an island sitting on a moving plate."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "This massive island moved slowly north across the ocean for millions of years. Eventually, the Indian plate crashed directly into the Asian plate. Because both pieces of land were made of hard, solid rock, neither one could slide underneath the other. Instead, the incredible force of the crash pushed the land straight up into the air. This massive geological collision created the Himalayan mountains."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Surprisingly, the story of the Himalayas is not finished yet. Even though the collision started millions of years ago, the Indian plate is still pushing into Asia today. Because of this continuous pushing force, the mountains are still growing taller by about five millimeters every year. The pressure from this movement also causes sudden shaking in the ground. These sudden movements are known as earthquakes, and they happen frequently in the region."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "The extreme height of the Himalayas has a huge impact on the local weather. When warm, wet air from the ocean blows toward the mountains, the tall peaks block the clouds. Because the clouds cannot pass over the mountains, heavy rain is forced to fall on one side of the range. This yearly weather event is known as the monsoon season, and it provides vital water for millions of farmers in South Asia."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "Introducing the tallest mountain range in the world", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The moving pieces of rock that make up the Earth", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "How a massive crash pushed the land upward", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Why the mountains are still growing and causing danger today", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "How the mountains control the rain and weather", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The dangerous animals that live high in the snow", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why scientists want to break the tectonic plates apart", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity or event to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "What famous peak is known as the highest point of land on the entire planet?",
+        "options": ["Mount Everest", "Tectonic plates", "Earthquakes", "The monsoon season"],
+        "correct": "Mount Everest",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "What yearly weather event is caused when tall mountains force heavy rain to fall on one side of the range?",
+        "options": ["The monsoon season", "Earthquakes", "Mount Everest", "Tectonic plates"],
+        "correct": "The monsoon season",
+        "found_in_paragraph": "E"
+      },
+      {
+        "prompt": "What are the massive, moving pieces of rock that make up the outer layer of the Earth called?",
+        "options": ["Tectonic plates", "Mount Everest", "The monsoon season", "Earthquakes"],
+        "correct": "Tectonic plates",
+        "found_in_paragraph": "B"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "When the Indian plate crashed into the Asian plate, it slid easily underneath the Asian landmass.",
+        "type": "False",
+        "explanation": "Paragraph C clearly states that 'neither one could slide underneath the other. Instead, the incredible force of the crash pushed the land straight up.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The Himalayan mountains are currently growing taller by about five millimeters every single year.",
+        "type": "True",
+        "explanation": "Paragraph D explicitly confirms that 'the mountains are still growing taller by about five millimeters every year.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Farmers in South Asia grow more rice during the monsoon season than any other crop.",
+        "type": "Not Given",
+        "explanation": "Paragraph E mentions that the monsoon provides vital water for millions of farmers, but it never mentions which specific crops (like rice) they grow.",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

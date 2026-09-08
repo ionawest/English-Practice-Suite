@@ -1,0 +1,85 @@
+{
+  "id": "infrastructure_27",
+  "topic": "The Construction of the Panama Canal",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "For hundreds of years, traveling by ship from the Atlantic Ocean to the Pacific Ocean was a massive challenge. Ships had to sail all the way down and around the dangerous southern tip of South America. This long journey took several months and cost shipping companies a huge amount of money. To solve this problem, global leaders wanted to dig a shortcut directly through the narrow piece of land connecting North and South America."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The first attempt to dig this shortcut began in 1881. The project was started by the same team that successfully built the famous Suez Canal in Egypt. However, digging in a hot, tropical jungle was very different from digging in a dry desert. Thousands of workers died from dangerous tropical diseases like malaria and yellow fever. Because they ran out of money and lost too many workers, the massive project was eventually abandoned by the French engineers."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "In 1904, the United States decided to take over the failed project. Before they started digging, they knew they had to make the jungle safer for the workers. A dedicated military doctor ordered workers to drain the local swamps and remove all standing water. By destroying the places where dangerous mosquitoes lived and bred, he successfully eliminated yellow fever from the construction camps. This famous doctor was named William Gorgas."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Once the workers were safe, the builders faced a massive geographic problem. The land in the middle of Panama was much higher than the oceans. Instead of digging a deep trench all the way through the mountains, the builders decided to lift the ships over them. They built massive mechanical water gates that fill with water to raise ships up into an artificial lake. These impressive engineering machines are known as water locks."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "The Panama Canal finally opened to the world in 1914. It completely changed the global economy by making international trade much faster and cheaper. Today, more than 14,000 ships pass through the shortcut every single year, carrying millions of tons of food, electronics, and clothing. Over a century after it was built, it remains one of the most important pieces of infrastructure in the world."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The expensive and dangerous journey around a continent", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The failure of the first attempt to dig the shortcut", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Removing the danger of deadly diseases in the jungle", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Lifting ships over mountains using mechanical gates", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The modern economic importance of the completed project", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "How modern airplanes replaced cargo ships", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The financial cost of building the Suez Canal", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who successfully eliminated yellow fever from the construction camps by destroying mosquito breeding areas?",
+        "options": ["William Gorgas", "French engineers", "Water locks", "American politicians"],
+        "correct": "William Gorgas",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who abandoned the massive project because they ran out of money and lost thousands of workers?",
+        "options": ["French engineers", "William Gorgas", "Water locks", "American politicians"],
+        "correct": "French engineers",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "What impressive engineering machines are used to lift heavy ships up into an artificial lake?",
+        "options": ["French engineers", "William Gorgas", "Water locks", "Suez Canals"],
+        "correct": "Water locks",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The French engineers abandoned the project because they found it impossible to dig through the hard mountain rock.",
+        "type": "False",
+        "explanation": "Paragraph B clearly states they abandoned the project 'because they ran out of money and lost too many workers' to tropical diseases, not because of the hard mountain rock.",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "The United States built massive mechanical water gates to raise ships up into an artificial lake.",
+        "type": "True",
+        "explanation": "Paragraph D confirms that 'They built massive mechanical water gates that fill with water to raise ships up into an artificial lake.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Today, ships must pay a tax of at least $100,000 to pass through the Panama Canal.",
+        "type": "Not Given",
+        "explanation": "Paragraph E mentions that over 14,000 ships pass through the canal every year, but it never mentions how much money the ships are charged to use it.",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "infrastructure_25",
+  "topic": "The Construction of the London Underground",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "In the early 1800s, London was the largest and busiest city in the world. However, its massive population caused a serious problem. The narrow streets were completely filled with thousands of horses, carts, and people walking to work. Traffic was so bad that it could take hours to travel a very short distance. The city desperately needed a new way to move people quickly from one place to another."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "To solve this problem, a bold new idea was suggested. Someone proposed building a railway for trains underneath the city streets. At first, many people thought this idea was crazy and dangerous. They worried that the tunnels would collapse and destroy the buildings above. The money and political support needed to finally start the project were gathered by a local city worker. His name was Charles Pearson."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Building an underground railway in the 1860s was very difficult work. Because they did not have modern machines to dig deep tunnels, the workers had to destroy the streets. The builders originally dug a deep trench in the street, built brick walls, and then placed a roof on top. This early, messy building technique was known as the cut-and-cover method. It forced thousands of people to temporarily leave their homes during construction."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "The very first line of the London Underground finally opened to the public in 1863. The trains were a huge success, and millions of people bought tickets in the first year. However, the travel experience was not very pleasant. When the first underground railway opened, the tunnels were constantly filled with thick, dirty smoke. This smoke was produced by steam trains, which burned coal to move."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "A major improvement happened in 1890 with the invention of electric trains. Because electric trains did not produce any smoke, the builders could finally dig tunnels much deeper underground. They used a special metal tube to dig safely without destroying the streets above. Today, millions of people still use this famous transport network every day, proving that Charles Pearson’s crazy idea changed city travel forever."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The terrible traffic problems in a growing city", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "A crazy idea and the man who supported it", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The messy and destructive method used to build the first tunnels", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The successful opening and the problem of smoke", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "How electricity allowed for deeper, cleaner tunnels", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "Why horses were banned from the city streets", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The high cost of buying a train ticket", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity or method to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "What messy early building technique involved digging a deep trench in the street and placing a roof on top?",
+        "options": ["The cut-and-cover method", "Charles Pearson", "Steam trains", "Electric trains"],
+        "correct": "The cut-and-cover method",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who gathered the money and political support needed to start the underground railway project?",
+        "options": ["Charles Pearson", "The cut-and-cover method", "Steam trains", "London city workers"],
+        "correct": "Charles Pearson",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "What produced the thick, dirty smoke that filled the tunnels of the early underground railway?",
+        "options": ["The cut-and-cover method", "Electric trains", "Charles Pearson", "Steam trains"],
+        "correct": "Steam trains",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Many people initially worried that digging underground tunnels would cause the buildings above to collapse.",
+        "type": "True",
+        "explanation": "Paragraph B clearly states that people thought the idea was dangerous because 'They worried that the tunnels would collapse and destroy the buildings above.'",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "The very first line of the London Underground opened to the public in 1890.",
+        "type": "False",
+        "explanation": "Paragraph D states that the first line opened in 1863. The year 1890 was when electric trains were introduced, according to Paragraph E.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Charles Pearson personally designed the special metal tube used to dig the deeper tunnels.",
+        "type": "Not Given",
+        "explanation": "The text mentions Charles Pearson supported the project, and it later mentions a special metal tube was used, but it never says who invented or designed the tube.",
+        "found_in_paragraph": "B"
+      }
+    ]
+  }
+}
