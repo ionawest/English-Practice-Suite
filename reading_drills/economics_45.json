@@ -5,56 +5,106 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "During the 1630s, the Netherlands was one of the richest trading nations in the world. Its wealthy citizens were always looking for beautiful new items to display in their homes and gardens to show off their money. During this time, trading ships brought a completely new, brightly colored flower from Turkey. This beautiful, exotic flower quickly became a symbol of extreme wealth. It was known as the tulip."
+      "content": "As global maritime commerce expanded rapidly, particularly during the 1630s, the Netherlands emerged as one of the world's most prosperous mercantile powers. Driven by an appetite for social distinction, affluent citizens constantly sought novel ornamental commodities to display within their private estates. Imported via merchant routes originating from Turkey, a newly introduced botanical specimen—the tulip—quickly established itself across Dutch society as a quintessential status symbol."
     },
     {
       "paragraph_id": "B",
-      "content": "While normal tulips were expensive, a very rare type of the flower became incredibly valuable. A strange biological virus caused the petals of some flowers to grow beautiful, flame-like stripes of red and white. Because no one knew how to grow these striped flowers on purpose, they were incredibly rare. Rich merchants were willing to pay huge amounts of money just to own a single striped bulb."
+      "content": "Although standard cultivars commanded significant prices, an uncommonly high valuation was assigned to a specific variegated variety. Caused by a plant virus that created distinct, flame-like patterns of contrasting pigmentation across the petals, this aesthetic feature could not be intentionally replicated by contemporary floriculturists. Consequently, wealthy merchants demonstrated a willingness to allocate vast financial resources toward acquiring individual bulbs exhibiting these unpredictable genetic traits."
     },
     {
       "paragraph_id": "C",
-      "content": "Soon, regular people realized they could make a lot of money by trading these flowers. Shoemakers, farmers, and bakers began selling their tools and houses just to buy a few flower bulbs. They planned to hold onto the bulbs for a few weeks and sell them to someone else for a much higher price. At the peak of this madness, a single rare flower bulb cost as much as a large luxury house in the center of the city."
+      "content": "Perceiving the potential for substantial capital gains, individuals from non-merchant backgrounds—including artisans, agricultural workers, and tradespeople—subsequently entered the speculative market. By liquidating essential tools, livestock, and real estate, these buyers sought to purchase bulbs intended for rapid resale at escalated prices. At the height of this market inflation, the value of a single high-demand specimen equaled that of a substantial residential property in central Amsterdam."
     },
     {
       "paragraph_id": "D",
-      "content": "However, this insane financial system could not last forever. In February 1637, a group of buyers suddenly refused to pay the high prices. Panic quickly spread across the country, and everyone tried to sell their flowers at the exact same time. Within a few days, the price of the flowers dropped to almost zero, completely ruining the families who had sold their homes. This sudden and disastrous financial crash is known today by a specific term. It is called an economic bubble."
+      "content": "Unsustained by underlying economic fundamentals, this speculative structure ultimately encountered a drastic reversal. Marking the abrupt collapse of buyer confidence in February 1637, routine trading auctions failed to attract bids at prevailing rates. As widespread panic swept through the commercial sector, simultaneous attempts to liquidate holdings precipitated a catastrophic drop in prices within days, causing complete financial ruin for heavily leveraged households. Economists now classify this structural collapse as an early manifestation of an asset bubble."
     },
     {
       "paragraph_id": "E",
-      "content": "The disaster of the flowers taught the world a very painful lesson about human greed. It proved that when people buy things only because they think the price will go up, the market will eventually crash. Today, modern economists still study the events of 1637 to understand how public panic can destroy financial markets. It is remembered as the first major financial crash in recorded history."
+      "content": "Serving as an enduring case study in irrational market dynamics, the historical trajectory of this crisis illustrates the risks associated with speculative behavior driven solely by anticipated asset appreciation. To analyze the mechanisms by which psychological contagion destabilizes financial structures, modern economic theorists continue to evaluate the market conditions of 1637. Consequently, this historical episode remains widely recognized as the earliest documented systemic financial crash in modern economic history."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "A wealthy nation and the arrival of an exotic flower", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "How a strange virus made the petals rare and valuable", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "Regular people selling their homes to trade the bulbs", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "The sudden panic and the collapse of the prices", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "The historical lesson about greed and financial markets", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "How to carefully plant and grow the perfect garden", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "The secret disease that killed all the flowers in Europe", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "An account of economic prosperity and the introduction of a novel commodity",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "An explanation of the biological cause behind a rare physical characteristic",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "An examination of widespread public participation in speculative trading",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "A description of market collapse and the sudden loss of confidence",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "An analysis of the long-term academic significance of historical market panics",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "A comparison of agricultural techniques used across European nations",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "An outline of governmental regulations imposed on foreign trade",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
     "questions": [
       {
-        "prompt": "What sudden and disastrous financial crash occurs when prices rise incredibly high before completely collapsing?",
-        "options": ["An economic bubble", "The tulip", "A biological virus", "A luxury house"],
-        "correct": "An economic bubble",
+        "prompt": "Which economic term refers to a financial crisis characterized by unsustainable asset prices followed by a sudden collapse?",
+        "options": [
+          "An asset bubble",
+          "The tulip",
+          "A plant virus",
+          "Residential property"
+        ],
+        "correct": "An asset bubble",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "What beautiful, exotic flower was brought from Turkey and quickly became a symbol of extreme wealth?",
-        "options": ["The tulip", "An economic bubble", "A biological virus", "A luxury house"],
+        "prompt": "Which foreign import rapidly developed into a prominent marker of social standing in seventeenth-century Holland?",
+        "options": [
+          "The tulip",
+          "An asset bubble",
+          "A plant virus",
+          "Residential property"
+        ],
         "correct": "The tulip",
         "found_in_paragraph": "A"
       },
       {
-        "prompt": "What caused the petals of some flowers to grow beautiful, flame-like stripes of red and white?",
-        "options": ["A biological virus", "An economic bubble", "The tulip", "Dutch farmers"],
-        "correct": "A biological virus",
+        "prompt": "What biological factor produced the unique variegated patterns on highly valued flower petals?",
+        "options": [
+          "A plant virus",
+          "An asset bubble",
+          "The tulip",
+          "Speculative trading"
+        ],
+        "correct": "A plant virus",
         "found_in_paragraph": "B"
       }
     ]
@@ -63,21 +113,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "At the peak of the madness, a single rare flower bulb cost the same amount of money as a large luxury house.",
+        "prompt": "At the peak of market valuation, the cost of a single rare bulb was equivalent to the value of a large urban residence.",
         "type": "True",
-        "explanation": "Paragraph C states this directly: 'At the peak of this madness, a single rare flower bulb cost as much as a large luxury house in the center of the city.'",
+        "explanation": "Paragraph C states that 'At the height of this market inflation, the value of a single high-demand specimen equaled that of a substantial residential property in central Amsterdam.'",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "When the prices crashed in 1637, the Dutch government gave free money to the families who had lost their homes.",
+        "prompt": "Following the market collapse in 1637, the Dutch government provided financial compensation to ruined citizens.",
         "type": "Not Given",
-        "explanation": "Paragraph D discusses how families were completely ruined when the prices dropped to zero, but it provides absolutely no information about the Dutch government giving them free money.",
+        "explanation": "Paragraph D describes the complete financial ruin caused by the crash, but the passage makes no reference to governmental intervention or financial compensation.",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "Dutch farmers eventually discovered exactly how to grow the striped flowers on purpose.",
+        "prompt": "Seventeenth-century floriculturists succeeded in deliberately reproducing the striped patterns on the flower petals.",
         "type": "False",
-        "explanation": "Paragraph B states the exact opposite: 'Because no one knew how to grow these striped flowers on purpose, they were incredibly rare.'",
+        "explanation": "Paragraph B explicitly states that 'this aesthetic feature could not be intentionally replicated by contemporary floriculturists.'",
         "found_in_paragraph": "B"
       }
     ]

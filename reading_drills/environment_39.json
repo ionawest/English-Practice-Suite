@@ -1,59 +1,109 @@
 {
   "id": "environment_35",
   "topic": "The Biology and Dangers of the Great Barrier Reef",
-  "difficulty": "Band 6.5",
+  "difficulty": "Band 7.5",
   "text": [
     {
       "paragraph_id": "A",
-      "content": "Located off the warm, sunny coast of Australia, the Great Barrier Reef is one of the most beautiful natural wonders on Earth. It stretches for over 2,300 kilometers through the clear, blue ocean. The massive underwater structure is so incredibly large that it can actually be seen by astronauts looking down from outer space. However, despite looking like a collection of colorful rocks, the reef is entirely made of living creatures."
+      "content": "Spanning a distance exceeding 2,300 kilometers off the north-eastern coastline, the vast underwater ecosystem known as the Great Barrier Reef in Australia represents one of the most significant natural formations on Earth. Observers situated in outer space are capable of viewing this massive marine structure without visual assistance. Although appearing to be composed of inanimate geological formations, the entire reef consists of living organisms."
     },
     {
       "paragraph_id": "B",
-      "content": "The foundation of this massive underwater city is built by millions of tiny, soft-bodied animals. When these animals die, they leave behind hard, white skeletons made of limestone. Over thousands of years, these empty skeletons pile up on top of each other to create the solid shape of the reef. The tiny animals that slowly build these massive limestone structures are called coral polyps."
+      "content": "Serving as the principal architects of this habitat, millions of microscopic, soft-bodied organisms continuously build its fundamental framework. Following the death of these individual creatures, rigid limestone skeletons remain in place. Accumulated over thousands of years, these calcium carbonate structures gradually coalesce to form the underlying matrix of the marine feature. These primary organism builders are systematically identified by marine biologists as coral polyps."
     },
     {
       "paragraph_id": "C",
-      "content": "Because the reef provides a safe place to hide and plenty of food to eat, it is home to an amazing variety of ocean life. Thousands of different types of bright, colorful fish swim through the coral every day. It also provides a vital home for larger animals, such as heavy sea turtles, gentle dugongs, and hunting reef sharks. This huge variety of plant and animal life makes the reef one of the most complex ecosystems in the world."
+      "content": "Offering essential protection and abundant nutritional resources, the habitat supports an exceptionally diverse array of marine fauna. Numerous species of aquatic life inhabit the crevices between coral formations daily. Furthermore, critical breeding and feeding grounds are provided for larger species, including marine turtles, dugongs, and predatory reef sharks. Consequently, this high concentration of biodiversity renders the environment one of the most intricate ecological systems globally."
     },
     {
       "paragraph_id": "D",
-      "content": "The bright, beautiful colors of the coral do not actually come from the animal itself. Instead, the color comes from tiny, microscopic plants that live safely inside the clear body of the coral. During the day, these tiny plants use sunlight to produce sugar, which they share with the coral to keep it alive. The colorful, microscopic plants that provide this vital food are known as zooxanthellae."
+      "content": "Contrary to common perception, the vivid pigmentation observed within coral colonies does not originate from the host organism itself. Rather, microscopic algae residing within the transparent tissue of the animal produce these distinctive shades. Utilizing solar energy through photosynthesis during daylight hours, these tiny entities synthesize nutrients that are transferred to the host to sustain its survival. These photosynthetic algal symbionts are formally designated as zooxanthellae."
     },
     {
       "paragraph_id": "E",
-      "content": "Unfortunately, this delicate biological relationship is currently in terrible danger. When the ocean water gets too warm due to climate change, the stressed coral animals spit the colorful plants out of their bodies. Without the plants, the coral turns completely white and will eventually starve to death. This dangerous and deadly process is referred to by marine biologists as coral bleaching."
+      "content": "Driven by rising sea temperatures associated with global climate shifts, this interdependent biological relationship faces widespread disruption. Under environmental stress, the host organisms forcefully expel their resident photosynthetic algae. Deprived of these essential energy sources, the affected corals experience rapid discoloration and face potential mortality through starvation. Within ecological literature, this destructive phenomenon is formally termed coral bleaching."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "Introducing a massive, living structure visible from space", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "The tiny animals that leave behind hard limestone skeletons", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "A complex ecosystem providing a home for thousands of species", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "The tiny plants that provide beautiful colors and essential food", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "How warm water causes the coral to turn white and starve", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The dangerous sharks that attack swimmers near the reef", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "Why tourists are no longer allowed to visit the reef", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "A description of the vast scale and biological composition of a major marine feature",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "An explanation of the role played by minute organisms in building the limestone structure",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "An account of the rich biodiversity supported by the aquatic habitat",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "A reference to the symbiotic mechanism providing color and nutrients to the host organism",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "The impact of elevated water temperatures on algal expulsion and coral survival",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "A discussion of aggressive predatory behaviors among tropical shark species",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "An evaluation of legislative restrictions imposed on international tourism",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
     "questions": [
       {
-        "prompt": "What are the tiny, soft-bodied animals that slowly build the massive limestone structures over thousands of years called?",
-        "options": ["Coral polyps", "Zooxanthellae", "Coral bleaching", "Reef sharks"],
+        "prompt": "Which organisms act as the primary builders of the underlying limestone matrix?",
+        "options": [
+          "Coral polyps",
+          "Zooxanthellae",
+          "Dugongs",
+          "Photosynthetic algae"
+        ],
         "correct": "Coral polyps",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "What are the colorful, microscopic plants that live safely inside the coral and provide it with vital food known as?",
-        "options": ["Zooxanthellae", "Coral polyps", "Coral bleaching", "Sea turtles"],
+        "prompt": "What microscopic entities provide coral colonies with nutrients generated through photosynthesis?",
+        "options": [
+          "Zooxanthellae",
+          "Coral polyps",
+          "Marine turtles",
+          "Limestone matrix"
+        ],
         "correct": "Zooxanthellae",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "What is the dangerous process where stressed corals lose their colorful plants and eventually starve to death referred to as?",
-        "options": ["Coral bleaching", "Zooxanthellae", "Coral polyps", "Climate change"],
+        "prompt": "What ecological term describes the expulsion of photosynthetic symbionts caused by elevated ocean temperatures?",
+        "options": [
+          "Coral bleaching",
+          "Photosynthesis",
+          "Symbiosis",
+          "Ecological complex"
+        ],
         "correct": "Coral bleaching",
         "found_in_paragraph": "E"
       }
@@ -63,21 +113,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "The bright, beautiful colors of the coral come directly from the body of the animal itself.",
+        "prompt": "The pigmentation of coral tissue is exclusively produced by the host organism.",
         "type": "False",
-        "explanation": "Paragraph D clearly states: 'The bright, beautiful colors of the coral do not actually come from the animal itself. Instead, the color comes from tiny, microscopic plants...'",
+        "explanation": "Paragraph D explicitly states that the vivid pigmentation does not originate from the host organism itself, but from microscopic algae residing within the tissue.",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "When ocean water becomes too warm, the coral spits the colorful plants out of its body.",
-        "type": "True",
-        "explanation": "Paragraph E explicitly confirms this: 'When the ocean water gets too warm due to climate change, the stressed coral animals spit the colorful plants out of their bodies.'",
+        "prompt": "Coral bleaching occurs exclusively when sea temperatures decrease below normal seasonal averages.",
+        "type": "False",
+        "explanation": "Paragraph E clarifies that coral bleaching is driven by rising sea temperatures rather than falling temperatures.",
         "found_in_paragraph": "E"
       },
       {
-        "prompt": "The Australian government recently banned all fishing boats from entering the Great Barrier Reef.",
+        "prompt": "The Australian government has introduced legal restrictions on commercial fishing near the reef to prevent ecosystem degradation.",
         "type": "Not Given",
-        "explanation": "The text discusses the biology of the reef and the threat of coral bleaching, but it provides absolutely no information about the Australian government or fishing boat regulations.",
+        "explanation": "Paragraph C discusses the biodiversity of the reef, but no mention is made regarding government legislation or commercial fishing restrictions.",
         "found_in_paragraph": "C"
       }
     ]

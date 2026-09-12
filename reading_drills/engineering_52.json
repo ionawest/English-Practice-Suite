@@ -1,0 +1,85 @@
+{
+  "id": "engineering_48",
+  "topic": "The Invention That Created the Skyscraper",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "During the middle of the 19th century, cities were becoming incredibly crowded. Because there was no more space to build wide houses, builders realized they needed to start building tall structures instead. However, carrying heavy goods and people up hundreds of stairs was exhausting. To solve this problem, engineers built wooden platforms that were pulled up by thick ropes to move things between floors."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "Unfortunately, these early lifting machines were incredibly dangerous. If the rope accidentally broke, the wooden platform would instantly crash to the bottom, seriously injuring or killing anyone standing on it. In 1852, a clever mechanic designed a special metal brake that would automatically catch the platform if the rope ever snapped. The man who invented this crucial safety device was named Elisha Otis."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "To prove to the public that his new invention was perfectly safe, the mechanic arranged a dramatic demonstration at an exhibition in New York. He stood on a high platform above a large crowd and ordered a man to cut the holding rope with a sharp axe. Amazingly, the heavy platform only dropped a few inches before the new metal brakes locked it securely in place."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "This brilliant safety invention completely changed the way architects designed buildings. Before this machine existed, the highest rooms in a building were the cheapest because people hated climbing so many stairs. However, once people could ride comfortably to the top in seconds, the highest floors suddenly became the most expensive and desirable places to live."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Without this mechanical innovation, modern urban architecture would be entirely impossible. Today, thousands of massive steel skyscrapers define the skylines of global cities like Tokyo, New York, and Dubai. None of these towering structures could exist without the simple, automatic braking system that finally made vertical travel safe for the public."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The need for a mechanical solution in crowded cities", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The deadly danger of broken ropes and a clever solution", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "A dramatic public demonstration involving a sharp axe", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "How the invention reversed property values in tall buildings", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The essential role of the machine in modern city design", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "Why modern buildings are made entirely out of steel", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The high cost of maintaining moving staircases", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who designed an automatic metal catch mechanism to prevent platforms from crashing to the ground?",
+        "options": ["Elisha Otis", "New York architects", "Dubai builders", "Exhibition crowds"],
+        "correct": "Elisha Otis",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Where did a dramatic public demonstration occur in which a holding rope was intentionally severed with an axe?",
+        "options": ["An exhibition in New York", "Elisha Otis", "Dubai", "Tokyo"],
+        "correct": "An exhibition in New York",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "What suddenly transformed into the most expensive and highly desired living spaces after the invention was popularized?",
+        "options": ["The highest floors", "Wooden platforms", "Modern skyscrapers", "Thick ropes"],
+        "correct": "The highest floors",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Prior to the invention of the safety brake, wealthy individuals preferred to live in the topmost rooms of residential buildings.",
+        "type": "False",
+        "explanation": "Paragraph D states the opposite: 'Before this machine existed, the highest rooms in a building were the cheapest because people hated climbing so many stairs.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "The automated metal brakes required electricity to lock the falling platform securely in place.",
+        "type": "Not Given",
+        "explanation": "Paragraph B and C describe how the metal brake caught the platform, but the text provides absolutely no information about whether the mechanism required electricity.",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "During the public demonstration, the wooden platform crashed to the bottom and injured several spectators.",
+        "type": "False",
+        "explanation": "Paragraph C clearly states that 'the heavy platform only dropped a few inches before the new metal brakes locked it securely in place.'",
+        "found_in_paragraph": "C"
+      }
+    ]
+  }
+}

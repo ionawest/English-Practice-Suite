@@ -1,59 +1,109 @@
 {
   "id": "energy_18",
-  "topic": "The Complexities and Trade-offs of Biomass Energy",
+  "topic": "The Advantages and Drawbacks of Biomass Energy",
   "difficulty": "Band 7.5",
   "text": [
     {
       "paragraph_id": "A",
-      "content": "Derived from living or recently deceased organisms, biomass is frequently utilized to generate both direct heat and indirect liquid fuels. One of the most common liquid derivatives is ethanol, which is produced by fermenting carbohydrate-rich organic matter. While blending this fuel with traditional gasoline reduces overall greenhouse gas emissions, its mass production creates significant agricultural strain. Specifically, dedicating massive tracts of arable land to monoculture biocrops heavily depletes water quality and introduces harmful fertilizers into the ecosystem. This particular agricultural burden is most heavily associated with the cultivation of a specific crop, commonly known as corn (Zea mays)."
+      "content": "Derived from living or recently dead organic matter, biomass is commonly used to produce direct heat as well as liquid fuels. Among the most widely used liquid derivatives is ethanol, created through the fermentation of plant materials rich in carbohydrates. Although mixing this fuel with conventional petrol lowers total greenhouse gas emissions, large-scale cultivation places considerable pressure on agricultural resources. In particular, growing single crops on vast areas of fertile land damages local water quality and releases chemical fertilizers into surrounding ecosystems. Widely recognized as a primary driver of this environmental burden is the intensive farming of a major cereal crop, corn (Zea mays)."
     },
     {
       "paragraph_id": "B",
-      "content": "Beyond liquid fermentation, organic material is exceptionally rich in hydrogen, which can be chemically extracted to power zero-emission vehicles. If implemented globally, stationary and vehicular fuel cells could drastically curb atmospheric pollution. A staggering reduction of global carbon dioxide emissions could be achieved through the widespread adoption of this technology, with recent estimates suggesting an annual decrease of up to 1.1 gigatons. However, the complex energy requirements necessary to isolate, compress, and transport the gas have led some experts to question whether this high-efficiency alternative is truly economically realistic."
+      "content": "Apart from liquid fuels, organic material contains large amounts of hydrogen, which can be chemically separated to power clean vehicles. If adopted on a global scale, stationary and transport fuel cells could significantly reduce air pollution. According to recent scientific projections, through the widespread use of this technology, global carbon dioxide emissions could fall by up to 1.1 gigatons each year. Nevertheless, because of the substantial energy required to isolate, compress, and distribute the gas, analysts debate whether this alternative is commercially viable."
     },
     {
       "paragraph_id": "C",
-      "content": "To avoid utilizing valuable agricultural land, scientists are aggressively exploring alternative aquatic organisms. Capable of growing in nonpotable ocean water without depleting freshwater resources, these organisms produce a highly lucrative biofuel known as 'green crude'. However, transitioning this theoretical technology into a viable global energy source remains prohibitively expensive due to massive facility construction costs. The unique marine organism possessing this high fat content and incredible environmental potential is algae."
+      "content": "To prevent the use of fertile land needed for food production, researchers are investigating aquatic organisms as an alternative source of fuel. Able to thrive in salty ocean water without consuming freshwater reserves, these organisms yield an energy-dense biofuel often termed green crude. However, because building specialized processing facilities requires enormous investment, expanding this technology into a commercial energy source is currently difficult to afford. Notable for its high oil content and capacity to grow rapidly in marine environments is algae."
     },
     {
       "paragraph_id": "D",
-      "content": "When managed sustainably, bioenergy provides distinct advantages over other renewable technologies, primarily because its energy remains physically stored within the organism until it is needed. Furthermore, feedstocks like switchgrass can be cultivated on marginal pastures, entirely avoiding competition with global food supplies. The ability to generate steady, reliable electricity without complex grid infrastructure is incredibly beneficial for remote communities. In isolated rural regions, this consistent power supply stimulates vital economic growth and significantly improves access to essential healthcare and education."
+      "content": "When managed sustainably, biomass offers clear advantages over other renewable sources, mainly because energy is stored directly within the organic material until required. Furthermore, by planting hardy crops such as switchgrass on low-quality land, farmers can produce fuel without competing with food crops. For remote communities, generating reliable electricity without expensive power grids provides major practical benefits. By ensuring a steady energy supply in isolated rural areas, this technology promotes local economic development and improves public services."
     },
     {
       "paragraph_id": "E",
-      "content": "Despite its renewable classification, the unmanaged combustion of organic matter presents severe ecological and public health consequences. The destruction of old-growth forests drastically reduces natural carbon sequestration, while the actual burning process releases dangerous particulate matter. These toxic emissions disproportionately affect vulnerable demographics who rely on indoor organic fires for daily cooking. Consequently, elevated risks of cardiovascular illness, lung cancer, and strokes are frequently suffered by marginalized populations living in low- to middle-income countries."
+      "content": "Despite being classed as renewable, the uncontrolled burning of organic material carries serious risks for both ecosystems and public health. Cutting down mature forests reduces the earth's natural ability to store carbon, while burning wood and waste releases harmful fine particles into the air. In many developing regions, families relying on open fires for cooking face elevated exposure to these airborne pollutants. As a result of long-term exposure to indoor smoke, inhabitants of low-income rural households experience increased rates of respiratory diseases and heart conditions."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The mechanics and agricultural drawbacks of liquid biofuels", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "The massive potential and economic challenges of hydrogen extraction", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "An aquatic alternative hindered by high implementation costs", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "The logistical benefits and socio-economic impact on remote areas", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "The ecological destruction and severe health risks of unmanaged combustion", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The financial collapse of the global fossil fuel industry", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "Why solar energy is far more efficient than organic matter", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "The environmental problems caused by crop-based liquid fuels",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "The potential and practical challenges of extracting hydrogen",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "The high expenses of developing fuel from saltwater plants",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "The benefits of organic energy for isolated communities",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "Health and ecological hazards linked to burning solid waste",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "The sudden decline in worldwide petroleum consumption",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "Government policies regulating agricultural exports",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific individual, organism, or figure to its corresponding description.",
     "questions": [
       {
-        "prompt": "Which specific crop is most heavily associated with the agricultural burden of depleted water quality and harmful fertilizers?",
-        "options": ["Algae", "Switchgrass", "Corn (Zea mays)", "Green crude"],
+        "prompt": "Which major agricultural grain is singled out for damaging soil and freshwater through excessive fertilizer use?",
+        "options": [
+          "Algae",
+          "Switchgrass",
+          "Corn (Zea mays)",
+          "Green crude"
+        ],
         "correct": "Corn (Zea mays)",
         "found_in_paragraph": "A"
       },
       {
-        "prompt": "Which unique marine organism possesses high fat content and can grow in nonpotable ocean water?",
-        "options": ["Switchgrass", "Algae", "Corn (Zea mays)", "Green crude"],
+        "prompt": "Which marine plant can produce high levels of combustible oil while thriving in saltwater environments?",
+        "options": [
+          "Switchgrass",
+          "Algae",
+          "Corn (Zea mays)",
+          "Green crude"
+        ],
         "correct": "Algae",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "What is the estimated annual decrease in global carbon dioxide emissions that could be achieved through widespread hydrogen fuel cell adoption?",
-        "options": ["1.1 gigatons", "50 percent", "40 gigatons", "100 years"],
+        "prompt": "What volume of annual carbon reduction might be achieved if fuel-cell vehicles are adopted worldwide?",
+        "options": [
+          "1.1 gigatons",
+          "50 percent",
+          "40 gigatons",
+          "100 years"
+        ],
         "correct": "1.1 gigatons",
         "found_in_paragraph": "B"
       }
@@ -63,22 +113,22 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "Biomass has a distinct logistical advantage over wind and solar power because its energy can be physically stored until it is required.",
+        "prompt": "Unlike many other renewable sources, biomass can retain its energy within the plant matter until required.",
         "type": "True",
-        "explanation": "Paragraph D explicitly states that bioenergy provides advantages over other renewables 'primarily because its energy remains physically stored within the organism until it is needed.'",
+        "explanation": "Paragraph D states that biomass holds distinct advantages because energy is stored directly within the organic material until needed.",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "Extracting and transporting hydrogen for fuel cells is currently the cheapest method of generating renewable energy in the world.",
-        "type": "False",
-        "explanation": "Paragraph B states the opposite, noting that the complex energy requirements to process the gas 'have led some experts to question whether this high-efficiency alternative is truly economically realistic.'",
-        "found_in_paragraph": "B"
+        "prompt": "Smoke produced by burning wood in enclosed domestic spaces has been linked to severe respiratory illnesses.",
+        "type": "True",
+        "explanation": "Paragraph E explicitly confirms that long-term exposure to indoor smoke in low-income homes leads to increased rates of respiratory diseases and heart conditions.",
+        "found_in_paragraph": "E"
       },
       {
-        "prompt": "Governments in low-income countries are currently offering financial subsidies to families who replace indoor wood fires with electric stoves.",
-        "type": "Not Given",
-        "explanation": "Paragraph E discusses the severe health risks vulnerable demographics face from relying on indoor organic fires, but it provides absolutely no information regarding government financial subsidies for electric stoves.",
-        "found_in_paragraph": "E"
+        "prompt": "Extracting and distributing hydrogen from biomass is currently regarded as a cheap and straightforward commercial process.",
+        "type": "False",
+        "explanation": "Paragraph B states that substantial energy is required to isolate, compress, and distribute the gas, leading analysts to debate whether it is commercially viable at all.",
+        "found_in_paragraph": "B"
       }
     ]
   }

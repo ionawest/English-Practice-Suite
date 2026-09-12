@@ -1,59 +1,109 @@
 {
   "id": "genetics_06",
-  "topic": "Designer Children and the Future of Predictive Genetics",
+  "topic": "Developments in predictive genetics and embryonic selection",
   "difficulty": "Band 7.5",
   "text": [
     {
       "paragraph_id": "A",
-      "content": "In the near future, a couple in California is expected to have a child selected using a revolutionary genetic technology. While pre-implantation testing has been used for years to prevent single-gene disorders like Tay-Sachs disease, a company called Genomic Prediction is offering something much more comprehensive. They are screening embryos for almost one million single-nucleotide polymorphisms (SNPs). While individual SNP differences rarely have much effect on their own, adding them together can significantly raise or lower the likelihood of a person suffering from a particular disease. This allows parents to select the embryo that is statistically most likely to grow up healthy."
+      "content": "While pre-implantation diagnostic techniques were traditionally restricted to preventing single-gene disorders such as Tay-Sachs disease, an unprecedented level of genomic analysis is now attainable. Following recent developments in molecular biology, an expectant couple based in California is anticipated to utilize a novel genetic selection procedure. Developed by a commercial entity known as Genomic Prediction, the process involves screening embryos for nearly one million single-nucleotide polymorphisms (SNPs). Although individual variation within a single SNP rarely exerts a significant influence on its own, aggregating these markers can substantially alter an individual's statistical risk of developing specific conditions, thereby allowing prospective parents to select embryos with the highest probability of long-term health."
     },
     {
       "paragraph_id": "B",
-      "content": "The scientific journey leading to this technology began in the mid-19th century. The first fundamental rules of genetic heredity were worked out by the Moravian abbot and amateur botanist Gregor Mendel. For decades, researchers searched for single genes with massive effects, hoping to easily cure diseases. However, scientists soon realized that human genetics is incredibly complex. For example, a person's adult height is influenced by approximately 100,000 different SNPs, rather than a single 'height gene'. To capture this massive complexity, a new technique called Genome-Wide Association Studies (GWAS) was developed."
+      "content": "Traced back to the mid-19th century, the foundational principles governing genetic inheritance were initially formulated by the Moravian botanist Gregor Mendel. For decades, scientific inquiry remained focused on identifying single genes capable of producing pronounced physical effects. It subsequently became evident, however, that human genomic architecture is far more intricate than previously assumed. Given that adult height, for instance, is determined not by an isolated genetic locus but by approximately 100,000 distinct SNPs, researchers required a more sophisticated analytical framework, eventually culminating in the implementation of Genome-Wide Association Studies (GWAS)."
     },
     {
       "paragraph_id": "C",
-      "content": "Utilizing GWAS, scientists have discovered that genetics influence far more than just physical health. For many years, it was assumed that behavioural traits were entirely shaped by a child's environment. However, a surprising heritability of 45% for television-watching habits was discovered during a 1990 study led by Robert Plomin. Similarly, researchers have found that a child’s tendency to be bullied at school, their likelihood of being accident-prone, and even their chances of getting divorced all have significant genetic components."
+      "content": "Through the application of GWAS, researchers have demonstrated that non-physical traits are also influenced by inherited variations. Contrary to the long-held assumption that behavioral patterns were dictated exclusively by environmental factors, a heritability rate of 45% regarding television viewing habits was reported in a 1990 study led by behavioral geneticist Robert Plomin. Further investigations have similarly indicated that a child's susceptibility to peer bullying, inclination toward accidental injury, and adult probability of marital dissolution all contain measurable genetic components."
     },
     {
       "paragraph_id": "D",
-      "content": "This research is now being accelerated by 'biobanks,' which store tissue samples and medical data from hundreds of thousands of volunteers. Using this vast data pool, scientists can now calculate predictive risk scores for severe diseases. For instance, polygenic risk scores that successfully predict a woman’s average ten-year risk of developing breast cancer were calculated by Cambridge researcher Nasim Mavaddat. This predictive ability will allow national health services to offer earlier screening and preventative drugs to young individuals who are at the highest genetic risk."
+      "content": "Facilitated by the growth of biobanks—large repositories containing tissue samples and medical records from hundreds of thousands of participants—the calculation of predictive health metrics has advanced rapidly. By processing these extensive datasets, statistical risk models can be established for various complex pathologies. A prominent example includes the ten-year breast cancer risk projection algorithm designed by Cambridge researcher Nasim Mavaddat. Utilizing these predictive tools, public healthcare providers aim to offer early intervention and preventative pharmacotherapy to individuals identified as possessing elevated genetic risks."
     },
     {
       "paragraph_id": "E",
-      "content": "Despite the medical benefits, applying these predictive scores to human embryos raises severe ethical and biological concerns. The historical fear that intelligence testing could be misused as a tool to weed out the 'feebleminded' from the gene pool was recently observed by Johns Hopkins University historian Nathaniel Comfort. Furthermore, geneticists worry about 'pleiotropy'—the phenomenon where the same piece of DNA influences multiple unrelated traits. Consequently, choosing an embryo with a low risk of heart disease might accidentally give that child a significantly higher chance of developing epilepsy."
+      "content": "Despite the anticipated clinical benefits, the deployment of polygenic scoring in embryonic selection introduces ethical and biological complications. Highlighting historical precedents, Johns Hopkins University historian Nathaniel Comfort noted that psychometric testing was previously exploited to justify the systematic exclusion of specific individuals from the population. From a biological perspective, concerns also center on pleiotropy, a phenomenon wherein a single genomic region affects multiple unrelated physiological traits. Consequently, selecting an embryo engineered for reduced cardiovascular risk may inadvertently heighten the statistical probability of developing neurological conditions such as epilepsy."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The modern application of comprehensive embryo screening", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "The historical shift from single genes to complex genetic mapping", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "The unexpected genetic influence on human behaviour", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "Using large databases to predict and prevent future illnesses", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "The moral and biological dangers of genetic selection", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The financial costs of storing medical data in biobanks", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "The successful elimination of single-gene disorders globally", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "An explanation of how comprehensive embryo screening is conducted",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "A description of the shift towards more complex genetic analysis",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "Details regarding the genetic influence on behavior",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "A reference to the use of large data repositories for health forecasting",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "An outline of the ethical and biological concerns surrounding embryo selection",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "An evaluation of the financial costs of running biobanks",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "A report on the successful elimination of single-gene disorders",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
     "questions": [
       {
-        "prompt": "Who led a study that discovered a significant genetic link to television-watching habits?",
-        "options": ["Nathaniel Comfort", "Nasim Mavaddat", "Robert Plomin", "Gregor Mendel"],
+        "prompt": "Which researcher identified a measurable genetic connection to how much screen time individuals consume?",
+        "options": [
+          "Nathaniel Comfort",
+          "Nasim Mavaddat",
+          "Robert Plomin",
+          "Gregor Mendel"
+        ],
         "correct": "Robert Plomin",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Who observed that intelligence testing was historically misused to remove certain people from the gene pool?",
-        "options": ["Robert Plomin", "Nathaniel Comfort", "Gregor Mendel", "Nasim Mavaddat"],
+        "prompt": "Which expert pointed out that psychological evaluations were once used to deliberately marginalize specific groups of people?",
+        "options": [
+          "Robert Plomin",
+          "Nathaniel Comfort",
+          "Gregor Mendel",
+          "Nasim Mavaddat"
+        ],
         "correct": "Nathaniel Comfort",
         "found_in_paragraph": "E"
       },
       {
-        "prompt": "Who established the first fundamental rules of genetic heredity?",
-        "options": ["Gregor Mendel", "Robert Plomin", "Nasim Mavaddat", "Nathaniel Comfort"],
+        "prompt": "Which individual was responsible for initially outlining the basic rules of how traits are passed down between generations?",
+        "options": [
+          "Gregor Mendel",
+          "Robert Plomin",
+          "Nasim Mavaddat",
+          "Nathaniel Comfort"
+        ],
         "correct": "Gregor Mendel",
         "found_in_paragraph": "B"
       }
@@ -63,21 +113,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "Individual single-nucleotide polymorphisms (SNPs) usually have a massive impact on a person's overall physical health.",
+        "prompt": "A single genetic variation is generally enough to significantly dictate a person's long-term medical outcomes.",
         "type": "False",
-        "explanation": "Paragraph A states the opposite: 'individual SNP differences rarely have much effect on their own.' They only have a major impact when added together.",
+        "explanation": "Paragraph A explicitly notes that individual variation within a single SNP rarely exerts a significant influence on its own, refuting the idea that one variation dictates medical outcomes.",
         "found_in_paragraph": "A"
       },
       {
-        "prompt": "Biobanks require volunteers to pay a monthly fee to have their tissue samples and medical data securely stored.",
+        "prompt": "Individuals who contribute their medical records to biobanks are charged a yearly fee for data maintenance.",
         "type": "Not Given",
-        "explanation": "Paragraph D explains that biobanks store tissue samples and medical data from volunteers, but it never mentions whether volunteers must pay a fee to participate.",
+        "explanation": "Paragraph D states that biobanks store tissue samples and medical records, but there is no mention of whether contributors must pay for this storage.",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "Selecting an embryo to prevent one specific illness could unintentionally increase its risk of developing a completely different medical condition.",
+        "prompt": "Choosing embryos to avoid a specific health issue may accidentally raise the chances of a different illness occurring.",
         "type": "True",
-        "explanation": "Paragraph E confirms this through the concept of pleiotropy, stating that 'choosing an embryo with a low risk of heart disease might accidentally give that child a significantly higher chance of developing epilepsy.'",
+        "explanation": "Paragraph E explains pleiotropy, confirming that selecting an embryo for reduced cardiovascular risk might inadvertently increase the probability of neurological conditions like epilepsy.",
         "found_in_paragraph": "E"
       }
     ]

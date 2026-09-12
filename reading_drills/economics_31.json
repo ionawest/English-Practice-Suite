@@ -5,55 +5,105 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "Long before modern airplanes and shipping containers existed, moving valuable goods across the world was incredibly difficult. However, over two thousand years ago, an ancient network of paths was created to connect the markets of Europe with the distant empires of Asia. Stretching across thousands of kilometers of dangerous mountains and deserts, this famous historical trade route is known today as the Silk Road."
+      "content": "Prior to the development of modern transportation infrastructure, transcontinental commercial exchange presented significant logistical challenges. Established over two millennia ago to facilitate commerce between Asian empires and European markets, an extensive network of overland trade routes emerged across formidable geographical barriers. Traversing thousands of kilometres of arid terrain and mountainous regions, this ancient commercial system came to be designated as the Silk Road."
     },
     {
       "paragraph_id": "B",
-      "content": "Traveling along this massive network was slow and dangerous. Merchants rarely traveled the entire distance from Europe to China. Instead, they traveled in short sections, trading their goods at busy market towns along the way. To protect themselves from thieves and extreme weather, merchants traveled together in large groups using camels to carry heavy loads. These organized traveling groups were known as caravans."
+      "content": "Traversing this vast infrastructure entailed severe hazards and protracted travel times, leading few traders to complete the full transit between China and Western destinations. Rather than undertaking continuous journeys, regional intermediaries operated within segmented sectors, exchanging commodities at strategic urban centers. To mitigate the dual threats of hostile raids and environmental extremes, traders organized into cohesive, large-scale travel units supported by pack animals, which became formally classified as caravans."
     },
     {
       "paragraph_id": "C",
-      "content": "Many different luxury items were traded along these routes. The network was named after its most famous product, silk, which was produced exclusively in China and sold for extremely high prices in Europe. In return, European merchants sent glass, gold, and fine wool back to Asia. Meanwhile, Indian merchants joined the network to sell valuable spices, such as black pepper and cinnamon, which were used to flavor and preserve food."
+      "content": "A diverse range of high-value commodities circulated through these trade channels, though none surpassed the economic significance of textiles. Originating solely within Chinese territories and commanding astronomical prices across European markets, the luxury fabric known as silk ultimately provided the nomenclature for the entire network. In exchange for these agrarian and artisanal exports, items such as glassware, precious metals, and fine wool were funneled eastward, while culinary preservatives and aromatic spices introduced by Indian traders expanded the scope of commercial enterprise."
     },
     {
       "paragraph_id": "D",
-      "content": "The Silk Road was not just a path for buying and selling objects; it was also a major highway for sharing ideas. When merchants met at market towns, they shared their culture, languages, and new technologies. For example, the secret technique of making paper traveled from China to Europe along this route. Furthermore, the network allowed for the peaceful spread of major religions, particularly Buddhism, from India into East Asia."
+      "content": "Beyond its primary function as a conduit for material transactions, the network served as a critical vector for cross-cultural transmission and technological transfer. Through sustained interactions at commercial hubs, diverse populations exchanged linguistic structures, artistic traditions, and technical innovations. Disseminated westward from its origins in East Asia, the complex methodology of papermaking transformed European administrative practices, while the peaceful transmission of ideological systems, most notably Buddhism from its South Asian birthplace, fundamentally altered the demographic landscape of the region."
     },
     {
       "paragraph_id": "E",
-      "content": "Despite its historical importance, the land route eventually declined. In the 15th century, European explorers built better ships and discovered new, faster ways to reach Asia by traveling across the ocean. Moving heavy goods by ship was much cheaper and safer than walking across harsh deserts. Although the ancient land paths were eventually abandoned, the cultural and economic connections they created forever changed the history of the world."
+      "content": "Despite its long-standing prominence, the terrestrial commercial network experienced a gradual obsolescence during the fifteenth century. Prompted by advancements in maritime technology, European navigators identified alternative oceanic routes that offered unprecedented efficiency and reduced financial risks compared to overland transit. Consequently, as bulk freight shifted to maritime vessels, the overland pathways were largely supplanted, though the institutional and cultural paradigms established during their operational zenith left an enduring global legacy."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "An ancient network connecting two distant continents", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "How merchants traveled safely in large groups", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "The exchange of luxury goods and valuable spices", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "The sharing of culture, technology, and religion", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "Why faster ocean travel replaced the land routes", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The invention of early paper money in China", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "How to care for camels in extreme desert weather", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "An overview of the origins and extent of an ancient trade network",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "A description of the operational methods adopted by long-distance traders",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "An account of the principal commodities exchanged across regions",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "A reference to non-material exchanges facilitated by commercial routes",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "An explanation for the eventual decline of terrestrial trade passages",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "A discussion concerning the initial implementation of paper currency",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "An analysis of environmental factors affecting livestock management",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
     "questions": [
       {
-        "prompt": "What famous historical trade route connected the markets of Europe with the distant empires of Asia?",
-        "options": ["The Silk Road", "Caravans", "Buddhism", "Spices"],
+        "prompt": "Which historical commercial network facilitated trade between East Asian empires and European markets?",
+        "options": [
+          "The Silk Road",
+          "Caravans",
+          "Buddhism",
+          "Spices"
+        ],
         "correct": "The Silk Road",
         "found_in_paragraph": "A"
       },
       {
-        "prompt": "What major religion spread peacefully from India into East Asia along the trade network?",
-        "options": ["Buddhism", "The Silk Road", "Caravans", "Hinduism"],
+        "prompt": "Which major belief system expanded into East Asia via South Asian trade connections?",
+        "options": [
+          "Buddhism",
+          "The Silk Road",
+          "Caravans",
+          "Hinduism"
+        ],
         "correct": "Buddhism",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "What were the large, organized groups of merchants and camels traveling together for protection called?",
-        "options": ["The Silk Road", "Caravans", "Buddhism", "Explorers"],
+        "prompt": "What term was assigned to the organized travel units formed by merchants to ensure mutual security?",
+        "options": [
+          "The Silk Road",
+          "Caravans",
+          "Buddhism",
+          "Explorers"
+        ],
         "correct": "Caravans",
         "found_in_paragraph": "B"
       }
@@ -63,21 +113,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "Merchants on the Silk Road usually traveled the entire distance from Europe directly to China.",
+        "prompt": "Traders operating along the Silk Road were required to complete the entirety of the route between China and Western markets.",
         "type": "False",
-        "explanation": "Paragraph B states the exact opposite: 'Merchants rarely traveled the entire distance from Europe to China. Instead, they traveled in short sections...'",
+        "explanation": "Paragraph B states that few traders completed the full transit, as regional intermediaries operated within segmented sectors rather than undertaking continuous journeys.",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "The trade network was named after a luxury product that was produced exclusively in China.",
+        "prompt": "The naming of the entire trade network was directly derived from a luxury textile produced exclusively in China.",
         "type": "True",
-        "explanation": "Paragraph C confirms this, stating that 'The network was named after its most famous product, silk, which was produced exclusively in China.'",
+        "explanation": "Paragraph C confirms that silk, a luxury fabric produced solely within Chinese territories, provided the nomenclature for the entire network.",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "The ancient secret of making paper was originally brought to China by European merchants.",
+        "prompt": "The technique of papermaking was initially introduced to East Asia through European commercial contact.",
         "type": "False",
-        "explanation": "Paragraph D states the opposite: 'the secret technique of making paper traveled from China to Europe along this route.'",
+        "explanation": "Paragraph D clarifies that papermaking originated in East Asia and disseminated westward to Europe, rather than vice versa.",
         "found_in_paragraph": "D"
       }
     ]

@@ -5,55 +5,105 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "Today, the potato is one of the most common foods in the world, but it originally came from only one place. The plant first grew high up in the cold, harsh environment of South America. Because the edible part of the plant grows safely underground, it could survive freezing temperatures that destroyed other crops. The first farmers to successfully grow this reliable food source lived in a famous South American mountain range. This area is known as the Andes mountains."
+      "content": "While currently recognized as one of the most widely consumed agricultural commodities globally, the cultivated potato originated within a single geographically restricted region. Thriving in the elevated terrain and hostile climatic conditions of South America, the subterranean nature of its edible tubers protected the crop from frost that routinely destroyed above-ground vegetation. It was in this elevated region, specifically within the mountain system known as the Andes, that indigenous agriculturalists first successfully domesticated the species."
     },
     {
       "paragraph_id": "B",
-      "content": "In the 1500s, European ships arrived in South America. When these ships returned home, they brought the potato with them. The people who first brought the plant across the ocean to Europe were Spanish explorers. However, European farmers did not want to eat it at first. Because the potato grows underground and looks strange, many people incorrectly believed that the plant was poisonous."
+      "content": "Following maritime expeditions to the Western Hemisphere during the sixteenth century, transatlantic vessels returned with botanical specimens previously unknown in the Old World. Responsible for introducing the flora to European agriculture were Spanish explorers, who documented its cultivation during the 1500s. Skepticism initially hindered widespread adoption among agrarian communities, where the subterranean development and unconventional appearance of the crop generated unfounded suspicions that the tuber was toxic."
     },
     {
       "paragraph_id": "C",
-      "content": "It took more than a hundred years for the potato to become popular in Europe. Eventually, national leaders realized that a farmer could grow a huge amount of potatoes on a very small piece of land. It provided far more food than traditional crops like wheat. Because poor families finally had enough calories to survive the winter, the potato caused a massive increase in the population of Europe during the 1700s and 1800s."
+      "content": "Although over a century elapsed before mainstream acceptance was achieved, European state authorities eventually recognized the economic efficiency of the crop, which yielded significantly higher caloric output per hectare than traditional staples such as wheat. By securing a reliable food supply during winter months for economically vulnerable populations, the widespread adoption of the tuber directly facilitated unprecedented demographic growth across Europe throughout the eighteenth and nineteenth centuries."
     },
     {
       "paragraph_id": "D",
-      "content": "However, relying on a single type of food can be very dangerous. By the 1840s, the people of Ireland ate almost nothing but potatoes. Suddenly, the entire harvest was destroyed by a dangerous plant disease. This disease was called potato blight. Because there was no other food available, over a million people died of hunger, and another million were forced to leave the country."
+      "content": "The risks inherent in extreme agricultural monoculture were dramatically illustrated during the mid-nineteenth century. Having established near-total nutritional dependency on a single potato variety by the 1840s, the agrarian population of Ireland suffered catastrophic losses when a pathogenic organism, commonly identified as potato blight, wiped out crop yields. In the absence of alternative food reserves, the resulting famine caused approximately one million fatalities and prompted the mass emigration of an equal number of citizens."
     },
     {
       "paragraph_id": "E",
-      "content": "Despite the disaster in Ireland, the potato continued to spread around the globe. Today, it is grown in almost every country on Earth. It is an incredibly important part of the modern global food supply because it requires very little water and can grow in poor soil. From a wild mountain plant, it has successfully become the fourth largest food crop in the world."
+      "content": "Despite the socio-economic crisis in North-Western Europe, global expansion of the crop accelerated throughout subsequent decades. Requiring minimal hydrological input and exhibiting adaptability to nutrient-deficient soil profiles, the plant has become an indispensable component of global food security. Having transitioned from a localized montane flora, it currently ranks as the fourth most substantial food crop produced worldwide."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The discovery and early farming of a tough mountain crop", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "The arrival in Europe and early public fear", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "How the crop eventually fueled population growth", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "The tragic danger of relying entirely on one food source", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "The modern importance of the crop around the world", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "How to cook healthy potato meals at home", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "The financial cost of shipping vegetables by sea", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "An account of the origins and early domestication of a highland crop",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "Initial resistance to the introduction of an exotic botanical species",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "The contribution of increased agricultural yields to demographic expansion",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "The catastrophic outcomes of reliance on a vulnerable monoculture",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "An assessment of the contemporary global significance of the crop",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "A comparison of nutritional values among major cereal crops",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "An analysis of the economic costs associated with maritime trade routes",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific entity or group to its corresponding description.",
     "questions": [
       {
-        "prompt": "Who first brought the potato plant across the ocean to Europe?",
-        "options": ["Spanish explorers", "The Andes mountains", "Potato blight", "European farmers"],
+        "prompt": "Which group was responsible for transporting the potato plant to Europe during the sixteenth century?",
+        "options": [
+          "Spanish explorers",
+          "The Andes mountains",
+          "Potato blight",
+          "European state authorities"
+        ],
         "correct": "Spanish explorers",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "What dangerous plant disease suddenly destroyed the entire harvest in Ireland?",
-        "options": ["Spanish explorers", "Potato blight", "The Andes mountains", "Wheat disease"],
+        "prompt": "What specific pathogen was responsible for destroying the Irish potato crop in the 1840s?",
+        "options": [
+          "Spanish explorers",
+          "Potato blight",
+          "The Andes mountains",
+          "Wheat disease"
+        ],
         "correct": "Potato blight",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "Where did the first farmers to successfully grow the potato live?",
-        "options": ["Potato blight", "Spanish explorers", "The Andes mountains", "Ireland"],
+        "prompt": "In which geographical region was the potato first successfully domesticated by indigenous farmers?",
+        "options": [
+          "Potato blight",
+          "Spanish explorers",
+          "The Andes mountains",
+          "Ireland"
+        ],
         "correct": "The Andes mountains",
         "found_in_paragraph": "A"
       }
@@ -63,21 +113,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "European farmers immediately started eating potatoes as soon as they arrived from South America.",
+        "prompt": "European farmers immediately adopted the potato as a staple food upon its arrival from South America.",
         "type": "False",
-        "explanation": "Paragraph B states that 'European farmers did not want to eat it at first' because they thought it was poisonous.",
+        "explanation": "Paragraph B states that skepticism initially hindered widespread adoption due to unfounded suspicions that the tuber was toxic, indicating that adoption was delayed rather than immediate.",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "The potato caused a massive population increase in Europe because it provided more food on a small piece of land than wheat.",
+        "prompt": "The demographic expansion in Europe during the eighteenth and nineteenth centuries was driven by the higher caloric yield of potatoes compared to wheat.",
         "type": "True",
-        "explanation": "Paragraph C confirms that it provided more food than wheat on a small piece of land, giving poor families enough calories to survive.",
+        "explanation": "Paragraph C explicitly connects the higher caloric yield per hectare of potatoes relative to wheat with securing winter food supplies, which directly facilitated demographic growth.",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Today, China grows more potatoes than any other country in the world.",
+        "prompt": "Currently, a specific East Asian nation produces a greater volume of potatoes than any other country.",
         "type": "Not Given",
-        "explanation": "Paragraph E mentions that the potato is grown in almost every country, but it never specifies which country grows the most.",
+        "explanation": "Paragraph E states that the crop is the fourth most substantial food crop globally, but does not provide details regarding individual national production volumes or rankings.",
         "found_in_paragraph": "E"
       }
     ]

@@ -1,0 +1,85 @@
+{
+  "id": "earthscience_51",
+  "topic": "Exploring the Deepest Place on Earth",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "For centuries, human beings successfully explored the highest mountains and the thickest jungles on the planet. However, the deepest parts of the ocean remained completely unknown. Hidden far beneath the surface of the Pacific Ocean is a massive, dark valley. It plunges so deep into the earth that if you dropped Mount Everest into it, the top of the mountain would still be completely underwater. This incredible underwater valley is known as the Mariana Trench."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "Reaching the absolute bottom of this valley is incredibly difficult due to the hostile environment. At those extreme depths, the weight of the water above creates a crushing physical pressure. This pressure is strong enough to instantly crush a normal military submarine like an empty aluminum can. Therefore, scientists had to design a highly specialized vehicle with ultra-thick steel walls to survive the journey."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "In 1960, two brave explorers climbed into a small, spherical cabin attached to a massive float filled with gasoline. For five hours, they slowly sank down into the absolute darkness, watching the water outside turn from blue to pitch black. The famous underwater vehicle that successfully carried them nearly eleven kilometers down to the ocean floor was called the Trieste."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Before this historical dive, most biologists believed that the deepest parts of the ocean were completely dead. They assumed that no biological creature could possibly survive the freezing temperatures and crushing pressure. However, when the explorers finally turned on their exterior lights, they were shocked. They saw a flatfish and small shrimp swimming happily in the mud, proving that life exists even in the most extreme places on Earth."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "In recent years, modern robotic submarines have returned to the deepest parts of the trench to record high-definition video. Tragically, these modern cameras discovered something very depressing. Lying in the mud next to the rare, deep-sea animals was a discarded plastic bag and sweet wrappers. It proved that human pollution has successfully reached the most isolated and remote location on the entire planet."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "Introducing a massive underwater valley deeper than Everest", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The dangerous, crushing force of the deep water", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "A historic five-hour journey in a specialized cabin", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "A shocking biological discovery in the absolute dark", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The tragic evidence of modern pollution on the ocean floor", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "How fast currents make swimming in the trench impossible", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The high cost of buying robotic submarine cameras", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Which specific vehicle was utilized by explorers to survive the crushing weight of the deep ocean during the 1960 dive?",
+        "options": ["The Trieste", "The Mariana Trench", "Military submarines", "Robotic submarines"],
+        "correct": "The Trieste",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "What incredible underwater valley plunges so deep that it could completely submerge Mount Everest?",
+        "options": ["The Mariana Trench", "The Trieste", "Military submarines", "Robotic submarines"],
+        "correct": "The Mariana Trench",
+        "found_in_paragraph": "A"
+      },
+      {
+        "prompt": "What modern machines recently traveled to the bottom of the ocean to record high-definition video of the environment?",
+        "options": ["Robotic submarines", "The Mariana Trench", "The Trieste", "Military submarines"],
+        "correct": "Robotic submarines",
+        "found_in_paragraph": "E"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Before the 1960 dive, the scientific community generally agreed that complex animals thrived at the very bottom of the ocean.",
+        "type": "False",
+        "explanation": "Paragraph D states the opposite: 'Before this historical dive, most biologists believed that the deepest parts of the ocean were completely dead.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "The explorers in the Trieste used long robotic arms to collect samples of the flatfish and shrimp from the mud.",
+        "type": "Not Given",
+        "explanation": "Paragraph D mentions that the explorers saw the animals swimming in the mud when they turned on their lights, but it provides no information about them collecting samples with robotic arms.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Modern cameras have unfortunately revealed that human waste products have reached the absolute bottom of the trench.",
+        "type": "True",
+        "explanation": "Paragraph E explicitly confirms this tragedy, noting that cameras found 'a discarded plastic bag and sweet wrappers' lying in the mud.",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

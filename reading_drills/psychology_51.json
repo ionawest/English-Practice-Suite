@@ -1,0 +1,85 @@
+{
+  "id": "psychology_47",
+  "topic": "The Power of the Placebo Effect",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "When a person is feeling sick, they usually go to a doctor to get medicine. However, sometimes the human brain is powerful enough to heal the body all by itself. If a patient strongly believes they are receiving a helpful treatment, their symptoms will often improve, even if the pill contains absolutely no real medicine. This fascinating medical phenomenon is scientifically known as the placebo effect."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "The amazing power of this mental trick was famously documented during the Second World War. When a military hospital ran out of chemical painkillers, a quick-thinking doctor began injecting wounded soldiers with simple saltwater instead. Amazingly, because the soldiers believed they were receiving strong medicine, they reported feeling much less physical pain. The military doctor who originally witnessed this incredible psychological response was Henry Beecher."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "For many years, scientists did not understand how a fake treatment could reduce real physical pain. Eventually, modern researchers discovered that human expectations actually trigger a chemical change in the body. When a patient expects to feel better, the brain releases its own natural painkillers into the bloodstream. These natural, pain-reducing chemicals produced by the human body are called endorphins."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Interestingly, the physical appearance of the fake medicine strongly influences how well it works. Studies show that patients experience better results when they are given large, brightly colored pills rather than small, white ones. Furthermore, if a doctor wears a highly professional white coat and speaks confidently, the patient's brain is much more likely to create a strong healing response."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "While this psychological tool is incredibly effective, it creates a difficult ethical problem for modern doctors. To make the mental trick work, doctors must technically lie to their patients about what is inside the pill. Today, medical professionals continue to debate whether it is morally acceptable to trick sick people, even if the deception ultimately helps them recover."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "Introducing a medical phenomenon powered entirely by belief", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Using saltwater to treat soldiers during a major conflict", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "How the brain creates its own natural pain medicine", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "How visual details and doctor behavior alter the results", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The moral problem of lying to sick individuals", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The high cost of manufacturing chemical painkillers", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why saltwater causes dangerous infections in hospitals", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who observed wounded soldiers feeling physical relief after being injected with saltwater instead of actual drugs?",
+        "options": ["Henry Beecher", "The placebo effect", "Endorphins", "Military patients"],
+        "correct": "Henry Beecher",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "What are the natural, pain-relieving substances that are pumped into the bloodstream by the brain?",
+        "options": ["Endorphins", "Henry Beecher", "The placebo effect", "Saltwater"],
+        "correct": "Endorphins",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "What is the scientific term used to describe symptoms improving simply because a patient expects to get better?",
+        "options": ["The placebo effect", "Endorphins", "Henry Beecher", "An ethical debate"],
+        "correct": "The placebo effect",
+        "found_in_paragraph": "A"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "Patients generally respond better to treatments that look impressive, such as colorful medicine and confident medical staff.",
+        "type": "True",
+        "explanation": "Paragraph D confirms this, stating that 'patients experience better results when they are given large, brightly colored pills' and when 'a doctor wears a highly professional white coat and speaks confidently'.",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "During World War II, a military hospital completely stopped using chemical painkillers because they discovered saltwater was cheaper.",
+        "type": "False",
+        "explanation": "Paragraph B explains that they used saltwater because the hospital 'ran out of chemical painkillers', not because it was a cheaper alternative they preferred.",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "Most modern medical boards completely forbid doctors from ever giving fake pills to their patients under any circumstances.",
+        "type": "Not Given",
+        "explanation": "Paragraph E mentions that doctors 'continue to debate whether it is morally acceptable', but it provides absolutely no information about medical boards officially forbidding the practice.",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

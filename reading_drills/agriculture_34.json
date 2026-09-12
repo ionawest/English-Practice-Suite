@@ -1,59 +1,109 @@
 {
   "id": "agriculture_29",
   "topic": "The Vital Role of Honey Bees in Agriculture",
-  "difficulty": "Band 6.5",
+  "difficulty": "Band 7.5-8.0",
   "text": [
     {
       "paragraph_id": "A",
-      "content": "When most people think of honey bees, they only think of the sweet, sticky honey that the insects produce. However, these small bugs perform a much more important job for the planet. As bees fly from flower to flower searching for sweet nectar, they accidentally carry yellow dust on their bodies. This process of moving dust between flowers allows plants to grow fruits and vegetables. This vital natural process is known as pollination."
+      "content": "While public perception typically associates honey bees primarily with honey production, their role in ecological preservation is far more substantial. Facilitated by foraging flights between floral structures, the inadvertent transfer of micro-spores—pollen—occurs across diverse plant species. Essential for agricultural fertility, this biological mechanism, known formally as pollination, enables the fertilization required for crop growth."
     },
     {
       "paragraph_id": "B",
-      "content": "Without the hard work of these insects, the human diet would be extremely boring and unhealthy. Bees are responsible for helping apples, almonds, broccoli, and cherries grow. In fact, scientists estimate that one out of every three bites of food humans eat depends entirely on bees. Because farmers rely on these insects to grow their crops, the global economic value of bees is estimated to be over 15 billion dollars every year."
+      "content": "In the absence of these managed pollinators, human dietary diversity and nutritional quality would experience severe degradation. Critical for the cultivation of commodities such as almonds, apples, and various brassica species, bee-mediated fertilization underpins global food systems. Indeed, responsible for approximately one-third of global dietary intake according to empirical estimations, managed apiaries are calculated to generate an annual global economic value exceeding $15 billion."
     },
     {
       "paragraph_id": "C",
-      "content": "Inside a beehive, every insect has a very specific job. Most of the insects in the hive are females who clean the nest, feed the babies, and fly outside to collect food. The few male bees stay inside and wait to mate. However, the entire hive revolves around a single, large female who lays thousands of eggs every single day. This vitally important insect is known as the Queen bee."
+      "content": "Structured around strict labor specialization, the interior dynamic of a colony relies on highly differentiated roles. Constituting the majority of the population, sterile female worker bees execute tasks ranging from comb sanitation and brood care to external resource foraging. Conversely, male drones perform purely reproductive functions, while central operational continuity rests entirely upon a singular reproductive female—the Queen bee—capable of producing thousands of eggs daily."
     },
     {
       "paragraph_id": "D",
-      "content": "Unfortunately, bee populations around the world have been dying in large numbers over the last twenty years. Beekeepers regularly open their boxes and find that all the adult insects have completely disappeared, leaving the babies behind to die. Scientists believe this is caused by a dangerous combination of toxic farming chemicals, tiny diseases, and a loss of natural flowers. This sudden and mysterious disappearance of adult bees is known as Colony Collapse Disorder."
+      "content": "Observed across global populations over the preceding two decades, widespread worker mortality has destabilized the apiculture sector. Characterized by the sudden abandonment of hives where intact brood and queens remain without adult populations, this anomaly is termed Colony Collapse Disorder. Etiological hypotheses attribute this phenomenon to a synergistic combination of synthetic agrochemicals, pathogen proliferation, and habitat loss."
     },
     {
       "paragraph_id": "E",
-      "content": "To protect the global food supply, humans must change the way they treat the environment. Many farmers are beginning to use fewer toxic chemicals on their crops to keep the insects safe. Furthermore, regular people can help by planting natural, colorful wildflowers in their own gardens to provide healthy food for the insects. If we protect these tiny creatures, we also protect the future of human farming."
+      "content": "To safeguard long-term food security, systemic modifications in land management and agricultural policy are increasingly required. Beyond the reduction of synthetic pesticide application by commercial growers, urban landscape intervention—such as the cultivation of native floral vegetation—provides critical supplemental forage. Protecting these essential pollinators ultimately preserves the stability of future agricultural systems."
     }
   ],
   "stage_1_headings": {
-    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "instructions": "Match the correct functional summary to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "How moving yellow dust helps fruits and vegetables grow", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "The massive financial and dietary importance of the insects", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "The different roles and the leader of the hive", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "A sudden and mysterious danger killing the insects", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "How farmers and regular people can help save the species", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The process of extracting sweet honey from the hive", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "Why some insects prefer to sleep during the winter", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "A description of the biological mechanism underlying plant fertilization",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "An assessment of the economic and dietary contributions of managed pollinators",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "A breakdown of division of labor within colony social structures",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "An investigation into the factors causing widespread colony loss",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "A proposal for agricultural and community-level mitigation strategies",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "A comparison of modern honey extraction techniques",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "An explanation of seasonal hibernation patterns in wild insects",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
     "questions": [
       {
-        "prompt": "What relies on a single, large female who lays thousands of eggs every single day?",
-        "options": ["The Queen bee", "Colony Collapse Disorder", "Pollination", "Worker bees"],
+        "prompt": "What singular reproductive entity is responsible for sustaining colony population levels through daily egg production?",
+        "options": [
+          "The Queen bee",
+          "Colony Collapse Disorder",
+          "Pollination",
+          "Worker bees"
+        ],
         "correct": "The Queen bee",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "What is the sudden and mysterious disappearance of adult bees from their hives known as?",
-        "options": ["Colony Collapse Disorder", "The Queen bee", "Pollination", "Worker bees"],
+        "prompt": "What term denotes the sudden loss of adult worker populations despite intact hive broods?",
+        "options": [
+          "Colony Collapse Disorder",
+          "The Queen bee",
+          "Pollination",
+          "Worker bees"
+        ],
         "correct": "Colony Collapse Disorder",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "What vital natural process involves moving yellow dust between flowers to help plants grow?",
-        "options": ["Colony Collapse Disorder", "Pollination", "The Queen bee", "Worker bees"],
+        "prompt": "Which natural mechanism involves the floral transfer of pollen required for fruit and crop development?",
+        "options": [
+          "Pollination",
+          "Colony Collapse Disorder",
+          "The Queen bee",
+          "Worker bees"
+        ],
         "correct": "Pollination",
         "found_in_paragraph": "A"
       }
@@ -63,21 +113,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "Scientists estimate that one out of every three bites of human food depends on bees.",
+        "prompt": "According to empirical estimates, managed apiaries contribute directly to approximately one-third of the global food supply.",
         "type": "True",
-        "explanation": "Paragraph B states clearly: 'scientists estimate that one out of every three bites of food humans eat depends entirely on bees.'",
+        "explanation": "Paragraph B explicitly notes that empirical estimations indicate bees are responsible for approximately one-third of global dietary intake.",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "The majority of the bees living inside the hive are males who fly outside to collect food.",
+        "prompt": "In a typical beehive, male drones constitute the majority of the insect population responsible for external foraging.",
         "type": "False",
-        "explanation": "Paragraph C states the opposite: 'Most of the insects in the hive are females who clean the nest, feed the babies, and fly outside to collect food.'",
+        "explanation": "Paragraph C states that sterile female worker bees constitute the majority of the population and handle foraging, while male drones perform purely reproductive functions.",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Beekeepers in the United States lose more money to Colony Collapse Disorder than beekeepers in Europe.",
+        "prompt": "Financial losses associated with Colony Collapse Disorder have been higher in North America than in European nations.",
         "type": "Not Given",
-        "explanation": "Paragraph D discusses Colony Collapse Disorder, but the text provides no information comparing the financial losses of the United States to those of Europe.",
+        "explanation": "Paragraph D outlines the phenomenon and causes of Colony Collapse Disorder, but no geographic comparison of financial losses between North America and Europe is mentioned in the text.",
         "found_in_paragraph": "D"
       }
     ]

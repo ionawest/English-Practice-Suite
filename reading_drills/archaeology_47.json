@@ -5,55 +5,105 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "For hundreds of years, modern scientists believed that the ancient Greeks only possessed very simple tools. While they were respected for their beautiful art and brilliant philosophy, they were not famous for advanced engineering. Historians assumed that complex mechanical machines were not invented until the clockmakers of Europe began working in the Middle Ages. However, a sudden discovery at the bottom of the ocean proved this assumption completely wrong."
+      "content": "For centuries, prevailing academic consensus held that classical Greek civilization lacked advanced mechanical engineering capabilities, despite its acknowledged contributions to philosophy and the visual arts. Until European horologists developed intricate clockwork during the medieval period, historians widely assumed that complex gear-based technology did not exist. However, challenging this long-standing historical narrative, an unexpected maritime discovery was made near a remote Mediterranean island."
     },
     {
       "paragraph_id": "B",
-      "content": "In the year 1900, a massive storm forced a small boat to hide near a Greek island. When the storm passed, the men on the boat dove deep into the water to search for sea sponges. Instead, they discovered the ruins of a 2,000-year-old sunken ship. The people who found the old shipwreck and pulled up its ancient statues and treasures were a group of professional sponge divers."
+      "content": "Driven off course while seeking shelter during an unexpected storm in the year 1900, a commercial vessel anchored near a Greek island. Once marine conditions stabilized, deep-water operations revealed not the intended marine yield, but the submerged remains of a cargo vessel dating back approximately 2,000 years. Submerged alongside fine sculptures and metallic artifacts, the physical evidence of this historic shipwreck was retrieved by local sponge divers."
     },
     {
       "paragraph_id": "C",
-      "content": "Among the beautiful statues, the divers also found a strange, heavy lump of green bronze. For a long time, the dirty lump was ignored in a museum. However, years later, the heavy bronze rock suddenly cracked open. Scientists were shocked to find that it was full of complex metal gears, acting exactly like a modern clock. This ancient, highly complex machine is known today as the Antikythera Mechanism."
+      "content": "Initially remaining unexamined in a museum archive for several decades, a heavily corroded mass of bronze was recovered among the seabed artifacts. Following the natural fragmentation of this metallic specimen, researchers observed an intricate system of interlocking gear wheels similar to modern clockwork. Subsequent analysis led to the formal identification of this sophisticated artifact as the Antikythera Mechanism."
     },
     {
       "paragraph_id": "D",
-      "content": "For decades, scientists could not understand what the ancient gears were actually used for. Because the machine was broken and covered in ocean dirt, its purpose was a total mystery. Finally, by using X-rays to look inside the metal, a clever researcher figured out that it was an ancient computer used to predict the movement of the planets and the sun. The British researcher who solved this ancient mystery was Derek de Solla Price."
+      "content": "Uncertainty regarding the precise function of these damaged metallic components persisted among researchers for several decades. Through the application of non-destructive radiographic imaging to analyze the interior components, the British researcher Derek de Solla Price established that the device operated as an analog computer designed to calculate astronomical positions."
     },
     {
       "paragraph_id": "E",
-      "content": "The discovery of this machine completely changed human history. It proved that the ancient Greeks possessed incredibly advanced mechanical technology. After the Roman empire collapsed, the knowledge required to build these complex metal gears was completely lost. It took humanity another thousand years to finally invent mechanical clocks as complex as this ancient device."
+      "content": "Substantially altering contemporary understanding of historical technological development, the identification of this device provided evidence of sophisticated mechanical engineering in antiquity. Although the complex technical knowledge required for its construction vanished following the decline of the Roman empire, equivalent mechanical complexity did not re-emerge until European craftspeople redeveloped similar gear systems more than a millennium later."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The false assumption about simple ancient tools", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "Hiding from a storm and finding a sunken ship", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "A dirty lump that cracked open to reveal metal gears", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "Using X-rays to discover the true purpose of the machine", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "How the machine changed our understanding of ancient technology", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The high cost of buying ancient Greek statues", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "How the ancient Greeks built their wooden sailing ships", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "A misconception regarding ancient mechanical capabilities",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "An account of the accidental discovery of submerged artifacts",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "An initial analysis revealing previously hidden internal mechanisms",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "The application of imaging technology to determine function",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "The broader historical implications of the mechanism's recovery",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "A comparison of commercial value between ancient Greek artifacts",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "An analysis of structural decay in ancient vessel construction",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
     "questions": [
       {
-        "prompt": "Who discovered the ruins of a 2,000-year-old sunken ship after diving deep into the water?",
-        "options": ["Sponge divers", "Derek de Solla Price", "The Antikythera Mechanism", "Ancient Greeks"],
+        "prompt": "Which group of individuals recovered the 2,000-year-old submerged vessel off the Greek coastline?",
+        "options": [
+          "Sponge divers",
+          "European horologists",
+          "Derek de Solla Price",
+          "Museum archivists"
+        ],
         "correct": "Sponge divers",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "What ancient, highly complex machine was found completely full of metal gears acting like a modern clock?",
-        "options": ["The Antikythera Mechanism", "Sponge divers", "Derek de Solla Price", "A bronze statue"],
+        "prompt": "What name was assigned to the corroded bronze artifact containing interlocking gear wheels?",
+        "options": [
+          "The Antikythera Mechanism",
+          "The Greco-Roman Archive",
+          "The Medieval Clockwork",
+          "The Marine Specimen"
+        ],
         "correct": "The Antikythera Mechanism",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Who used X-rays to figure out that the broken machine was actually an ancient computer?",
-        "options": ["Derek de Solla Price", "The Antikythera Mechanism", "Sponge divers", "Ancient Greeks"],
+        "prompt": "Who conducted the radiographic examination that revealed the astronomical computing function of the device?",
+        "options": [
+          "Derek de Solla Price",
+          "European craftspeople",
+          "Sponge divers",
+          "Greek philosophers"
+        ],
         "correct": "Derek de Solla Price",
         "found_in_paragraph": "D"
       }
@@ -63,21 +113,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "When it was first pulled from the ocean, the ancient Greek machine was completely intact and shining like new gold.",
+        "prompt": "Upon its retrieval from the seabed, the metallic artifact was immediately recognized by museum staff as a complex computing device.",
         "type": "False",
-        "explanation": "Paragraph C states the exact opposite: the machine was found as a 'strange, heavy lump of green bronze' that was dirty and later 'cracked open'.",
+        "explanation": "Paragraph C states that the bronze mass initially remained unexamined in a museum archive for several decades, and its internal gears were only observed after it naturally fragmented.",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Derek de Solla Price used X-rays to discover the complex metal gears hidden inside the dirty rock.",
+        "prompt": "Radiographic imaging enabled researchers to analyze the internal structure of the device without causing physical damage.",
         "type": "True",
-        "explanation": "Paragraph D confirms this directly: 'by using X-rays to look inside the metal, a clever researcher figured out that it was an ancient computer...'",
+        "explanation": "Paragraph D explicitly states that Derek de Solla Price used non-destructive radiographic imaging to analyze the interior components of the device.",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "The Antikythera Mechanism was built by a famous Greek philosopher named Archimedes.",
+        "prompt": "The Antikythera Mechanism was constructed using bronze raw materials imported from outside the Mediterranean region.",
         "type": "Not Given",
-        "explanation": "The text discusses what the machine is and how it was found, but it provides absolutely no information about the name of the ancient person who actually built it.",
+        "explanation": "While Paragraph C mentions that the artifact was made of bronze, the text provides no information about the geographical source of the raw materials used.",
         "found_in_paragraph": "C"
       }
     ]

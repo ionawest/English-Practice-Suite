@@ -5,55 +5,105 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "Throughout human history, societies have continually sought to understand their physical place in the world. Coined in the third century B.C.E., the term 'geography' was first introduced by the Greek scholar Eratosthenes. However, complex geographical understanding and mapping significantly predated the ancient Greeks. For example, the successful navigation of the British explorer James Cook through the treacherous South Pacific in 1769 was made possible only with expert guidance from a Polynesian navigator. His name was Tupaia. Using natural stick charts to memorize ocean currents and relying on the stars, Indigenous navigators had been traversing the Pacific for thousands of years."
+      "content": "Throughout human history, societies have continually sought to understand their physical environment. Although the term geography was first introduced in the third century B.C.E. by the Greek scholar Eratosthenes, sophisticated spatial mapping had already been developed long before classical antiquity. Indeed, when navigating the treacherous waters of the South Pacific in 1769, the British explorer James Cook relied fundamentally on guidance provided by Tupaia, a Polynesian navigator. Having utilized natural stick charts to record ocean currents while relying on stellar observations, Indigenous mariners had already been traversing the Pacific Ocean for millennia."
     },
     {
       "paragraph_id": "B",
-      "content": "During the medieval period, the global center of geographic advancement shifted away from Europe. Early examples of rectangular, grid-based maps were developed by scientists from the Islamic world, who also applied spatial studies to determine optimal agricultural planning. Furthermore, the immense contribution of Asian empires to global geography cannot be overstated. A massive expansion of Chinese influence throughout Southeast Asia and the Indian Ocean during the early 1400s was achieved through the seven epic voyages of the explorer Zheng He."
+      "content": "During the medieval period, key advancements in geographic science occurred primarily outside Europe. By applying spatial analysis to agricultural planning, scholars in the Islamic world produced early rectangular, grid-based maps. Similarly, following seven extensive maritime expeditions throughout Southeast Asia and the Indian Ocean in the early 1400s, Chinese political influence expanded significantly under the leadership of the explorer Zheng He."
     },
     {
       "paragraph_id": "C",
-      "content": "Interest in geography surged again in Europe with the dawn of the Age of Discovery. This era was largely motivated by the loss of the Silk Road and the subsequent desire to find new, profitable maritime routes for the Asian spice trade. As explorers ventured further across the globe, the widespread dissemination of accurate maps and navigational charts was rapidly accelerated by a revolutionary 15th-century invention. This critical technological advancement was the printing press, which allowed geographic knowledge to be shared on an unprecedented scale."
+      "content": "In Europe, a renewed interest in geography emerged during the Age of Discovery, driven largely by the decline of the Silk Road and the search for profitable trade routes to Asia. With explorers venturing into unfamiliar territories, the rapid reproduction of navigational charts became possible through the invention of the printing press in the 15th century, allowing geographical data to be distributed across the continent on an unprecedented scale."
     },
     {
       "paragraph_id": "D",
-      "content": "While European geographic expansion generated immense wealth and expanded humanity's understanding of the planet, it resulted in catastrophic exploitation for Indigenous populations worldwide. As colonizers claimed new territories, millions of Indigenous people were displaced, decimated by foreign diseases, or subjected to forced labor. In South America, a system was established where Indigenous people provided labor and agricultural tributes in exchange for supposed education and protection, though it effectively functioned as a brutal form of slavery. This framework of exploitation was officially known as the encomienda system."
+      "content": "Although European territorial expansion generated wealth and broadened global knowledge, it caused widespread devastation among Indigenous populations. Following colonial conquest, millions were displaced, affected by foreign diseases, or forced into labor systems. In South America, under a coercive framework known as the encomienda system, local communities were compelled to provide agricultural labor and tribute to European settlers in exchange for nominal protection and instruction."
     },
     {
       "paragraph_id": "E",
-      "content": "Today, geographic principles are integrated into numerous academic disciplines, ranging from geochemistry to modern epidemiology. By mapping the exact locations of household deaths on a London street grid, the source of a devastating 1854 cholera outbreak was famously traced to a single contaminated water pump. This pioneering use of spatial analysis for public health was conducted by Dr. John Snow. From tracking global disease patterns to understanding how highway systems influence suburban growth, the geographic perspective remains essential for solving complex modern challenges."
+      "content": "In contemporary research, spatial methods are applied across diverse disciplines, including geochemistry and public health. By plotting cases of infection onto a street map during a severe cholera outbreak in London in 1854, the physician Dr. John Snow demonstrated that the disease originated from a single public water pump. From monitoring global infection patterns to analyzing urban growth, spatial analysis remains a vital tool for addressing complex modern issues."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The ancient origins and early Indigenous masters of navigation", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "Non-European advancements in cartography and maritime exploration", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "Economic motivations and technological catalysts for European exploration", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "The devastating human cost of global geographic expansion", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "The modern application of spatial analysis across various sciences", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The sudden decline of mapping technologies during the Renaissance", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "How ancient Greek scholars successfully cured epidemic diseases", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "Early navigation methods used by Indigenous voyagers",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "Significant geographical achievements outside Europe",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "Economic factors that encouraged European exploration",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "The destructive impact of colonial expansion on local populations",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "Using mapping techniques to identify the source of disease",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "Trade networks established across ancient North America",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "Medical innovations introduced by early Greek thinkers",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
     "questions": [
       {
-        "prompt": "Who provided the expert guidance that allowed the British explorer James Cook to successfully navigate the South Pacific?",
-        "options": ["Zheng He", "Dr. John Snow", "Eratosthenes", "Tupaia"],
+        "prompt": "Which Polynesian navigator provided vital assistance to an 18th-century British expedition across the Pacific?",
+        "options": [
+          "Zheng He",
+          "Dr. John Snow",
+          "Eratosthenes",
+          "Tupaia"
+        ],
         "correct": "Tupaia",
         "found_in_paragraph": "A"
       },
       {
-        "prompt": "Which entity functioned as a brutal framework of exploitation where Indigenous people provided labor in exchange for supposed protection?",
-        "options": ["The encomienda system", "The printing press", "The Silk Road", "The Age of Discovery"],
+        "prompt": "Which colonial system legally forced native communities in South America to work for foreign settlers?",
+        "options": [
+          "The encomienda system",
+          "The printing press",
+          "The Silk Road",
+          "The Age of Discovery"
+        ],
         "correct": "The encomienda system",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "Who achieved a massive expansion of Chinese influence throughout Southeast Asia via seven epic maritime voyages?",
-        "options": ["Eratosthenes", "Dr. John Snow", "Tupaia", "Zheng He"],
+        "prompt": "Which voyager commanded several large naval voyages that broadened Chinese influence during the 15th century?",
+        "options": [
+          "Eratosthenes",
+          "Dr. John Snow",
+          "Tupaia",
+          "Zheng He"
+        ],
         "correct": "Zheng He",
         "found_in_paragraph": "B"
       }
@@ -63,21 +113,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "The word 'geography' was originally invented by European scholars during the Age of Discovery in the 15th century.",
+        "prompt": "The discipline of geography was formally named during the European Renaissance era.",
         "type": "False",
-        "explanation": "Paragraph A states that the term 'geography' was 'coined in the third century B.C.E.' and 'first introduced by the Greek scholar Eratosthenes.'",
+        "explanation": "Paragraph A states that the term was first coined in the third century B.C.E. by the ancient Greek scholar Eratosthenes, long before the Renaissance.",
         "found_in_paragraph": "A"
       },
       {
-        "prompt": "European exploration during the Age of Discovery was partially motivated by the loss of traditional land routes used for the Asian spice trade.",
-        "type": "True",
-        "explanation": "Paragraph C confirms this, stating the era 'was largely motivated by the loss of the Silk Road and the subsequent desire to find new, profitable maritime routes for the Asian spice trade.'",
+        "prompt": "In the 15th century, navigational charts were kept secret by monarchs to restrict geographic knowledge to government fleets.",
+        "type": "False",
+        "explanation": "Paragraph C directly contradicts this by stating that the printing press enabled navigational charts to be rapidly reproduced and distributed across the continent on an unprecedented scale.",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Dr. John Snow's famous 1854 cholera map was immediately copied by other European nations to stop outbreaks in Paris and Berlin.",
+        "prompt": "Dr. John Snow's mapping technique was immediately adopted by public health authorities across other European capitals.",
         "type": "Not Given",
-        "explanation": "Paragraph E discusses Dr. John Snow using a map to trace a cholera outbreak in London, but it provides absolutely no information regarding whether other European nations copied his methods to stop outbreaks in Paris or Berlin.",
+        "explanation": "Paragraph E describes Dr. Snow using spatial analysis to locate the contaminated pump during the 1854 London outbreak, but no details are provided regarding whether other European capitals adopted his method.",
         "found_in_paragraph": "E"
       }
     ]

@@ -7,7 +7,7 @@
     {
         "file": "reading_drills/agriculture_34.json",
         "topic": "The Vital Role of Honey Bees in Agriculture",
-        "difficulty": "Band 6.5"
+        "difficulty": "Band 7.5-8.0"
     },
     {
         "file": "reading_drills/archaeology_47.json",
@@ -82,22 +82,22 @@
     {
         "file": "reading_drills/environment_39.json",
         "topic": "The Biology and Dangers of the Great Barrier Reef",
-        "difficulty": "Band 6.5"
+        "difficulty": "Band 7.5"
     },
     {
         "file": "reading_drills/food_41.json",
-        "topic": "The Bitter Origins and Sweet History of Chocolate",
-        "difficulty": "Band 6.5"
+        "topic": "The History and Industrial Evolution of Chocolate",
+        "difficulty": "Band 7.0-7.5"
     },
     {
         "file": "reading_drills/geology_28.json",
         "topic": "The Formation of the Himalayas",
-        "difficulty": "Band 6.5"
+        "difficulty": "Band 7.0-7.5"
     },
     {
         "file": "reading_drills/geology_35.json",
         "topic": "The Sudden Destruction and Discovery of Pompeii",
-        "difficulty": "Band 6.5"
+        "difficulty": "Band 7.0-7.5"
     },
     {
         "file": "reading_drills/history_29.json",
@@ -206,7 +206,7 @@
     },
     {
         "file": "reading_drills/natgeo_wildlife_23.json",
-        "topic": "How to Save the Red Wolf From Going Extinct",
+        "topic": "How to Save the Red Wolf From Extinction",
         "difficulty": "Band 7.5"
     },
     {

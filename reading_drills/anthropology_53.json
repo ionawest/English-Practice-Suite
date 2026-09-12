@@ -1,0 +1,85 @@
+{
+  "id": "anthropology_49",
+  "topic": "Lucy and the Origins of Human Walking",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "For a very long time, scientists argued about how early human ancestors evolved. The biggest debate was about which biological change happened first. Some experts believed that early ancestors developed large, intelligent brains before they learned how to walk on two legs. Other experts believed that upright walking happened long before large brains developed. To find the answer, researchers needed to discover ancient bones."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "In 1974, a team of scientists was exploring the hot, dry desert of Ethiopia in East Africa. While walking through a rocky valley, they suddenly noticed a small piece of an arm bone lying in the dirt. After digging carefully for several weeks, they uncovered a massive collection of ancient bones belonging to a single individual. The lead American researcher who made this incredible discovery was Donald Johanson."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "When the team put the pieces together, they realized they had found nearly forty percent of a complete skeleton. Because a popular Beatles song was playing on the radio during their celebration party, they decided to give the skeleton a famous nickname. Today, this incredibly famous set of three-million-year-old bones is universally known as Lucy."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "By carefully studying the shape of her legs and hips, researchers solved the great evolutionary debate. The bones proved that she walked perfectly upright on two feet, exactly like modern humans. However, the size of her skull showed that she still possessed a very small brain, similar in size to a modern chimpanzee. This proved that upright walking definitely developed millions of years before advanced intelligence."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "This amazing discovery completely rewrote the history books. It showed that freeing the hands from walking was the crucial first step in human evolution. Because they no longer needed their hands to move around, our ancient ancestors could eventually start using tools, carrying food, and creating complex societies."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "The scientific debate about the timeline of human evolution", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Finding pieces of bone in an East African desert", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Assembling the skeleton and giving it a popular nickname", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "How the bones proved that walking came before large brains", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Why standing upright changed the future of the human species", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The high cost of paying diggers to explore the desert", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "How researchers accurately date ancient rocks", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who uncovered a massive collection of ancient bones while exploring a rocky valley in East Africa?",
+        "options": ["Donald Johanson", "Lucy", "The Beatles", "Chimpanzees"],
+        "correct": "Donald Johanson",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "What famous nickname was given to the three-million-year-old skeleton by the celebrating researchers?",
+        "options": ["Lucy", "Donald Johanson", "The Beatles", "Chimpanzees"],
+        "correct": "Lucy",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "What animal possesses a small brain roughly equivalent in size to the one found in the ancient skull?",
+        "options": ["Chimpanzees", "Lucy", "Donald Johanson", "The Beatles"],
+        "correct": "Chimpanzees",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The discovery confirmed the theory that human ancestors developed advanced intelligence before they learned to walk on two legs.",
+        "type": "False",
+        "explanation": "Paragraph D states the exact opposite: 'This proved that upright walking definitely developed millions of years before advanced intelligence.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "The research team was able to recover exactly one hundred percent of the bones belonging to the ancient skeleton.",
+        "type": "False",
+        "explanation": "Paragraph C states that they found 'nearly forty percent of a complete skeleton', meaning the majority of the bones were still missing.",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "The skeleton was eventually transported to a popular natural history museum in the United States.",
+        "type": "Not Given",
+        "explanation": "The text discusses the discovery of the bones and what they proved about evolution, but it provides absolutely no information regarding which museum the skeleton is currently kept in.",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

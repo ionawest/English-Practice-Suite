@@ -5,56 +5,106 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "For hundreds of years, the massive monuments and pyramids of ancient Egypt stood as a total mystery to modern historians. The walls of these old buildings were covered in beautiful picture writing, but no living person knew how to read it. The knowledge of how to translate these ancient pictures had been completely lost for over a thousand years. This beautiful, mysterious writing system is known as hieroglyphics."
+      "content": "Having endured for millennia across the Nile valley, the architectural monuments of ancient Egypt posed a persistent enigma to modern historians due to an unreadable script. Adorning the stone walls of these structures were intricate pictorial symbols, the comprehension of which had been entirely lost following the collapse of classical civilization. Consequently, the complex linguistic system known as hieroglyphics remained completely indecipherable for over a millennium."
     },
     {
       "paragraph_id": "B",
-      "content": "The key to unlocking this ancient mystery was found completely by accident. In 1799, a military army was traveling through Egypt and decided to rebuild an old, broken fort near the town of Rosetta. While digging in the dirt to build a stronger wall, a large, dark piece of rock was discovered by a group of French soldiers. They immediately noticed that the heavy rock was covered in strange writing."
+      "content": "The resolution to this long-standing linguistic obstacle occurred fortuitously during a military expedition. While reinforcing the defensive foundations of an old fortification in the vicinity of the coastal settlement of Rosetta in 1799, an inscribed basalt slab was unearthed by French military engineers. Upon closer inspection, these troops observed that the heavy stone featured several distinct lines of engraved text."
     },
     {
       "paragraph_id": "C",
-      "content": "When experts examined the heavy stone, they realized it was a very special document. The exact same message was carved into the rock three different times using three different languages. The top section was written in ancient hieroglyphics, the middle section used a common Egyptian script, and the bottom section was written in an old European language. This final language at the bottom of the stone was ancient Greek."
+      "content": "Detailed scholarly analysis subsequently revealed that the artifact contained a singular administrative decree transcribed in three separate scripts. Located at the apex of the monument was the official hieroglyphic text, followed in the central register by Demotic, a daily cursive script, and concluded at the base by ancient Greek. Because this final European language was already well understood by contemporary scholars, the artifact provided a parallel text for systematic comparison."
     },
     {
       "paragraph_id": "D",
-      "content": "Because modern historians could already read ancient Greek, they finally had a way to translate the Egyptian pictures. For decades, many smart people tried to decode the text without success. Finally, a brilliant scholar realized that the Egyptian pictures represented individual sounds rather than whole words. The man who successfully unlocked the secret of ancient Egyptian writing was Jean-François Champollion."
+      "content": "Despite the initial enthusiasm surrounding this bilingual key, comprehensive translation required decades of intense intellectual effort. Reversing the prevailing assumption that the characters were purely ideographic, it was ultimately determined that the symbols possessed phonetic values corresponding to spoken sounds. This decisive breakthrough in structural linguistics was achieved in the 1820s by the French philologist Jean-François Champollion."
     },
     {
       "paragraph_id": "E",
-      "content": "Today, the Rosetta Stone is considered one of the most important historical objects ever discovered. By providing the key to the ancient language, it allowed historians to finally read the stories of the pharaohs and understand the true history of Egypt. After the French army lost a major war, the famous stone was taken to London, England. It has been on display for the public since 1802 at the British Museum."
+      "content": "Following the military defeat and surrender of Napoleon's forces in North Africa, ownership of the artifact was transferred to Great Britain under diplomatic terms. Housed continuously for public view in London since 1802 at the British Museum, the Rosetta Stone remains a foundational icon in archaeological science, having facilitated the systematic reconstruction of ancient Egyptian history."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The lost knowledge of an ancient picture language", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "An accidental discovery in the dirt during a military trip", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "A single message written in three different languages", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "The brilliant scholar who finally decoded the pictures", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "The historical importance and current location of the stone", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "How ancient Egyptians built the great pyramids", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "The financial value of ancient gold coins", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "An account of the long-standing incomprehensibility of Egyptian script",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "An accidental discovery during military fortification work",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "A structural description of the trilingual inscription",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "A breakthrough in understanding the phonetic nature of the symbols",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "The historical relocation and enduring legacy of the artifact",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "An analysis of architectural techniques used in pyramid construction",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "An examination of economic trade routes across North Africa",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
     "questions": [
       {
-        "prompt": "Who successfully unlocked the secret of the pictures by realizing they represented individual sounds?",
-        "options": ["Jean-François Champollion", "French soldiers", "The British Museum", "Egyptian pharaohs"],
+        "prompt": "Who deduced that Egyptian hieroglyphics functioned phonetically rather than purely ideographically?",
+        "options": [
+          "Jean-François Champollion",
+          "French military engineers",
+          "The British Museum",
+          "Napoleon's forces"
+        ],
         "correct": "Jean-François Champollion",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "What famous institution has publicly displayed the stone in London since 1802?",
-        "options": ["French soldiers", "The British Museum", "Jean-François Champollion", "Egyptian pharaohs"],
+        "prompt": "Where has the physical artifact been made accessible to the public since 1802?",
+        "options": [
+          "French military engineers",
+          "The British Museum",
+          "Jean-François Champollion",
+          "Napoleon's forces"
+        ],
         "correct": "The British Museum",
         "found_in_paragraph": "E"
       },
       {
-        "prompt": "Who discovered the heavy rock covered in strange writing while rebuilding an old fort?",
-        "options": ["Jean-François Champollion", "Egyptian pharaohs", "The British Museum", "French soldiers"],
-        "correct": "French soldiers",
+        "prompt": "Which group of individuals initially uncovered the inscribed slab while undertaking construction work?",
+        "options": [
+          "Jean-François Champollion",
+          "Napoleon's forces",
+          "The British Museum",
+          "French military engineers"
+        ],
+        "correct": "French military engineers",
         "found_in_paragraph": "B"
       }
     ]
@@ -63,22 +113,22 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "The Rosetta Stone was found inside a hidden room inside the largest pyramid in Egypt.",
+        "prompt": "French military engineers discovered the Rosetta Stone during an intentional archaeological excavation.",
         "type": "False",
-        "explanation": "Paragraph B states that the stone was found in the dirt while soldiers were 'rebuilding an old, broken fort near the town of Rosetta.'",
+        "explanation": "Paragraph B states that the discovery occurred 'fortuitously' while soldiers were 'reinforcing the defensive foundations of an old fortification', not during a deliberate archaeological survey.",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "The exact same message was carved into the Rosetta Stone using three different languages.",
+        "prompt": "The three scripts present on the Rosetta Stone convey the exact same underlying decree.",
         "type": "True",
-        "explanation": "Paragraph C clearly states that 'The exact same message was carved into the rock three different times using three different languages.'",
+        "explanation": "Paragraph C explicitly confirms that the artifact 'contained a singular administrative decree transcribed in three separate scripts.'",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "The Rosetta Stone is currently the heaviest object on display in the British Museum.",
+        "prompt": "Jean-François Champollion was the sole scholar working on deciphering ancient Egyptian scripts during the 1820s.",
         "type": "Not Given",
-        "explanation": "Paragraph E mentions that the stone is on display at the British Museum, but it provides absolutely no information about whether it is the heaviest object in the building.",
-        "found_in_paragraph": "E"
+        "explanation": "Paragraph D mentions that deciphering required 'decades of intense intellectual effort' and names Champollion as making the breakthrough in the 1820s, but does not state that he was the only scholar working on it at that time.",
+        "found_in_paragraph": "D"
       }
     ]
   }

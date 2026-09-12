@@ -5,56 +5,106 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "Every year, one specific animal experiences more daylight than any other creature on Earth. To do this, it travels from its breeding grounds in the high Arctic all the way to the frozen ice of Antarctica, and then returns. This massive annual journey, which often covers more than 70,000 kilometers, is completed by a small seabird. It is known to biologists as the Arctic Tern."
+      "content": "By undertaking an annual journey that frequently exceeds 70,000 kilometers between northern breeding grounds and the Antarctic pack ice, a particular species of seabird experiences more annual daylight than any other organism on Earth. Known to researchers as the Arctic Tern, this small bird completes a massive trans-hemispheric migration every year."
     },
     {
       "paragraph_id": "B",
-      "content": "To survive this long flight, the bird relies on several important physical features. Because it weighs very little, the bird requires much less energy to stay in the air. Furthermore, instead of continuously flapping its wings, it uses long, pointed wings designed to catch the wind. This efficient body shape allows the bird to glide over the ocean for hundreds of kilometers without getting tired."
+      "content": "Sustaining such an arduous flight relies on distinct anatomical adaptations. Having a minimal body mass significantly reduces the energy expenditure required for prolonged active flight. Furthermore, rather than maintaining continuous wing movement, efficient aerodynamic gliding over vast oceanic expanses is facilitated by long, narrow wings adapted to harness prevailing wind currents."
     },
     {
       "paragraph_id": "C",
-      "content": "Scientists have long wondered how these birds know exactly where to go. Because they travel across empty oceans, they cannot use visual landmarks like mountains or trees to find their way. Instead, researchers believe that the migration is guided by an internal biological compass. By feeling the invisible magnetic fields of the Earth, the birds can navigate the open water with incredible accuracy."
+      "content": "Navigating across featureless oceanic regions where visual landmarks such as coastal topography are absent presents a major physiological challenge. It is hypothesised by marine biologists that an internal biological mechanism directs this movement. Through the detection of geomagnetic field variations, accurate navigation over open water is achieved without reliance on terrestrial reference points."
     },
     {
       "paragraph_id": "D",
-      "content": "Rather than flying in a straight line from north to south, the bird's travel route is actually highly curved. This specific path is chosen so the birds can follow global ocean currents where food is easy to find. During the journey, they survive by diving into the water to catch small fish. They also eat huge amounts of a tiny, shrimp-like ocean animal known as krill."
+      "content": "Instead of following a direct latitudinal trajectory, the transit route exhibits significant curvature, aligned primarily with major marine currents rich in prey. Foraging during flight, these birds submerge to capture small fish and consume substantial quantities of marine crustaceans commonly referred to as krill."
     },
     {
       "paragraph_id": "E",
-      "content": "Unfortunately, this ancient travel route is facing modern problems. As global ocean temperatures rise, the cold-water fish and krill that the birds eat are moving to different areas. As a result, these small birds must now fly even further away from their normal path to find enough food. If these ocean food sources continue to move or disappear, the world’s longest animal migration could be in serious danger."
+      "content": "Recent environmental changes pose a severe threat to this established migratory corridor. Driven by increases in sea surface temperatures, key prey distributions—including cold-water fish species and krill populations—are shifting geographically. Consequently, extended flight deviations from traditional routes are increasingly necessary for energetic maintenance, jeopardising the long-term viability of the migration."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "Introducing the longest annual trip in the animal kingdom", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "The physical features that make long flights possible", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "Using the Earth's natural forces to navigate empty oceans", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "Following ocean currents to find reliable food", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "How rising temperatures are changing the migration path", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The dangers of commercial fishing in the Arctic", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "Why coastal wind currents are slowing down globally", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "A description of the longest annual migration in the animal kingdom",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "An analysis of physical adaptations facilitating long-distance flight",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "An explanation of navigation mechanisms across featureless environments",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "The influence of ocean currents on flight paths and foraging",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "The impact of rising sea temperatures on migratory routes",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "The effects of commercial fishing on Arctic bird populations",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "A comparison of coastal wind patterns across hemispheres",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
     "questions": [
       {
-        "prompt": "What relies on long, pointed wings to catch the wind and glide over the ocean?",
-        "options": ["The Arctic Tern", "Krill", "Magnetic fields", "Cold-water fish"],
+        "prompt": "Which organism is identified as completing an annual journey exceeding 70,000 kilometers?",
+        "options": [
+          "The Arctic Tern",
+          "Krill",
+          "Geomagnetic fields",
+          "Cold-water fish"
+        ],
         "correct": "The Arctic Tern",
-        "found_in_paragraph": "B"
+        "found_in_paragraph": "A"
       },
       {
-        "prompt": "What tiny, shrimp-like ocean animal is eaten in huge amounts by migrating seabirds?",
-        "options": ["Magnetic fields", "The Arctic Tern", "Cold-water fish", "Krill"],
+        "prompt": "What marine organism forms a primary component of the bird's diet along the curved flight route?",
+        "options": [
+          "Geomagnetic fields",
+          "The Arctic Tern",
+          "Cold-water fish",
+          "Krill"
+        ],
         "correct": "Krill",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "What invisible natural forces are felt by the birds to act as an internal biological compass?",
-        "options": ["Krill", "Magnetic fields", "The Arctic Tern", "Cold-water fish"],
-        "correct": "Magnetic fields",
+        "prompt": "What natural phenomenon is detected by the birds to enable precise open-ocean navigation?",
+        "options": [
+          "Krill",
+          "Geomagnetic fields",
+          "The Arctic Tern",
+          "Cold-water fish"
+        ],
+        "correct": "Geomagnetic fields",
         "found_in_paragraph": "C"
       }
     ]
@@ -63,22 +113,22 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "The Arctic Tern navigates across the ocean by following visual landmarks like mountains and trees.",
+        "prompt": "The Arctic Tern relies exclusively on coastal topography to navigate across open oceans.",
         "type": "False",
-        "explanation": "Paragraph C states the opposite: 'Because they travel across empty oceans, they cannot use visual landmarks like mountains or trees to find their way.'",
+        "explanation": "Paragraph C explicitly states that visual landmarks such as coastal topography are absent over open water and navigation is achieved 'without reliance on terrestrial reference points.'",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "The Arctic Tern's travel route from north to south is highly curved.",
-        "type": "True",
-        "explanation": "Paragraph D confirms that 'Rather than flying in a straight line from north to south, the bird's travel route is actually highly curved.'",
+        "prompt": "The trajectory taken by the Arctic Tern during migration follows a direct line from north to south.",
+        "type": "False",
+        "explanation": "Paragraph D states that 'Instead of following a direct latitudinal trajectory, the transit route exhibits significant curvature.'",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "Adult Arctic Terns usually live for around 20 years in the wild.",
+        "prompt": "Rising ocean temperatures have caused a permanent reduction in the overall population size of Arctic Terns.",
         "type": "Not Given",
-        "explanation": "The text discusses the bird's migration, diet, and physical features, but it provides no information about how long the birds live.",
-        "found_in_paragraph": "C"
+        "explanation": "Paragraph E discusses how rising temperatures force birds to deviate from their routes to find food, jeopardising the viability of the migration, but does not mention whether the total population size has permanently decreased.",
+        "found_in_paragraph": "E"
       }
     ]
   }

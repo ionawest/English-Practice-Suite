@@ -1,37 +1,37 @@
 {
   "id": "history_20",
   "topic": "The Evolution of Kingdoms: From Absolute Rule to Constitutional Monarchy",
-  "difficulty": "Band 7.5",
+  "difficulty": "Band 7.0",
   "text": [
     {
       "paragraph_id": "A",
-      "content": "Originating around 3000 B.C.E., the earliest monarchical societies emerged when localized leaders began conquering adjacent settlements to form centralized states. In exchange for providing military protection, these early rulers demanded regular tax payments and labor from their subjects. The construction of complex irrigation canals and massive temples known as ziggurats was famously undertaken by one of these foundational civilizations. Located between the Tigris and Euphrates Rivers in modern-day Iraq, this ancient kingdom was known as Sumer."
+      "content": "Dating back to around 3000 B.C.E., early monarchical societies began to form as regional leaders expanded their power by taking control of neighboring settlements. In return for offering military security, these emerging rulers required regular tax payments and forced labor from the local population. Under these early governments, the construction of extensive irrigation networks and large stepped temples became widespread. Situated in the fertile region between the Tigris and Euphrates Rivers, this prominent early civilization was known as Sumer."
     },
     {
       "paragraph_id": "B",
-      "content": "During the medieval period, highly sophisticated monarchies emerged well beyond the borders of Europe. Relying on extensive trans-Saharan trade routes, major hubs for the exchange of gold, salt, and cultural ideas flourished across the African continent. A massive kingdom stretching from the Atlantic coast to the inland regions of southeast Africa was established around 1200. This wealthy trading empire, which uniquely possessed its own domestic gold mines, was successfully consolidated under the leadership of King Sundiata."
+      "content": "Far beyond the traditional political boundaries of medieval Europe, highly organized monarchies developed across other regions of the world. By taking advantage of extensive trade networks across the Sahara Desert, prosperous commercial cities specializing in the exchange of gold and salt flourished across the African continent. Extending from the Atlantic coast far into inland territories, an extensive state emerged around 1200. Uniquely distinguished by its direct access to domestic gold deposits, this wealthy trading empire was gradually united under the rule of King Sundiata."
     },
     {
       "paragraph_id": "C",
-      "content": "As global exploration expanded in the 15th century, monarchies began establishing complex diplomatic and commercial ties with distant territories. While some Asian kingdoms strictly rejected European interference, foreign concepts of free trade and domestic manufacturing were deliberately utilized to modernize a major Southeast Asian nation. This period of rapid integration, which included the establishment of the region's first newspaper, was spearheaded by the progressive leader of Siam, King Mongkut."
+      "content": "Following the expansion of global ocean routes during the 15th century, monarchs increasingly formed diplomatic and commercial relationships with distant powers. Although several Asian states resisted Western influence entirely, foreign models of international trade and industrial production were deliberately adopted to reform one prominent Southeast Asian kingdom. Accompanied by significant social developments such as the publication of the region's first newspaper, this fast-paced modernization effort was initiated by the ruler of Siam, King Mongkut."
     },
     {
       "paragraph_id": "D",
-      "content": "Today, the political structure of monarchies has evolved significantly. While a small minority of nations, such as Saudi Arabia and Brunei, are still governed by absolute monarchs who retain final political authority, the vast majority have transitioned to constitutional systems. Under a constitutional monarchy, a nation is formally governed by an elected legislature and an executive prime minister, while the royal family is largely restricted to ceremonial duties and the promotion of national culture."
+      "content": "In the modern era, the structural organization of monarchies has undergone a major transformation. Although absolute authority remains intact in a limited number of states, such as Saudi Arabia, most contemporary sovereign nations have adopted constitutional frameworks instead. Within a typical constitutional system, official governance and lawmaking are carried out by an elected parliament and a prime minister. In these modern systems, the monarch's role is typically confined to symbolic functions and cultural duties."
     },
     {
       "paragraph_id": "E",
-      "content": "Even within constitutional systems, modern monarchs can occasionally exert considerable informal influence over national politics. For example, a formal transition from an absolute monarchy to a democratic system with elected leaders occurred in Thailand in 1932. Despite this legal restriction on royal power, tremendous public support and occasional political intervention were hallmarks of the nation's longest-serving modern monarch. His name was King Bhumibol Adulyadej. Following his death, however, the exact political role of the monarchy has become increasingly uncertain."
+      "content": "Despite the formal restrictions imposed by constitutional structures, individual monarchs can still exercise substantial informal influence over state affairs. Following the transition from an absolute system to a representative government in Thailand in 1932, executive power was officially transferred to elected officials. Nevertheless, immense public respect and periodic political mediation characterized the reign of the country's longest-serving contemporary ruler, King Bhumibol Adulyadej. Since his passing, however, the long-term political trajectory of the monarchy has remained a subject of ongoing debate."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The emergence and infrastructure of the earliest centralized states", "isDistractor": false, "matches": "A" },
+      { "id": "h1", "text": "The emergence and infrastructure of early centralized states", "isDistractor": false, "matches": "A" },
       { "id": "h2", "text": "The economic foundations of medieval African trading empires", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "Utilizing foreign concepts to proactively modernize a nation", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "The global transition toward ceremonial and constitutional leadership", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "The enduring informal political influence of modern monarchs", "isDistractor": false, "matches": "E" },
+      { "id": "h3", "text": "Using foreign concepts to modernize an independent nation", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The modern shift towards ceremonial and constitutional systems", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The informal political influence retained by contemporary royalty", "isDistractor": false, "matches": "E" },
       { "id": "h6", "text": "The military collapse of early democratic governments", "isDistractor": true, "matches": null },
       { "id": "h7", "text": "The financial burden of maintaining ceremonial royal families", "isDistractor": true, "matches": null }
     ]
@@ -40,20 +40,35 @@
     "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
     "questions": [
       {
-        "prompt": "Which ancient kingdom famously undertook the construction of complex irrigation canals and massive temples known as ziggurats?",
-        "options": ["King Sundiata", "King Bhumibol Adulyadej", "King Mongkut", "Sumer"],
+        "prompt": "Which early civilization was responsible for building large water-management systems and stepped religious monuments?",
+        "options": [
+          "King Sundiata",
+          "King Bhumibol Adulyadej",
+          "King Mongkut",
+          "Sumer"
+        ],
         "correct": "Sumer",
         "found_in_paragraph": "A"
       },
       {
-        "prompt": "Who successfully consolidated a wealthy African trading empire that uniquely possessed its own domestic gold mines?",
-        "options": ["Sumer", "King Sundiata", "King Mongkut", "King Bhumibol Adulyadej"],
+        "prompt": "Which ruler united a prosperous commercial state that had local access to precious metals?",
+        "options": [
+          "Sumer",
+          "King Sundiata",
+          "King Mongkut",
+          "King Bhumibol Adulyadej"
+        ],
         "correct": "King Sundiata",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "Who spearheaded a period of rapid integration by deliberately utilizing foreign concepts of free trade to modernize Siam?",
-        "options": ["King Mongkut", "Sumer", "King Sundiata", "King Bhumibol Adulyadej"],
+        "prompt": "Which monarch initiated a fast-paced modernization effort by introducing overseas practices into his nation?",
+        "options": [
+          "King Mongkut",
+          "Sumer",
+          "King Sundiata",
+          "King Bhumibol Adulyadej"
+        ],
         "correct": "King Mongkut",
         "found_in_paragraph": "C"
       }
@@ -63,21 +78,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "In a modern constitutional monarchy, the royal family retains the final legal authority to create and enforce national laws.",
+        "prompt": "In contemporary constitutional systems, the ruling monarch typically retains the power to draft and pass new legislation.",
         "type": "False",
-        "explanation": "Paragraph D states the opposite: under a constitutional monarchy, the nation is 'formally governed by an elected legislature and an executive prime minister,' while the royal family is 'largely restricted to ceremonial duties.'",
+        "explanation": "Paragraph D states that in a constitutional system, 'official governance and lawmaking are carried out by an elected parliament and a prime minister', while the monarch is confined to symbolic functions.",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "The medieval African empire consolidated around 1200 was notable for containing active gold mines within its own territorial borders.",
-        "type": "True",
-        "explanation": "Paragraph B explicitly confirms this, describing it as a 'wealthy trading empire, which uniquely possessed its own domestic gold mines.'",
+        "prompt": "The trading empire established in West Africa around 1200 relied entirely on importing gold from other regions.",
+        "type": "False",
+        "explanation": "Paragraph B states the exact opposite, noting the empire was 'uniquely distinguished by its direct access to domestic gold deposits.'",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "King Mongkut traveled extensively throughout Europe to study the printing press before establishing Siam's first newspaper.",
+        "prompt": "King Mongkut faced strong political opposition from his citizens when he introduced the first local newspaper.",
         "type": "Not Given",
-        "explanation": "Paragraph C notes that King Mongkut spearheaded modernization and the establishment of the region's first newspaper, but it provides absolutely no information regarding him traveling to Europe to study printing presses.",
+        "explanation": "Paragraph C mentions the publication of the region's first newspaper under King Mongkut's rule, but it provides no information regarding whether the public opposed or supported it.",
         "found_in_paragraph": "C"
       }
     ]

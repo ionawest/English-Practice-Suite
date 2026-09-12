@@ -5,54 +5,54 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "Craig Gidney, a researcher at Google Quantum AI, is currently working on implementing what could be the world’s most dangerous algorithm. If successful, his work could unleash a crisis known as Q-Day, a theoretical moment when it will suddenly become possible to rapidly crack the encryption systems that secure global private data. Despite his relatively low public profile and refusal to give keynote lectures, his pioneering optimization of quantum circuits is forcing the international cybersecurity industry to confront this impending threat much earlier than anticipated."
+      "content": "In the highly specialized field of advanced computing, the race to build the next generation of hardware is accelerating. Currently striving to implement what many consider the world's most perilous algorithm is a lead researcher at Google Quantum AI, Craig Gidney. If his research is successful, it could trigger an event known as Q-Day—a theoretical tipping point where it suddenly becomes possible to shatter the encryption systems safeguarding global digital data. Although he maintains a low public profile, his pioneering work on quantum circuits is forcing the cybersecurity industry to prepare for this threat much earlier than initially anticipated."
     },
     {
       "paragraph_id": "B",
-      "content": "Today, much of our private digital infrastructure is protected by encryption systems that conventional computers simply cannot break. However, in 1994, a theoretical framework proving that a sufficiently powerful quantum machine could effortlessly break these mathematical barriers was published by a researcher at the Massachusetts Institute of Technology. His name was Peter Shor. Consequently, the countdown to a global cryptographic collapse is essentially a countdown to a physical machine successfully running his famous algorithm."
+      "content": "At present, the vast majority of private digital infrastructure relies on complex mathematical encryption systems that traditional computers are simply unable to crack. However, the academic community has known about the vulnerability of these systems for decades. Publishing the foundational theoretical paper which demonstrated that a sufficiently advanced quantum system could break modern encryption was a researcher at the Massachusetts Institute of Technology, Peter Shor. Ever since his breakthrough in 1994, the countdown to a widespread failure of modern digital security has essentially been a timeline leading to a physical machine running his algorithm."
     },
     {
       "paragraph_id": "C",
-      "content": "To accelerate this timeline, Gidney translates complex quantum operations into three-dimensional, color-coded diagrams, allowing him to heavily optimize the circuits. Recently, his team estimated that this algorithm could be run with just 500,000 qubits, representing a massive hardware reduction from previous estimates of 100 million. To protect global security, the initial publication deliberately omitted specific configuration details of these quantum circuits. However, these hidden mathematical gaps were successfully deciphered and published just three months later. This remarkable achievement was completed by André Schrottenloher at the Inria Centre at Rennes University."
+      "content": "By translating complex quantum operations into three-dimensional visual diagrams, Gidney and his team have significantly increased circuit efficiency. According to recent calculations, running this code-breaking algorithm might require as few as 500,000 qubits, a massive reduction from earlier estimates of 100 million. To prevent immediate security threats, specific configuration details were deliberately omitted from their initial publication. Nevertheless, successfully analyzing and publishing these missing mathematical elements within three months of the initial release was a computer scientist based at the Inria Centre at Rennes University, André Schrottenloher."
     },
     {
       "paragraph_id": "D",
-      "content": "Rather than intending to cause global chaos, Gidney hopes his research will force major organizations to upgrade their security infrastructure before quantum computers fully mature. Recognizing this impending crisis, new 'post-quantum' encryption algorithms have been rigorously tested since 2017 by a major American regulatory body. The National Institute of Standards and Technology, aiming to establish reliable global standards, recently announced several viable protections. Nevertheless, implementing these new safety measures across the internet will require immense financial and engineering resources."
+      "content": "Far from intending to cause widespread disruption, Gidney hopes his discoveries will force major institutions to upgrade their security networks before quantum hardware fully matures. Evaluating new post-quantum encryption standards since 2017 to address this impending crisis is a major American regulatory body known as the National Institute of Standards and Technology. The agency recently introduced several viable protective measures. However, implementing these complex safeguards across global networks will demand massive financial investment and specialized technical expertise."
     },
     {
       "paragraph_id": "E",
-      "content": "Despite the alarming implications of his research, Gidney maintains an unwavering positivity regarding the general future of quantum technology. Interestingly, his primary concern about his own career does not stem from quantum hardware, but rather from the rapid advancement of artificial intelligence. When asked if he will still be manually optimizing quantum circuits a decade from now, he expresses profound uncertainty. He suspects that within a few years, large language models may possess the capability to automatically generate circuit optimizations that human engineers cannot even conceptualize."
+      "content": "Despite the serious implications of his work, Gidney maintains a remarkably optimistic outlook on the future of quantum technology. Interestingly, his primary concern regarding his own professional future involves the rapid growth of artificial intelligence rather than physical hardware development. When asked whether manual circuit optimization will still form part of his role in ten years, he expresses complete uncertainty. Within a few short years, sophisticated language models may be capable of generating circuit designs that human engineers cannot easily conceptualize."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The potential threat posed by optimizing a dangerous algorithm", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "The theoretical foundation of quantum code-breaking", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "Visualizing abstract mathematics to reduce hardware requirements", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "Prompting urgent developments in global cybersecurity", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "How artificial intelligence might eventually replace human engineers", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The financial collapse of modern technology companies", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "Why quantum computers will never be physically built", "isDistractor": true, "matches": null }
+      { "id": "h1", "text": "The potential threat of optimizing a dangerous code-breaking algorithm", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "The theoretical foundation of quantum vulnerability", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Reducing hardware requirements and the uncovering of missing data", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Regulatory efforts to establish new global security protocols", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "Predictions regarding the impact of artificial intelligence on engineering", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "The financial collapse of modern cybersecurity corporations", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "Why physical quantum devices are too dangerous to be produced", "isDistractor": true, "matches": null }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
     "questions": [
       {
-        "prompt": "Who successfully deciphered and published the hidden mathematical gaps regarding circuit configurations?",
+        "prompt": "Which researcher successfully decoded and published the mathematical elements that were intentionally left out of the original circuit design paper?",
         "options": ["Craig Gidney", "André Schrottenloher", "Peter Shor", "The National Institute of Standards and Technology"],
         "correct": "André Schrottenloher",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Who published a theoretical framework proving that powerful quantum machines could break modern mathematical barriers?",
+        "prompt": "Who authored the 1994 theoretical paper proving that advanced quantum systems could bypass traditional mathematical barriers?",
         "options": ["André Schrottenloher", "Craig Gidney", "The National Institute of Standards and Technology", "Peter Shor"],
         "correct": "Peter Shor",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "Which entity has been rigorously testing new 'post-quantum' encryption algorithms since 2017?",
+        "prompt": "Which specific regulatory organization has been tasked with assessing new protective standards for the post-quantum era?",
         "options": ["The National Institute of Standards and Technology", "Google Quantum AI", "The Inria Centre at Rennes University", "Massachusetts Institute of Technology"],
         "correct": "The National Institute of Standards and Technology",
         "found_in_paragraph": "D"
@@ -63,22 +63,22 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "The initial research paper published by Craig Gidney and his team deliberately excluded certain technical details to protect global security.",
-        "type": "True",
-        "explanation": "Paragraph C explicitly states that 'To protect global security, the initial publication deliberately omitted specific configuration details of these quantum circuits.'",
+        "prompt": "The initial research paper published by Gidney and his team included comprehensive configuration details to assist other scientists.",
+        "type": "False",
+        "explanation": "Paragraph C explicitly states that 'specific configuration details were deliberately omitted from their initial publication' to prevent security threats.",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Craig Gidney is absolutely confident that he will spend the next 15 years manually optimizing quantum circuits.",
+        "prompt": "The National Institute of Standards and Technology has successfully implemented post-quantum safeguards across all major global networks.",
         "type": "False",
-        "explanation": "Paragraph E states the opposite: 'When asked if he will still be manually optimizing quantum circuits a decade from now, he expresses profound uncertainty' due to the rise of artificial intelligence.",
-        "found_in_paragraph": "E"
+        "explanation": "Paragraph D states that the agency introduced viable measures, but 'implementing these complex safeguards across global networks will demand massive financial investment.' They have not been fully implemented yet.",
+        "found_in_paragraph": "D"
       },
       {
-        "prompt": "The National Institute of Standards and Technology is currently the highest-funded government agency in the United States.",
+        "prompt": "Craig Gidney anticipates that artificial intelligence will completely replace human hardware engineers within the next five years.",
         "type": "Not Given",
-        "explanation": "While Paragraph D mentions that the National Institute of Standards and Technology is testing encryption algorithms, it provides absolutely no information regarding its financial funding compared to other government agencies.",
-        "found_in_paragraph": "D"
+        "explanation": "Paragraph E notes that Gidney expresses 'complete uncertainty' about his role in ten years and suggests AI may generate designs, but it never states that he anticipates AI will completely replace engineers within a strict five-year timeframe.",
+        "found_in_paragraph": "E"
       }
     ]
   }

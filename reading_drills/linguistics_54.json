@@ -1,0 +1,85 @@
+{
+  "id": "linguistics_50",
+  "topic": "Esperanto: A Language Designed for Global Peace",
+  "difficulty": "Band 6.5",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "Throughout history, communication barriers have caused severe misunderstandings between different cultures. In the 19th century, a young doctor lived in a European city where the residents spoke four entirely different languages. He watched how this linguistic division constantly caused arguments, suspicion, and anger among his neighbors. He believed that if everyone in the world shared one neutral language, global peace could finally be achieved."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "To solve this problem, the doctor spent years sitting at his desk inventing an entirely new vocabulary and grammar system. He wanted to create a language that belonged to no specific country, meaning no nation would have an unfair cultural advantage. The idealistic doctor who published the first book detailing this constructed language in 1887 was named L.L. Zamenhof."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "The brilliance of this newly invented language was its incredible simplicity. While natural languages are filled with confusing exceptions and silent letters, this new system possessed perfectly regular grammar. There were absolutely no irregular verbs to memorize, and words were always pronounced exactly as they were spelled. Because it was so logical, a student could master the language known as Esperanto in just a few months."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "At first, the language spread rapidly across Europe, with thousands of clubs and magazines popping up. However, during the mid-20th century, the movement faced terrible danger. Dictators in both Germany and the Soviet Union became deeply suspicious of a language that encouraged international friendship and borderless communication. Consequently, many prominent speakers were actively persecuted or imprisoned during the Second World War."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Despite these historical tragedies, the constructed language completely survived and continues to thrive today. Thanks to the internet and modern language-learning applications, more than a million people across the globe currently speak it. While it never officially replaced natural languages as the doctor originally hoped, it remains a beautiful symbol of global unity and international cooperation."
+    }
+  ],
+  "stage_1_headings": {
+    "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
+    "options": [
+      { "id": "h1", "text": "How local language divisions inspired a dream of peace", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "An idealistic doctor invents a neutral, borderless vocabulary", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "The highly logical and simplified rules of the system", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "Political suspicion and the persecution of speakers", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The modern survival and digital revival of the community", "isDistractor": false, "matches": "E" },
+      { "id": "h6", "text": "Why memorizing irregular verbs improves brain health", "isDistractor": true, "matches": null },
+      { "id": "h7", "text": "The financial cost of publishing translated dictionaries", "isDistractor": true, "matches": null }
+    ]
+  },
+  "stage_2_scanning": {
+    "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
+    "questions": [
+      {
+        "prompt": "Who spent years at a desk inventing a neutral vocabulary system to eliminate unfair cultural advantages?",
+        "options": ["L.L. Zamenhof", "Esperanto", "Dictators", "European residents"],
+        "correct": "L.L. Zamenhof",
+        "found_in_paragraph": "B"
+      },
+      {
+        "prompt": "What logical system lacked confusing exceptions and allowed students to master its rules in just a few months?",
+        "options": ["Esperanto", "L.L. Zamenhof", "Dictators", "Natural languages"],
+        "correct": "Esperanto",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "Who actively imprisoned prominent speakers because they were deeply suspicious of international friendship?",
+        "options": ["Dictators", "L.L. Zamenhof", "European residents", "Internet users"],
+        "correct": "Dictators",
+        "found_in_paragraph": "D"
+      }
+    ]
+  },
+  "stage_3_logic": {
+    "instructions": "Are the following statements True, False, or Not Given according to the text?",
+    "questions": [
+      {
+        "prompt": "The newly invented language was incredibly difficult to learn because it contained thousands of confusing irregular verbs.",
+        "type": "False",
+        "explanation": "Paragraph C states the exact opposite: 'There were absolutely no irregular verbs to memorize... Because it was so logical, a student could master the language... in just a few months.'",
+        "found_in_paragraph": "C"
+      },
+      {
+        "prompt": "During the mid-20th century, certain political leaders viewed the borderless language as a dangerous threat.",
+        "type": "True",
+        "explanation": "Paragraph D confirms this, noting that dictators 'became deeply suspicious of a language that encouraged international friendship and borderless communication.'",
+        "found_in_paragraph": "D"
+      },
+      {
+        "prompt": "Today, Esperanto has successfully replaced English as the official language of international business.",
+        "type": "False",
+        "explanation": "Paragraph E explicitly states: 'While it never officially replaced natural languages as the doctor originally hoped, it remains a beautiful symbol of global unity.'",
+        "found_in_paragraph": "E"
+      }
+    ]
+  }
+}

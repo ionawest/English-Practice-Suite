@@ -5,55 +5,105 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "For thousands of years, the farmers living in the rich, northern valleys of China faced a terrible threat. The groups of fierce warriors who frequently rode horses across the northern borders to steal food and attack villages were known as nomadic tribes. To protect their land from these fast, dangerous horsemen, local Chinese leaders began building tall barriers out of dirt and wood along the border."
+      "content": "Throughout the agricultural settlements located across northern China, rural communities experienced sustained security threats from mobile pastoral groups operating beyond the frontier. Known historically as nomadic tribes, these horseback incursions aimed to seize agricultural yields and disrupt local settlements. Prompted by the necessity to safeguard agrarian resources, local regional administrators commenced the construction of earthen and timber defensive barriers along northern boundary zones."
     },
     {
       "paragraph_id": "B",
-      "content": "In 221 BC, the different regions of China were finally united into a single, powerful empire. To protect his new, massive country, the leader ordered that all the smaller, disconnected barriers be joined together into one massive, continuous wall. The fierce leader who originally ordered this unbelievable building project was China’s first emperor. His name was Qin Shi Huang."
+      "content": "Following the political unification of disparate territories into a centralized state in 221 BC, strategic defense requirements expanded significantly. To consolidate state security across newly acquired territories, the consolidation of previously isolated fortification lines into a singular continuous defensive structure was commanded by Qin Shi Huang, the initial imperial ruler of the unified state."
     },
     {
       "paragraph_id": "C",
-      "content": "Building a wall that stretched for thousands of kilometers was incredibly difficult. The ancient builders did not have modern machines, so everything had to be done by human hands. Millions of soldiers and poor farmers were forced to work in freezing mountains and hot deserts. They built the early wall by tightly packing local dirt and heavy stones together inside wooden frames, a method known as rammed earth."
+      "content": "Requiring substantial manual labor due to the complete absence of mechanical apparatus, the execution of this multi-thousand-kilometer engineering project relied upon conscripted laborers and military units working under extreme environmental conditions. Utilizing a technique categorized as rammed earth, early workforce members compacted local soil and aggregate within temporary timber shuttering to assemble structural foundations."
     },
     {
       "paragraph_id": "D",
-      "content": "Hundreds of years later, another group of leaders decided to completely rebuild the wall to make it even stronger. Instead of just packing dirt, they used millions of heavy stone bricks to create a massive military fortress. They added tall watchtowers so soldiers could safely shoot arrows at invading enemies. The powerful ruling family that completely rebuilt the wall using these strong bricks was the Ming Dynasty."
+      "content": "Centuries subsequent to these initial efforts, a comprehensive structural transformation was initiated to enhance defensive durability. Overseen by the administrative authority of the Ming Dynasty, construction shifted from compacted soil to durable kiln-fired brick and masonry work. Integrated along the upper ramparts were defensive watchtowers, which provided elevated vantage points for defending archers against hostile incursions."
     },
     {
       "paragraph_id": "E",
-      "content": "Today, the Great Wall of China is the longest human-made structure in the history of the world. While it is no longer used for military protection, it is an incredibly popular tourist attraction that brings millions of visitors to China every year. Although the natural weather has damaged some older sections, the brick walls built by the Ming Dynasty still stand strong, snaking beautifully across the green mountain tops."
+      "content": "Recognized presently as the most extensive anthropogenic structure globally, the site has transitioned from its original martial utility to become a major destination for international tourism. While environmental exposure has contributed to the degradation of peripheral segments, the masonry architecture produced during the Ming Dynasty remains largely intact across mountainous terrain."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The danger of horsemen and the first simple barriers", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "The first emperor and his order to connect the wall", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "The difficult human labor and the packed dirt method", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "Rebuilding a stronger fortress using stone bricks", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "The modern survival and tourism of the famous structure", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The high cost of buying a tourist ticket today", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "How modern machines quickly rebuild the broken walls", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "An account of early security threats and initial boundary defenses",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "A description of imperial unification and barrier integration",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "An outline of construction techniques and labor conditions",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "An explanation of structural upgrades implemented by a later dynasty",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "A summary of the modern functional shift and present structural state",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "A comparison of financial expenditures across historical periods",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "An analysis of modern machinery used in structural restoration",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific entity to its corresponding description.",
     "questions": [
       {
-        "prompt": "Who were the fierce warriors that frequently rode horses across the northern borders to attack farming villages?",
-        "options": ["Nomadic tribes", "Qin Shi Huang", "The Ming Dynasty", "Chinese farmers"],
+        "prompt": "Which pastoral groups conducted horseback incursions across northern boundary zones prior to territorial unification?",
+        "options": [
+          "Nomadic tribes",
+          "Qin Shi Huang",
+          "The Ming Dynasty",
+          "Agrarian administrators"
+        ],
         "correct": "Nomadic tribes",
         "found_in_paragraph": "A"
       },
       {
-        "prompt": "Who was the fierce leader that originally ordered all the smaller, disconnected barriers be joined together?",
-        "options": ["Qin Shi Huang", "Nomadic tribes", "The Ming Dynasty", "Chinese farmers"],
+        "prompt": "Which imperial ruler ordered the consolidation of disconnected defensive lines into a continuous wall?",
+        "options": [
+          "Qin Shi Huang",
+          "Nomadic tribes",
+          "The Ming Dynasty",
+          "Agrarian administrators"
+        ],
         "correct": "Qin Shi Huang",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "What was the powerful ruling family that completely rebuilt the wall using strong bricks and tall watchtowers?",
-        "options": ["The Ming Dynasty", "Qin Shi Huang", "Nomadic tribes", "Chinese farmers"],
+        "prompt": "Which ruling authority replaced compacted soil structures with kiln-fired brick and defensive watchtowers?",
+        "options": [
+          "The Ming Dynasty",
+          "Qin Shi Huang",
+          "Nomadic tribes",
+          "Agrarian administrators"
+        ],
         "correct": "The Ming Dynasty",
         "found_in_paragraph": "D"
       }
@@ -63,22 +113,22 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "The ancient builders used modern construction machines to lift the heavy stones into the mountains.",
+        "prompt": "Mechanized equipment was utilized to assist conscripted laborers in transporting materials across mountain regions.",
         "type": "False",
-        "explanation": "Paragraph C clearly states: 'The ancient builders did not have modern machines, so everything had to be done by human hands.'",
+        "explanation": "Paragraph C explicitly states that the project relied upon manual labor due to the complete absence of mechanical apparatus, contradicting the assertion that mechanized equipment was used.",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "The early version of the wall was built by tightly packing local dirt and heavy stones inside wooden frames.",
+        "prompt": "The rammed earth technique required laborers to compress local soil inside temporary wooden frames.",
         "type": "True",
-        "explanation": "Paragraph C confirms this, describing how they built the wall by 'tightly packing local dirt and heavy stones together inside wooden frames.'",
+        "explanation": "Paragraph C confirms that the rammed earth technique involved compacting local soil and aggregate within temporary timber shuttering.",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "The Great Wall of China is the most expensive building project in the history of the world.",
+        "prompt": "The total financial cost of constructing the Ming Dynasty brick sections exceeded that of earlier earthen structures.",
         "type": "Not Given",
-        "explanation": "The text mentions that it is the longest human-made structure in the world, but it provides no information comparing its financial cost to other historical building projects.",
-        "found_in_paragraph": "E"
+        "explanation": "While Paragraph D describes the transition from compacted soil to kiln-fired brick under the Ming Dynasty, no comparison regarding financial expenditure is provided in the text.",
+        "found_in_paragraph": "D"
       }
     ]
   }

@@ -5,55 +5,105 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "Born in London in 1815, Augusta Ada Byron was the only child of a famous British writer. Fearing that the child would inherit her father's wild behavior, Ada’s mother insisted on a very strict education. Instead of studying literature or poetry, the young girl was taught science and mathematics. This unusual education was specifically designed to distance her from the legacy of her father, the famous poet Lord Byron."
+      "content": "In an effort to prevent the inheritance of her father's erratic temperament, an intense educational curriculum emphasizing science and mathematics was mandated by the mother of Augusta Ada Byron, born in London in 1815 as the sole legitimate child of the famed romantic poet, Lord Byron. Rather than engaging with literary works or poetry, scientific principles and mathematical logic formed the core of her academic training. This rigorous foundation was structured explicitly to minimize the cultural legacy and influence of her father."
     },
     {
       "paragraph_id": "B",
-      "content": "As a young adult, Ada met many important scientists in London. During a party in 1833, she was shown a small model of a remarkable calculating machine. Fascinated by what it could do, she began a lifelong friendship with the man who built it. The complex machine, which used metal gears to solve math problems, was designed by the British inventor Charles Babbage. He called his invention the Analytical Engine."
+      "content": "Upon attending a social gathering in 1833, a working prototype of a mechanical calculating apparatus was demonstrated to the young scholar, introducing her to prominent members of the contemporary scientific community. Driven by a deep interest in the mechanism's operational capabilities, a long-term professional relationship commenced with its designer, the British innovator Charles Babbage. Known as the Analytical Engine, this intricate device utilized gear-based mechanisms to compute complex mathematical equations."
     },
     {
       "paragraph_id": "C",
-      "content": "A few years later, a detailed article about the Analytical Engine was published in a French scientific magazine. The original paper explaining how the machine worked was written by an Italian military engineer. His name was Luigi Menabrea. Because Babbage was too busy to translate the article himself, Ada was asked to translate the text into English. Since she understood the machine perfectly, she decided to add her own notes to the translation."
+      "content": "Following the publication of an extensive treatise on the Analytical Engine in a French academic journal—authored initially by the Italian military engineer Luigi Menabrea—a requirement arose for an English translation. Owing to Babbage’s preoccupation with other commitments, the translation task was assigned to Lovelace. Recognizing the broader potential of the system, she incorporated extensive personal annotations alongside the primary text."
     },
     {
       "paragraph_id": "D",
-      "content": "Ada’s added notes ended up being three times longer than the original article. In one specific section, she wrote a step-by-step mathematical plan for the Analytical Engine to calculate a sequence of numbers. Because this is the first published plan specifically written for a computing machine, Ada Lovelace is celebrated today as the world's first computer programmer."
+      "content": "Exceeding the original length of the source document threefold, the supplementary commentary compiled by Lovelace contained a comprehensive, sequential algorithm designed to calculate Bernoulli numbers via the Analytical Engine. Because this detailed formulation represents the earliest published instructions tailored specifically for an automated calculating apparatus, contemporary historians regard Lovelace as the pioneer of computer programming."
     },
     {
       "paragraph_id": "E",
-      "content": "While Babbage focused entirely on math, Ada possessed a much larger vision for the machine. She guessed that if a machine could understand numbers, it could eventually be programmed to understand other things, such as musical notes or letters. This brilliant idea, predicting that computers could eventually be used to create music and graphics, proved that her understanding of computing was a full century ahead of her time."
+      "content": "Whereas Babbage remained focused primarily on numeric computations, a significantly broader application for automated devices was conceptualized by Lovelace. Hypothesizing that symbols representing musical notes or textual characters could be manipulated provided numerical parameters were assigned, her theoretical insight anticipated non-mathematical computing capabilities by approximately a century."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "A strict education focused on science and math", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "Meeting the inventor of a mechanical calculator", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "Translating and adding to a foreign scientific article", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "Writing the world's first computer program", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "Predicting the creative future of modern computers", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The high cost of building early computers", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "How modern computers solve mathematical problems", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "An account of an educational strategy designed to counter parental influence",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "A description of an initial encounter with a mechanical device and its creator",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "An explanation of the circumstances leading to the translation of a scientific paper",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "A reference to the creation of the earliest documented computer algorithm",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "An outline of theoretical predictions regarding non-numerical computing applications",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "An analysis of the financial constraints associated with early computing hardware",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "A comparison between mathematical techniques used in modern digital processors",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific individual to their corresponding description or action.",
     "questions": [
       {
-        "prompt": "Who wrote the original French article explaining how the Analytical Engine worked?",
-        "options": ["Charles Babbage", "Lord Byron", "Luigi Menabrea", "Ada Lovelace"],
+        "prompt": "Which individual authored the original French journal publication regarding the Analytical Engine?",
+        "options": [
+          "Charles Babbage",
+          "Lord Byron",
+          "Luigi Menabrea",
+          "Ada Lovelace"
+        ],
         "correct": "Luigi Menabrea",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Who was a famous poet and the biological father of Ada Lovelace?",
-        "options": ["Charles Babbage", "Lord Byron", "Luigi Menabrea", "Ada Lovelace"],
+        "prompt": "Whose personal influence was the primary reason behind Lovelace’s specialized early education?",
+        "options": [
+          "Charles Babbage",
+          "Lord Byron",
+          "Luigi Menabrea",
+          "Ada Lovelace"
+        ],
         "correct": "Lord Byron",
         "found_in_paragraph": "A"
       },
       {
-        "prompt": "Who invented and designed the complex calculating machine known as the Analytical Engine?",
-        "options": ["Luigi Menabrea", "Lord Byron", "Charles Babbage", "Ada Lovelace"],
+        "prompt": "Who designed the mechanical device known as the Analytical Engine?",
+        "options": [
+          "Luigi Menabrea",
+          "Lord Byron",
+          "Charles Babbage",
+          "Ada Lovelace"
+        ],
         "correct": "Charles Babbage",
         "found_in_paragraph": "B"
       }
@@ -63,21 +113,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "Charles Babbage built a full-sized, working version of the Analytical Engine before he died.",
+        "prompt": "Charles Babbage was unable to complete the translation of the treatise exclusively because of his financial difficulties.",
         "type": "Not Given",
-        "explanation": "Paragraph B says Babbage showed Ada a 'small model' of the machine, but the text never mentions if he successfully built a full-sized version.",
-        "found_in_paragraph": "B"
+        "explanation": "Paragraph C states that Babbage did not translate the text 'owing to Babbage’s preoccupation with other commitments', but does not state or imply that financial difficulties were the reason.",
+        "found_in_paragraph": "C"
       },
       {
-        "prompt": "Ada Lovelace's personal notes on the Analytical Engine were significantly longer than the original article.",
-        "type": "True",
-        "explanation": "Paragraph D clearly states that 'Ada’s added notes ended up being three times longer than the original article.'",
+        "prompt": "The commentary added by Lovelace was significantly shorter in length than Menabrea’s original paper.",
+        "type": "False",
+        "explanation": "Paragraph D explicitly contradicts this statement, noting that Lovelace's commentary 'exceeded the original length of the source document threefold'.",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "Ada Lovelace believed that computing machines would only ever be used to solve math problems.",
-        "type": "False",
-        "explanation": "Paragraph E states the opposite: she guessed that the machine 'could eventually be programmed to understand other things, such as musical notes or letters.'",
+        "prompt": "Lovelace theorized that automated machinery could process non-numerical symbols provided they could be represented mathematically.",
+        "type": "True",
+        "explanation": "Paragraph E explicitly confirms that she hypothesized non-numerical symbols could be manipulated 'provided numerical parameters were assigned'.",
         "found_in_paragraph": "E"
       }
     ]

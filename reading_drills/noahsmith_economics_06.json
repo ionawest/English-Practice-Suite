@@ -5,54 +5,54 @@
   "text": [
     {
       "paragraph_id": "A",
-      "content": "During the early 2000s, Japan was widely perceived as the global center of futuristic technology. While Western nations were still transitioning from older electronics, Japanese society had already seamlessly integrated advanced digital appliances, mobile internet, and high-speed rail networks into daily life. This overwhelming sense of accelerated technological progress was famously documented by the creator of the cyberpunk science fiction genre, William Gibson. Observing the neon-lit urban landscape, he declared that the country had successfully emerged from a period of rapid change to firmly establish itself in the 21st century."
+      "content": "During the early 2000s, the global community frequently viewed Japan as the ultimate pioneer of futuristic technology. Long before Western nations upgraded their older electronic systems, advanced digital appliances, mobile internet, and high-speed rail networks had been seamlessly integrated into everyday Japanese society. Capturing this neon-lit transition into the 21st century in his cultural writings was the prominent science fiction author, William Gibson."
     },
     {
       "paragraph_id": "B",
-      "content": "Remarkably, this era of high-tech prosperity occurred a full decade after the infamous collapse of the Japanese asset price bubble. Rather than experiencing continuous decline, the nation enjoyed a prolonged period of slow but steady economic recovery. Full employment and stable economic growth were successfully restored during the administration of Prime Minister Koizumi Junichiro. Although overall growth appeared slower than in Western Europe, this was primarily caused by rapid population aging rather than systemic failure. When measured by productivity per worker, the nation’s economic performance actually outpaced many other advanced economies between 1990 and 2007."
+      "content": "Following the severe economic downturn triggered by the bursting of the asset price bubble, the nation underwent a slow but steady recovery. Spearheading the administration that oversaw this gradual restoration of full employment and stability was Prime Minister Koizumi Junichiro. Although the nation's overall growth appeared sluggish compared to Western Europe, this disparity was largely driven by a rapidly aging population rather than fundamental structural inefficiency. In fact, when measuring actual output per worker between 1990 and 2007, the country's economic performance surpassed several other developed nations."
     },
     {
       "paragraph_id": "C",
-      "content": "This economic stability directly translated into improved living standards for average citizens. The famously cramped housing of the post-war period gradually expanded, providing families with significantly larger living spaces. Furthermore, the domestic food market and daily home cooking were fundamentally revolutionized by large corporate grocery chains such as Aeon. Culturally, the nation maintained its position at the global cutting edge, exporting highly influential street fashion, animation, and digital media, thereby proving that the so-called 'lost decade' was actually a period of vital cultural innovation."
+      "content": "Reflecting this era of steady economic stability, daily living standards for the average citizen experienced measurable improvements. Moving away from the cramped housing of the post-war era, families gradually acquired significantly larger domestic spaces. Fundamentally transforming the distribution of food and daily home cooking across the nation was the major commercial retail chain, Aeon. On a cultural level, the nation maintained a fierce international influence through the export of street fashion and digital media, proving the era was rich in creative innovation."
     },
     {
       "paragraph_id": "D",
-      "content": "However, a definitive turning point occurred in 2008, after which genuine economic stagnation began to set in. Over the subsequent fifteen years, overall living standards barely grew, and the minimal growth that did occur was achieved entirely by increasing the number of people in the workforce, rather than through improvements in productivity. A combination of factors, including the global financial crisis, severe natural disasters, and the retirement of the Baby Boom generation, resulted in Japanese workers producing less per hour than they had a decade prior. Consequently, the nation began to lose its dominance in consumer electronics and automotive manufacturing to overseas competitors."
+      "content": "However, following the global financial crash in 2008, a distinct period of economic stagnation began to take hold. Over the subsequent fifteen years, average living standards saw minimal growth. Crucially, any financial gains achieved during this time resulted entirely from getting more people into the workforce rather than improving industrial efficiency. Compounded by severe natural disasters and the mass retirement of the Baby Boom generation, worker output per hour declined. Consequently, historic market share in consumer electronics and automotive manufacturing was increasingly lost to international competitors."
     },
     {
       "paragraph_id": "E",
-      "content": "Today, while major cities remain highly attractive, safe, and comfortable, the economic reality for the average family has become increasingly difficult. To cope with stagnant wages and a weakening currency, there has been a massive shift toward dual-income households. Unfortunately, this transition can only happen once; as the elderly population continues to grow, working-age citizens will be forced to toil longer hours simply to maintain their current lifestyle. Ultimately, securing a comfortable future for the population will require the country to reclaim its position at the forefront of global technological innovation."
+      "content": "While major urban centers continue to boast high standards of safety and convenience today, financial conditions for average families have become increasingly strained. To offset stagnant income levels and a depreciating currency, a widespread transition toward dual-income households has become the norm. Nevertheless, as the proportion of elderly citizens continues to swell, working-age individuals will be forced to extend their employment hours just to maintain their existing living standards. Ultimately, securing long-term economic stability will require the nation to return to the forefront of global technological innovation."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The international perception of a technologically advanced society", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "The successful restoration of growth despite demographic challenges", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "The cultural and material benefits of steady economic recovery", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "A sudden decline in productivity and global industrial dominance", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "The necessity of innovation to alleviate future economic burdens", "isDistractor": false, "matches": "E" },
+      { "id": "h1", "text": "International perspectives on a nation's technological leadership", "isDistractor": false, "matches": "A" },
+      { "id": "h2", "text": "Achieving economic recovery despite demographic hurdles", "isDistractor": false, "matches": "B" },
+      { "id": "h3", "text": "Material improvements and cultural influence in daily life", "isDistractor": false, "matches": "C" },
+      { "id": "h4", "text": "The causes behind declining productivity and lost market dominance", "isDistractor": false, "matches": "D" },
+      { "id": "h5", "text": "The domestic financial strain and the necessity for future innovation", "isDistractor": false, "matches": "E" },
       { "id": "h6", "text": "The environmental consequences of rapid technological expansion", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "The complete collapse of the global financial market", "isDistractor": true, "matches": null }
+      { "id": "h7", "text": "A detailed comparison of Asian and European automotive manufacturing", "isDistractor": true, "matches": null }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
     "questions": [
       {
-        "prompt": "Who successfully restored full employment and stable economic growth after the asset price bubble?",
+        "prompt": "Which political leader was at the forefront of the government that successfully brought back stable economic conditions and full employment?",
         "options": ["William Gibson", "Prime Minister Koizumi Junichiro", "Aeon", "The Baby Boom generation"],
         "correct": "Prime Minister Koizumi Junichiro",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "Which entity fundamentally revolutionized the domestic food market and daily home cooking?",
+        "prompt": "Which major retail corporation was responsible for fundamentally changing how food was distributed to households?",
         "options": ["Western Europe", "William Gibson", "Aeon", "Prime Minister Koizumi Junichiro"],
         "correct": "Aeon",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Who famously documented the overwhelming sense of accelerated technological progress in the early 2000s?",
+        "prompt": "Which famous author documented the country's seamless transition into a highly advanced digital society?",
         "options": ["Aeon", "Prime Minister Koizumi Junichiro", "The Baby Boom generation", "William Gibson"],
         "correct": "William Gibson",
         "found_in_paragraph": "A"
@@ -63,21 +63,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "Japan's slow overall economic growth between 1990 and 2007 was primarily caused by a severe lack of technological innovation.",
-        "type": "False",
-        "explanation": "Paragraph B states that the slower overall growth 'was primarily caused by rapid population aging rather than systemic failure', not a lack of innovation.",
+        "prompt": "The disparity in economic growth between Japan and Western Europe between 1990 and 2007 was fundamentally a result of an aging population.",
+        "type": "True",
+        "explanation": "Paragraph B confirms this, stating that the sluggish overall growth 'was largely driven by a rapidly aging population rather than fundamental structural inefficiency.'",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "The Japanese automotive industry currently receives massive financial subsidies from the national government to compete with overseas brands.",
-        "type": "Not Given",
-        "explanation": "Paragraph D mentions that the nation began to lose its dominance in automotive manufacturing to overseas competitors, but there is absolutely no mention of government financial subsidies.",
+        "prompt": "Following the 2008 financial crash, improvements in the national living standard were achieved primarily by expanding the size of the active workforce.",
+        "type": "True",
+        "explanation": "Paragraph D states that 'any financial gains achieved during this time resulted entirely from getting more people into the workforce rather than improving industrial efficiency.'",
         "found_in_paragraph": "D"
       },
       {
-        "prompt": "The minimal economic growth achieved after 2008 was the result of higher workforce participation rather than increased efficiency.",
-        "type": "True",
-        "explanation": "Paragraph D explicitly states that growth 'was achieved entirely by increasing the number of people in the workforce, rather than through improvements in productivity'.",
+        "prompt": "Japanese consumer electronics companies successfully retained their global market dominance despite the 2008 financial crash.",
+        "type": "False",
+        "explanation": "Paragraph D states the opposite: 'historic market share in consumer electronics and automotive manufacturing was increasingly lost to international competitors.'",
         "found_in_paragraph": "D"
       }
     ]

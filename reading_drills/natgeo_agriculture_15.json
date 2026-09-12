@@ -1,59 +1,109 @@
 {
   "id": "agriculture_14",
   "topic": "The Next Green Revolution: Genetics vs. Organic Agriculture",
-  "difficulty": "Band 7.5",
+  "difficulty": "Band 7.0",
   "text": [
     {
       "paragraph_id": "A",
-      "content": "In regions like sub-Saharan Africa, where small family farms produce the vast majority of food, the changing climate is making agricultural survival increasingly precarious. A catastrophic viral disease, which destroys the starchy root of the cassava plant before it can be harvested, is currently being spread by a growing population of whiteflies. The devastating impact of this agricultural crisis on subsistence farmers was recently observed firsthand on a small, failing plot in Tanzania owned by Ramadhani Juma."
+      "content": "In areas like sub-Saharan Africa, where most food comes from small family plots, unpredictable weather is making farming incredibly difficult. A destructive virus, which ruins the starchy roots of the cassava plant before they can be collected, is currently being spread by a rising population of insects. The terrible reality of this agricultural disaster was recently witnessed on a failing plot of land in Tanzania managed by Ramadhani Juma."
     },
     {
       "paragraph_id": "B",
-      "content": "To prevent a global food crisis as the human population expands toward 2050, agricultural experts are hoping to replicate the massive successes of the 20th century. During the 1960s, a dramatic increase in Asian crop yields was achieved through the selective breeding of dwarf wheat and rice varieties. The first of these high-yielding 'miracle' strains, which famously prevented widespread famine across India, was developed at the International Rice Research Institute (IRRI) by the plant pathologist Peter Jennings."
+      "content": "To avoid global food shortages as populations grow toward 2050, scientists are trying to repeat the massive agricultural victories of the 20th century. During the 1960s, crop production in Asia was dramatically increased by selectively breeding smaller, stronger varieties of wheat and rice. The very first of these highly productive 'miracle' crops, which successfully stopped widespread starvation across India, was created by a plant researcher at the International Rice Research Institute (IRRI) named Peter Jennings."
     },
     {
       "paragraph_id": "C",
-      "content": "Today, one proposed method for achieving a second agricultural revolution relies heavily on modern genetic modification. Proponents argue that transferring specific genes between unrelated species can create drought-resistant and pest-immune crops, thereby drastically reducing the need for toxic chemical sprays. A passionate defense of this biotechnology, arguing that the public debate has been unfairly muddled by environmental activists, has been repeatedly articulated by the current director of IRRI, Robert Zeigler."
+      "content": "Nowadays, one suggested method for starting a second farming revolution relies on modern genetic engineering. Supporters claim that moving specific genes between completely different species can create crops that survive droughts and resist bugs, greatly lowering the need for harmful chemical sprays. A strong defense of this laboratory technology, arguing that environmental groups have unfairly confused the public debate, has been frequently presented by the current director of IRRI, Robert Zeigler."
     },
     {
       "paragraph_id": "D",
-      "content": "However, an alternative vision for the future of farming completely rejects the use of expensive, patented seeds and synthetic fertilizers. By strategically planting a diverse mix of crops and utilizing natural compost, farmers can effectively deter pests while entirely liberating themselves from crippling financial debt. This low-tech, organic approach to agriculture is currently being taught to local farmers in the mountains of Tanzania by a young agricultural activist named Janet Maro."
+      "content": "On the other hand, an alternative approach to sustainable farming completely avoids expensive, patented seeds and artificial chemicals. By planting a wide variety of crops together and using natural soil treatments, farmers can naturally control insect populations while avoiding heavy financial debt. This low-cost, traditional method of farming is currently being taught to rural communities in the Tanzanian mountains by a young agricultural campaigner named Janet Maro."
     },
     {
       "paragraph_id": "E",
-      "content": "Ultimately, securing the global food supply will likely require a combination of both advanced genetics and ecological management. While organic farming provides vital financial relief for impoverished communities, genetic engineering remains a powerful tool for rapidly addressing sudden viral epidemics. Recognizing that no single technological approach can serve as a universal cure, modern researchers are increasingly combining traditional ecological knowledge with sophisticated laboratory science to build resilient agricultural systems."
+      "content": "In the end, guaranteeing a reliable global food supply will probably require a mix of both advanced genetics and natural ecological management. While organic methods offer necessary financial relief to poor communities, genetic tools provide a fast way to stop sudden outbreaks of plant diseases. Recognizing that a single approach cannot solve every problem, adaptable farming systems are now being developed by modern researchers who combine traditional field practices with complex laboratory science."
     }
   ],
   "stage_1_headings": {
     "instructions": "Match the correct function or central theme to each paragraph. There are two extra distractor headings.",
     "options": [
-      { "id": "h1", "text": "The devastating impact of climate-driven viral diseases on local agriculture", "isDistractor": false, "matches": "A" },
-      { "id": "h2", "text": "Replicating historical successes in selective plant breeding", "isDistractor": false, "matches": "B" },
-      { "id": "h3", "text": "The argument for utilizing genetic modification to protect crops", "isDistractor": false, "matches": "C" },
-      { "id": "h4", "text": "Empowering farmers through debt-free ecological practices", "isDistractor": false, "matches": "D" },
-      { "id": "h5", "text": "The necessity of combining diverse agricultural strategies", "isDistractor": false, "matches": "E" },
-      { "id": "h6", "text": "The financial collapse of international agricultural charities", "isDistractor": true, "matches": null },
-      { "id": "h7", "text": "Why synthetic fertilizers are superior to natural compost", "isDistractor": true, "matches": null }
+      {
+        "id": "h1",
+        "text": "The severe effects of a viral plant disease on local farmers",
+        "isDistractor": false,
+        "matches": "A"
+      },
+      {
+        "id": "h2",
+        "text": "Historical successes in breeding highly productive crops",
+        "isDistractor": false,
+        "matches": "B"
+      },
+      {
+        "id": "h3",
+        "text": "The case for using genetic modification to protect harvests",
+        "isDistractor": false,
+        "matches": "C"
+      },
+      {
+        "id": "h4",
+        "text": "Teaching farmers how to grow crops without expensive chemicals",
+        "isDistractor": false,
+        "matches": "D"
+      },
+      {
+        "id": "h5",
+        "text": "The need to merge modern science with traditional farming",
+        "isDistractor": false,
+        "matches": "E"
+      },
+      {
+        "id": "h6",
+        "text": "The financial collapse of global agricultural charities",
+        "isDistractor": true,
+        "matches": null
+      },
+      {
+        "id": "h7",
+        "text": "Why natural fertilizers fail to stop insect plagues",
+        "isDistractor": true,
+        "matches": null
+      }
     ]
   },
   "stage_2_scanning": {
     "instructions": "Scan the text rapidly. Match the specific individual or entity to their corresponding description or action.",
     "questions": [
       {
-        "prompt": "Who developed the high-yielding 'miracle' rice strain that famously prevented widespread famine across India?",
-        "options": ["Ramadhani Juma", "Janet Maro", "Peter Jennings", "Robert Zeigler"],
+        "prompt": "Which person successfully bred a new plant variety that prevented mass starvation in India?",
+        "options": [
+          "Ramadhani Juma",
+          "Janet Maro",
+          "Peter Jennings",
+          "Robert Zeigler"
+        ],
         "correct": "Peter Jennings",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "Who argued that the public debate surrounding biotechnology has been unfairly muddled by environmental activists?",
-        "options": ["Robert Zeigler", "Peter Jennings", "Janet Maro", "Ramadhani Juma"],
+        "prompt": "Which individual claims that environmental activists have deliberately misled the public conversation about biotechnology?",
+        "options": [
+          "Robert Zeigler",
+          "Peter Jennings",
+          "Janet Maro",
+          "Ramadhani Juma"
+        ],
         "correct": "Robert Zeigler",
         "found_in_paragraph": "C"
       },
       {
-        "prompt": "Which individual is currently teaching low-tech, organic agricultural methods to local farmers in the mountains of Tanzania?",
-        "options": ["Janet Maro", "Robert Zeigler", "Ramadhani Juma", "Peter Jennings"],
+        "prompt": "Who is currently instructing rural African communities on how to farm without falling into financial debt?",
+        "options": [
+          "Janet Maro",
+          "Robert Zeigler",
+          "Ramadhani Juma",
+          "Peter Jennings"
+        ],
         "correct": "Janet Maro",
         "found_in_paragraph": "D"
       }
@@ -63,21 +113,21 @@
     "instructions": "Are the following statements True, False, or Not Given according to the text?",
     "questions": [
       {
-        "prompt": "The viral disease currently affecting cassava plants destroys the edible root before the farmer is able to harvest it.",
+        "prompt": "The virus currently destroying cassava crops ruins the edible part of the plant before the harvest takes place.",
         "type": "True",
-        "explanation": "Paragraph A confirms this, stating that the disease 'destroys the starchy root of the cassava plant before it can be harvested.'",
+        "explanation": "Paragraph A states that the virus 'ruins the starchy roots of the cassava plant before they can be collected,' matching the prompt perfectly.",
         "found_in_paragraph": "A"
       },
       {
-        "prompt": "The high-yielding Asian crops developed during the 1960s were created by transferring genes between completely unrelated species.",
-        "type": "False",
-        "explanation": "Paragraph B states that the 1960s crops were created 'through the selective breeding of dwarf wheat and rice varieties.' Transferring genes between unrelated species is a modern proposed method mentioned later in Paragraph C.",
+        "prompt": "The highly productive crop varieties created in the 1960s were produced through selective breeding rather than modern genetic engineering.",
+        "type": "True",
+        "explanation": "Paragraph B explains that the 1960s crop production was increased 'by selectively breeding smaller, stronger varieties.' Genetic engineering is introduced as a modern method later in Paragraph C.",
         "found_in_paragraph": "B"
       },
       {
-        "prompt": "Janet Maro's organic farming program receives the majority of its funding directly from the Tanzanian government.",
+        "prompt": "Janet Maro's organic agricultural program is primarily funded by the Tanzanian government.",
         "type": "Not Given",
-        "explanation": "Paragraph D discusses Janet Maro teaching organic agriculture to local farmers, but it provides absolutely no information regarding where her program receives its funding.",
+        "explanation": "Paragraph D discusses Janet Maro teaching organic agriculture to communities in the Tanzanian mountains, but it provides no information regarding where her funding comes from.",
         "found_in_paragraph": "D"
       }
     ]
