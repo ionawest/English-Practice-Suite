@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Marathon Reading Endurance Simulator</title>
+    <style>
+        :root {
+            --primary: #1b4965;
+            --primary-dark: #0f2c3f;
+            --accent: #62b6cb;
+            --accent-dark: #407b8b;
+            --success: #2a9d8f;
+            --error: #e76f51;
+            --warning: #f4a261;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --border: #dee2e6;
+            --text: #212529;
+            --text-light: #6c757d;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); display: flex; justify-content: center; min-height: 100vh; }
+        .app-container { width: 100%; max-width: 1300px; height: 100vh; display: flex; flex-direction: column; background: var(--card-bg); overflow: hidden; }
+
+        /* Navigation Header */
+        .app-header { height: 50px; background: var(--primary); color: white; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; flex-shrink: 0; }
+        .app-header h1 { font-size: 16px; font-weight: 600; letter-spacing: 0.5px; }
+        .app-header button { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+
+        /* Screens */
+        .screen { display: none; height: calc(100vh - 50px); width: 100%; overflow: hidden; }
+        .screen.active { display: flex; }
+
+        /* Setup Screen */
+        .setup-screen { justify-content: center; align-items: center; padding: 20px; }
+        .setup-box { max-width: 600px; width: 100%; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
+        .setup-box h2 { font-size: 24px; color: var(--primary); margin-bottom: 12px; }
+        .setup-box p { color: var(--text-light); font-size: 14px; line-height: 1.6; margin-bottom: 25px; }
+        .setup-controls { display: flex; flex-direction: column; gap: 15px; text-align: left; }
+        .setup-controls label { font-size: 13px; font-weight: bold; color: var(--primary); }
+        select { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
+
+        /* Split-Screen Workspace */
+        .workspace { display: grid; grid-template-columns: 1.15fr 0.85fr; width: 100%; height: 100%; overflow: hidden; }
+
+        /* Text Viewer Panel (Top / Left) */
+        .text-panel { background: #fdfbf7; border-right: 1px solid var(--border); padding: 25px 30px; overflow-y: auto; height: 100%; display: flex; flex-direction: column; gap: 20px; }
+        .text-panel h2 { font-size: 20px; color: var(--primary); border-bottom: 2px solid #e9ecef; padding-bottom: 10px; }
+        .paragraph-block { background: #ffffff; border: 1px solid #e9ecef; border-radius: 8px; padding: 18px; line-height: 1.75; font-size: 15px; position: relative; transition: border-color 0.2s, box-shadow 0.2s; }
+        .paragraph-block.highlight { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(27, 73, 101, 0.15); }
+        .para-label { font-size: 12px; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+        .heading-dropdown { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; background: #fff; margin-bottom: 12px; }
+        .heading-dropdown.correct { border-color: var(--success); background-color: #e8f5e9; color: var(--success); font-weight: bold; pointer-events: none; }
+        .heading-dropdown.wrong { border-color: var(--error); background-color: #ffebee; }
+
+        /* Controller Panel (Bottom / Right) */
+        .control-panel { background: #ffffff; display: flex; flex-direction: column; height: 100%; border-left: 1px solid var(--border); overflow-y: auto; padding: 25px; justify-content: space-between; gap: 15px; }
+        .phase-badge-row { display: flex; justify-content: space-between; align-items: center; }
+        .phase-badge { padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+        .badge-1 { background: #e3f2fd; color: #1565c0; }
+        .badge-2 { background: #e0f2f1; color: #00695c; }
+        .badge-3 { background: #ede7f6; color: #4527a0; }
+        .badge-4 { background: #fff3e0; color: #e65100; }
+        .badge-5 { background: #fbe9e7; color: #d84315; }
+
+        .phase-progress { font-size: 12px; font-weight: bold; color: var(--text-light); }
+        .phase-header h3 { font-size: 17px; color: var(--primary); margin-bottom: 4px; }
+        .phase-header p { font-size: 13px; color: var(--text-light); line-height: 1.4; }
+
+        .question-card { background: #f8f9fa; border: 1px solid var(--border); border-radius: 8px; padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 14px; min-height: 180px; }
+        .prompt-text { font-size: 15px; font-weight: 600; line-height: 1.5; }
+        .context-quote { font-size: 13px; font-style: italic; color: var(--text-light); background: #ffffff; padding: 10px; border-left: 3px solid var(--accent); border-radius: 4px; }
+        
+        .options-grid { display: flex; flex-direction: column; gap: 8px; }
+        .option-btn { background: #ffffff; border: 1.5px solid var(--border); padding: 12px 14px; border-radius: 6px; text-align: left; font-size: 13px; font-weight: 500; color: var(--text); cursor: pointer; transition: all 0.15s; }
+        .option-btn:hover { border-color: var(--primary); background: #f0f7f9; }
+        .option-btn.selected-correct { border-color: var(--success); background: #e8f5e9; color: var(--success); font-weight: bold; }
+        .option-btn.selected-wrong { border-color: var(--error); background: #ffebee; color: var(--error); }
+
+        .tfng-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .tfng-btn { padding: 14px 8px; border: 1.5px solid var(--border); border-radius: 6px; background: white; font-weight: bold; font-size: 13px; cursor: pointer; text-align: center; }
+        .tfng-btn:hover { border-color: var(--primary); background: #f0f7f9; }
+
+        .feedback-box { padding: 12px 14px; border-radius: 6px; font-size: 13px; line-height: 1.5; display: none; }
+        .feedback-box.correct { background: #e8f5e9; border: 1px solid var(--success); color: #2e7d32; }
+        .feedback-box.wrong { background: #ffebee; border: 1px solid var(--error); color: #c62828; }
+
+        .btn { background: var(--primary); color: white; border: none; padding: 12px 20px; font-size: 14px; border-radius: 6px; cursor: pointer; font-weight: 600; text-align: center; }
+        .btn:hover { background: var(--primary-dark); }
+        .btn-secondary { background: #6c757d; }
+        .btn-secondary:hover { background: #5a6268; }
+
+        /* End Screen */
+        .end-screen { justify-content: center; align-items: center; padding: 25px; overflow-y: auto; }
+        .end-box { max-width: 750px; width: 100%; background: #ffffff; border: 1px solid var(--border); border-radius: 10px; padding: 30px; text-align: center; }
+        .end-score { font-size: 26px; font-weight: bold; color: var(--primary); margin: 15px 0; }
+        .review-list { max-height: 380px; overflow-y: auto; text-align: left; display: flex; flex-direction: column; gap: 10px; margin: 20px 0; padding-right: 5px; }
+        .review-item { background: #f8f9fa; border: 1px solid var(--border); border-radius: 6px; padding: 12px 15px; font-size: 13px; }
+
+        /* Responsive Mobile Split (Stacked 45vh / 55vh) */
+        @media (max-width: 900px) {
+            .workspace { grid-template-columns: 1fr; grid-template-rows: 45vh calc(55vh - 50px); }
+            .text-panel { border-right: none; border-bottom: 2px solid var(--border); padding: 15px; height: 100%; }
+            .control-panel { border-left: none; padding: 15px; height: 100%; }
+            .question-card { padding: 12px; min-height: 140px; }
+            .option-btn { padding: 10px 12px; font-size: 12.5px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <header class="app-header">
+        <h1>IELTS Reading Endurance Gauntlet</h1>
+        <button onclick="resetToSetup()">Exit Marathon</button>
+    </header>
+
+    <!-- Setup Screen -->
+    <div id="setupScreen" class="screen setup-screen active">
+        <div class="setup-box">
+            <h2>Marathon Reading Simulator</h2>
+            <p>Engage in an exhaustive, multi-phase cognitive endurance drill spanning extended academic texts. Advance sequentially through structural mapping, entity scanning, syntactic referencing, distractor interrogation, and deterministic logic.</p>
+            <div class="setup-controls">
+                <label for="drillSelect">Select Extended Academic Text:</label>
+                <select id="drillSelect">
+                    <option value="">Loading drills...</option>
+                </select>
+                <button class="btn" style="margin-top: 10px;" onclick="loadDrill()">Launch Marathon Drill</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Workspace Screen -->
+    <div id="drillScreen" class="screen">
+        <div class="workspace">
+            
+            <!-- Independently Scrollable Text Viewer -->
+            <div class="text-panel" id="textViewer">
+                <h2 id="passageTitle">Passage Title</h2>
+                <div id="paragraphsContainer"></div>
+            </div>
+
+            <!-- Interactive Sequential Controller Panel -->
+            <div class="control-panel">
+                <div class="phase-badge-row">
+                    <span id="phaseBadge" class="phase-badge badge-1">Phase 1: Architecture</span>
+                    <span id="phaseProgress" class="phase-progress">0/0</span>
+                </div>
+
+                <div class="phase-header">
+                    <h3 id="phaseTitle">Stage Title</h3>
+                    <p id="phaseInstructions">Instructions for current drill phase.</p>
+                </div>
+
+                <div class="question-card" id="questionCard"></div>
+                <div class="feedback-box" id="feedbackBox"></div>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button id="primaryBtn" class="btn" style="flex: 1;" onclick="handlePrimaryAction()">Validate Architecture</button>
+                    <button id="giveUpBtn" class="btn btn-secondary" style="flex: 1; display: none;" onclick="showPhase1Answers()">Reveal Headings</button>
+                    <button id="nextBtn" class="btn" style="flex: 1; display: none;" onclick="advanceStep()">Next Step</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- End Screen -->
+    <div id="endScreen" class="screen end-screen">
+        <div class="end-box">
+            <h2>Endurance Run Complete</h2>
+            <div class="end-score" id="finalScoreDisplay">0/0 (0%)</div>
+            <p id="feedbackSummary" style="color: var(--text-light); font-size: 14px;"></p>
+            <div class="review-list" id="reviewList"></div>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button class="btn" style="flex: 1;" onclick="resetToSetup()">Choose Another Text</button>
+                <button class="btn btn-secondary" style="flex: 1;" onclick="window.location.href='index.html'">Main Dashboard</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentDrill = null;
+    let currentPhase = 1;
+
+    // Phase Question Pools (holds full shuffled sets)
+    let activePhaseQuestions = {
+        phase2: [],
+        phase3: [],
+        phase4: [],
+        phase5: []
+    };
+
+    let phaseIndices = { p2: 0, p3: 0, p4: 0, p5: 0 };
+    let scores = { p1: 0, p2: 0, p3: 0, p4: 0, p5: 0 };
+    let phase1Attempts = 0;
+    let phase1UsedHelp = false;
+    let drillHistory = [];
+
+    function shuffleArray(arr) {
+        return [...arr].sort(() => 0.5 - Math.random());
+    }
+
+    function escapeHtml(text) {
+        if (!text) return "";
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    // --- AUTO-LOAD THE DROPDOWN LIST ---
+    window.onload = async function() {
+        try {
+            const response = await fetch('marathon_drills/index.json');
+            if (!response.ok) throw new Error("Index not found.");
+            const drills = await response.json();
+            
+            const selectEl = document.getElementById('drillSelect');
+            selectEl.innerHTML = ''; 
+            
+            drills.forEach(drill => {
+                let option = document.createElement('option');
+                option.value = drill.file;
+                option.innerText = `${drill.topic} (${drill.difficulty})`;
+                selectEl.appendChild(option);
+            });
+        } catch (error) {
+            console.log("Could not load index.json. Did you run the Python script?", error);
+        }
+    };
+
+    async function loadDrill() {
+        const path = document.getElementById('drillSelect').value;
+        if (!path) return alert("Please select a drill first.");
+
+        try {
+            const response = await fetch(path);
+            if (!response.ok) throw new Error("Drill fetch failure.");
+            currentDrill = await response.json();
+            startMarathonSession();
+        } catch (error) {
+            console.error(error);
+            alert("Could not load the JSON file. Ensure your web server is running and the file exists.");
+        }
+    }
+
+    function resetToSetup() {
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('drillScreen').classList.remove('active');
+        document.getElementById('setupScreen').classList.add('active');
+        window.onload();
+    }
+
+    function startMarathonSession() {
+        currentPhase = 1;
+        phase1Attempts = 0;
+        phase1UsedHelp = false;
+        scores = { p1: 0, p2: 0, p3: 0, p4: 0, p5: 0 };
+        phaseIndices = { p2: 0, p3: 0, p4: 0, p5: 0 };
+        drillHistory = [];
+
+        // Shuffle and run ALL questions from the banks
+        activePhaseQuestions.phase2 = shuffleArray(currentDrill.question_banks.phase_2_scanning.pool);
+        activePhaseQuestions.phase3 = shuffleArray(currentDrill.question_banks.phase_3_referents.pool);
+        activePhaseQuestions.phase4 = shuffleArray(currentDrill.question_banks.phase_4_distractors.pool);
+        activePhaseQuestions.phase5 = shuffleArray(currentDrill.question_banks.phase_5_logic.pool);
+
+        document.getElementById('setupScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.remove('active');
+        document.getElementById('drillScreen').classList.add('active');
+
+        document.getElementById('passageTitle').innerText = currentDrill.topic;
+        renderTextPassage();
+        setupPhase1();
+    }
+
+    function renderTextPassage() {
+        const container = document.getElementById('paragraphsContainer');
+        container.innerHTML = '';
+
+        // Randomize the heading dropdown options so they are NOT in paragraph order
+        const randomizedHeadings = shuffleArray(currentDrill.question_banks.phase_1_headings.pool);
+
+        currentDrill.text.forEach(p => {
+            const div = document.createElement('div');
+            div.className = 'paragraph-block';
+            div.id = `para_${p.paragraph_id}`;
+
+            const optionsHtml = randomizedHeadings
+                .map(opt => `<option value="${opt.id}">${escapeHtml(opt.text)}</option>`).join('');
+
+            div.innerHTML = `
+                <span class="para-label">Paragraph ${p.paragraph_id}</span>
+                <div id="slot_${p.paragraph_id}">
+                    <select class="heading-dropdown" id="select_${p.paragraph_id}" data-para="${p.paragraph_id}">
+                        <option value="">-- Match Paragraph Function --</option>
+                        ${optionsHtml}
+                    </select>
+                </div>
+                <div class="para-text">${p.content}</div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function clearHighlights() {
+        document.querySelectorAll('.paragraph-block').forEach(b => b.classList.remove('highlight'));
+    }
+
+    function highlightParagraph(paraId) {
+        clearHighlights();
+        const block = document.getElementById(`para_${paraId}`);
+        if (block) {
+            block.classList.add('highlight');
+            block.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    // ==========================================
+    // PHASE 1: ARCHITECTURE MAPPING
+    // ==========================================
+    function setupPhase1() {
+        currentPhase = 1;
+        document.getElementById('phaseBadge').className = 'phase-badge badge-1';
+        document.getElementById('phaseBadge').innerText = 'Phase 1: Architecture';
+        document.getElementById('phaseProgress').innerText = `${currentDrill.text.length} Targets`;
+        document.getElementById('phaseTitle').innerText = 'Structural Heading Matrix';
+        document.getElementById('phaseInstructions').innerText = currentDrill.question_banks.phase_1_headings.instructions;
+
+        document.getElementById('questionCard').innerHTML = `
+            <div style="font-size: 13.5px; line-height: 1.6; color: var(--text);">
+                Carefully skim each paragraph of this extended text. Assign the matching structural tag using the dropdown selectors located above each text block in the left panel. Avoid distractor tags.
+            </div>
+        `;
+
+        document.getElementById('feedbackBox').style.display = 'none';
+        document.getElementById('primaryBtn').style.display = 'block';
+        document.getElementById('primaryBtn').innerText = 'Validate Architecture';
+        document.getElementById('giveUpBtn').style.display = 'block';
+        document.getElementById('nextBtn').style.display = 'none';
+    }
+
+    function checkPhase1() {
+        phase1Attempts++;
+        let allCorrect = true;
+        let matchedSoFar = 0;
+
+        currentDrill.text.forEach(p => {
+            const select = document.getElementById(`select_${p.paragraph_id}`);
+            const matchedOption = currentDrill.question_banks.phase_1_headings.pool.find(o => o.matches === p.paragraph_id);
+
+            if (matchedOption && select.value === matchedOption.id) {
+                select.className = 'heading-dropdown correct';
+                matchedSoFar++;
+            } else {
+                select.className = 'heading-dropdown wrong';
+                allCorrect = false;
+            }
+        });
+
+        const feedback = document.getElementById('feedbackBox');
+        feedback.style.display = 'block';
+
+        if (allCorrect) {
+            scores.p1 = currentDrill.text.length;
+            feedback.className = 'feedback-box correct';
+            feedback.innerText = `Architecture validated in ${phase1Attempts} attempt(s). Phase 2 unlocked.`;
+            
+            document.getElementById('primaryBtn').style.display = 'none';
+            document.getElementById('giveUpBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'block';
+            document.getElementById('nextBtn').innerText = 'Advance to Phase 2 (Scanning)';
+        } else {
+            feedback.className = 'feedback-box wrong';
+            feedback.innerText = `Discrepancies identified (${matchedSoFar}/${currentDrill.text.length}). Distractor traps or incorrect functions flagged in red.`;
+        }
+    }
+
+    function showPhase1Answers() {
+        phase1UsedHelp = true;
+        let currentCorrectCount = 0;
+
+        currentDrill.text.forEach(p => {
+            const select = document.getElementById(`select_${p.paragraph_id}`);
+            const matchedOption = currentDrill.question_banks.phase_1_headings.pool.find(o => o.matches === p.paragraph_id);
+            if (matchedOption && select.value === matchedOption.id) currentCorrectCount++;
+            if (matchedOption) {
+                select.value = matchedOption.id;
+                select.className = 'heading-dropdown correct';
+            }
+        });
+
+        scores.p1 = currentCorrectCount;
+        const feedback = document.getElementById('feedbackBox');
+        feedback.style.display = 'block';
+        feedback.className = 'feedback-box wrong';
+        feedback.innerText = 'Answer key revealed. Review structural relationships before progressing.';
+
+        document.getElementById('primaryBtn').style.display = 'none';
+        document.getElementById('giveUpBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'block';
+        document.getElementById('nextBtn').innerText = 'Advance to Phase 2 (Scanning)';
+    }
+
+    // ==========================================
+    // PHASE 2: SPEAKER & ENTITY SCANNING
+    // ==========================================
+    function setupPhase2() {
+        currentPhase = 2;
+        document.getElementById('phaseBadge').className = 'phase-badge badge-2';
+        document.getElementById('phaseBadge').innerText = 'Phase 2: Entity Hunt';
+        document.getElementById('phaseTitle').innerText = 'Visual Data & Entity Match';
+        document.getElementById('phaseInstructions').innerText = currentDrill.question_banks.phase_2_scanning.instructions;
+
+        currentDrill.text.forEach(p => {
+            const slot = document.getElementById(`slot_${p.paragraph_id}`);
+            if (slot) slot.style.display = 'none';
+        });
+
+        loadPhase2Question();
+    }
+
+    function loadPhase2Question() {
+        clearHighlights();
+        document.getElementById('feedbackBox').style.display = 'none';
+        document.getElementById('primaryBtn').style.display = 'none';
+        document.getElementById('giveUpBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'none';
+
+        const list = activePhaseQuestions.phase2;
+        document.getElementById('phaseProgress').innerText = `Item ${phaseIndices.p2 + 1} of ${list.length}`;
+        const q = list[phaseIndices.p2];
+
+        // Shuffle options dynamically
+        const randomizedOptions = shuffleArray(q.options);
+        const optionsHtml = randomizedOptions.map(opt => `
+            <button class="option-btn" onclick="handlePhase2Answer(this)">${escapeHtml(opt)}</button>
+        `).join('');
+
+        document.getElementById('questionCard').innerHTML = `
+            <div class="prompt-text">${escapeHtml(q.prompt)}</div>
+            <div class="options-grid">${optionsHtml}</div>
+        `;
+    }
+
+    function handlePhase2Answer(btn) {
+        const q = activePhaseQuestions.phase2[phaseIndices.p2];
+        const chosen = btn.textContent.trim();
+        const isCorrect = (chosen === q.correct.trim());
+        if (isCorrect) scores.p2++;
+
+        drillHistory.push({ phase: 2, prompt: q.prompt, chosen: chosen, correct: q.correct, isCorrect: isCorrect });
+        highlightParagraph(q.paragraph_id);
+
+        document.querySelectorAll('.option-btn').forEach(b => {
+            b.style.pointerEvents = 'none';
+            if (b.textContent.trim() === q.correct.trim()) b.className = 'option-btn selected-correct';
+            if (b.textContent.trim() === chosen && !isCorrect) b.className = 'option-btn selected-wrong';
+        });
+
+        const feedback = document.getElementById('feedbackBox');
+        feedback.style.display = 'block';
+        feedback.className = isCorrect ? 'feedback-box correct' : 'feedback-box wrong';
+        feedback.innerText = isCorrect ? `Identified accurately in Paragraph ${q.paragraph_id}.` : `Incorrect. Located in Paragraph ${q.paragraph_id}: ${q.correct}`;
+
+        document.getElementById('nextBtn').style.display = 'block';
+        document.getElementById('nextBtn').innerText = (phaseIndices.p2 + 1 < activePhaseQuestions.phase2.length) ? 'Next Scan' : 'Advance to Phase 3 (Referents)';
+    }
+
+    // ==========================================
+    // PHASE 3: LEXICAL CHAIN LINKER
+    // ==========================================
+    function setupPhase3() {
+        currentPhase = 3;
+        document.getElementById('phaseBadge').className = 'phase-badge badge-3';
+        document.getElementById('phaseBadge').innerText = 'Phase 3: Lexical Chain';
+        document.getElementById('phaseTitle').innerText = 'Syntactic Antecedent Tracing';
+        document.getElementById('phaseInstructions').innerText = currentDrill.question_banks.phase_3_referents.instructions;
+
+        loadPhase3Question();
+    }
+
+    function loadPhase3Question() {
+        clearHighlights();
+        document.getElementById('feedbackBox').style.display = 'none';
+        document.getElementById('primaryBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'none';
+
+        const list = activePhaseQuestions.phase3;
+        document.getElementById('phaseProgress').innerText = `Referent ${phaseIndices.p3 + 1} of ${list.length}`;
+        const q = list[phaseIndices.p3];
+
+        // Shuffle options dynamically
+        const randomizedOptions = shuffleArray(q.options);
+        const optionsHtml = randomizedOptions.map(opt => `
+            <button class="option-btn" onclick="handlePhase3Answer(this)">${escapeHtml(opt)}</button>
+        `).join('');
+
+        document.getElementById('questionCard').innerHTML = `
+            <div class="prompt-text">${escapeHtml(q.prompt)}</div>
+            <div class="context-quote">"${escapeHtml(q.context)}"</div>
+            <div class="options-grid">${optionsHtml}</div>
+        `;
+    }
+
+    function handlePhase3Answer(btn) {
+        const q = activePhaseQuestions.phase3[phaseIndices.p3];
+        const chosen = btn.textContent.trim();
+        const isCorrect = (chosen === q.correct.trim());
+        if (isCorrect) scores.p3++;
+
+        drillHistory.push({ phase: 3, prompt: `Referent: ${q.target_phrase}`, chosen: chosen, correct: q.correct, isCorrect: isCorrect });
+        highlightParagraph(q.paragraph_id);
+
+        document.querySelectorAll('.option-btn').forEach(b => {
+            b.style.pointerEvents = 'none';
+            if (b.textContent.trim() === q.correct.trim()) b.className = 'option-btn selected-correct';
+            if (b.textContent.trim() === chosen && !isCorrect) b.className = 'option-btn selected-wrong';
+        });
+
+        const feedback = document.getElementById('feedbackBox');
+        feedback.style.display = 'block';
+        feedback.className = isCorrect ? 'feedback-box correct' : 'feedback-box wrong';
+        feedback.innerText = isCorrect ? `Syntactic chain resolved accurately.` : `Incorrect referent link. Target antecedent: ${q.correct}`;
+
+        document.getElementById('nextBtn').style.display = 'block';
+        document.getElementById('nextBtn').innerText = (phaseIndices.p3 + 1 < activePhaseQuestions.phase3.length) ? 'Next Referent' : 'Advance to Phase 4 (Distractors)';
+    }
+
+    // ==========================================
+    // PHASE 4: DISTRACTOR INTERROGATION
+    // ==========================================
+    function setupPhase4() {
+        currentPhase = 4;
+        document.getElementById('phaseBadge').className = 'phase-badge badge-4';
+        document.getElementById('phaseBadge').innerText = 'Phase 4: Distractor Lab';
+        document.getElementById('phaseTitle').innerText = 'Distractor Error Meta-Analysis';
+        document.getElementById('phaseInstructions').innerText = currentDrill.question_banks.phase_4_distractors.instructions;
+
+        loadPhase4Question();
+    }
+
+    function loadPhase4Question() {
+        clearHighlights();
+        document.getElementById('feedbackBox').style.display = 'none';
+        document.getElementById('primaryBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'none';
+
+        const list = activePhaseQuestions.phase4;
+        document.getElementById('phaseProgress').innerText = `Trap ${phaseIndices.p4 + 1} of ${list.length}`;
+        const q = list[phaseIndices.p4];
+
+        highlightParagraph(q.paragraph_id);
+
+        // Shuffle options dynamically
+        const randomizedOptions = shuffleArray(q.options);
+        const optionsHtml = randomizedOptions.map(opt => `
+            <button class="option-btn" onclick="handlePhase4Answer(this)">${escapeHtml(opt)}</button>
+        `).join('');
+
+        document.getElementById('questionCard').innerHTML = `
+            <div class="context-quote" style="border-left-color: var(--error);"><b>Trap Heading:</b> "${escapeHtml(q.target_heading)}" [Applied to ${escapeHtml(q.applied_to_paragraph)}]</div>
+            <div class="prompt-text">${escapeHtml(q.prompt)}</div>
+            <div class="options-grid">${optionsHtml}</div>
+        `;
+    }
+
+    function handlePhase4Answer(btn) {
+        const q = activePhaseQuestions.phase4[phaseIndices.p4];
+        const chosen = btn.textContent.trim();
+        const isCorrect = (chosen === q.correct.trim());
+        if (isCorrect) scores.p4++;
+
+        drillHistory.push({ phase: 4, prompt: `Trap: ${q.target_heading}`, chosen: chosen, correct: q.correct, isCorrect: isCorrect });
+
+        document.querySelectorAll('.option-btn').forEach(b => {
+            b.style.pointerEvents = 'none';
+            if (b.textContent.trim() === q.correct.trim()) b.className = 'option-btn selected-correct';
+            if (b.textContent.trim() === chosen && !isCorrect) b.className = 'option-btn selected-wrong';
+        });
+
+        const feedback = document.getElementById('feedbackBox');
+        feedback.style.display = 'block';
+        feedback.className = isCorrect ? 'feedback-box correct' : 'feedback-box wrong';
+        feedback.innerText = isCorrect ? `Trap logic decrypted successfully.` : `Misidentified trap rationale. Rationale: ${q.correct}`;
+
+        document.getElementById('nextBtn').style.display = 'block';
+        document.getElementById('nextBtn').innerText = (phaseIndices.p4 + 1 < activePhaseQuestions.phase4.length) ? 'Next Distractor' : 'Advance to Phase 5 (Deterministic Logic)';
+    }
+
+    // ==========================================
+    // PHASE 5: DETERMINISTIC LOGIC (T / F / NG)
+    // ==========================================
+    function setupPhase5() {
+        currentPhase = 5;
+        document.getElementById('phaseBadge').className = 'phase-badge badge-5';
+        document.getElementById('phaseBadge').innerText = 'Phase 5: Logic Sniper';
+        document.getElementById('phaseTitle').innerText = 'Deterministic Logic Analysis';
+        document.getElementById('phaseInstructions').innerText = currentDrill.question_banks.phase_5_logic.instructions;
+
+        loadPhase5Question();
+    }
+
+    function loadPhase5Question() {
+        clearHighlights();
+        document.getElementById('feedbackBox').style.display = 'none';
+        document.getElementById('primaryBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'none';
+
+        const list = activePhaseQuestions.phase5;
+        document.getElementById('phaseProgress').innerText = `Statement ${phaseIndices.p5 + 1} of ${list.length}`;
+        const q = list[phaseIndices.p5];
+
+        document.getElementById('questionCard').innerHTML = `
+            <div class="prompt-text">"${escapeHtml(q.prompt)}"</div>
+            <div class="tfng-grid">
+                <button class="tfng-btn" onclick="handlePhase5Answer('True')">TRUE</button>
+                <button class="tfng-btn" onclick="handlePhase5Answer('False')">FALSE</button>
+                <button class="tfng-btn" onclick="handlePhase5Answer('Not Given')">NOT GIVEN</button>
+            </div>
+        `;
+    }
+
+    function handlePhase5Answer(chosen) {
+        const q = activePhaseQuestions.phase5[phaseIndices.p5];
+        const isCorrect = (chosen.toLowerCase() === q.type.trim().toLowerCase());
+        if (isCorrect) scores.p5++;
+
+        drillHistory.push({ phase: 5, prompt: q.prompt, chosen: chosen, correct: q.type, explanation: q.explanation, isCorrect: isCorrect });
+        highlightParagraph(q.paragraph_id);
+
+        document.querySelectorAll('.tfng-btn').forEach(b => {
+            b.style.pointerEvents = 'none';
+            if (b.innerText.toLowerCase() === q.type.trim().toLowerCase()) {
+                b.style.backgroundColor = '#e8f5e9';
+                b.style.borderColor = '#2a9d8f';
+                b.style.color = '#2a9d8f';
+            }
+            if (b.innerText.toLowerCase() === chosen.toLowerCase() && !isCorrect) {
+                b.style.backgroundColor = '#ffebee';
+                b.style.borderColor = '#e76f51';
+                b.style.color = '#e76f51';
+            }
+        });
+
+        const feedback = document.getElementById('feedbackBox');
+        feedback.style.display = 'block';
+        feedback.className = isCorrect ? 'feedback-box correct' : 'feedback-box wrong';
+        feedback.innerHTML = `<b>${q.type.toUpperCase()}</b>: ${escapeHtml(q.explanation)} (Paragraph ${q.paragraph_id})`;
+
+        document.getElementById('nextBtn').style.display = 'block';
+        document.getElementById('nextBtn').innerText = (phaseIndices.p5 + 1 < activePhaseQuestions.phase5.length) ? 'Next Statement' : 'Finalize Marathon Run';
+    }
+
+    // ==========================================
+    // GLOBAL PROGRESSION ROUTER
+    // ==========================================
+    function handlePrimaryAction() {
+        if (currentPhase === 1) checkPhase1();
+    }
+
+    function advanceStep() {
+        if (currentPhase === 1) {
+            setupPhase2();
+        } else if (currentPhase === 2) {
+            phaseIndices.p2++;
+            if (phaseIndices.p2 < activePhaseQuestions.phase2.length) loadPhase2Question();
+            else setupPhase3();
+        } else if (currentPhase === 3) {
+            phaseIndices.p3++;
+            if (phaseIndices.p3 < activePhaseQuestions.phase3.length) loadPhase3Question();
+            else setupPhase4();
+        } else if (currentPhase === 4) {
+            phaseIndices.p4++;
+            if (phaseIndices.p4 < activePhaseQuestions.phase4.length) loadPhase4Question();
+            else setupPhase5();
+        } else if (currentPhase === 5) {
+            phaseIndices.p5++;
+            if (phaseIndices.p5 < activePhaseQuestions.phase5.length) loadPhase5Question();
+            else renderEndScreen();
+        }
+    }
+
+    // ==========================================
+    // SCORE RECORDING & END SCREEN
+    // ==========================================
+    function renderEndScreen() {
+        document.getElementById('drillScreen').classList.remove('active');
+        document.getElementById('endScreen').classList.add('active');
+
+        const totalAvailable = currentDrill.text.length + 
+                               activePhaseQuestions.phase2.length + 
+                               activePhaseQuestions.phase3.length + 
+                               activePhaseQuestions.phase4.length + 
+                               activePhaseQuestions.phase5.length;
+
+        const totalEarned = scores.p1 + scores.p2 + scores.p3 + scores.p4 + scores.p5;
+        const totalPct = Math.round((totalEarned / totalAvailable) * 100);
+
+        document.getElementById('finalScoreDisplay').innerText = `${totalEarned} / ${totalAvailable} (${totalPct}%)`;
+
+        let summary = "";
+        if (totalPct >= 85 && !phase1UsedHelp) summary = "Elite Band 8.5 Processing: Impeccable cognitive stamina, syntactical tracking, and deterministic boundary verification.";
+        else if (totalPct >= 70) summary = "Strong Band 7.5 Endurance: High syntactic competence; minor distractor friction detected in macro/logic traps.";
+        else summary = "Band 6.5 Warning: Cognitive overload induced translation drag. Re-analyze the antecedent chains and Not Given parameters below.";
+        document.getElementById('feedbackSummary').innerText = summary;
+
+        const reviewList = document.getElementById('reviewList');
+        reviewList.innerHTML = '';
+
+        // Phase 1 Card
+        const p1Card = document.createElement('div');
+        p1Card.className = 'review-item';
+        p1Card.innerHTML = `<b>Phase 1: Architecture</b> — Score: ${scores.p1}/${currentDrill.text.length} (${phase1UsedHelp ? 'Answer key consulted' : `${phase1Attempts} validation checks`})`;
+        reviewList.appendChild(p1Card);
+
+        // Subsequent Phase Cards
+        drillHistory.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'review-item';
+            card.innerHTML = `
+                <div style="font-weight:600; color:var(--primary); margin-bottom:2px;">[Phase ${item.phase}] ${escapeHtml(item.prompt)}</div>
+                <div>Selection: <b style="color:${item.isCorrect ? 'var(--success)' : 'var(--error)'}">${escapeHtml(item.chosen)}</b> | Correct: <b>${escapeHtml(item.correct)}</b></div>
+                ${item.explanation ? `<div style="font-size:12px; color:var(--text-light); margin-top:2px;">${escapeHtml(item.explanation)}</div>` : ''}
+            `;
+            reviewList.appendChild(card);
+        });
+
+        // Remote Google Sheets Logging
+        const trackingEnabled = localStorage.getItem("ielts_tracking_enabled") === "true";
+        if (trackingEnabled) {
+            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwAUYzRONdG5foqJ395nLu_0jAhNz1DgREUyTttFw5fBmGvzcpgHyJxtruXyIJiM7w76w/exec";
+            const studentName = localStorage.getItem("ielts_student_name") || "Marathon Runner";
+
+            let mistakes = [];
+            drillHistory.filter(i => !i.isCorrect).forEach(i => mistakes.push(`P${i.phase}: ${i.prompt} (${i.correct})`));
+
+            let payload = {
+                studentName: studentName,
+                drillName: "Reading Marathon",
+                contentType: `${currentDrill.topic} (${currentDrill.difficulty})`,
+                timeLimit: "Full Endurance Run",
+                score: totalEarned,
+                maxScore: totalAvailable,
+                percentage: totalPct,
+                mistakes: mistakes.length > 0 ? mistakes.join(" | ") : "Flawless Execution"
+            };
+
+            fetch(WEB_APP_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            }).catch(err => console.log("Remote logging failed:", err));
+        }
+    }
+</script>
+
+</body>
+</html>

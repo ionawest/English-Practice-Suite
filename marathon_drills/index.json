@@ -1,0 +1,17 @@
+[
+    {
+        "file": "marathon_drills/marathon_01.json",
+        "topic": "Megacity Thermal Inversion and Microclimate Disruption",
+        "difficulty": "Band 8.0+"
+    },
+    {
+        "file": "marathon_drills/marathon_02.json",
+        "topic": "Rewilding: Ecological Principles, Empirical Complexities, and the Future of Conservation",
+        "difficulty": "Band 8.0+"
+    },
+    {
+        "file": "marathon_drills/marathon_03.json",
+        "topic": "The Utopian Promise and Economic Reality of Vertical Farming",
+        "difficulty": "Band 7.5"
+    }
+]
