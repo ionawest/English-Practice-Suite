@@ -13,5 +13,30 @@
         "file": "marathon_drills/marathon_03.json",
         "topic": "The Utopian Promise and Economic Reality of Vertical Farming",
         "difficulty": "Band 7.5"
+    },
+    {
+        "file": "marathon_drills/marathon_04.json",
+        "topic": "The Chemistry of Longevity: Roman Concrete and Sustainable Construction",
+        "difficulty": "Band 7.5"
+    },
+    {
+        "file": "marathon_drills/marathon_05.json",
+        "topic": "Circadian Disruption: Artificial Light, Chronobiology, and the Modern Workforce",
+        "difficulty": "Band 8.0"
+    },
+    {
+        "file": "marathon_drills/marathon_06.json",
+        "topic": "Cracking the Aegean Code: The Decipherment of Linear B and Mycenaean History",
+        "difficulty": "Band 8.0"
+    },
+    {
+        "file": "marathon_drills/marathon_07.json",
+        "topic": "The Andean Tuber: How the Potato Reshaped Global Demographics",
+        "difficulty": "Band 7.0"
+    },
+    {
+        "file": "marathon_drills/marathon_08.json",
+        "topic": "Architects of the Shallows: Coral Reef Biology, Bleaching, and Restoration",
+        "difficulty": "Band 7.0"
     }
 ]
