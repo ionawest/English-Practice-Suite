@@ -1,0 +1,489 @@
+{
+  "id": "chronobiology_05",
+  "topic": "Circadian Disruption: Artificial Light, Chronobiology, and the Modern Workforce",
+  "difficulty": "Band 8.0",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "For billions of years, life on Earth evolved under a predictable environmental rhythm: the twenty-four-hour rotation of the planet, which alternates between bright solar radiation and complete darkness. Consequently, virtually all terrestrial organisms—ranging from single-celled cyanobacteria to human beings—have developed internal biological timing mechanisms known as circadian rhythms. Rather than merely responding passively to sunrise and sunset, these endogenous clocks anticipate environmental transitions, regulating metabolic rate, core body temperature, hormone secretion, and cellular repair before dawn or dusk actually arrives. However, since the widespread electrification of urban society in the late nineteenth century, humanity has effectively decoupled itself from the solar day, constructing an illuminated indoor environment that operates twenty-four hours a day, seven days a week."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "That biological rhythms are generated internally rather than driven solely by external environmental cues was first demonstrated scientifically in 1729 by the French astronomer Jean-Jacques d’Ortous de Mairan. Observing the *Mimosa pudica* plant, which routinely unfolds its leaves toward the sun during the day and closes them at dusk, de Mairan placed the specimen inside a pitch-black closet. To his astonishment, the plant continued to open and fold its leaves on a regular daily schedule despite the total absence of sunlight. Centuries later, in the 1950s, German biologist Jürgen Aschoff conducted pioneering isolation experiments with human volunteers housed in subterranean bunkers stripped of clocks and natural light. Aschoff proved that humans similarly possess an autonomous internal clock that runs on a 'free-running' cycle of slightly more than twenty-four hours when deprived of external time cues, which he termed *Zeitgebers* ('time-givers')."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "The precise genetic machinery governing this internal clock remained obscure until the late twentieth century. In 1971, neurogeneticist Seymour Benzer and his student Ronald Konopka identified specific mutations in fruit flies (*Drosophila melanogaster*) that altered their twenty-four-hour activity cycles, localizing the defect to a single gene they named *period*. Building upon this breakthrough in 1984, researchers Jeffrey Hall, Michael Rosbash, and Michael Young—who were jointly awarded the Nobel Prize in Physiology or Medicine in 2017—successfully isolated the *period* gene and decoded its self-regulating molecular feedback loop. They demonstrated that the gene instructs cells to accumulate a specific protein, called PER, throughout the night; once PER reaches a critical concentration by morning, it enters the cell nucleus and deactivates its own genetic production, allowing the protein to degrade over the afternoon so the twenty-four-hour cycle can restart."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "In mammals, these billions of individual cellular clocks do not operate in isolation; instead, they are synchronized by a centralized 'master clock' situated deep within the brain’s hypothalamus. Known as the suprachiasmatic nucleus (SCN), this paired structure of roughly twenty thousand neurons receives direct electrical signals from the eyes, utilizing ambient light to reset the body’s peripheral clocks in the liver, heart, and digestive tract each morning. For decades, vision scientists assumed that the rods and cones responsible for conscious sight were the sole photoreceptors transmitting this light data to the SCN. However, neuroscientist Russell Foster stunned the ophthalmology community in the late 1990s by demonstrating that mice genetically engineered to lack functional rods and cones could still synchronize their circadian rhythms perfectly to light-dark cycles."
+    },
+    {
+      "paragraph_id": "E",
+      "content": "Foster’s discovery led directly to the identification of a previously unknown third class of mammalian photoreceptor: intrinsically photosensitive retinal ganglion cells (ipRGCs). Located across the inner layer of the retina, these specialized cells contain a photopigment called melanopsin, which is entirely uninvolved in forming visual images. Crucially, melanopsin is maximally sensitive to short-wavelength blue light, peaking at approximately 480 nanometers—the exact spectral wavelength of a clear midday sky. Whenever blue light strikes the retina, ipRGCs fire rapid signals directly to the suprachiasmatic nucleus, which in turn instructs the pineal gland to halt the secretion of melatonin, the hormone responsible for lowering core body temperature and initiating biological sleep."
+    },
+    {
+      "paragraph_id": "F",
+      "content": "While this blue-light detection system was evolutionarily advantageous when sunlight was the only source of short-wavelength radiation, it has become a profound physiological liability in the twenty-first century. To maximize energy efficiency and screen brightness, modern light-emitting diodes (LEDs), smartphones, tablets, and computer monitors emit a disproportionate peak of radiation in the 460-to-480-nanometer blue spectrum. When individuals gaze at illuminated screens late in the evening, their melanopsin receptors interpret the artificial glow as midday sunlight. Clinical trials conducted at Harvard Medical School by neuroscientist Anne-Marie Chang demonstrated that reading on a light-emitting tablet for four hours prior to bedtime suppresses evening melatonin levels by over fifty percent, delays the circadian phase by more than ninety minutes, and significantly reduces rapid eye movement (REM) sleep compared to reading a printed book under dim incandescent light."
+    },
+    {
+      "paragraph_id": "G",
+      "content": "The health consequences of chronic circadian misalignment extend far beyond simple daytime fatigue, affecting the most vulnerable segments of the global labor force. In modern service and industrial economies, approximately twenty percent of employees—including hospital nurses, long-haul pilots, factory workers, and emergency responders—engage in rotating or permanent night-shift work. Because these workers must remain awake under bright fluorescent lighting at night while attempting to sleep during the sunlit day, their central SCN clock becomes chronically desynchronized from the peripheral clocks in their metabolic organs. When a night-shift worker consumes a heavy meal at 2:00 AM, their pancreas and liver—which are genetically programmed to fast and repair tissues during darkness—cannot process glucose or lipids efficiently, leading to elevated rates of insulin resistance, type 2 diabetes, and cardiovascular disease."
+    },
+    {
+      "paragraph_id": "H",
+      "content": "Even more concerning is the epidemiological link between nocturnal light exposure and cellular malignancy. Melatonin is not merely a sleep-inducing hormone; it also functions as a potent endogenous antioxidant that scavenges DNA-damaging free radicals and suppresses the proliferation of hormone-dependent tumors. Following decades of large-scale cohort studies tracking female nurses and flight attendants—most notably research led by epidemiologist Eva Schernhammer—the World Health Organization’s International Agency for Research on Cancer (IARC) officially classified night-shift work that involves circadian disruption as a 'probable human carcinogen' (Group 2A). Furthermore, cellular studies indicate that when the *period* genes inside peripheral tissues lose their rhythmic synchronization, the cell-division cycle loses a critical regulatory brake, permitting mutated cells to divide unchecked."
+    },
+    {
+      "paragraph_id": "I",
+      "content": "Circadian disruption is not restricted to industrial night workers; a milder yet far more pervasive phenomenon affects the majority of daytime students and office employees. Coined 'social jetlag' by German chronobiologist Till Roenneberg, this condition describes the chronic discrepancy between an individual’s biological clock and the arbitrary schedules imposed by school and corporate start times. Human chronotypes—the genetic predisposition toward morningness ('larks') or eveningness ('owls')—vary widely across the population and shift dramatically across the human lifespan. During adolescence, a biological delay in melatonin secretion pushes the teenage circadian clock back by roughly two hours, making it physiologically difficult for teenagers to fall asleep before 11:00 PM."
+    },
+    {
+      "paragraph_id": "J",
+      "content": "When secondary schools mandate 7:30 AM or 8:00 AM start times, adolescent students are forced to wake up during their biological night, accumulating severe sleep debt throughout the five-day workweek. On weekends, these individuals inevitably stay up late and sleep until midday to compensate, shifting their internal timing across multiple time zones every Friday and Sunday without ever boarding an aircraft. Roenneberg’s large-scale epidemiological surveys revealed that for every hour of social jetlag an adult or adolescent experiences, the statistical likelihood of being overweight or obese increases by thirty-three percent, accompanied by measurable declines in academic performance, emotional regulation, and cognitive executive function."
+    },
+    {
+      "paragraph_id": "K",
+      "content": "In response to mounting chronobiological evidence, architects, medical practitioners, and policymakers are beginning to implement targeted structural interventions. Within the field of 'circadian lighting design,' commercial offices, hospitals, and international airliners are replacing static fluorescent tubes with dynamic, tunable LED arrays. These automated systems deliver high-intensity, blue-enriched white light during the morning hours to boost alertness and mood, before gradually shifting to dim, amber, blue-depleted wavelengths after sunset to preserve endogenous melatonin production. Concurrently, in the clinical realm, oncologists led by Francis Lévi have pioneered 'chronotherapy'—the practice of timing the administration of chemotherapy and blood-pressure medications to coincide with the exact hour of the day when healthy host cells are least vulnerable to toxicity and cancer cells are most susceptible."
+    },
+    {
+      "paragraph_id": "L",
+      "content": "Despite these promising technological and clinical advances, addressing circadian disruption at a societal scale requires overcoming entrenched economic and cultural inertia. While several school districts in the United States and the United Kingdom have successfully delayed high school start times to 8:45 AM or 9:00 AM—resulting in immediate improvements in attendance and standardized test scores—widespread adoption is frequently blocked by parents and municipal administrators concerned about bus scheduling logistics, after-school sports, and childcare costs. Similarly, round-the-clock global manufacturing and logistics networks cannot simply be switched off at dusk. Ultimately, mitigating the public health toll of the twenty-four-hour society demands a multi-tiered approach: combining intelligent dynamic lighting and flexible, chronotype-aware work schedules with rigorous labor protections for essential night-shift personnel."
+    }
+  ],
+  "question_banks": {
+    "phase_1_headings": {
+      "instructions": "Match the core structural function or central theme to each paragraph. Be vigilant against keyword distractor headings.",
+      "pool": [
+        { "id": "h1", "text": "The evolutionary purpose of internal clocks and their disruption by electrification", "matches": "A" },
+        { "id": "h2", "text": "Early experiments proving that biological rhythms persist without external cues", "matches": "B" },
+        { "id": "h3", "text": "Decoding the genetic and protein feedback loop that drives the daily cycle", "matches": "C" },
+        { "id": "h4", "text": "The anatomical master clock and the discovery of non-visual light synchronization", "matches": "D" },
+        { "id": "h5", "text": "How specialized retinal pigments detect blue wavelengths to suppress sleep hormones", "matches": "E" },
+        { "id": "h6", "text": "The physiological impact of evening screen use on sleep architecture", "matches": "F" },
+        { "id": "h7", "text": "Metabolic disorders caused by desynchronized organ clocks in nocturnal workers", "matches": "G" },
+        { "id": "h8", "text": "Epidemiological and cellular links between shift work and tumor development", "matches": "H" },
+        { "id": "h9", "text": "The mismatch between genetic chronotypes, adolescent biology, and social schedules", "matches": "I" },
+        { "id": "h10", "text": "How weekly sleep shifts mimic travel across time zones and impair health", "matches": "J" },
+        { "id": "h11", "text": "Technological lighting adaptations and the precise timing of medical treatments", "matches": "K" },
+        { "id": "h12", "text": "Logistical and economic barriers to implementing society-wide schedule reforms", "matches": "L" },
+        { "id": "d1", "text": "How genetic engineering cured total blindness in laboratory mice", "matches": null },
+        { "id": "d2", "text": "Why transcontinental air travel is more dangerous than permanent night shifts", "matches": null },
+        { "id": "d3", "text": "The complete ban on fluorescent lighting across European hospitals", "matches": null }
+      ]
+    },
+    "phase_2_scanning": {
+      "instructions": "Scan the text rapidly. Match the specific scientist, researcher, or organization to their corresponding experiment, discovery, or clinical finding.",
+      "pool": [
+        {
+          "prompt": "Who demonstrated in the eighteenth century that plant leaves continue their daily folding cycle even when locked in total darkness?",
+          "options": ["Jean-Jacques d’Ortous de Mairan", "Jürgen Aschoff", "Seymour Benzer", "Till Roenneberg"],
+          "correct": "Jean-Jacques d’Ortous de Mairan",
+          "paragraph_id": "B"
+        },
+        {
+          "prompt": "Which biologist placed human volunteers inside underground bunkers to prove that the human clock runs slightly longer than twenty-four hours without external cues?",
+          "options": ["Jürgen Aschoff", "Russell Foster", "Jean-Jacques d’Ortous de Mairan", "Francis Lévi"],
+          "correct": "Jürgen Aschoff",
+          "paragraph_id": "B"
+        },
+        {
+          "prompt": "Who first pinpointed the specific genetic mutation in fruit flies that disrupted their twenty-four-hour behavioral rhythm?",
+          "options": ["Seymour Benzer and Ronald Konopka", "Jeffrey Hall and Michael Rosbash", "Russell Foster and Anne-Marie Chang", "Eva Schernhammer and Francis Lévi"],
+          "correct": "Seymour Benzer and Ronald Konopka",
+          "paragraph_id": "C"
+        },
+        {
+          "prompt": "Which neuroscientist proved that mice lacking conventional visual rods and cones could still align their daily rhythms to light and dark?",
+          "options": ["Russell Foster", "Jürgen Aschoff", "Till Roenneberg", "Michael Young"],
+          "correct": "Russell Foster",
+          "paragraph_id": "D"
+        },
+        {
+          "prompt": "Who conducted clinical trials showing that reading on an illuminated tablet before bed cuts evening melatonin levels by more than half?",
+          "options": ["Anne-Marie Chang", "Eva Schernhammer", "Russell Foster", "Till Roenneberg"],
+          "correct": "Anne-Marie Chang",
+          "paragraph_id": "F"
+        },
+        {
+          "prompt": "Which epidemiologist led major cohort studies tracking nurses and flight attendants that linked nocturnal work to elevated cancer risks?",
+          "options": ["Eva Schernhammer", "Anne-Marie Chang", "Francis Lévi", "Ronald Konopka"],
+          "correct": "Eva Schernhammer",
+          "paragraph_id": "H"
+        },
+        {
+          "prompt": "Who coined the term 'social jetlag' and calculated its statistical correlation with rising obesity rates?",
+          "options": ["Till Roenneberg", "Jürgen Aschoff", "Russell Foster", "Francis Lévi"],
+          "correct": "Till Roenneberg",
+          "paragraph_id": "I"
+        },
+        {
+          "prompt": "Which clinician pioneered the practice of administering chemotherapy at specific hours of the day to minimize toxicity to healthy tissues?",
+          "options": ["Francis Lévi", "Eva Schernhammer", "Anne-Marie Chang", "Seymour Benzer"],
+          "correct": "Francis Lévi",
+          "paragraph_id": "K"
+        },
+        {
+          "prompt": "Which international body formally classified circadian-disrupting night-shift work as a probable human carcinogen?",
+          "options": ["International Agency for Research on Cancer", "Harvard Medical School", "Nobel Assembly", "European Chronobiology Consortium"],
+          "correct": "International Agency for Research on Cancer",
+          "paragraph_id": "H"
+        },
+        {
+          "prompt": "Which trio of researchers won the 2017 Nobel Prize for decoding the self-regulating PER protein feedback loop?",
+          "options": ["Jeffrey Hall, Michael Rosbash, and Michael Young", "Seymour Benzer, Ronald Konopka, and Russell Foster", "Jürgen Aschoff, Till Roenneberg, and Francis Lévi", "Anne-Marie Chang, Eva Schernhammer, and Michael Young"],
+          "correct": "Jeffrey Hall, Michael Rosbash, and Michael Young",
+          "paragraph_id": "C"
+        }
+      ]
+    },
+    "phase_3_referents": {
+      "instructions": "Trace the syntactic chains. Identify the exact concept, entity, or mechanism that the highlighted pronoun phrase refers back to.",
+      "pool": [
+        {
+          "target_phrase": "these endogenous clocks",
+          "context": "Paragraph A: '...developed internal biological timing mechanisms known as circadian rhythms. Rather than merely responding passively to sunrise and sunset, these endogenous clocks anticipate environmental transitions...'",
+          "prompt": "What does 'these endogenous clocks' explicitly refer back to?",
+          "options": [
+            "Internal biological timing mechanisms known as circadian rhythms",
+            "The twenty-four-hour rotation of the planet between solar radiation and darkness",
+            "Illuminated indoor environments operating twenty-four hours a day",
+            "Single-celled cyanobacteria and terrestrial mammals"
+          ],
+          "correct": "Internal biological timing mechanisms known as circadian rhythms",
+          "paragraph_id": "A"
+        },
+        {
+          "target_phrase": "this paired structure",
+          "context": "Paragraph D: '...synchronized by a centralized master clock situated deep within the brain’s hypothalamus. Known as the suprachiasmatic nucleus (SCN), this paired structure of roughly twenty thousand neurons receives...'",
+          "prompt": "What anatomical feature is identified by 'this paired structure'?",
+          "options": [
+            "The suprachiasmatic nucleus (SCN) located inside the hypothalamus",
+            "The rods and cones responsible for conscious visual sight",
+            "The peripheral clocks situated within the liver, heart, and digestive tract",
+            "The pineal gland responsible for secreting melatonin into the bloodstream"
+          ],
+          "correct": "The suprachiasmatic nucleus (SCN) located inside the hypothalamus",
+          "paragraph_id": "D"
+        },
+        {
+          "target_phrase": "these specialized cells",
+          "context": "Paragraph E: 'Foster’s discovery led directly to the identification of a previously unknown third class of mammalian photoreceptor: intrinsically photosensitive retinal ganglion cells (ipRGCs). Located across the inner layer of the retina, these specialized cells contain...'",
+          "prompt": "What does 'these specialized cells' refer to?",
+          "options": [
+            "Intrinsically photosensitive retinal ganglion cells (ipRGCs)",
+            "Conventional rod and cone photoreceptors that form visual images",
+            "Mutated fruit fly neurons lacking the period gene",
+            "Insulin-producing cells located within the human pancreas"
+          ],
+          "correct": "Intrinsically photosensitive retinal ganglion cells (ipRGCs)",
+          "paragraph_id": "E"
+        },
+        {
+          "target_phrase": "This blue-light detection system",
+          "context": "Paragraph F: 'While this blue-light detection system was evolutionarily advantageous when sunlight was the only source of short-wavelength radiation, it has become a profound physiological liability...'",
+          "prompt": "What biological mechanism does 'this blue-light detection system' encapsulate?",
+          "options": [
+            "Melanopsin-containing retinal cells firing signals to the SCN to halt melatonin when struck by 480nm blue light",
+            "The installation of energy-efficient LED backlights in modern smartphones and tablets",
+            "The clinical practice of reading printed books under dim incandescent lighting",
+            "The rapid eye movement (REM) phase of nocturnal human sleep"
+          ],
+          "correct": "Melanopsin-containing retinal cells firing signals to the SCN to halt melatonin when struck by 480nm blue light",
+          "paragraph_id": "F"
+        },
+        {
+          "target_phrase": "a critical regulatory brake",
+          "context": "Paragraph H: '...when the period genes inside peripheral tissues lose their rhythmic synchronization, the cell-division cycle loses a critical regulatory brake, permitting mutated cells to divide unchecked.'",
+          "prompt": "What is functioning as 'a critical regulatory brake' in healthy cells?",
+          "options": [
+            "The rhythmic synchronization of period genes that governs when cells are permitted to divide",
+            "The classification of night-shift work as a Group 2A probable carcinogen by the IARC",
+            "The administration of bright fluorescent lighting in hospital wards",
+            "The consumption of glucose and lipids at 2:00 AM by factory workers"
+          ],
+          "correct": "The rhythmic synchronization of period genes that governs when cells are permitted to divide",
+          "paragraph_id": "H"
+        },
+        {
+          "target_phrase": "this condition",
+          "context": "Paragraph I: 'Coined social jetlag by German chronobiologist Till Roenneberg, this condition describes the chronic discrepancy between an individual’s biological clock and the arbitrary schedules imposed by school and corporate start times.'",
+          "prompt": "What term is directly defined by 'this condition'?",
+          "options": [
+            "Social jetlag",
+            "Permanent rotating night-shift work",
+            "Subterranean free-running isolation",
+            "Hormone-dependent cellular malignancy"
+          ],
+          "correct": "Social jetlag",
+          "paragraph_id": "I"
+        },
+        {
+          "target_phrase": "these individuals",
+          "context": "Paragraph J: 'When secondary schools mandate 7:30 AM or 8:00 AM start times, adolescent students are forced to wake up during their biological night... On weekends, these individuals inevitably stay up late and sleep until midday...'",
+          "prompt": "Who are 'these individuals'?",
+          "options": [
+            "Adolescent students subjected to early 7:30 AM or 8:00 AM school start times",
+            "Long-haul commercial pilots flying across multiple international time zones",
+            "Parents and municipal administrators managing bus scheduling logistics",
+            "Human volunteers housed inside Jürgen Aschoff’s underground bunkers"
+          ],
+          "correct": "Adolescent students subjected to early 7:30 AM or 8:00 AM school start times",
+          "paragraph_id": "J"
+        },
+        {
+          "target_phrase": "These automated systems",
+          "context": "Paragraph K: '...commercial offices, hospitals, and international airliners are replacing static fluorescent tubes with dynamic, tunable LED arrays. These automated systems deliver high-intensity, blue-enriched white light during the morning...'",
+          "prompt": "What technology does 'These automated systems' refer back to?",
+          "options": [
+            "Dynamic, tunable LED lighting arrays that adjust their spectral wavelength across the day",
+            "Intravenous chemotherapy pumps utilized by oncologist Francis Lévi",
+            "Standard fluorescent tubes installed in twentieth-century factories",
+            "Genetic screening tools used to identify morning larks and evening owls"
+          ],
+          "correct": "Dynamic, tunable LED lighting arrays that adjust their spectral wavelength across the day",
+          "paragraph_id": "K"
+        },
+        {
+          "target_phrase": "this breakthrough",
+          "context": "Paragraph C: 'In 1971, neurogeneticist Seymour Benzer and his student Ronald Konopka identified specific mutations in fruit flies... localizing the defect to a single gene they named period. Building upon this breakthrough in 1984...'",
+          "prompt": "What specific scientific achievement does 'this breakthrough' refer to?",
+          "options": [
+            "Benzer and Konopka's identification of the period gene mutation governing fruit fly activity cycles",
+            "The awarding of the Nobel Prize in Physiology or Medicine in 2017",
+            "De Mairan's 1729 closet experiment involving the Mimosa pudica plant",
+            "The discovery of melanopsin photopigments inside mammalian retinas"
+          ],
+          "correct": "Benzer and Konopka's identification of the period gene mutation governing fruit fly activity cycles",
+          "paragraph_id": "C"
+        },
+        {
+          "target_phrase": "the specimen",
+          "context": "Paragraph B: 'Observing the Mimosa pudica plant, which routinely unfolds its leaves toward the sun during the day and closes them at dusk, de Mairan placed the specimen inside a pitch-black closet.'",
+          "prompt": "What is 'the specimen'?",
+          "options": [
+            "The Mimosa pudica plant observed by Jean-Jacques d’Ortous de Mairan",
+            "A genetically modified fruit fly lacking the PER protein",
+            "A laboratory mouse engineered without functional rods or cones",
+            "A tissue sample extracted from the suprachiasmatic nucleus"
+          ],
+          "correct": "The Mimosa pudica plant observed by Jean-Jacques d’Ortous de Mairan",
+          "paragraph_id": "B"
+        }
+      ]
+    },
+    "phase_4_distractors": {
+      "instructions": "Meta-analysis: Evaluate why the presented answer choice is an invalid distractor trap, recognizing how IELTS manipulates keywords to generate false structural matches.",
+      "pool": [
+        {
+          "target_heading": "How total darkness permanently halts the biological rhythms of plants and humans",
+          "applied_to_paragraph": "Paragraph B",
+          "prompt": "Why is this heading a direct factual contradiction of Paragraph B?",
+          "options": [
+            "The experiments by de Mairan and Aschoff proved the exact opposite: internal rhythms *continue* autonomously even in total darkness.",
+            "Paragraph B states that only human rhythms stop in bunkers, while plants continue their cycles.",
+            "The text notes that de Mairan used artificial blue LEDs inside the closet to keep the plant alive.",
+            "Aschoff proved that human cycles shrink to twelve hours when deprived of external clocks."
+          ],
+          "correct": "The experiments by de Mairan and Aschoff proved the exact opposite: internal rhythms *continue* autonomously even in total darkness.",
+          "paragraph_id": "B"
+        },
+        {
+          "target_heading": "Using genetic engineering to restore conscious sight to blind laboratory mice",
+          "applied_to_paragraph": "Paragraph D",
+          "prompt": "Why is this heading a deceptive keyword trap for Paragraph D?",
+          "options": [
+            "Russell Foster used mice engineered to *lack* rods and cones to study circadian synchronization, not to restore their conscious visual sight.",
+            "The experiment in Paragraph D was conducted on fruit flies (*Drosophila*), not laboratory mice.",
+            "The text states that removing the suprachiasmatic nucleus cured blindness in human volunteers.",
+            "The mice in Foster's experiment were completely unable to synchronize their clocks to light-dark cycles."
+          ],
+          "correct": "Russell Foster used mice engineered to *lack* rods and cones to study circadian synchronization, not to restore their conscious visual sight.",
+          "paragraph_id": "D"
+        },
+        {
+          "target_heading": "How melanopsin cells form high-resolution visual images in midday sunlight",
+          "applied_to_paragraph": "Paragraph E",
+          "prompt": "Identify the specific factual error in applying this heading to Paragraph E.",
+          "options": [
+            "The text explicitly states that ipRGCs and melanopsin are 'entirely uninvolved in forming visual images,' serving only to detect light wavelengths for the master clock.",
+            "Melanopsin is only active in pitch-black environments and is destroyed by 480nm sunlight.",
+            "Paragraph E states that the pineal gland forms visual images when stimulated by melatonin.",
+            "Short-wavelength blue light triggers the immediate release of melatonin rather than halting it."
+          ],
+          "correct": "The text explicitly states that ipRGCs and melanopsin are 'entirely uninvolved in forming visual images,' serving only to detect light wavelengths for the master clock.",
+          "paragraph_id": "E"
+        },
+        {
+          "target_heading": "Why printed books suppress melatonin more severely than electronic tablets",
+          "applied_to_paragraph": "Paragraph F",
+          "prompt": "How does this heading invert the experimental comparison in Paragraph F?",
+          "options": [
+            "Anne-Marie Chang’s study proved that *light-emitting tablets* suppress melatonin by over 50% compared to reading a printed book under dim incandescent light.",
+            "The paragraph states that neither printed books nor electronic tablets have any effect on REM sleep.",
+            "Incandescent light bulbs emit a higher peak of 480nm blue light than modern smartphones.",
+            "The Harvard clinical trial studied factory workers rather than evening readers."
+          ],
+          "correct": "Anne-Marie Chang’s study proved that *light-emitting tablets* suppress melatonin by over 50% compared to reading a printed book under dim incandescent light.",
+          "paragraph_id": "F"
+        },
+        {
+          "target_heading": "How eating large nocturnal meals accelerates tissue repair in the liver and pancreas",
+          "applied_to_paragraph": "Paragraph G",
+          "prompt": "Why does this heading misrepresent the metabolic mechanics in Paragraph G?",
+          "options": [
+            "The text explains that peripheral organs are programmed to *fast* and repair at night; eating at 2:00 AM overwhelms them, causing insulin resistance and diabetes.",
+            "Paragraph G states that night-shift workers experience lower rates of cardiovascular disease than daytime workers.",
+            "The suprachiasmatic nucleus completely shuts down the digestive tract during daylight hours.",
+            "Only eighty percent of employees in modern economies work rotating night shifts."
+          ],
+          "correct": "The text explains that peripheral organs are programmed to *fast* and repair at night; eating at 2:00 AM overwhelms them, causing insulin resistance and diabetes.",
+          "paragraph_id": "G"
+        },
+        {
+          "target_heading": "Why the World Health Organization classified melatonin supplements as a probable carcinogen",
+          "applied_to_paragraph": "Paragraph H",
+          "prompt": "Why is this heading a severe misattribution trap for Paragraph H?",
+          "options": [
+            "The IARC classified *night-shift work involving circadian disruption* as a probable carcinogen—not melatonin, which actually protects against tumors.",
+            "The World Health Organization concluded that shift work has zero connection to cellular malignancy.",
+            "Eva Schernhammer proved that endogenous antioxidants accelerate the division of mutated cells.",
+            "Paragraph H discusses blood-pressure medication timing rather than cancer epidemiology."
+          ],
+          "correct": "The IARC classified *night-shift work involving circadian disruption* as a probable carcinogen—not melatonin, which actually protects against tumors.",
+          "paragraph_id": "H"
+        },
+        {
+          "target_heading": "The adverse health effects of frequent transcontinental aviation on teenage students",
+          "applied_to_paragraph": "Paragraph J",
+          "prompt": "How does this heading misinterpret a metaphorical comparison in Paragraph J?",
+          "options": [
+            "The text notes that teenagers shift their sleep schedules across time zones on weekends 'without ever boarding an aircraft' (social jetlag), not through actual aviation.",
+            "Paragraph J states that sleeping until midday on weekends reduces the risk of obesity by 33 percent.",
+            "Till Roenneberg only surveyed retired commercial airline pilots for his epidemiological study.",
+            "Secondary schools mandated weekend flights to improve students' cognitive executive function."
+          ],
+          "correct": "The text notes that teenagers shift their sleep schedules across time zones on weekends 'without ever boarding an aircraft' (social jetlag), not through actual aviation.",
+          "paragraph_id": "J"
+        },
+        {
+          "target_heading": "The universal decision by municipal administrators to delay high school start times",
+          "applied_to_paragraph": "Paragraph L",
+          "prompt": "Why is this heading an overgeneralization trap for Paragraph L?",
+          "options": [
+            "While *several* districts delayed start times successfully, the text states that widespread adoption is frequently *blocked* by parents and administrators over logistics.",
+            "Delaying school start times to 9:00 AM caused an immediate drop in standardized test scores.",
+            "The United Kingdom and the United States passed federal laws banning school before 10:00 AM.",
+            "Paragraph L argues that global manufacturing networks have already been switched off at dusk."
+          ],
+          "correct": "While *several* districts delayed start times successfully, the text states that widespread adoption is frequently *blocked* by parents and administrators over logistics.",
+          "paragraph_id": "L"
+        },
+        {
+          "target_heading": "Why oncologists administer chemotherapy exclusively during complete nocturnal darkness",
+          "applied_to_paragraph": "Paragraph K",
+          "prompt": "Why does this heading distort the description of chronotherapy in Paragraph K?",
+          "options": [
+            "The text states that chronotherapy times medication to the exact hour when healthy cells are least vulnerable, without claiming it occurs exclusively in nocturnal darkness.",
+            "Francis Lévi proved that chemotherapy is ineffective when combined with tunable LED hospital lighting.",
+            "Paragraph K states that blood-pressure medications must never be taken during the daytime.",
+            "Tunable LED arrays emit amber light in the morning and blue-enriched light after sunset."
+          ],
+          "correct": "The text states that chronotherapy times medication to the exact hour when healthy cells are least vulnerable, without claiming it occurs exclusively in nocturnal darkness.",
+          "paragraph_id": "K"
+        },
+        {
+          "target_heading": "How the PER protein permanently destroys the nucleus of fruit fly cells",
+          "applied_to_paragraph": "Paragraph C",
+          "prompt": "Why is this heading an inaccurate summary of the molecular process in Paragraph C?",
+          "options": [
+            "PER enters the nucleus merely to deactivate its own genetic production temporarily so the daily cycle can reset; it does not destroy the cell nucleus.",
+            "The period gene prevents the accumulation of PER protein during nighttime hours.",
+            "Seymour Benzer won the 2017 Nobel Prize for destroying mutated fruit fly cells.",
+            "The molecular feedback loop in Paragraph C takes forty-eight hours to complete one cycle."
+          ],
+          "correct": "PER enters the nucleus merely to deactivate its own genetic production temporarily so the daily cycle can reset; it does not destroy the cell nucleus.",
+          "paragraph_id": "C"
+        }
+      ]
+    },
+    "phase_5_logic": {
+      "instructions": "Determine if each statement is True, False, or Not Given based strictly on the deterministic parameters of the text. Do not rely on external medical knowledge.",
+      "pool": [
+        {
+          "prompt": "Single-celled cyanobacteria lack the internal biological timing mechanisms found in more complex terrestrial mammals.",
+          "type": "False",
+          "explanation": "Paragraph A states the opposite: 'virtually all terrestrial organisms—ranging from single-celled cyanobacteria to human beings—have developed internal biological timing mechanisms.'",
+          "paragraph_id": "A"
+        },
+        {
+          "prompt": "When human volunteers are isolated in underground bunkers without clocks or sunlight, their internal circadian rhythm naturally shortens to roughly twenty hours.",
+          "type": "False",
+          "explanation": "Paragraph B states that Jürgen Aschoff proved the human internal clock runs on a free-running cycle of 'slightly more than twenty-four hours' when deprived of cues, not twenty hours.",
+          "paragraph_id": "B"
+        },
+        {
+          "prompt": "Seymour Benzer was excluded from sharing the 2017 Nobel Prize in Physiology or Medicine because he had passed away prior to the award ceremony.",
+          "type": "Not Given",
+          "explanation": "Paragraph C notes that Benzer and Konopka identified the *period* gene in 1971 and that Hall, Rosbash, and Young won the 2017 Nobel Prize, but the text gives no explanation as to why Benzer did not receive the prize.",
+          "paragraph_id": "C"
+        },
+        {
+          "prompt": "Inside a healthy cell, the concentration of PER protein peaks in the morning and degrades over the course of the afternoon.",
+          "type": "True",
+          "explanation": "Paragraph C explicitly confirms that cells accumulate PER throughout the night, reach 'a critical concentration by morning,' and allow the protein 'to degrade over the afternoon.'",
+          "paragraph_id": "C"
+        },
+        {
+          "prompt": "Melanopsin-containing retinal cells are primarily responsible for enabling humans to read fine print in dim lighting conditions.",
+          "type": "False",
+          "explanation": "Paragraph E states that ipRGCs containing melanopsin are 'entirely uninvolved in forming visual images' and instead detect short-wavelength blue light to regulate the master clock.",
+          "paragraph_id": "E"
+        },
+        {
+          "prompt": "In Anne-Marie Chang’s Harvard study, participants who read printed books under dim incandescent light experienced zero suppression of their evening melatonin levels.",
+          "type": "Not Given",
+          "explanation": "Paragraph F states that tablet readers experienced over 50% melatonin suppression and less REM sleep 'compared to reading a printed book,' but it does not state whether the printed-book group experienced exactly zero percent suppression.",
+          "paragraph_id": "F"
+        },
+        {
+          "prompt": "Roughly one in five workers in contemporary industrial and service economies participates in night-shift schedules.",
+          "type": "True",
+          "explanation": "Paragraph G confirms that in modern service and industrial economies, 'approximately twenty percent of employees... engage in rotating or permanent night-shift work.'",
+          "paragraph_id": "G"
+        },
+        {
+          "prompt": "In addition to regulating sleep onset, the hormone melatonin acts within the body to neutralize DNA-damaging free radicals.",
+          "type": "True",
+          "explanation": "Paragraph H explicitly states that melatonin 'also functions as a potent endogenous antioxidant that scavenges DNA-damaging free radicals.'",
+          "paragraph_id": "H"
+        },
+        {
+          "prompt": "During adolescence, human biology naturally shifts the timing of evening melatonin secretion earlier by approximately two hours.",
+          "type": "False",
+          "explanation": "Paragraph I states the opposite: during adolescence, a biological *delay* pushes the teenage clock *back* by roughly two hours, making it difficult to fall asleep before 11:00 PM.",
+          "paragraph_id": "I"
+        },
+        {
+          "prompt": "Till Roenneberg’s research indicates that each hour of social jetlag is associated with a one-third increase in the risk of becoming overweight or obese.",
+          "type": "True",
+          "explanation": "Paragraph J confirms that 'for every hour of social jetlag an adult or adolescent experiences, the statistical likelihood of being overweight or obese increases by thirty-three percent.'",
+          "paragraph_id": "J"
+        },
+        {
+          "prompt": "Oncologist Francis Lévi demonstrated that blood-pressure medications are four times more effective than chemotherapy when administered using chronotherapy.",
+          "type": "Not Given",
+          "explanation": "Paragraph K mentions that Lévi pioneered chronotherapy for administering 'chemotherapy and blood-pressure medications,' but provides no comparative data claiming one is four times more effective than the other.",
+          "paragraph_id": "K"
+        },
+        {
+          "prompt": "Every school district in the United Kingdom that trialed a 9:00 AM start time eventually reversed the policy due to increased busing costs.",
+          "type": "Not Given",
+          "explanation": "Paragraph L notes that several UK and US districts successfully delayed start times and that *widespread* adoption elsewhere is often blocked by bus logistics, but it never states that the districts that trialed it reversed their policies.",
+          "paragraph_id": "L"
+        }
+      ]
+    }
+  }
+}

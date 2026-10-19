@@ -1,0 +1,489 @@
+{
+  "id": "epigraphy_06",
+  "topic": "Cracking the Aegean Code: The Decipherment of Linear B and Mycenaean History",
+  "difficulty": "Band 8.0",
+  "text": [
+    {
+      "paragraph_id": "A",
+      "content": "For centuries, modern historians regarded the heroic legends of the Trojan War, King Agamemnon, and the labyrinth of Crete—immortalized in the epic poetry of Homer—as purely mythical inventions devoid of historical substance. However, during the late nineteenth century, archaeological excavations across the Aegean basin dramatically transformed this scholarly consensus. After uncovering the gold-filled shaft graves of Mycenae on the Greek mainland, amateur archaeologist Heinrich Schliemann proved that a wealthy, fortified Bronze Age civilization had indeed flourished prior to the classical Greek era. Shortly thereafter, in 1900, British archaeologist Sir Arthur Evans began excavating the sprawling palace complex of Knossos on the island of Crete, unearthing a sophisticated maritime society he named the 'Minoans' after the legendary King Minos."
+    },
+    {
+      "paragraph_id": "B",
+      "content": "While excavating the fire-hardened ruins of Knossos, Evans discovered thousands of sun-dried clay tablets that had been accidentally baked and preserved when the palace burned down around 1400 BCE. Etched into these tablets were three distinct, previously unknown writing systems spanning several centuries of Cretan history. The earliest script consisted of pictorial symbols, which Evans termed Cretan Hieroglyphic. This evolved into an intermediate cursive script deployed across religious and administrative artifacts, which he designated Linear A. Finally, the largest cache of tablets at Knossos featured a later, highly standardized script that Evans named Linear B. For the next fifty years, Linear B stood as the most formidable linguistic puzzle in classical archaeology: a silent archive written in an unknown script, recording an unknown language, with no bilingual 'Rosetta Stone' to aid translation."
+    },
+    {
+      "paragraph_id": "C",
+      "content": "Despite the absence of a bilingual key, structural analysis of the clay tablets yielded crucial preliminary deductions regarding how the script functioned.Linguists recognized that world writing systems fall into three primary structural categories: logographic scripts (such as Chinese), which require thousands of distinct characters representing whole words; alphabets (such as Latin or modern English), which utilize roughly twenty to thirty letters representing individual vowel and consonant sounds; and syllabaries, where each symbol represents a combined consonant-plus-vowel syllable (such as *ka*, *ke*, *ki*, *ko*, *ku*). Because the Linear B tablets contained approximately eighty-seven recurring phonetic signs—accompanied by separate pictorial ideograms representing commodities like horses, tripods, and olive oil—scholars deduced that Linear B had to be a syllabic script."
+    },
+    {
+      "paragraph_id": "D",
+      "content": "Ironically, the greatest impediment to deciphering Linear B during the early twentieth century was Sir Arthur Evans himself. Having devoted his career to championing the cultural supremacy of Minoan Crete, Evans became dogmatically convinced that the Minoans had conquered the Greek mainland and that Linear B recorded an indigenous, non-Greek 'Minoan' language. Because Evans controlled the exclusive publication rights to the vast majority of the Knossos tablets, he withheld thousands of inscriptions from outside researchers for over four decades, releasing only curated fragments while suppressing academic dissent. This orthodoxy began to fracture in 1939 when American archaeologist Carl Blegen excavated the Mycenaean palace of Pylos on the Greek mainland and uncovered over six hundred Linear B tablets. The discovery of identical administrative records inside a quintessential mainland stronghold raised a provocative question: were the rulers of Pylos speaking Minoan, or had Greek-speaking Mycenaeans actually conquered Knossos?"
+    },
+    {
+      "paragraph_id": "E",
+      "content": "As the Pylos and Knossos tablets finally became accessible to the broader scholarly community in the 1940s, American classicist and cryptanalyst Alice Kober laid the rigorous analytical foundation that made decipherment possible. Refusing to speculate prematurely about which historical language lay behind the script, Kober subjected the unread symbols to exhaustive statistical and internal structural analysis. Working during World War II when paper was rationed, she hand-cut over 180,000 index cards from scrap cartons and cigarette packs, cataloging the frequency and positional context of every single sign. Through this meticulous database, Kober proved that Linear B recorded an inflected language—one in which the grammatical endings of words change to indicate gender, plural number, or case, while the root of the word remains constant."
+    },
+    {
+      "paragraph_id": "F",
+      "content": "Kober’s monumental breakthrough involved identifying recurring 'triplets'—sets of three related words on the tablets that shared an identical root stem but terminated in three consistent variations (for example, one form used for feminine nouns, a second for masculine nouns, and a third when preceded by the preposition 'from'). Crucially, because Linear B was a syllabic script where each sign combined a consonant and a vowel, the sign directly bridging the word stem and the grammatical suffix changed its visual shape whenever the ending vowel shifted, even though its root consonant remained identical. By cross-referencing these bridging signs, Kober constructed diagnostic two-dimensional grids classifying symbols that shared either the same consonant or the same vowel, without yet knowing the actual phonetic pronunciation of any single sign. Tragically, Kober died of cancer in 1950 at the age of forty-three, just before her structural grids could be unlocked."
+    },
+    {
+      "paragraph_id": "G",
+      "content": " parallel to Kober’s work, American linguist Emmett Bennett Jr., who had worked as a military cryptographer decoding Japanese ciphers during World War II, performed an indispensable service to the field of Aegean epigraphy. Prior to Bennett’s intervention, scholars frequently confused variations in individual scribes' handwriting with entirely separate phonetic signs. Through forensic paleographic analysis of the Pylos and Knossos archives, Bennett standardized the exact signary of Linear B, distinguishing scribal penmanship habits from genuine linguistic characters and establishing the definitive numbering system still used today."
+    },
+    {
+      "paragraph_id": "H",
+      "content": "The final leap from structural grids to phonetic reading was achieved not by a tenured university professor, but by a young British architect named Michael Ventris, who had been fascinated by Linear B since hearing Arthur Evans lecture as a fourteen-year-old schoolboy. Expanding upon Kober’s phonetic grids and Bennett’s standardized sign catalogs, Ventris initially shared Evans’s assumption that the language behind Linear B was related to Etruscan—a non-Indo-European language from ancient Italy. However, in early 1952, Ventris noticed that specific five-sign word triplets appearing purely in the Knossos tablets were entirely absent from the mainland Pylos tablets. Reasoning that these local words likely represented major Cretan cities—such as *Amnisos*, *Knossos*, and *Phaistos*—Ventris experimentally plugged the classical Greek pronunciations of these place names into his grid."
+    },
+    {
+      "paragraph_id": "I",
+      "content": "Because each syllable in a Kober grid was linked to dozens of other signs sharing the same row or column, assigning phonetic values to just a few Cretan town names triggered an immediate, cascading chain reaction across the entire syllabary. As Ventris applied the newly derived sound values to ordinary vocabulary words across the tablets, unmistakable archaic Greek words began emerging on the page: *po-me* ('shepherd'), *ka-ke-u* ('bronzesmith'), and *ku-ru-so* ('gold'). Stunned by the realization that Evans’s fifty-year dogma was wrong, Ventris announced on a BBC radio broadcast in July 1952 that the language of the Linear B tablets was an archaic dialect of Greek, written seven centuries before Homer."
+    },
+    {
+      "paragraph_id": "J",
+      "content": "Recognizing that as an architect he lacked the formal philological training in historical Greek dialects needed to validate his decipherment, Ventris partnered with John Chadwick, a Cambridge University classicist and former wartime naval codebreaker at Bletchley Park. Together, Ventris and Chadwick systematically applied the rules of Mycenaean Greek phonology to the tablets, publishing their landmark 1953 paper in the *Journal of Hellenic Studies*. Nevertheless, lingering academic skepticism persisted until May 1953, when Carl Blegen uncovered a newly excavated tablet at Pylos—designated *Ta 641*—which neither Ventris nor Chadwick had ever seen. The tablet featured small incised drawings of three-legged cauldrons and four-handled, three-handled, and handleless clay goblets. When Blegen plugged Ventris’s phonetic grid into the text accompanying the drawings, the syllables spelled out the exact Greek words *ti-ri-po-de* ('tripods'), *qe-to-ro-we* ('four-handled'), and *a-no-we* ('earless/handleless'), providing irrefutable, blind verification of the decipherment."
+    },
+    {
+      "paragraph_id": "K",
+      "content": "While the translation of Linear B pushed the documented history of the Greek language back by half a millennium, the actual content of the tablets surprised literary romantics who had hoped to uncover early versions of Homeric poetry, philosophical treaties, or royal chronicles. Instead, the tablets proved to be meticulous, bureaucratic tax and inventory ledgers maintained by palace accountants. The Mycenaean palaces operated as hyper-centralized command economies that tracked every single bronze sword, chariot wheel, flock of sheep, and ration of grain distributed to textile weavers and rowers. Paradoxically, this mundane administrative prose provided historians with an extraordinarily intimate portrait of Bronze Age social stratification, land tenure, and religious offerings to familiar Olympian deities including Zeus, Poseidon, and Dionysus—all recorded during the final days before the palaces were consumed by fire."
+    },
+    {
+      "paragraph_id": "L",
+      "content": "Ultimately, the decipherment of Linear B stands as a triumph of interdisciplinary collaboration, uniting classical archaeology, forensic handwriting analysis, and statistical cryptanalysis. While Ventris’s breakthrough resolved the mystery of the late Mycenaean archives, the earlier Aegean scripts unearthed by Evans—Cretan Hieroglyphic and Linear A—remain largely undeciphered to this day. Although scholars can apply the phonetic values of Linear B signs to read the approximate sounds of Linear A inscriptions, the underlying Minoan language matches no known linguistic family, and the surviving corpus of Linear A texts is currently too small to permit the statistical grid-building pioneered by Alice Kober. Until future excavations unearth a substantially larger archive of Minoan tablets, the original voice of Europe’s first maritime civilization will remain locked in silence."
+    }
+  ],
+  "question_banks": {
+    "phase_1_headings": {
+      "instructions": "Match the core structural function or central theme to each paragraph. Be vigilant against keyword distractor headings.",
+      "pool": [
+        { "id": "h1", "text": "Archaeological excavations that validated the historical reality of Bronze Age legends", "matches": "A" },
+        { "id": "h2", "text": "The preservation and categorization of three ancient scripts at Knossos", "matches": "B" },
+        { "id": "h3", "text": "Using character counts to determine the structural category of the script", "matches": "C" },
+        { "id": "h4", "text": "How academic gatekeeping and a mainland discovery challenged an established theory", "matches": "D" },
+        { "id": "h5", "text": "Cataloging sign frequencies to prove the presence of grammatical inflections", "matches": "E" },
+        { "id": "h6", "text": "Constructing relational grids from changing word endings without knowing pronunciation", "matches": "F" },
+        { "id": "h7", "text": "Distinguishing individual handwriting styles from actual phonetic characters", "matches": "G" },
+        { "id": "h8", "text": "Testing regional Cretan place names to unlock the phonetic grid", "matches": "H" },
+        { "id": "h9", "text": "The cascading emergence of archaic Greek vocabulary and a public announcement", "matches": "I" },
+        { "id": "h10", "text": "Philological collaboration and the blind verification of the decipherment", "matches": "J" },
+        { "id": "h11", "text": "What mundane accounting ledgers revealed about Bronze Age economy and religion", "matches": "K" },
+        { "id": "h12", "text": "Why the earlier Minoan scripts remain untranslated despite the Linear B breakthrough", "matches": "L" },
+        { "id": "d1", "text": "The discovery of a bilingual Rosetta Stone inside the palace of Pylos", "matches": null },
+        { "id": "d2", "text": "How epic Homeric poetry was preserved on sun-dried Cretan clay", "matches": null },
+        { "id": "d3", "text": "Proof that the Minoan language was a dialect of ancient Italian Etruscan", "matches": null }
+      ]
+    },
+    "phase_2_scanning": {
+      "instructions": "Scan the text rapidly. Match the specific archaeologist, linguist, or scholar to their corresponding discovery, methodology, or historical role.",
+      "pool": [
+        {
+          "prompt": "Who excavated the shaft graves of Mycenae, proving that a wealthy Bronze Age civilization existed on the Greek mainland?",
+          "options": ["Heinrich Schliemann", "Sir Arthur Evans", "Carl Blegen", "Emmett Bennett Jr."],
+          "correct": "Heinrich Schliemann",
+          "paragraph_id": "A"
+        },
+        {
+          "prompt": "Who unearthed the palace of Knossos, categorized the three Cretan scripts, and withheld thousands of tablets for four decades?",
+          "options": ["Sir Arthur Evans", "Heinrich Schliemann", "Michael Ventris", "John Chadwick"],
+          "correct": "Sir Arthur Evans",
+          "paragraph_id": "D"
+        },
+        {
+          "prompt": "Which archaeologist discovered over six hundred Linear B tablets at Pylos in 1939 and later unearthed the 'tripod' tablet that verified the decipherment?",
+          "options": ["Carl Blegen", "Sir Arthur Evans", "Emmett Bennett Jr.", "Heinrich Schliemann"],
+          "correct": "Carl Blegen",
+          "paragraph_id": "J"
+        },
+        {
+          "prompt": "Who hand-cut 180,000 index cards to prove that Linear B was an inflected language and built diagnostic consonant-vowel grids?",
+          "options": ["Alice Kober", "Michael Ventris", "Emmett Bennett Jr.", "John Chadwick"],
+          "correct": "Alice Kober",
+          "paragraph_id": "E"
+        },
+        {
+          "prompt": "Which former military cryptographer standardized the Linear B sign catalog by separating scribal handwriting quirks from distinct phonetic characters?",
+          "options": ["Emmett Bennett Jr.", "John Chadwick", "Alice Kober", "Michael Ventris"],
+          "correct": "Emmett Bennett Jr.",
+          "paragraph_id": "G"
+        },
+        {
+          "prompt": "Which British architect plugged Cretan city names into Kober’s grids and announced on the radio that Linear B recorded archaic Greek?",
+          "options": ["Michael Ventris", "John Chadwick", "Sir Arthur Evans", "Carl Blegen"],
+          "correct": "Michael Ventris",
+          "paragraph_id": "H"
+        },
+        {
+          "prompt": "Which Cambridge classicist and former Bletchley Park codebreaker partnered with Ventris to apply historical Greek phonology rules to the tablets?",
+          "options": ["John Chadwick", "Emmett Bennett Jr.", "Carl Blegen", "Sir Arthur Evans"],
+          "correct": "John Chadwick",
+          "paragraph_id": "J"
+        },
+        {
+          "prompt": "On which ancient artifact did pictorial drawings of three-legged cauldrons and handleless goblets confirm the accuracy of the phonetic grid?",
+          "options": ["Tablet Ta 641", "De Architectura", "The Rosetta Stone", "The Knossos Hierarchy"],
+          "correct": "Tablet Ta 641",
+          "paragraph_id": "J"
+        },
+        {
+          "prompt": "Which ancient Aegean script remains undeciphered today because its surviving text corpus is too small for statistical grid analysis?",
+          "options": ["Linear A", "Linear B", "Etruscan", "Mycenaean Greek"],
+          "correct": "Linear A",
+          "paragraph_id": "L"
+        },
+        {
+          "prompt": "At which mainland Greek site were over six hundred administrative tablets uncovered in 1939, challenging the theory of Minoan linguistic dominance?",
+          "options": ["Pylos", "Knossos", "Amnisos", "Phaistos"],
+          "correct": "Pylos",
+          "paragraph_id": "D"
+        }
+      ]
+    },
+    "phase_3_referents": {
+      "instructions": "Trace the syntactic chains. Identify the exact concept, entity, or mechanism that the highlighted pronoun phrase refers back to.",
+      "pool": [
+        {
+          "target_phrase": "this scholarly consensus",
+          "context": "Paragraph A: 'For centuries, modern historians regarded the heroic legends of the Trojan War... as purely mythical inventions devoid of historical substance. However, during the late nineteenth century, archaeological excavations... dramatically transformed this scholarly consensus.'",
+          "prompt": "What specific historical view does 'this scholarly consensus' refer to?",
+          "options": [
+            "The long-held belief among historians that Homeric legends of the Trojan War and Crete were purely mythical inventions",
+            "The agreement between Heinrich Schliemann and Sir Arthur Evans regarding the age of Knossos",
+            "The theory that Linear B recorded an archaic dialect of the Greek language",
+            "The classification of world writing systems into logographic, alphabetic, and syllabic categories"
+          ],
+          "correct": "The long-held belief among historians that Homeric legends of the Trojan War and Crete were purely mythical inventions",
+          "paragraph_id": "A"
+        },
+        {
+          "target_phrase": "This orthodoxy",
+          "context": "Paragraph D: '...Evans became dogmatically convinced that the Minoans had conquered the Greek mainland and that Linear B recorded an indigenous, non-Greek Minoan language... This orthodoxy began to fracture in 1939...'",
+          "prompt": "What established belief is represented by 'This orthodoxy'?",
+          "options": [
+            "Sir Arthur Evans’s dogmatic insistence that Minoan Crete dominated the mainland and that Linear B was a non-Greek Minoan language",
+            "Carl Blegen’s discovery of six hundred clay tablets inside the palace of Pylos",
+            "The practice of baking sun-dried clay tablets in accidental palace fires",
+            "The belief that Linear B could never be translated without a bilingual Rosetta Stone"
+          ],
+          "correct": "Sir Arthur Evans’s dogmatic insistence that Minoan Crete dominated the mainland and that Linear B was a non-Greek Minoan language",
+          "paragraph_id": "D"
+        },
+        {
+          "target_phrase": "an inflected language",
+          "context": "Paragraph E: 'Through this meticulous database, Kober proved that Linear B recorded an inflected language—one in which the grammatical endings of words change to indicate gender, plural number, or case...'",
+          "prompt": "How does the text explicitly define 'an inflected language'?",
+          "options": [
+            "A language where word suffixes alter to show grammatical gender, number, or case while the root stem stays the same",
+            "A script that utilizes thousands of distinct characters to represent entire words",
+            "An ancient Italian tongue related to non-Indo-European Etruscan",
+            "A writing system that separates phonetic syllables from pictorial commodity ideograms"
+          ],
+          "correct": "A language where word suffixes alter to show grammatical gender, number, or case while the root stem stays the same",
+          "paragraph_id": "E"
+        },
+        {
+          "target_phrase": "these bridging signs",
+          "context": "Paragraph F: '...the sign directly bridging the word stem and the grammatical suffix changed its visual shape whenever the ending vowel shifted, even though its root consonant remained identical. By cross-referencing these bridging signs, Kober constructed...'",
+          "prompt": "What specific symbols are referred to by 'these bridging signs'?",
+          "options": [
+            "The syllabic characters connecting a word's root stem to its changing grammatical suffix",
+            "The pictorial ideograms representing horses, tripods, and olive oil on the tablets",
+            "The cigarette packs and scrap cartons cut into index cards during World War II",
+            "The handwriting variations confused by early scholars prior to Emmett Bennett Jr."
+          ],
+          "correct": "The syllabic characters connecting a word's root stem to its changing grammatical suffix",
+          "paragraph_id": "F"
+        },
+        {
+          "target_phrase": "these local words",
+          "context": "Paragraph H: '...Ventris noticed that specific five-sign word triplets appearing purely in the Knossos tablets were entirely absent from the mainland Pylos tablets. Reasoning that these local words likely represented major Cretan cities...'",
+          "prompt": "What are 'these local words'?",
+          "options": [
+            "Specific five-sign word triplets found exclusively on the Cretan tablets at Knossos and absent at mainland Pylos",
+            "Archaic Greek occupational terms for shepherds and bronzesmiths",
+            "Etruscan vocabulary borrowed from non-Indo-European tribes in Italy",
+            "The names of Olympian deities such as Zeus, Poseidon, and Dionysus"
+          ],
+          "correct": "Specific five-sign word triplets found exclusively on the Cretan tablets at Knossos and absent at mainland Pylos",
+          "paragraph_id": "H"
+        },
+        {
+          "target_phrase": "an immediate, cascading chain reaction",
+          "context": "Paragraph I: 'Because each syllable in a Kober grid was linked to dozens of other signs sharing the same row or column, assigning phonetic values to just a few Cretan town names triggered an immediate, cascading chain reaction across the entire syllabary.'",
+          "prompt": "What process is described by 'an immediate, cascading chain reaction'?",
+          "options": [
+            "How identifying the sounds of a few Cretan place names automatically revealed the consonants and vowels of dozens of linked signs across the grid",
+            "The rapid spread of fire through the palace of Knossos around 1400 BCE",
+            "The public controversy following Michael Ventris's 1952 BBC radio broadcast",
+            "The collapse of the hyper-centralized Mycenaean command economy"
+          ],
+          "correct": "How identifying the sounds of a few Cretan place names automatically revealed the consonants and vowels of dozens of linked signs across the grid",
+          "paragraph_id": "I"
+        },
+        {
+          "target_phrase": "this mundane administrative prose",
+          "context": "Paragraph K: 'The Mycenaean palaces operated as hyper-centralized command economies that tracked every single bronze sword, chariot wheel, flock of sheep, and ration of grain... Paradoxically, this mundane administrative prose provided historians with...'",
+          "prompt": "What does 'this mundane administrative prose' refer back to?",
+          "options": [
+            "The bureaucratic tax and inventory ledgers tracking weapons, livestock, and grain rations",
+            "Lost manuscripts of Homeric epic poetry and royal philosophical treatises",
+            "The 1953 academic paper published in the Journal of Hellenic Studies",
+            "Undeciphered religious inscriptions written in Cretan Hieroglyphic"
+          ],
+          "correct": "The bureaucratic tax and inventory ledgers tracking weapons, livestock, and grain rations",
+          "paragraph_id": "K"
+        },
+        {
+          "target_phrase": "Europe’s first maritime civilization",
+          "context": "Paragraph L: 'Until future excavations unearth a substantially larger archive of Minoan tablets, the original voice of Europe’s first maritime civilization will remain locked in silence.'",
+          "prompt": "Which society is referred to as 'Europe’s first maritime civilization'?",
+          "options": [
+            "The Minoan civilization of Crete, which wrote in Linear A and Cretan Hieroglyphic",
+            "The Greek-speaking Mycenaean warriors who ruled the mainland palace of Pylos",
+            "The Etruscan city-states of pre-Roman Italy",
+            "The classical Athenians of the fifth century BCE"
+          ],
+          "correct": "The Minoan civilization of Crete, which wrote in Linear A and Cretan Hieroglyphic",
+          "paragraph_id": "L"
+        },
+        {
+          "target_phrase": "an indispensable service",
+          "context": "Paragraph G: '...American linguist Emmett Bennett Jr., who had worked as a military cryptographer... performed an indispensable service to the field of Aegean epigraphy.'",
+          "prompt": "What specific contribution does 'an indispensable service' refer to in Paragraph G?",
+          "options": [
+            "Distinguishing individual scribal handwriting variations from actual phonetic signs to standardize the Linear B sign catalog",
+            "Breaking Japanese naval ciphers for the American military during World War II",
+            "Excavating the gold-filled shaft graves of Mycenae in the late nineteenth century",
+            "Translating the tripod descriptions on Tablet Ta 641 alongside Carl Blegen"
+          ],
+          "correct": "Distinguishing individual scribal handwriting variations from actual phonetic signs to standardize the Linear B sign catalog",
+          "paragraph_id": "G"
+        },
+        {
+          "target_phrase": "these tablets",
+          "context": "Paragraph B: 'While excavating the fire-hardened ruins of Knossos, Evans discovered thousands of sun-dried clay tablets that had been accidentally baked... Etched into these tablets were three distinct, previously unknown writing systems...'",
+          "prompt": "What does 'these tablets' refer to?",
+          "options": [
+            "The thousands of sun-dried clay records preserved by fire at the palace of Knossos",
+            "Bilingual stone monuments inscribed in both Egyptian hieroglyphs and classical Greek",
+            "The 180,000 paper index cards hand-cut by Alice Kober during World War II",
+            "Bronze weapons and chariot wheels stored in the armories of Pylos"
+          ],
+          "correct": "The thousands of sun-dried clay records preserved by fire at the palace of Knossos",
+          "paragraph_id": "B"
+        }
+      ]
+    },
+    "phase_4_distractors": {
+      "instructions": "Meta-analysis: Evaluate why the presented answer choice is an invalid distractor trap, recognizing how IELTS manipulates keywords to generate false structural matches.",
+      "pool": [
+        {
+          "target_heading": "How ancient palace scribes deliberately kilned clay tablets to preserve royal history",
+          "applied_to_paragraph": "Paragraph B",
+          "prompt": "Why is this heading factually inaccurate regarding Paragraph B?",
+          "options": [
+            "The text states that the sun-dried clay tablets were *accidentally* baked and preserved when the palace burned down, not deliberately kilned by scribes.",
+            "Paragraph B explains that the tablets were carved out of volcanic stone rather than sun-dried clay.",
+            "Sir Arthur Evans destroyed the majority of the tablets during the 1900 excavation of Knossos.",
+            "The paragraph states that a bilingual Rosetta Stone was discovered alongside the Linear B cache."
+          ],
+          "correct": "The text states that the sun-dried clay tablets were *accidentally* baked and preserved when the palace burned down, not deliberately kilned by scribes.",
+          "paragraph_id": "B"
+        },
+        {
+          "target_heading": "Why Linear B was classified as an alphabetic script containing eighty-seven letters",
+          "applied_to_paragraph": "Paragraph C",
+          "prompt": "Identify the classification error in applying this heading to Paragraph C.",
+          "options": [
+            "Paragraph C explains that alphabets only have 20–30 signs; having 87 phonetic signs proved Linear B was a *syllabic* script, not an alphabet.",
+            "The text concludes that Linear B is a logographic script identical in structure to Chinese.",
+            "Ideograms for horses and tripods were used as phonetic vowels rather than commodity symbols.",
+            "Linguists in Paragraph C determined that Linear B contained over three thousand unique characters."
+          ],
+          "correct": "Paragraph C explains that alphabets only have 20–30 signs; having 87 phonetic signs proved Linear B was a *syllabic* script, not an alphabet.",
+          "paragraph_id": "C"
+        },
+        {
+          "target_heading": "Sir Arthur Evans’s generous sharing of Knossos tablets with international scholars",
+          "applied_to_paragraph": "Paragraph D",
+          "prompt": "How does this heading directly contradict the historical account in Paragraph D?",
+          "options": [
+            "The text states the opposite: Evans *withheld* thousands of inscriptions for over four decades and suppressed academic dissent.",
+            "Evans immediately donated all of the Knossos tablets to Carl Blegen at the University of Cincinnati.",
+            "The Cretan authorities prohibited Sir Arthur Evans from publishing any fragments of Linear B.",
+            "Paragraph D focuses on Heinrich Schliemann's excavations at Troy rather than Evans's work at Knossos."
+          ],
+          "correct": "The text states the opposite: Evans *withheld* thousands of inscriptions for over four decades and suppressed academic dissent.",
+          "paragraph_id": "D"
+        },
+        {
+          "target_heading": "How Alice Kober assigned Greek phonetic pronunciations to every sign on her grids",
+          "applied_to_paragraph": "Paragraph F",
+          "prompt": "Why does this heading overstate Alice Kober’s achievement in Paragraph F?",
+          "options": [
+            "The text explicitly notes that Kober built relational grids 'without yet knowing the actual phonetic pronunciation of any single sign' before her death.",
+            "Alice Kober believed that Linear B was an uninflected language with no grammatical suffixes.",
+            "The grids described in Paragraph F were constructed by John Chadwick at Bletchley Park, not Kober.",
+            "Kober proved that every symbol in Linear B represented a standalone consonant without a vowel."
+          ],
+          "correct": "The text explicitly notes that Kober built relational grids 'without yet knowing the actual phonetic pronunciation of any single sign' before her death.",
+          "paragraph_id": "F"
+        },
+        {
+          "target_heading": "Michael Ventris’s confirmation that Linear B recorded an ancient Etruscan dialect",
+          "applied_to_paragraph": "Paragraph H",
+          "prompt": "Why is this heading a classic 'discarded hypothesis' trap for Paragraph H?",
+          "options": [
+            "While Ventris *initially* assumed the language was related to Etruscan, plugging in Greek place names proved it was actually archaic Greek.",
+            "Paragraph H states that Etruscan was spoken only on the Greek mainland at Pylos, not on Crete.",
+            "Sir Arthur Evans convinced Ventris to abandon the Etruscan theory during a 1952 lecture.",
+            "The five-sign word triplets in Paragraph H turned out to be names of Italian rivers."
+          ],
+          "correct": "While Ventris *initially* assumed the language was related to Etruscan, plugging in Greek place names proved it was actually archaic Greek.",
+          "paragraph_id": "H"
+        },
+        {
+          "target_heading": "How Ventris and Chadwick forged Tablet Ta 641 to convince skeptical professors",
+          "applied_to_paragraph": "Paragraph J",
+          "prompt": "Why is this heading a false distortion of the events in Paragraph J?",
+          "options": [
+            "Tablet Ta 641 was independently excavated by Carl Blegen and had *never been seen* by Ventris or Chadwick, serving as genuine blind verification.",
+            "The drawings of tripods and goblets on Tablet Ta 641 actually disproved Ventris’s phonetic grid.",
+            "John Chadwick refused to co-author the 1953 paper because he doubted the Greek phonology.",
+            "Tablet Ta 641 was discovered in the ruins of Knossos in 1900 rather than at Pylos in 1953."
+          ],
+          "correct": "Tablet Ta 641 was independently excavated by Carl Blegen and had *never been seen* by Ventris or Chadwick, serving as genuine blind verification.",
+          "paragraph_id": "J"
+        },
+        {
+          "target_heading": "The discovery of epic Homeric poetry and royal chronicles on the Pylos tablets",
+          "applied_to_paragraph": "Paragraph K",
+          "prompt": "Why does this heading fail to match Paragraph K?",
+          "options": [
+            "The text explicitly states that romantics *hoped* to find poetry and chronicles, but the tablets actually contained mundane bureaucratic tax and inventory ledgers.",
+            "Paragraph K proves that the Mycenaeans worshipped Egyptian deities rather than Zeus or Poseidon.",
+            "The tablets revealed that Mycenaean palaces operated as free-market democracies with zero taxation.",
+            "Only the tablets at Knossos contained Homeric poetry, while Pylos contained military maps."
+          ],
+          "correct": "The text explicitly states that romantics *hoped* to find poetry and chronicles, but the tablets actually contained mundane bureaucratic tax and inventory ledgers.",
+          "paragraph_id": "K"
+        },
+        {
+          "target_heading": "How the decipherment of Linear B enabled the complete translation of Linear A",
+          "applied_to_paragraph": "Paragraph L",
+          "prompt": "Why is this heading directly contradicted by the conclusion in Paragraph L?",
+          "options": [
+            "Paragraph L states that Linear A and Cretan Hieroglyphic 'remain largely undeciphered to this day' because the Minoan language matches no known family.",
+            "The text states that Linear A was actually written in classical Latin rather than Minoan.",
+            "Alice Kober successfully translated Linear A before beginning her work on Linear B.",
+            "Archaeologists have unearthed millions of Linear A tablets, creating a database too large to analyze."
+          ],
+          "correct": "Paragraph L states that Linear A and Cretan Hieroglyphic 'remain largely undeciphered to this day' because the Minoan language matches no known family.",
+          "paragraph_id": "L"
+        },
+        {
+          "target_heading": "Why Emmett Bennett Jr. concluded that every scribe at Pylos used a different language",
+          "applied_to_paragraph": "Paragraph G",
+          "prompt": "How does this heading misrepresent Emmett Bennett Jr.’s paleographic work in Paragraph G?",
+          "options": [
+            "Bennett showed that visual differences were merely variations in individual scribes' *handwriting*, not separate phonetic signs or languages.",
+            "The paragraph states that only a single scribe wrote all of the tablets at both Pylos and Knossos.",
+            "Bennett used Japanese ciphers to translate the religious texts of King Minos.",
+            "Earlier scholars had already standardized the Linear B numbering system before Bennett arrived."
+          ],
+          "correct": "Bennett showed that visual differences were merely variations in individual scribes' *handwriting*, not separate phonetic signs or languages.",
+          "paragraph_id": "G"
+        },
+        {
+          "target_heading": "Why amateur archaeologists failed to find any physical evidence of Bronze Age Greece",
+          "applied_to_paragraph": "Paragraph A",
+          "prompt": "Why is this heading factually opposite to Paragraph A?",
+          "options": [
+            "Amateur archaeologist Heinrich Schliemann *succeeded* in uncovering the shaft graves of Mycenae, proving a wealthy Bronze Age civilization existed.",
+            "Paragraph A states that Sir Arthur Evans believed the Minoans were a purely mythical invention.",
+            "Excavations in the late nineteenth century proved that the city of Mycenae was built during the Roman Empire.",
+            "The text states that Homer personally excavated the palace complex of Knossos."
+          ],
+          "correct": "Amateur archaeologist Heinrich Schliemann *succeeded* in uncovering the shaft graves of Mycenae, proving a wealthy Bronze Age civilization existed.",
+          "paragraph_id": "A"
+        }
+      ]
+    },
+    "phase_5_logic": {
+      "instructions": "Determine if each statement is True, False, or Not Given based strictly on the deterministic parameters of the text. Do not rely on external historical knowledge.",
+      "pool": [
+        {
+          "prompt": "Prior to the late nineteenth century, mainstream historians generally viewed the events and settings of Homer’s epic poems as fictional.",
+          "type": "True",
+          "explanation": "Paragraph A states that 'For centuries, modern historians regarded the heroic legends of the Trojan War... as purely mythical inventions devoid of historical substance.'",
+          "paragraph_id": "A"
+        },
+        {
+          "prompt": "Of the three writing systems uncovered by Sir Arthur Evans at Knossos, Cretan Hieroglyphic was found on the largest number of clay tablets.",
+          "type": "False",
+          "explanation": "Paragraph B states that 'the largest cache of tablets at Knossos featured a later, highly standardized script that Evans named Linear B,' not Cretan Hieroglyphic.",
+          "paragraph_id": "B"
+        },
+        {
+          "prompt": "A writing system that relies on roughly eighty to ninety distinct phonetic characters is structurally classified by linguists as a syllabary rather than an alphabet.",
+          "type": "True",
+          "explanation": "Paragraph C explains that alphabets use 20–30 letters and logographic scripts use thousands; because Linear B had approximately 87 phonetic signs, scholars deduced it 'had to be a syllabic script.'",
+          "paragraph_id": "C"
+        },
+        {
+          "prompt": "Carl Blegen’s 1939 excavation at Pylos was financially sponsored by Sir Arthur Evans in an effort to prove Minoan cultural supremacy.",
+          "type": "Not Given",
+          "explanation": "Paragraph D mentions Evans's belief in Minoan supremacy and Blegen's 1939 excavation at Pylos, but provides zero information regarding who funded Blegen's dig.",
+          "paragraph_id": "D"
+        },
+        {
+          "prompt": "Alice Kober used recycled cardboard and cigarette packaging to build her index card database because wartime rationing restricted paper supplies.",
+          "type": "True",
+          "explanation": "Paragraph E explicitly confirms that 'Working during World War II when paper was rationed, she hand-cut over 180,000 index cards from scrap cartons and cigarette packs.'",
+          "paragraph_id": "E"
+        },
+        {
+          "prompt": "Before passing away in 1950, Alice Kober successfully determined that the language underlying her diagnostic grids was an archaic dialect of Greek.",
+          "type": "False",
+          "explanation": "Paragraph E notes she refused to speculate on the historical language, and Paragraph F confirms she constructed her grids 'without yet knowing the actual phonetic pronunciation of any single sign' before dying in 1950.",
+          "paragraph_id": "F"
+        },
+        {
+          "prompt": "Emmett Bennett Jr. served alongside John Chadwick at the British codebreaking center at Bletchley Park during World War II.",
+          "type": "Not Given",
+          "explanation": "Paragraph G states that American linguist Bennett decoded Japanese ciphers during WWII, and Paragraph J states that British classicist Chadwick worked at Bletchley Park, but the text never states whether Bennett worked at Bletchley Park or met Chadwick during the war.",
+          "paragraph_id": "G"
+        },
+        {
+          "prompt": "Michael Ventris held a doctorate in comparative linguistics from Cambridge University prior to announcing his decipherment on the BBC.",
+          "type": "False",
+          "explanation": "Paragraph H identifies Ventris as 'a young British architect,' and Paragraph J explicitly states that 'as an architect he lacked the formal philological training in historical Greek dialects.'",
+          "paragraph_id": "J"
+        },
+        {
+          "prompt": "The five-sign word triplets that Michael Ventris identified as Cretan city names appeared frequently in both the Knossos and Pylos tablet archives.",
+          "type": "False",
+          "explanation": "Paragraph H states the exact opposite: Ventris noticed that these specific triplets 'appearing purely in the Knossos tablets were entirely absent from the mainland Pylos tablets.'",
+          "paragraph_id": "H"
+        },
+        {
+          "prompt": "Tablet Ta 641 provided compelling proof of Ventris’s decipherment because its syllabic text matched the small illustrations of vessels incised on the same tablet.",
+          "type": "True",
+          "explanation": "Paragraph J confirms that Tablet Ta 641 featured incised drawings of three-legged cauldrons and goblets with varying handles, and applying Ventris's grid spelled out the exact corresponding Greek words.",
+          "paragraph_id": "J"
+        },
+        {
+          "prompt": "The translated Linear B archives revealed that the Mycenaean civilization did not yet worship any of the gods later associated with classical Mount Olympus.",
+          "type": "False",
+          "explanation": "Paragraph K contradicts this, noting that the tablets recorded 'religious offerings to familiar Olympian deities including Zeus, Poseidon, and Dionysus.'",
+          "paragraph_id": "K"
+        },
+        {
+          "prompt": "Scholars are currently unable to decipher Linear A in part because the surviving collection of inscriptions is too small for statistical analysis.",
+          "type": "True",
+          "explanation": "Paragraph L confirms that 'the surviving corpus of Linear A texts is currently too small to permit the statistical grid-building pioneered by Alice Kober.'",
+          "paragraph_id": "L"
+        }
+      ]
+    }
+  }
+}
