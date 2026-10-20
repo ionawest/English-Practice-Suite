@@ -18,6 +18,8 @@
             --border: #dee2e6;
             --text: #212529;
             --text-light: #6c757d;
+            --highlight-bg: #fff3a8;
+            --highlight-hover: #ffe66d;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
@@ -25,32 +27,96 @@
         .app-container { width: 100%; max-width: 1300px; height: 100vh; display: flex; flex-direction: column; background: var(--card-bg); overflow: hidden; }
 
         /* Navigation Header */
-        .app-header { height: 50px; background: var(--primary); color: white; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; flex-shrink: 0; }
-        .app-header h1 { font-size: 16px; font-weight: 600; letter-spacing: 0.5px; }
-        .app-header button { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: white; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+        .app-header { height: 50px; background: var(--primary); color: white; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; flex-shrink: 0; gap: 10px; }
+        .app-header h1 { font-size: 16px; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .header-actions { display: flex; align-items: center; gap: 8px; }
+        .app-header button { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.35); color: white; padding: 5px 11px; border-radius: 4px; cursor: pointer; font-size: 12.5px; font-weight: 500; transition: background 0.15s; white-space: nowrap; }
+        .app-header button:hover { background: rgba(255,255,255,0.22); }
+        .app-header button.btn-save { background: var(--success); border-color: var(--success); font-weight: 600; }
+        .app-header button.btn-save:hover { background: #21867a; }
 
         /* Screens */
         .screen { display: none; height: calc(100vh - 50px); width: 100%; overflow: hidden; }
         .screen.active { display: flex; }
 
         /* Setup Screen */
-        .setup-screen { justify-content: center; align-items: center; padding: 20px; }
+        .setup-screen { justify-content: center; align-items: center; padding: 20px; overflow-y: auto; }
         .setup-box { max-width: 600px; width: 100%; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; }
         .setup-box h2 { font-size: 24px; color: var(--primary); margin-bottom: 12px; }
         .setup-box p { color: var(--text-light); font-size: 14px; line-height: 1.6; margin-bottom: 25px; }
         .setup-controls { display: flex; flex-direction: column; gap: 15px; text-align: left; }
         .setup-controls label { font-size: 13px; font-weight: bold; color: var(--primary); }
-        select { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
+        select, input.resume-input { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
+        .divider { height: 1px; background: var(--border); margin: 12px 0; }
 
         /* Split-Screen Workspace */
         .workspace { display: grid; grid-template-columns: 1.15fr 0.85fr; width: 100%; height: 100%; overflow: hidden; }
 
         /* Text Viewer Panel (Top / Left) */
         .text-panel { background: #fdfbf7; border-right: 1px solid var(--border); padding: 25px 30px; overflow-y: auto; height: 100%; display: flex; flex-direction: column; gap: 20px; }
-        .text-panel h2 { font-size: 20px; color: var(--primary); border-bottom: 2px solid #e9ecef; padding-bottom: 10px; }
+        .text-panel-header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #e9ecef; padding-bottom: 10px; gap: 10px; flex-wrap: wrap; }
+        .text-panel h2 { font-size: 20px; color: var(--primary); }
+        .exam-tip { font-size: 12px; color: var(--text-light); background: #eef4f7; padding: 4px 8px; border-radius: 4px; }
         .paragraph-block { background: #ffffff; border: 1px solid #e9ecef; border-radius: 8px; padding: 18px; line-height: 1.75; font-size: 15px; position: relative; transition: border-color 0.2s, box-shadow 0.2s; }
         .paragraph-block.highlight { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(27, 73, 101, 0.15); }
-        .para-label { font-size: 12px; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+        .para-label { font-size: 12px; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 8px; display: inline-block; user-select: none; }
+        .para-text { user-select: text; -webkit-user-select: text; cursor: text; }
+
+        /* IELTS Computer Exam Highlight Styling */
+        mark.user-highlight {
+            background-color: var(--highlight-bg);
+            color: inherit;
+            padding: 1px 0;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.15s;
+            box-shadow: 0 1px 0 rgba(212, 172, 13, 0.35);
+        }
+        mark.user-highlight:hover {
+            background-color: var(--highlight-hover);
+        }
+
+        /* Floating Highlight Tooltip */
+        .highlight-toolbar {
+            position: fixed;
+            display: none;
+            z-index: 2000;
+            background: #1b263b;
+            color: #fff;
+            border-radius: 6px;
+            padding: 5px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+            gap: 5px;
+            align-items: center;
+            transform: translateX(-50%);
+        }
+        .highlight-toolbar::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px 6px 0;
+            border-style: solid;
+            border-color: #1b263b transparent;
+        }
+        .highlight-toolbar button {
+            background: transparent;
+            border: none;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 12.5px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+        }
+        .highlight-toolbar button:hover { background: rgba(255,255,255,0.15); }
+        .highlight-toolbar button.remove-btn { color: #ffadad; }
+
         .heading-dropdown { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; background: #fff; margin-bottom: 12px; }
         .heading-dropdown.correct { border-color: var(--success); background-color: #e8f5e9; color: var(--success); font-weight: bold; pointer-events: none; }
         .heading-dropdown.wrong { border-color: var(--error); background-color: #ffebee; }
@@ -99,6 +165,14 @@
         .review-list { max-height: 380px; overflow-y: auto; text-align: left; display: flex; flex-direction: column; gap: 10px; margin: 20px 0; padding-right: 5px; }
         .review-item { background: #f8f9fa; border: 1px solid var(--border); border-radius: 6px; padding: 12px 15px; font-size: 13px; }
 
+        /* Save / Share Modal */
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 3000; padding: 20px; }
+        .modal-overlay.active { display: flex; }
+        .modal-box { background: #fff; max-width: 520px; width: 100%; border-radius: 10px; padding: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); display: flex; flex-direction: column; gap: 14px; }
+        .modal-box h3 { color: var(--primary); font-size: 18px; }
+        .modal-box p { font-size: 13px; color: var(--text-light); line-height: 1.5; }
+        .modal-box textarea { width: 100%; height: 75px; padding: 10px; font-size: 12px; font-family: monospace; border: 1px solid var(--border); border-radius: 6px; resize: none; background: #f8f9fa; }
+
         /* Responsive Mobile Split (Stacked 45vh / 55vh) */
         @media (max-width: 900px) {
             .workspace { grid-template-columns: 1fr; grid-template-rows: 45vh calc(55vh - 50px); }
@@ -106,16 +180,40 @@
             .control-panel { border-left: none; padding: 15px; height: 100%; }
             .question-card { padding: 12px; min-height: 140px; }
             .option-btn { padding: 10px 12px; font-size: 12.5px; }
+            .app-header h1 { font-size: 14px; }
         }
     </style>
 </head>
 <body>
 
+<!-- Floating Highlight Context Menu -->
+<div id="highlightToolbar" class="highlight-toolbar">
+    <button id="applyHighlightBtn" onmousedown="event.preventDefault(); applyUserHighlight();">🖍️ Highlight</button>
+    <button id="removeHighlightBtn" class="remove-btn" style="display:none;" onmousedown="event.preventDefault(); removeActiveHighlight();">🗑️ Remove</button>
+</div>
+
+<!-- Save Progress Modal -->
+<div id="saveModal" class="modal-overlay">
+    <div class="modal-box">
+        <h3>⏸️ Progress Saved & Link Copied!</h3>
+        <p>Bookmark or copy the link below to resume this marathon at the exact same question, score, and highlighted text:</p>
+        <textarea id="shareUrlOutput" readonly onclick="this.select()"></textarea>
+        <div style="display: flex; gap: 10px;">
+            <button class="btn" style="flex: 1;" onclick="copyShareUrl()">Copy Resume Link</button>
+            <button class="btn btn-secondary" onclick="closeSaveModal()">Close</button>
+        </div>
+    </div>
+</div>
+
 <div class="app-container">
     <header class="app-header">
         <h1>IELTS Reading Endurance Gauntlet</h1>
-        <button class="btn btn-secondary" onclick="window.location.href='index.html'">Back to Menu</button>
-        <button onclick="resetToSetup()">Exit Marathon</button>
+        <div class="header-actions">
+            <button id="clearHighlightsBtn" style="display:none;" onclick="clearAllUserHighlights()" title="Remove all yellow highlights">🧹 Clear Highlights</button>
+            <button id="saveProgressBtn" class="btn-save" style="display:none;" onclick="exportProgressLink()">⏸️ Save / Share Link</button>
+            <button onclick="window.location.href='index.html'">Back to Menu</button>
+            <button onclick="resetToSetup()">Exit Marathon</button>
+        </div>
     </header>
 
     <!-- Setup Screen -->
@@ -128,7 +226,14 @@
                 <select id="drillSelect">
                     <option value="">Loading drills...</option>
                 </select>
-                <button class="btn" style="margin-top: 10px;" onclick="loadDrill()">Launch Marathon Drill</button>
+                <button class="btn" style="margin-top: 5px;" onclick="loadDrill()">Launch Marathon Drill</button>
+
+                <div class="divider"></div>
+                <label for="resumeInput">Or Paste a Saved Resume Link / Code:</label>
+                <div style="display: flex; gap: 8px;">
+                    <input type="text" id="resumeInput" class="resume-input" placeholder="Paste saved link or code here...">
+                    <button class="btn btn-secondary" style="white-space: nowrap;" onclick="resumeFromInput()">Resume</button>
+                </div>
             </div>
         </div>
     </div>
@@ -139,7 +244,10 @@
             
             <!-- Independently Scrollable Text Viewer -->
             <div class="text-panel" id="textViewer">
-                <h2 id="passageTitle">Passage Title</h2>
+                <div class="text-panel-header">
+                    <h2 id="passageTitle">Passage Title</h2>
+                    <span class="exam-tip">💡 Select text to highlight • Click highlight to remove</span>
+                </div>
                 <div id="paragraphsContainer"></div>
             </div>
 
@@ -185,9 +293,19 @@
 
 <script>
     let currentDrill = null;
+    let currentDrillPath = "";
     let currentPhase = 1;
 
-    // Phase Question Pools (holds full shuffled sets)
+    // Stores the permutation order (indices into currentDrill pools) so progress links are compact
+    let poolOrder = {
+        h1: [],
+        p2: [],
+        p3: [],
+        p4: [],
+        p5: []
+    };
+
+    // Phase Question Pools (resolved from poolOrder)
     let activePhaseQuestions = {
         phase2: [],
         phase3: [],
@@ -200,6 +318,14 @@
     let phase1Attempts = 0;
     let phase1UsedHelp = false;
     let drillHistory = [];
+
+    // Highlight state
+    let activeClickedMark = null;
+
+    function shuffleIndices(length) {
+        let indices = Array.from({ length }, (_, i) => i);
+        return indices.sort(() => 0.5 - Math.random());
+    }
 
     function shuffleArray(arr) {
         return [...arr].sort(() => 0.5 - Math.random());
@@ -215,7 +341,26 @@
             .replace(/'/g, "&#039;");
     }
 
-    // --- AUTO-LOAD THE DROPDOWN LIST ---
+    // Unicode-safe Base64 encoding/decoding for URL state
+    function encodeStateToBase64(obj) {
+        const jsonStr = JSON.stringify(obj);
+        const bytes = new TextEncoder().encode(jsonStr);
+        let binary = "";
+        bytes.forEach(b => binary += String.fromCharCode(b));
+        return btoa(binary);
+    }
+
+    function decodeStateFromBase64(b64) {
+        const binary = atob(b64);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) {
+            bytes[i] = binary.charCodeAt(i);
+        }
+        const jsonStr = new TextDecoder().decode(bytes);
+        return JSON.parse(jsonStr);
+    }
+
+    // --- AUTO-LOAD THE DROPDOWN LIST & CHECK FOR RESUME LINK ---
     window.onload = async function() {
         try {
             const response = await fetch('marathon_drills/index.json');
@@ -234,6 +379,13 @@
         } catch (error) {
             console.log("Could not load index.json. Did you run the Python script?", error);
         }
+
+        // Automatically resume if ?resume= parameter is present in URL
+        const params = new URLSearchParams(window.location.search);
+        const resumeCode = params.get('resume');
+        if (resumeCode) {
+            await restoreSessionFromCode(resumeCode);
+        }
     };
 
     async function loadDrill() {
@@ -244,6 +396,9 @@
             const response = await fetch(path);
             if (!response.ok) throw new Error("Drill fetch failure.");
             currentDrill = await response.json();
+            currentDrillPath = path;
+            // Clear any old resume query param when starting fresh
+            window.history.replaceState({}, document.title, window.location.pathname);
             startMarathonSession();
         } catch (error) {
             console.error(error);
@@ -252,10 +407,13 @@
     }
 
     function resetToSetup() {
+        hideHighlightToolbar();
+        document.getElementById('saveProgressBtn').style.display = 'none';
+        document.getElementById('clearHighlightsBtn').style.display = 'none';
         document.getElementById('endScreen').classList.remove('active');
         document.getElementById('drillScreen').classList.remove('active');
         document.getElementById('setupScreen').classList.add('active');
-        window.onload();
+        window.history.replaceState({}, document.title, window.location.pathname);
     }
 
     function startMarathonSession() {
@@ -266,27 +424,38 @@
         phaseIndices = { p2: 0, p3: 0, p4: 0, p5: 0 };
         drillHistory = [];
 
-        // Shuffle and run ALL questions from the banks
-        activePhaseQuestions.phase2 = shuffleArray(currentDrill.question_banks.phase_2_scanning.pool);
-        activePhaseQuestions.phase3 = shuffleArray(currentDrill.question_banks.phase_3_referents.pool);
-        activePhaseQuestions.phase4 = shuffleArray(currentDrill.question_banks.phase_4_distractors.pool);
-        activePhaseQuestions.phase5 = shuffleArray(currentDrill.question_banks.phase_5_logic.pool);
+        // Generate shuffled index orders
+        poolOrder.h1 = shuffleIndices(currentDrill.question_banks.phase_1_headings.pool.length);
+        poolOrder.p2 = shuffleIndices(currentDrill.question_banks.phase_2_scanning.pool.length);
+        poolOrder.p3 = shuffleIndices(currentDrill.question_banks.phase_3_referents.pool.length);
+        poolOrder.p4 = shuffleIndices(currentDrill.question_banks.phase_4_distractors.pool.length);
+        poolOrder.p5 = shuffleIndices(currentDrill.question_banks.phase_5_logic.pool.length);
+
+        rebuildActivePoolsFromOrder();
 
         document.getElementById('setupScreen').classList.remove('active');
         document.getElementById('endScreen').classList.remove('active');
         document.getElementById('drillScreen').classList.add('active');
+        document.getElementById('saveProgressBtn').style.display = 'inline-block';
+        document.getElementById('clearHighlightsBtn').style.display = 'inline-block';
 
         document.getElementById('passageTitle').innerText = currentDrill.topic;
         renderTextPassage();
         setupPhase1();
     }
 
+    function rebuildActivePoolsFromOrder() {
+        activePhaseQuestions.phase2 = poolOrder.p2.map(i => currentDrill.question_banks.phase_2_scanning.pool[i]);
+        activePhaseQuestions.phase3 = poolOrder.p3.map(i => currentDrill.question_banks.phase_3_referents.pool[i]);
+        activePhaseQuestions.phase4 = poolOrder.p4.map(i => currentDrill.question_banks.phase_4_distractors.pool[i]);
+        activePhaseQuestions.phase5 = poolOrder.p5.map(i => currentDrill.question_banks.phase_5_logic.pool[i]);
+    }
+
     function renderTextPassage() {
         const container = document.getElementById('paragraphsContainer');
         container.innerHTML = '';
 
-        // Randomize the heading dropdown options so they are NOT in paragraph order
-        const randomizedHeadings = shuffleArray(currentDrill.question_banks.phase_1_headings.pool);
+        const randomizedHeadings = poolOrder.h1.map(i => currentDrill.question_banks.phase_1_headings.pool[i]);
 
         currentDrill.text.forEach(p => {
             const div = document.createElement('div');
@@ -304,9 +473,282 @@
                         ${optionsHtml}
                     </select>
                 </div>
-                <div class="para-text">${p.content}</div>
+                <div class="para-text" id="paraText_${p.paragraph_id}">${p.content}</div>
             `;
             container.appendChild(div);
+        });
+    }
+
+    // ==========================================
+    // IELTS TEXT HIGHLIGHT & UNHIGHLIGHT SYSTEM
+    // ==========================================
+    const toolbar = document.getElementById('highlightToolbar');
+    const applyBtn = document.getElementById('applyHighlightBtn');
+    const removeBtn = document.getElementById('removeHighlightBtn');
+
+    document.addEventListener('mouseup', handleTextSelection);
+    document.addEventListener('touchend', () => setTimeout(handleTextSelection, 60));
+
+    function handleTextSelection(e) {
+        const textViewer = document.getElementById('textViewer');
+        if (!textViewer || !document.getElementById('drillScreen').classList.contains('active')) return;
+
+        // Check if user directly clicked an existing highlight mark
+        if (e && e.target && e.target.classList && e.target.classList.contains('user-highlight')) {
+            const sel = window.getSelection();
+            if (!sel || sel.isCollapsed) {
+                activeClickedMark = e.target;
+                const rect = e.target.getBoundingClientRect();
+                showHighlightToolbar(rect.left + rect.width / 2, rect.top - 42, false, true);
+                return;
+            }
+        }
+
+        const selection = window.getSelection();
+        if (!selection || selection.isCollapsed || !selection.toString().trim()) {
+            if (e && !toolbar.contains(e.target)) {
+                hideHighlightToolbar();
+            }
+            return;
+        }
+
+        const range = selection.getRangeAt(0);
+        const startPara = range.startContainer.parentElement?.closest('.para-text');
+        const endPara = range.endContainer.parentElement?.closest('.para-text');
+
+        // Only allow highlighting inside the same paragraph block
+        if (!startPara || startPara !== endPara) {
+            hideHighlightToolbar();
+            return;
+        }
+
+        // Check if selection touches an existing highlight
+        const existingMark = range.commonAncestorContainer.parentElement?.closest('mark.user-highlight');
+        activeClickedMark = existingMark || null;
+
+        const rect = range.getBoundingClientRect();
+        showHighlightToolbar(rect.left + rect.width / 2, rect.top - 42, true, !!existingMark);
+    }
+
+    function showHighlightToolbar(x, y, canAdd, canRemove) {
+        applyBtn.style.display = canAdd ? 'inline-flex' : 'none';
+        removeBtn.style.display = canRemove ? 'inline-flex' : 'none';
+        toolbar.style.left = `${Math.max(70, Math.min(window.innerWidth - 70, x))}px`;
+        toolbar.style.top = `${Math.max(10, y)}px`;
+        toolbar.style.display = 'flex';
+    }
+
+    function hideHighlightToolbar() {
+        toolbar.style.display = 'none';
+        activeClickedMark = null;
+    }
+
+    function applyUserHighlight() {
+        const selection = window.getSelection();
+        if (!selection || selection.isCollapsed) return;
+
+        const range = selection.getRangeAt(0);
+        const startPara = range.startContainer.parentElement?.closest('.para-text');
+        const endPara = range.endContainer.parentElement?.closest('.para-text');
+        if (!startPara || startPara !== endPara) return;
+
+        const mark = document.createElement('mark');
+        mark.className = 'user-highlight';
+
+        try {
+            range.surroundContents(mark);
+        } catch (err) {
+            // Fallback if selection partially crosses another mark
+            const fragment = range.extractContents();
+            fragment.querySelectorAll('mark.user-highlight').forEach(nested => {
+                while (nested.firstChild) nested.parentNode.insertBefore(nested.firstChild, nested);
+                nested.remove();
+            });
+            mark.appendChild(fragment);
+            range.insertNode(mark);
+        }
+
+        selection.removeAllRanges();
+        startPara.normalize();
+        hideHighlightToolbar();
+    }
+
+    function removeActiveHighlight() {
+        if (activeClickedMark) {
+            unwrapMarkElement(activeClickedMark);
+        } else {
+            const selection = window.getSelection();
+            if (selection && !selection.isCollapsed) {
+                const range = selection.getRangeAt(0);
+                const container = range.commonAncestorContainer.parentElement?.closest('.para-text');
+                if (container) {
+                    container.querySelectorAll('mark.user-highlight').forEach(m => {
+                        if (selection.containsNode(m, true)) unwrapMarkElement(m);
+                    });
+                }
+            }
+        }
+        window.getSelection()?.removeAllRanges();
+        hideHighlightToolbar();
+    }
+
+    function unwrapMarkElement(markEl) {
+        const parent = markEl.parentNode;
+        if (!parent) return;
+        while (markEl.firstChild) {
+            parent.insertBefore(markEl.firstChild, markEl);
+        }
+        parent.removeChild(markEl);
+        parent.normalize();
+    }
+
+    function clearAllUserHighlights() {
+        document.querySelectorAll('mark.user-highlight').forEach(m => unwrapMarkElement(m));
+        hideHighlightToolbar();
+    }
+
+    // ==========================================
+    // PAUSE / EXPORT & RESUME LINK SYSTEM
+    // ==========================================
+    function exportProgressLink() {
+        if (!currentDrill) return;
+
+        // Capture Phase 1 dropdown values
+        const p1Selections = {};
+        currentDrill.text.forEach(p => {
+            const sel = document.getElementById(`select_${p.paragraph_id}`);
+            if (sel && sel.value) p1Selections[p.paragraph_id] = sel.value;
+        });
+
+        // Capture any paragraphs that contain user highlights
+        const highlightedParas = {};
+        currentDrill.text.forEach(p => {
+            const paraEl = document.getElementById(`paraText_${p.paragraph_id}`);
+            if (paraEl && paraEl.querySelector('mark.user-highlight')) {
+                highlightedParas[p.paragraph_id] = paraEl.innerHTML;
+            }
+        });
+
+        const statePayload = {
+            f: currentDrillPath,
+            cp: currentPhase,
+            po: poolOrder,
+            pi: phaseIndices,
+            sc: scores,
+            p1a: phase1Attempts,
+            p1h: phase1UsedHelp,
+            p1s: p1Selections,
+            dh: drillHistory,
+            hl: highlightedParas
+        };
+
+        const encoded = encodeStateToBase64(statePayload);
+        const shareUrl = `${window.location.origin}${window.location.pathname}?resume=${encodeURIComponent(encoded)}`;
+
+        // Update browser bar so user can also directly bookmark the page
+        window.history.replaceState({}, document.title, `?resume=${encodeURIComponent(encoded)}`);
+
+        const output = document.getElementById('shareUrlOutput');
+        output.value = shareUrl;
+        document.getElementById('saveModal').classList.add('active');
+
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(shareUrl).catch(() => {});
+        }
+    }
+
+    function copyShareUrl() {
+        const output = document.getElementById('shareUrlOutput');
+        output.select();
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(output.value);
+        } else {
+            document.execCommand('copy');
+        }
+    }
+
+    function closeSaveModal() {
+        document.getElementById('saveModal').classList.remove('active');
+    }
+
+    async function resumeFromInput() {
+        const raw = document.getElementById('resumeInput').value.trim();
+        if (!raw) return alert("Please paste a valid resume link or code.");
+
+        let code = raw;
+        if (raw.includes('resume=')) {
+            try {
+                const urlObj = new URL(raw);
+                code = urlObj.searchParams.get('resume') || raw;
+            } catch {
+                code = raw.split('resume=')[1].split('&')[0];
+            }
+        }
+        await restoreSessionFromCode(decodeURIComponent(code));
+    }
+
+    async function restoreSessionFromCode(code) {
+        try {
+            const state = decodeStateFromBase64(code);
+            if (!state || !state.f) throw new Error("Invalid resume payload.");
+
+            const response = await fetch(state.f);
+            if (!response.ok) throw new Error("Could not fetch drill JSON.");
+            currentDrill = await response.json();
+            currentDrillPath = state.f;
+
+            currentPhase = state.cp || 1;
+            poolOrder = state.po;
+            phaseIndices = state.pi || { p2: 0, p3: 0, p4: 0, p5: 0 };
+            scores = state.sc || { p1: 0, p2: 0, p3: 0, p4: 0, p5: 0 };
+            phase1Attempts = state.p1a || 0;
+            phase1UsedHelp = !!state.p1h;
+            drillHistory = state.dh || [];
+
+            rebuildActivePoolsFromOrder();
+
+            document.getElementById('setupScreen').classList.remove('active');
+            document.getElementById('endScreen').classList.remove('active');
+            document.getElementById('drillScreen').classList.add('active');
+            document.getElementById('saveProgressBtn').style.display = 'inline-block';
+            document.getElementById('clearHighlightsBtn').style.display = 'inline-block';
+
+            document.getElementById('passageTitle').innerText = currentDrill.topic;
+            renderTextPassage();
+
+            // Restore Phase 1 selections
+            if (state.p1s) {
+                Object.keys(state.p1s).forEach(paraId => {
+                    const sel = document.getElementById(`select_${paraId}`);
+                    if (sel) sel.value = state.p1s[paraId];
+                });
+            }
+
+            // Restore user text highlights
+            if (state.hl) {
+                Object.keys(state.hl).forEach(paraId => {
+                    const paraEl = document.getElementById(`paraText_${paraId}`);
+                    if (paraEl) paraEl.innerHTML = state.hl[paraId];
+                });
+            }
+
+            // Jump to the saved phase and question index
+            if (currentPhase === 1) setupPhase1();
+            else if (currentPhase === 2) setupPhase2();
+            else if (currentPhase === 3) { hideHeadingDropdowns(); setupPhase3(); }
+            else if (currentPhase === 4) { hideHeadingDropdowns(); setupPhase4(); }
+            else if (currentPhase === 5) { hideHeadingDropdowns(); setupPhase5(); }
+
+        } catch (err) {
+            console.error("Failed to restore session:", err);
+            alert("Could not restore progress from the provided link or code.");
+        }
+    }
+
+    function hideHeadingDropdowns() {
+        currentDrill.text.forEach(p => {
+            const slot = document.getElementById(`slot_${p.paragraph_id}`);
+            if (slot) slot.style.display = 'none';
         });
     }
 
@@ -419,11 +861,7 @@
         document.getElementById('phaseTitle').innerText = 'Visual Data & Entity Match';
         document.getElementById('phaseInstructions').innerText = currentDrill.question_banks.phase_2_scanning.instructions;
 
-        currentDrill.text.forEach(p => {
-            const slot = document.getElementById(`slot_${p.paragraph_id}`);
-            if (slot) slot.style.display = 'none';
-        });
-
+        hideHeadingDropdowns();
         loadPhase2Question();
     }
 
@@ -438,7 +876,6 @@
         document.getElementById('phaseProgress').innerText = `Item ${phaseIndices.p2 + 1} of ${list.length}`;
         const q = list[phaseIndices.p2];
 
-        // Shuffle options dynamically
         const randomizedOptions = shuffleArray(q.options);
         const optionsHtml = randomizedOptions.map(opt => `
             <button class="option-btn" onclick="handlePhase2Answer(this)">${escapeHtml(opt)}</button>
@@ -497,7 +934,6 @@
         document.getElementById('phaseProgress').innerText = `Referent ${phaseIndices.p3 + 1} of ${list.length}`;
         const q = list[phaseIndices.p3];
 
-        // Shuffle options dynamically
         const randomizedOptions = shuffleArray(q.options);
         const optionsHtml = randomizedOptions.map(opt => `
             <button class="option-btn" onclick="handlePhase3Answer(this)">${escapeHtml(opt)}</button>
@@ -559,7 +995,6 @@
 
         highlightParagraph(q.paragraph_id);
 
-        // Shuffle options dynamically
         const randomizedOptions = shuffleArray(q.options);
         const optionsHtml = randomizedOptions.map(opt => `
             <button class="option-btn" onclick="handlePhase4Answer(this)">${escapeHtml(opt)}</button>
@@ -692,6 +1127,11 @@
     // SCORE RECORDING & END SCREEN
     // ==========================================
     function renderEndScreen() {
+        hideHighlightToolbar();
+        document.getElementById('saveProgressBtn').style.display = 'none';
+        document.getElementById('clearHighlightsBtn').style.display = 'none';
+        window.history.replaceState({}, document.title, window.location.pathname);
+
         document.getElementById('drillScreen').classList.remove('active');
         document.getElementById('endScreen').classList.add('active');
 
